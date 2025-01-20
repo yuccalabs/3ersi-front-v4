@@ -82,6 +82,9 @@ h4,
 i {
   font-size: 1.6rem;
 }
+/*--------------------------------------------------------------
+# reusable style
+--------------------------------------------------------------*/
 .headline {
   text-align: center;
   margin: 2rem 0;
@@ -90,9 +93,6 @@ i {
   color: var(--primary-color);
   margin-bottom: 8px;
 }
-/*--------------------------------------------------------------
-# reusable style
---------------------------------------------------------------*/
 .section {
   width: var(--width-section);
   margin: 5rem auto;
@@ -113,13 +113,12 @@ i {
 }
 .pesoudo::before {
   left: -1px;
-  background: linear-gradient(to right, #fff, transparent);
+  background: linear-gradient(to left, transparent, #fff);
 }
 .pesoudo::after {
   right: -1px;
   background: linear-gradient(to left, #fff, transparent);
 }
-
 /* the herizontal scroll */
 /* Hide scrollbar for better UI */
 .container-boxes::-webkit-scrollbar {
@@ -136,6 +135,7 @@ i {
   overflow-x: auto;
   padding: 10px;
   position: relative;
+  transition: all 1s;
 }
 .box {
   flex: 0 0 calc(240px - 10px);
@@ -144,6 +144,37 @@ i {
   border-radius: 15px;
   position: relative;
   padding-bottom: 8px;
+  cursor: pointer;
+}
+/* arrow style */
+.arrows-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.arrows-container span {
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  border-radius: 100%;
+  box-shadow: var(--shadow-box);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.arrows-container span i {
+  font-size: 1.2rem;
+}
+.arrows-container span:hover i {
+  color: var(--primary-color);
+  transition: var(--hover-transition);
+}
+@media (max-width: 991px) {
+  .arrows-container {
+    display: none;
+  }
 }
 /*--------------------------------------------------------------
 # Start Header Section
@@ -151,6 +182,7 @@ i {
 .header {
   padding: 0.4rem 0;
   box-shadow: var(--shadow-box);
+  position: relative;
 }
 .header .vendors-gate {
   width: var(--width-section);
@@ -229,12 +261,12 @@ i {
 .header .header-container .navmenu ul li .dropdown {
   display: none;
   position: absolute;
-  top: 110%;
+  top: 150%;
   left: 0;
-  width: 15rem;
+  width: 17rem;
   background: #fff;
   box-shadow: var(--shadow-box);
-  border-radius: 8px;
+  border-radius: 4px;
   z-index: 2;
 }
 .header .header-container .navmenu ul li.active .dropdown {
@@ -245,8 +277,8 @@ i {
   padding: 1rem 0.8rem;
 }
 .header .header-container .navmenu ul li .dropdown li a {
-  font-size: 1.4rem;
-  color: #222;
+  font-size: 1.6rem;
+  color: var(--secondaly-color);
 }
 .header .header-container .navmenu ul li .dropdown li a:hover {
   color: var(--primary-color);
@@ -263,9 +295,92 @@ i {
   cursor: pointer;
   font-size: 4rem;
 }
+.header .header-container aside {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  z-index: 2;
+}
+.header .header-container aside .aside-content {
+  width: 60%;
+  height: 100%;
+  background-color: var(--background-color);
+  padding: 3rem 0;
+  transition: var(--hover-transition);
+}
+.header .header-container aside .aside-content .remove-aside {
+  padding: 0 2.5rem 2rem;
+  border-bottom: 1px solid #eee;
+  text-align: right;
+}
+.header .header-container aside .aside-content .remove-aside i {
+  font-size: 2.6rem;
+  color: #8c8c8c;
+}
+
+.header .header-container aside .aside-content ul li div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #eee;
+  padding: 3rem 2.5rem;
+  position: relative;
+}
+.header .header-container aside .aside-content ul li i {
+  color: #8c8c8c;
+}
+.header .header-container aside .aside-overlay {
+  width: 40%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 100%;
+}
+.header .header-container .aside-content ul li .dropdown {
+  padding-left: 3rem;
+  overflow: hidden;
+  height: 0;
+}
+.header .header-container .aside-content ul li.active .dropdown {
+  height: auto;
+}
+.header .header-container .aside-content ul li .dropdown li {
+  border-bottom: 1px solid #eee;
+  padding: 2rem 0;
+}
+.header .header-container .aside-content ul li .dropdown li a {
+  font-size: 1.6rem;
+  color: #6c6c6c;
+}
+.header .header-container .aside-content ul li .dropdown li a:hover {
+  color: var(--primary-color);
+  transition: var(--hover-transition);
+}
+.header .header-container .aside-content ul li.active > div i {
+  transition: var(--hover-transition);
+  rotate: 90deg;
+}
+.header .header-container .aside-content ul li .dropdown li .sign-up-btn {
+  display: block;
+  padding: 6px 10px;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.header .header-container .aside-content ul li .dropdown li:last-child {
+  border: none;
+}
 @media (max-width: 769px) {
   .header .header-container .navmenu,
-  .header .header-container .sign-up-btn {
+  .header .header-container .subscirbe .sign-up-btn {
     display: none;
   }
   .header .header-container {
@@ -393,10 +508,40 @@ i {
   border-radius: 0 14px 14px 0;
   cursor: pointer;
 }
+.hero .container .hero-content form .input-container > div {
+  position: relative;
+}
+.hero .container .hero-content .type-service-list,
+.hero .container .hero-content .location-service-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: var(--shadow-box);
+  z-index: 2;
+  cursor: pointer;
+}
+.hero .container .hero-content .type-service-list {
+  border-radius: 1.4rem 0 0 1.4rem;
+}
+.hero .container .hero-content .type-service-list li,
+.hero .container .hero-content .location-service-list li {
+  padding: 2rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eee;
+}
+
+.hero .container .hero-content .type-service-list li:hover,
+.hero .container .hero-content .location-service-list li:hover {
+  color: var(--primary-color);
+}
+
 @media (max-width: 991px) {
   .hero .container .hero-content form {
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
   }
   .hero .container .hero-content form > div {
     width: 100%;
@@ -412,6 +557,13 @@ i {
     border-radius: 1.4rem;
     width: 100%;
     height: 5rem;
+  }
+  .hero .container .hero-main-text h3 span {
+    display: block;
+  }
+  .hero .container .hero-content .type-service-list,
+  .hero .container .hero-content .location-service-list {
+    border-radius: 1.4rem;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -450,8 +602,8 @@ i {
   .hero .container .hero-main-text h3 {
     line-height: 3rem;
   }
-  .hero .container .hero-main-text h3 span {
-    display: block;
+  .hero .container .hero-content form {
+    gap: 2rem;
   }
   .hero .container .hero-content form > div {
     display: block;
@@ -465,12 +617,12 @@ i {
 }
 /* End Hero Section */
 /* Start Best Vendors Section */
-.best-vendors .container .box img {
+.best-vendors .vendors-container .box img {
   width: 100%;
   height: 50%;
   border-radius: 15px 15px 0 0;
 }
-.best-vendors .container .box .icon-container {
+.best-vendors .vendors-container .box .icon-container {
   width: 50px;
   height: 50px;
   border-radius: 100%;
@@ -480,18 +632,18 @@ i {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid #6c6c6c;
   box-shadow: 0px 0px 4px;
 }
-.best-vendors .container .box .box-text-content {
+.best-vendors .vendors-container .box .box-text-content {
   margin-top: 30px;
   text-align: center;
   padding: 0 6px;
 }
-.best-vendors .container .box .box-text-content p {
+.best-vendors .vendors-container .box .box-text-content p {
   color: #6c6c6c;
   font-size: 1.3rem;
   margin-top: 1rem;
@@ -500,7 +652,7 @@ i {
 }
 /* End Best Vendors Section */
 /* Start Best Discount Section */
-.discount .container .box::before {
+.discount .discount-container .box::before {
   content: attr(data-discount);
   position: absolute;
   top: 1rem;
@@ -516,27 +668,27 @@ i {
   align-items: center;
   justify-content: center;
 }
-.discount .container .box img {
+.discount .discount-container .box img {
   width: 100%;
   height: 50%;
   border-radius: 15px 15px 0 0;
 }
-.discount .container .box .discount-contant {
+.discount .discount-container .box .discount-contant {
   padding: 8px 12px 0;
 }
-.discount .container .box .discount-info {
+.discount .discount-container .box .discount-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.discount .container .box .discount-info .time {
+.discount .discount-container .box .discount-info .time {
   color: var(--primary-color);
   font-weight: 300;
 }
-.discount .container .box .discount-info .time i {
+.discount .discount-container .box .discount-info .time i {
   padding-right: 0.2rem;
 }
-.discount .container .box .discount-info > span {
+.discount .discount-container .box .discount-info > span {
   width: fit-content;
   padding: 2px 4px;
   background-color: #eee;
@@ -544,31 +696,31 @@ i {
   border-radius: 4px;
   color: #222;
 }
-.discount .container .box .discount-text {
+.discount .discount-container .box .discount-text {
   margin: 1.6rem 0 0.5rem;
 }
-.discount .container .box .discount-text h4 {
+.discount .discount-container .box .discount-text h4 {
   font-size: 1.6rem;
   margin-bottom: 4px;
 }
-.discount .container .box .discount-text p {
+.discount .discount-container .box .discount-text p {
   font-size: 1.3rem;
   color: #6c6c6c;
   font-weight: 300;
   line-height: 2rem;
 }
-.discount .container .box .price .new-price {
+.discount .discount-container .box .price .new-price {
   font-size: 2.2rem;
   font-weight: 400;
   padding-right: 8px;
 }
-.discount .container .box .price .old-price {
+.discount .discount-container .box .price .old-price {
   font-size: 1.3rem;
   font-weight: 300;
   color: #6c6c6c;
   position: relative;
 }
-.discount .container .box .price .old-price::after {
+.discount .discount-container .box .price .old-price::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -665,7 +817,7 @@ i {
   margin: 2rem 0;
 }
 .articles .headline-container .headline-content {
-  flex: 1 1 50%;
+  width: 50%;
 }
 .articles .headline-container .headline-content h2 {
   margin-bottom: 8px;
@@ -673,16 +825,18 @@ i {
 .articles .headline-container .more-articles {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 .articles .headline-container .more-articles a {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-decoration: underline;
+}
+.articles .headline-container .more-articles i {
+  font-size: 1.2rem;
 }
 .articles .more-articles.mob-v {
   display: none;
 }
-
 .articles .category-container {
   display: flex;
   align-items: center;
@@ -717,6 +871,24 @@ i {
   color: var(--background-color);
   z-index: 2;
 }
+.articles .pesoudo > span {
+  position: absolute;
+  z-index: 2;
+  align-items: center;
+  justify-content: space-between;
+  top: 40%;
+  color: var(--third-color);
+  cursor: pointer;
+}
+.articles .pesoudo > span.left-arrow {
+  left: 2rem;
+}
+.articles .pesoudo > span.right-arrow {
+  right: 2rem;
+}
+.articles .pesoudo > span i {
+  font-size: 2rem;
+}
 .articles .article img {
   width: 100%;
   height: 50%;
@@ -737,7 +909,15 @@ i {
   font-size: 1.4rem;
   margin: 8px 0;
 }
+@media (max-width: 991px) {
+  .articles .pesoudo > span {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
+  .articles .headline-container .headline-content {
+    width: 100%;
+  }
   .articles .headline-container .more-articles {
     display: none;
   }
@@ -747,6 +927,9 @@ i {
     font-size: 2rem;
     text-decoration: underline;
     padding: 2rem;
+  }
+  .articles .pesoudo > span {
+    display: none;
   }
 }
 /* End Articles Section */
@@ -785,7 +968,7 @@ footer .footer-col.second-col ul li:last-child a {
 }
 footer .footer-col.second-col ul li:last-child {
   font-size: 1.2rem;
-  width: 75%;
+  width: 85%;
   display: flex;
   align-items: center;
   gap: 5px;

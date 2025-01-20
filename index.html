@@ -83,9 +83,69 @@
         <div class="subscirbe">
           <button class="sign-up-btn">Connexion</button>
         </div>
-        <div class="humberger">
+        <div class="humberger" id="humberger">
           <i class="fa-solid fa-bars"></i>
         </div>
+        <aside>
+          <div class="aside-content">
+            <div class="remove-aside">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+            <ul id="asideList">
+              <li>
+                <div>
+                  Salles Et Réception
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <ul class="dropdown">
+                  <li><a href="">Tesdira et Robes</a></li>
+                  <li><a href="">Coiffure et beauté</a></li>
+                  <li><a href="">Machta</a></li>
+                  <li><a href="">Bijoux</a></li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  La Mariée
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <ul class="dropdown">
+                  <li><a href="">Tesdira et Robes</a></li>
+                  <li><a href="">Coiffure et beauté</a></li>
+                  <li><a href="">Machta</a></li>
+                  <li><a href="">Bijoux</a></li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <a href="">Wedding Planner</a>
+                </div>
+              </li>
+              <li>
+                <div><a href="">Blog</a></div>
+              </li>
+              <li>
+                <div>
+                  Autres Services
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <ul class="dropdown">
+                  <li><a href="">Coiffure homme</a></li>
+                  <li><a href="">Location de voiture</a></li>
+                  <li><a href="">Voyage de noces</a></li>
+                  <li><a href="">Faire-part mariage</a></li>
+                  <li><a href="">Boites de gateaux</a></li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <button class="sign-up-btn">Connexion</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="aside-overlay"></div>
+        </aside>
       </div>
     </header>
     <!-- End Header Section -->
@@ -115,6 +175,11 @@
                           placeholder="Que charchez-vous ?"
                           class="type-service"
                         />
+                        <ul class="type-service-list">
+                          <li>Salle des fetes</li>
+                          <li>Decoration</li>
+                          <li>Traituers</li>
+                        </ul>
                       </div>
                       <div>
                         <i class="fa-solid fa-location-dot"></i>
@@ -123,6 +188,11 @@
                           placeholder="Ou ?"
                           class="location-service"
                         />
+                        <ul class="location-service-list">
+                          <li>Alger</li>
+                          <li>Oran</li>
+                          <li>Stife</li>
+                        </ul>
                       </div>
                     </div>
                     <button type="submit" class="search-btn">Recharche</button>
@@ -133,7 +203,6 @@
           </div>
         </div>
       </section>
-
       <!-- End Hero Section -->
       <!-- Start best vendors Section -->
       <section class="best-vendors section">
@@ -145,7 +214,39 @@
           </h3>
         </div>
         <div class="pesoudo">
-          <div class="container container-boxes">
+          <div class="vendors-container container-boxes">
+            <div class="box">
+              <img
+                src="/assets/images/best-prest.jpg"
+                alt="le meilleur prestataire"
+              />
+              <div class="icon-container">
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <div class="box-text-content">
+                <h4>Salle des fêtes</h4>
+                <p>
+                  Explorez des salles de fêtes exceptionnelles pour vos moments
+                  inoubliables.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <img
+                src="/assets/images/best-prest.jpg"
+                alt="le meilleur prestataire"
+              />
+              <div class="icon-container">
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <div class="box-text-content">
+                <h4>Salle des fêtes</h4>
+                <p>
+                  Explorez des salles de fêtes exceptionnelles pour vos moments
+                  inoubliables.
+                </p>
+              </div>
+            </div>
             <div class="box">
               <img
                 src="/assets/images/best-prest.jpg"
@@ -227,6 +328,12 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="arrows-container">
+          <span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+          <span class="right-arrow"
+            ><i class="fa-solid fa-arrow-right"></i
+          ></span>
         </div>
       </section>
       <!-- End best vendors Section -->
@@ -240,10 +347,10 @@
           </h3>
         </div>
         <div class="pesoudo">
-          <div class="container container-boxes">
+          <div class="discount-container container-boxes">
             <div class="box" data-discount="15 %">
               <img
-                src="/assets/images/best-disc.jpg"
+                src="/assets/images/promo.jpg"
                 alt="le meilleur prestataire"
               />
               <div class="discount-contant">
@@ -269,7 +376,7 @@
             </div>
             <div class="box" data-discount="15 %">
               <img
-                src="/assets/images/best-disc.jpg"
+                src="/assets/images/promo.jpg"
                 alt="le meilleur prestataire"
               />
               <div class="discount-contant">
@@ -295,7 +402,7 @@
             </div>
             <div class="box" data-discount="15 %">
               <img
-                src="/assets/images/best-disc.jpg"
+                src="/assets/images/promo.jpg"
                 alt="le meilleur prestataire"
               />
               <div class="discount-contant">
@@ -321,7 +428,7 @@
             </div>
             <div class="box" data-discount="15 %">
               <img
-                src="/assets/images/best-disc.jpg"
+                src="/assets/images/promo.jpg"
                 alt="le meilleur prestataire"
               />
               <div class="discount-contant">
@@ -347,7 +454,7 @@
             </div>
             <div class="box" data-discount="15 %">
               <img
-                src="/assets/images/best-disc.jpg"
+                src="/assets/images/promo.jpg"
                 alt="le meilleur prestataire"
               />
               <div class="discount-contant">
@@ -373,7 +480,7 @@
             </div>
             <div class="box" data-discount="15 %">
               <img
-                src="/assets/images/best-disc.jpg"
+                src="/assets/images/promo.jpg"
                 alt="le meilleur prestataire"
               />
               <div class="discount-contant">
@@ -398,6 +505,12 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="arrows-container">
+          <span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+          <span class="right-arrow"
+            ><i class="fa-solid fa-arrow-right"></i
+          ></span>
         </div>
       </section>
       <!--  End best Discount Section -->
@@ -434,119 +547,139 @@
           </div>
           <div class="more-articles">
             <a href="">Lire plus Articles...</a>
-            <i class="fa-solid fa-greater-than"></i>
+            <i class="fa-solid fa-chevron-right"></i>
           </div>
         </div>
-        <div class="pesoudo">
-          <div class="category-container container-boxes">
-            <div class="category">
-              <h5>Decoration</h5>
+        <div class="category-parent">
+          <div class="pesoudo">
+            <div class="category-container container-boxes">
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
             </div>
-            <div class="category">
-              <h5>Decoration</h5>
-            </div>
-            <div class="category">
-              <h5>Decoration</h5>
-            </div>
-            <div class="category">
-              <h5>Decoration</h5>
-            </div>
-            <div class="category">
-              <h5>Decoration</h5>
-            </div>
-            <div class="category">
-              <h5>Decoration</h5>
-            </div>
-            <div class="category">
-              <h5>Decoration</h5>
-            </div>
+            <!-- <div class="arrows-container"> -->
+            <span class="left-arrow"
+              ><i class="fa-solid fa-chevron-left"></i
+            ></span>
+            <span class="right-arrow"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+            <!-- </div> -->
           </div>
         </div>
-        <div class="pesoudo">
-          <div class="articles-container container-boxes">
-            <article class="article box">
-              <img src="/assets/images/best-disc.jpg" alt="" />
-              <div class="article-content">
-                <div class="article-info">
-                  <span>Category</span>
-                  <span>5 min read</span>
+        <div class="articles-parent">
+          <div class="pesoudo">
+            <div class="articles-container container-boxes">
+              <article class="article box">
+                <img src="/assets/images/best-disc.jpg" alt="" />
+                <div class="article-content">
+                  <div class="article-info">
+                    <span>Category</span>
+                    <span>5 min read</span>
+                  </div>
+                  <p>
+                    5 Raisons pour lesquelles vous devez organiser un événement
+                    en tant qu’Entreprise !
+                  </p>
                 </div>
-                <p>
-                  5 Raisons pour lesquelles vous devez organiser un événement en
-                  tant qu’Entreprise !
-                </p>
-              </div>
-            </article>
-            <article class="article box">
-              <img src="/assets/images/best-disc.jpg" alt="" />
-              <div class="article-content">
-                <div class="article-info">
-                  <span>Category</span>
-                  <span>5 min read</span>
+              </article>
+              <article class="article box">
+                <img src="/assets/images/best-disc.jpg" alt="" />
+                <div class="article-content">
+                  <div class="article-info">
+                    <span>Category</span>
+                    <span>5 min read</span>
+                  </div>
+                  <p>
+                    5 Raisons pour lesquelles vous devez organiser un événement
+                    en tant qu’Entreprise !
+                  </p>
                 </div>
-                <p>
-                  5 Raisons pour lesquelles vous devez organiser un événement en
-                  tant qu’Entreprise !
-                </p>
-              </div>
-            </article>
-            <article class="article box">
-              <img src="/assets/images/best-disc.jpg" alt="" />
-              <div class="article-content">
-                <div class="article-info">
-                  <span>Category</span>
-                  <span>5 min read</span>
+              </article>
+              <article class="article box">
+                <img src="/assets/images/best-disc.jpg" alt="" />
+                <div class="article-content">
+                  <div class="article-info">
+                    <span>Category</span>
+                    <span>5 min read</span>
+                  </div>
+                  <p>
+                    5 Raisons pour lesquelles vous devez organiser un événement
+                    en tant qu’Entreprise !
+                  </p>
                 </div>
-                <p>
-                  5 Raisons pour lesquelles vous devez organiser un événement en
-                  tant qu’Entreprise !
-                </p>
-              </div>
-            </article>
-            <article class="article box">
-              <img src="/assets/images/best-disc.jpg" alt="" />
-              <div class="article-content">
-                <div class="article-info">
-                  <span>Category</span>
-                  <span>5 min read</span>
+              </article>
+              <article class="article box">
+                <img src="/assets/images/best-disc.jpg" alt="" />
+                <div class="article-content">
+                  <div class="article-info">
+                    <span>Category</span>
+                    <span>5 min read</span>
+                  </div>
+                  <p>
+                    5 Raisons pour lesquelles vous devez organiser un événement
+                    en tant qu’Entreprise !
+                  </p>
                 </div>
-                <p>
-                  5 Raisons pour lesquelles vous devez organiser un événement en
-                  tant qu’Entreprise !
-                </p>
-              </div>
-            </article>
-            <article class="article box">
-              <img src="/assets/images/best-disc.jpg" alt="" />
-              <div class="article-content">
-                <div class="article-info">
-                  <span>Category</span>
-                  <span>5 min read</span>
+              </article>
+              <article class="article box">
+                <img src="/assets/images/best-disc.jpg" alt="" />
+                <div class="article-content">
+                  <div class="article-info">
+                    <span>Category</span>
+                    <span>5 min read</span>
+                  </div>
+                  <p>
+                    5 Raisons pour lesquelles vous devez organiser un événement
+                    en tant qu’Entreprise !
+                  </p>
                 </div>
-                <p>
-                  5 Raisons pour lesquelles vous devez organiser un événement en
-                  tant qu’Entreprise !
-                </p>
-              </div>
-            </article>
-            <article class="article box">
-              <img src="/assets/images/best-disc.jpg" alt="" />
-              <div class="article-content">
-                <div class="article-info">
-                  <span>Category</span>
-                  <span>5 min read</span>
+              </article>
+              <article class="article box">
+                <img src="/assets/images/best-disc.jpg" alt="" />
+                <div class="article-content">
+                  <div class="article-info">
+                    <span>Category</span>
+                    <span>5 min read</span>
+                  </div>
+                  <p>
+                    5 Raisons pour lesquelles vous devez organiser un événement
+                    en tant qu’Entreprise !
+                  </p>
                 </div>
-                <p>
-                  5 Raisons pour lesquelles vous devez organiser un événement en
-                  tant qu’Entreprise !
-                </p>
-              </div>
-            </article>
+              </article>
+            </div>
           </div>
-        </div>
-        <div class="more-articles mob-v">
-          <a href="">Lire plus Articles...</a>
-          <i class="fa-solid fa-greater-than"></i>
+          <div class="more-articles mob-v">
+            <a href="">Lire plus Articles...</a>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="arrows-container">
+            <span class="left-arrow"
+              ><i class="fa-solid fa-arrow-left"></i
+            ></span>
+            <span class="right-arrow"
+              ><i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </div>
         </div>
       </section>
       <!-- End Articles Section -->
