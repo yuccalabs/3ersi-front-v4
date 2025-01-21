@@ -20,7 +20,6 @@ navItems.forEach((navItem) => {
     });
   });
 });
-
 asideNavItems.forEach((aNavItem) => {
   aNavItem.addEventListener("click", () => {
     aNavItem.classList.toggle("active");
