@@ -1,11 +1,11 @@
 "use strict";
-//select all nav items
+// control the navbar
 const navItems = document.querySelectorAll("#navmenu ul li");
 const hamburger = document.querySelector("#hamburger");
 const aside = document.querySelector("aside");
 const asideContent = document.querySelector("aside .aside-content");
 const asideOverlay = document.querySelector("aside .aside-overlay");
-const removeAside = document.querySelector(".remove-aside i");
+const removeAside = document.querySelector(".remove-aside svg");
 const asideNavItems = document.querySelectorAll("#asideList li");
 const asideDropMenu = document.querySelector("#asideList li");
 
@@ -20,7 +20,6 @@ navItems.forEach((navItem) => {
     });
   });
 });
-
 asideNavItems.forEach((aNavItem) => {
   aNavItem.addEventListener("click", () => {
     aNavItem.classList.toggle("active");
@@ -51,7 +50,6 @@ removeAside.addEventListener("click", () => {
   hideElement(aside);
   document.body.classList.remove("no-scroll");
 });
-
 asideOverlay.addEventListener("click", () => {
   hideElement(aside);
   document.body.classList.remove("no-scroll");
