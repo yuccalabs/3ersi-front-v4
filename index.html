@@ -18,13 +18,12 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
-    <!-- main CSS file -->
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <!-- Icons -->
+    <!-- CSS files -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
+    <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
     <!-- Start Header Section -->
@@ -32,20 +31,53 @@
       <div class="vendors-gate">
         <h3 class="vendors-link" style="font-size: 1.4rem">
           <a href="#"
-            ><i class="fa-solid fa-briefcase"></i> êtes-vous un prestataire ?</a
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="none"
+                stroke="#222"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm5-2V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m-4 5v.01"
+                />
+                <path d="M3 13a20 20 0 0 0 18 0" />
+              </g>
+            </svg>
+            êtes-vous un prestataire ?</a
           >
         </h3>
       </div>
       <span></span>
       <div class="header-container">
         <div id="logo">
-          <img src="/assets/images/logo.svg" alt="logo company" />
+          <a href="/">
+            <img src="/assets/images/logo.svg" alt="logo company"
+          /></a>
         </div>
         <nav id="navmenu" class="navmenu">
           <ul>
             <li>
               Salles Et Réception
-              <i class="fa-solid fa-caret-down"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2rem"
+                height="2rem"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M5.307 8.713A.75.75 0 0 1 6 8.25h12a.75.75 0 0 1 .53 1.28l-6 6a.75.75 0 0 1-1.06 0l-6-6a.75.75 0 0 1-.163-.817"
+                  clip-rule="evenodd"
+                />
+              </svg>
               <ul class="dropdown">
                 <li><a href="">salle des fetes</a></li>
                 <li><a href="">Décoration</a></li>
@@ -57,7 +89,19 @@
             </li>
             <li>
               La Mariée
-              <i class="fa-solid fa-caret-down"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2rem"
+                height="2rem"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M5.307 8.713A.75.75 0 0 1 6 8.25h12a.75.75 0 0 1 .53 1.28l-6 6a.75.75 0 0 1-1.06 0l-6-6a.75.75 0 0 1-.163-.817"
+                  clip-rule="evenodd"
+                />
+              </svg>
               <ul class="dropdown">
                 <li><a href="">Tesdira et Robes</a></li>
                 <li><a href="">Coiffure et beauté</a></li>
@@ -69,7 +113,19 @@
             <li><a href="">Blog</a></li>
             <li>
               Autres Services
-              <i class="fa-solid fa-caret-down"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2rem"
+                height="2rem"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M5.307 8.713A.75.75 0 0 1 6 8.25h12a.75.75 0 0 1 .53 1.28l-6 6a.75.75 0 0 1-1.06 0l-6-6a.75.75 0 0 1-.163-.817"
+                  clip-rule="evenodd"
+                />
+              </svg>
               <ul class="dropdown">
                 <li><a href="">Coiffure homme</a></li>
                 <li><a href="">Location de voiture</a></li>
@@ -83,9 +139,146 @@
         <div class="subscirbe">
           <button class="sign-up-btn">Connexion</button>
         </div>
-        <div class="humberger">
-          <i class="fa-solid fa-bars"></i>
+        <div class="humberger" id="humberger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="2rem"
+            height="2rem"
+            viewBox="0 0 24 24"
+          >
+            <rect
+              width="18"
+              height="2"
+              x="3"
+              y="11"
+              fill="currentColor"
+              rx=".95"
+              ry=".95"
+            />
+            <rect
+              width="18"
+              height="2"
+              x="3"
+              y="16"
+              fill="currentColor"
+              rx=".95"
+              ry=".95"
+            />
+            <rect
+              width="18"
+              height="2"
+              x="3"
+              y="6"
+              fill="currentColor"
+              rx=".95"
+              ry=".95"
+            />
+          </svg>
         </div>
+        <aside>
+          <div class="aside-content">
+            <div class="remove-aside">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="3rem"
+                height="3rem"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243"
+                />
+              </svg>
+            </div>
+            <ul id="asideList">
+              <li>
+                <div>
+                  Salles Et Réception
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2rem"
+                    height="2rem"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m8.086 17.5l5.5-5.5l-5.5-5.5L9.5 5.086L16.414 12L9.5 18.914z"
+                    />
+                  </svg>
+                </div>
+                <ul class="dropdown">
+                  <li><a href="">Tesdira et Robes</a></li>
+                  <li><a href="">Coiffure et beauté</a></li>
+                  <li><a href="">Machta</a></li>
+                  <li><a href="">Bijoux</a></li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  La Mariée
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2rem"
+                    height="2rem"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m8.086 17.5l5.5-5.5l-5.5-5.5L9.5 5.086L16.414 12L9.5 18.914z"
+                    />
+                  </svg>
+                </div>
+                <ul class="dropdown">
+                  <li><a href="">Tesdira et Robes</a></li>
+                  <li><a href="">Coiffure et beauté</a></li>
+                  <li><a href="">Machta</a></li>
+                  <li><a href="">Bijoux</a></li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <a href="">Wedding Planner</a>
+                </div>
+              </li>
+              <li>
+                <div><a href="">Blog</a></div>
+              </li>
+              <li>
+                <div>
+                  Autres Services
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2rem"
+                    height="2rem"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m8.086 17.5l5.5-5.5l-5.5-5.5L9.5 5.086L16.414 12L9.5 18.914z"
+                    />
+                  </svg>
+                </div>
+                <ul class="dropdown">
+                  <li><a href="">Coiffure homme</a></li>
+                  <li><a href="">Location de voiture</a></li>
+                  <li><a href="">Voyage de noces</a></li>
+                  <li><a href="">Faire-part mariage</a></li>
+                  <li><a href="">Boites de gateaux</a></li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <button class="sign-up-btn">Connexion</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="aside-overlay"></div>
+        </aside>
       </div>
     </header>
     <!-- End Header Section -->
@@ -109,20 +302,42 @@
                   <form>
                     <div class="input-container">
                       <div>
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="2rem"
+                          height="2rem"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+                          />
+                        </svg>
                         <input
                           type="text"
                           placeholder="Que charchez-vous ?"
                           class="type-service"
                         />
+                        <ul class="type-service-list"></ul>
                       </div>
                       <div>
-                        <i class="fa-solid fa-location-dot"></i>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="2rem"
+                          height="2rem"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"
+                          />
+                        </svg>
                         <input
                           type="text"
                           placeholder="Ou ?"
                           class="location-service"
                         />
+                        <ul class="location-service-list"></ul>
                       </div>
                     </div>
                     <button type="submit" class="search-btn">Recharche</button>
@@ -145,14 +360,33 @@
           </h3>
         </div>
         <div class="pesoudo">
-          <div class="container container-boxes">
+          <div class="vendors-container container-boxes">
             <div class="box">
               <img
                 src="/assets/images/best-prest.jpg"
                 alt="le meilleur prestataire"
               />
               <div class="icon-container">
-                <i class="fa-solid fa-house"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3rem"
+                  height="3rem"
+                  viewBox="0 0 14 14"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                    />
+                    <path
+                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                    />
+                  </g>
+                </svg>
               </div>
               <div class="box-text-content">
                 <h4>Salle des fêtes</h4>
@@ -168,7 +402,26 @@
                 alt="le meilleur prestataire"
               />
               <div class="icon-container">
-                <i class="fa-solid fa-house"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3rem"
+                  height="3rem"
+                  viewBox="0 0 14 14"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                    />
+                    <path
+                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                    />
+                  </g>
+                </svg>
               </div>
               <div class="box-text-content">
                 <h4>Salle des fêtes</h4>
@@ -184,7 +437,26 @@
                 alt="le meilleur prestataire"
               />
               <div class="icon-container">
-                <i class="fa-solid fa-house"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3rem"
+                  height="3rem"
+                  viewBox="0 0 14 14"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                    />
+                    <path
+                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                    />
+                  </g>
+                </svg>
               </div>
               <div class="box-text-content">
                 <h4>Salle des fêtes</h4>
@@ -200,7 +472,26 @@
                 alt="le meilleur prestataire"
               />
               <div class="icon-container">
-                <i class="fa-solid fa-house"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3rem"
+                  height="3rem"
+                  viewBox="0 0 14 14"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                    />
+                    <path
+                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                    />
+                  </g>
+                </svg>
               </div>
               <div class="box-text-content">
                 <h4>Salle des fêtes</h4>
@@ -216,7 +507,96 @@
                 alt="le meilleur prestataire"
               />
               <div class="icon-container">
-                <i class="fa-solid fa-house"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3rem"
+                  height="3rem"
+                  viewBox="0 0 14 14"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                    />
+                    <path
+                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="box-text-content">
+                <h4>Salle des fêtes</h4>
+                <p>
+                  Explorez des salles de fêtes exceptionnelles pour vos moments
+                  inoubliables.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <img
+                src="/assets/images/best-prest.jpg"
+                alt="le meilleur prestataire"
+              />
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3rem"
+                  height="3rem"
+                  viewBox="0 0 14 14"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                    />
+                    <path
+                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="box-text-content">
+                <h4>Salle des fêtes</h4>
+                <p>
+                  Explorez des salles de fêtes exceptionnelles pour vos moments
+                  inoubliables.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <img
+                src="/assets/images/best-prest.jpg"
+                alt="le meilleur prestataire"
+              />
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3rem"
+                  height="3rem"
+                  viewBox="0 0 14 14"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                    />
+                    <path
+                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                    />
+                  </g>
+                </svg>
               </div>
               <div class="box-text-content">
                 <h4>Salle des fêtes</h4>
@@ -227,6 +607,34 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="arrows-container">
+          <span class="left-arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M19.5 13H7.914l4.5 4.5L11 18.914L4.086 12L11 5.086L12.414 6.5l-4.5 4.5H19.5z"
+              />
+            </svg>
+          </span>
+          <span class="right-arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M4.5 11h11.586l-4.5-4.5L13 5.086L19.914 12L13 18.914L11.586 17.5l4.5-4.5H4.5z"
+              />
+            </svg>
+          </span>
         </div>
       </section>
       <!-- End best vendors Section -->
@@ -243,15 +651,25 @@
           <div class="container container-boxes">
             <div class="box" data-discount="15 %">
               <img
-                src="/assets/images/best-disc.jpg"
-                alt="le meilleur prestataire"
+                src="/assets/images/promo.jpg"
+                alt="Réduction spéciale pour nos prestataires de mariage."
               />
               <div class="discount-contant">
                 <div class="discount-info">
                   <span>Bijoux</span>
                   <div class="time">
-                    <i class="fa-regular fa-clock"></i>
-                    <span>Limited Time</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2rem"
+                      height="2rem"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
+                      />
+                    </svg>
+                    <span>Durée limitée</span>
                   </div>
                 </div>
                 <div class="discount-text">
@@ -269,15 +687,25 @@
             </div>
             <div class="box" data-discount="15 %">
               <img
-                src="/assets/images/best-disc.jpg"
-                alt="le meilleur prestataire"
+                src="/assets/images/promo.jpg"
+                alt="Réduction spéciale pour nos prestataires de mariage."
               />
               <div class="discount-contant">
                 <div class="discount-info">
                   <span>Bijoux</span>
                   <div class="time">
-                    <i class="fa-regular fa-clock"></i>
-                    <span>Limited Time</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2rem"
+                      height="2rem"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
+                      />
+                    </svg>
+                    <span>Durée limitée</span>
                   </div>
                 </div>
                 <div class="discount-text">
@@ -295,15 +723,25 @@
             </div>
             <div class="box" data-discount="15 %">
               <img
-                src="/assets/images/best-disc.jpg"
-                alt="le meilleur prestataire"
+                src="/assets/images/promo.jpg"
+                alt="Réduction spéciale pour nos prestataires de mariage."
               />
               <div class="discount-contant">
                 <div class="discount-info">
                   <span>Bijoux</span>
                   <div class="time">
-                    <i class="fa-regular fa-clock"></i>
-                    <span>Limited Time</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2rem"
+                      height="2rem"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
+                      />
+                    </svg>
+                    <span>Durée limitée</span>
                   </div>
                 </div>
                 <div class="discount-text">
@@ -321,15 +759,25 @@
             </div>
             <div class="box" data-discount="15 %">
               <img
-                src="/assets/images/best-disc.jpg"
-                alt="le meilleur prestataire"
+                src="/assets/images/promo.jpg"
+                alt="Réduction spéciale pour nos prestataires de mariage."
               />
               <div class="discount-contant">
                 <div class="discount-info">
                   <span>Bijoux</span>
                   <div class="time">
-                    <i class="fa-regular fa-clock"></i>
-                    <span>Limited Time</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2rem"
+                      height="2rem"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
+                      />
+                    </svg>
+                    <span>Durée limitée</span>
                   </div>
                 </div>
                 <div class="discount-text">
@@ -347,15 +795,25 @@
             </div>
             <div class="box" data-discount="15 %">
               <img
-                src="/assets/images/best-disc.jpg"
-                alt="le meilleur prestataire"
+                src="/assets/images/promo.jpg"
+                alt="Réduction spéciale pour nos prestataires de mariage."
               />
               <div class="discount-contant">
                 <div class="discount-info">
                   <span>Bijoux</span>
                   <div class="time">
-                    <i class="fa-regular fa-clock"></i>
-                    <span>Limited Time</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2rem"
+                      height="2rem"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
+                      />
+                    </svg>
+                    <span>Durée limitée</span>
                   </div>
                 </div>
                 <div class="discount-text">
@@ -373,15 +831,25 @@
             </div>
             <div class="box" data-discount="15 %">
               <img
-                src="/assets/images/best-disc.jpg"
-                alt="le meilleur prestataire"
+                src="/assets/images/promo.jpg"
+                alt="Réduction spéciale pour nos prestataires de mariage."
               />
               <div class="discount-contant">
                 <div class="discount-info">
                   <span>Bijoux</span>
                   <div class="time">
-                    <i class="fa-regular fa-clock"></i>
-                    <span>Limited Time</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2rem"
+                      height="2rem"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
+                      />
+                    </svg>
+                    <span>Durée limitée</span>
                   </div>
                 </div>
                 <div class="discount-text">
@@ -398,6 +866,34 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="arrows-container">
+          <span class="left-arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M19.5 13H7.914l4.5 4.5L11 18.914L4.086 12L11 5.086L12.414 6.5l-4.5 4.5H19.5z"
+              />
+            </svg>
+          </span>
+          <span class="right-arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M4.5 11h11.586l-4.5-4.5L13 5.086L19.914 12L13 18.914L11.586 17.5l4.5-4.5H4.5z"
+              />
+            </svg>
+          </span>
         </div>
       </section>
       <!--  End best Discount Section -->
@@ -434,119 +930,215 @@
           </div>
           <div class="more-articles">
             <a href="">Lire plus Articles...</a>
-            <i class="fa-solid fa-greater-than"></i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="m15.684 12l-4.95 4.95l-1.414-1.414L12.856 12L9.32 8.465l1.415-1.415z"
+              />
+            </svg>
           </div>
         </div>
-        <div class="pesoudo">
-          <div class="category-container container-boxes">
-            <div class="category">
-              <h5>Decoration</h5>
+        <div class="category-parent">
+          <div class="pesoudo">
+            <div class="category-container container-boxes">
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
+              <div class="category">
+                <h5>Decoration</h5>
+              </div>
             </div>
-            <div class="category">
-              <h5>Decoration</h5>
-            </div>
-            <div class="category">
-              <h5>Decoration</h5>
-            </div>
-            <div class="category">
-              <h5>Decoration</h5>
-            </div>
-            <div class="category">
-              <h5>Decoration</h5>
-            </div>
-            <div class="category">
-              <h5>Decoration</h5>
-            </div>
-            <div class="category">
-              <h5>Decoration</h5>
-            </div>
+            <span class="left-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2rem"
+                height="2rem"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m15.914 17.5l-5.5-5.5l5.5-5.5L14.5 5.086L7.586 12l6.914 6.914z"
+                />
+              </svg>
+            </span>
+            <span class="right-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2rem"
+                height="2rem"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m8.086 17.5l5.5-5.5l-5.5-5.5L9.5 5.086L16.414 12L9.5 18.914z"
+                />
+              </svg>
+            </span>
           </div>
         </div>
-        <div class="pesoudo">
-          <div class="articles-container container-boxes">
-            <article class="article box">
-              <img src="/assets/images/best-disc.jpg" alt="" />
-              <div class="article-content">
-                <div class="article-info">
-                  <span>Category</span>
-                  <span>5 min read</span>
+        <div class="articles-parent">
+          <div class="pesoudo">
+            <div class="articles-container container-boxes">
+              <article class="article box">
+                <img
+                  src="/assets/images/best-disc.jpg"
+                  alt="Inspiration de mariage - Idées de décoration et thèmes."
+                />
+                <div class="article-content">
+                  <div class="article-info">
+                    <span>Category</span>
+                    <span>5 min read</span>
+                  </div>
+                  <p>
+                    5 Raisons pour lesquelles vous devez organiser un événement
+                    en tant qu’Entreprise !
+                  </p>
                 </div>
-                <p>
-                  5 Raisons pour lesquelles vous devez organiser un événement en
-                  tant qu’Entreprise !
-                </p>
-              </div>
-            </article>
-            <article class="article box">
-              <img src="/assets/images/best-disc.jpg" alt="" />
-              <div class="article-content">
-                <div class="article-info">
-                  <span>Category</span>
-                  <span>5 min read</span>
+              </article>
+              <article class="article box">
+                <img
+                  src="/assets/images/best-disc.jpg"
+                  alt="Inspiration de mariage - Idées de décoration et thèmes."
+                />
+                <div class="article-content">
+                  <div class="article-info">
+                    <span>Category</span>
+                    <span>5 min read</span>
+                  </div>
+                  <p>
+                    5 Raisons pour lesquelles vous devez organiser un événement
+                    en tant qu’Entreprise !
+                  </p>
                 </div>
-                <p>
-                  5 Raisons pour lesquelles vous devez organiser un événement en
-                  tant qu’Entreprise !
-                </p>
-              </div>
-            </article>
-            <article class="article box">
-              <img src="/assets/images/best-disc.jpg" alt="" />
-              <div class="article-content">
-                <div class="article-info">
-                  <span>Category</span>
-                  <span>5 min read</span>
+              </article>
+              <article class="article box">
+                <img
+                  src="/assets/images/best-disc.jpg"
+                  alt="Inspiration de mariage - Idées de décoration et thèmes."
+                />
+                <div class="article-content">
+                  <div class="article-info">
+                    <span>Category</span>
+                    <span>5 min read</span>
+                  </div>
+                  <p>
+                    5 Raisons pour lesquelles vous devez organiser un événement
+                    en tant qu’Entreprise !
+                  </p>
                 </div>
-                <p>
-                  5 Raisons pour lesquelles vous devez organiser un événement en
-                  tant qu’Entreprise !
-                </p>
-              </div>
-            </article>
-            <article class="article box">
-              <img src="/assets/images/best-disc.jpg" alt="" />
-              <div class="article-content">
-                <div class="article-info">
-                  <span>Category</span>
-                  <span>5 min read</span>
+              </article>
+              <article class="article box">
+                <img
+                  src="/assets/images/best-disc.jpg"
+                  alt="Inspiration de mariage - Idées de décoration et thèmes."
+                />
+                <div class="article-content">
+                  <div class="article-info">
+                    <span>Category</span>
+                    <span>5 min read</span>
+                  </div>
+                  <p>
+                    5 Raisons pour lesquelles vous devez organiser un événement
+                    en tant qu’Entreprise !
+                  </p>
                 </div>
-                <p>
-                  5 Raisons pour lesquelles vous devez organiser un événement en
-                  tant qu’Entreprise !
-                </p>
-              </div>
-            </article>
-            <article class="article box">
-              <img src="/assets/images/best-disc.jpg" alt="" />
-              <div class="article-content">
-                <div class="article-info">
-                  <span>Category</span>
-                  <span>5 min read</span>
+              </article>
+              <article class="article box">
+                <img
+                  src="/assets/images/best-disc.jpg"
+                  alt="Inspiration de mariage - Idées de décoration et thèmes."
+                />
+                <div class="article-content">
+                  <div class="article-info">
+                    <span>Category</span>
+                    <span>5 min read</span>
+                  </div>
+                  <p>
+                    5 Raisons pour lesquelles vous devez organiser un événement
+                    en tant qu’Entreprise !
+                  </p>
                 </div>
-                <p>
-                  5 Raisons pour lesquelles vous devez organiser un événement en
-                  tant qu’Entreprise !
-                </p>
-              </div>
-            </article>
-            <article class="article box">
-              <img src="/assets/images/best-disc.jpg" alt="" />
-              <div class="article-content">
-                <div class="article-info">
-                  <span>Category</span>
-                  <span>5 min read</span>
+              </article>
+              <article class="article box">
+                <img
+                  src="/assets/images/best-disc.jpg"
+                  alt="Inspiration de mariage - Idées de décoration et thèmes."
+                />
+                <div class="article-content">
+                  <div class="article-info">
+                    <span>Category</span>
+                    <span>5 min read</span>
+                  </div>
+                  <p>
+                    5 Raisons pour lesquelles vous devez organiser un événement
+                    en tant qu’Entreprise !
+                  </p>
                 </div>
-                <p>
-                  5 Raisons pour lesquelles vous devez organiser un événement en
-                  tant qu’Entreprise !
-                </p>
-              </div>
-            </article>
+              </article>
+            </div>
           </div>
-        </div>
-        <div class="more-articles mob-v">
-          <a href="">Lire plus Articles...</a>
-          <i class="fa-solid fa-greater-than"></i>
+          <div class="more-articles mob-v">
+            <a href="">Lire plus Articles...</a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="m15.684 12l-4.95 4.95l-1.414-1.414L12.856 12L9.32 8.465l1.415-1.415z"
+              />
+            </svg>
+          </div>
+          <div class="arrows-container">
+            <span class="left-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2rem"
+                height="2rem"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M19.5 13H7.914l4.5 4.5L11 18.914L4.086 12L11 5.086L12.414 6.5l-4.5 4.5H19.5z"
+                />
+              </svg>
+            </span>
+            <span class="right-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2rem"
+                height="2rem"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M4.5 11h11.586l-4.5-4.5L13 5.086L19.914 12L13 18.914L11.586 17.5l4.5-4.5H4.5z"
+                />
+              </svg>
+            </span>
+          </div>
         </div>
       </section>
       <!-- End Articles Section -->
@@ -578,7 +1170,25 @@
             <li><a href="">Rejoignez-Nous</a></li>
             <li><a href="">FAQ</a></li>
             <li>
-              <i class="fa-solid fa-briefcase"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2rem"
+                height="2rem"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="#222"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm5-2V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m-4 5v.01"
+                  />
+                  <path d="M3 13a20 20 0 0 0 18 0" />
+                </g>
+              </svg>
               <a href="">Organisation événementielle pour les entreprises</a>
             </li>
           </ul>
@@ -607,32 +1217,83 @@
           <h5>Suivez-nous sur</h5>
           <ul class="follwo-us">
             <li>
-              <a href="">
-                <img
-                  src="/assets/images/instagram-icon.png"
-                  alt="Suivez-nous sur Instagram"
-                />
+              <a href="https://www.instagram.com/3ersi_dz/" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3em"
+                  height="3em"
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="#6c6c6c" d="M16 7a1 1 0 1 1 2 0a1 1 0 0 1-2 0" />
+                  <path
+                    fill="#6c6c6c"
+                    fill-rule="evenodd"
+                    d="M12 7.25a4.75 4.75 0 1 0 0 9.5a4.75 4.75 0 0 0 0-9.5M8.75 12a3.25 3.25 0 1 1 6.5 0a3.25 3.25 0 0 1-6.5 0"
+                    clip-rule="evenodd"
+                  />
+                  <path
+                    fill="#6c6c6c"
+                    fill-rule="evenodd"
+                    d="M17.258 2.833a47.7 47.7 0 0 0-10.516 0c-2.012.225-3.637 1.81-3.873 3.832a46 46 0 0 0 0 10.67c.236 2.022 1.86 3.607 3.873 3.832a47.8 47.8 0 0 0 10.516 0c2.012-.225 3.637-1.81 3.873-3.832a46 46 0 0 0 0-10.67c-.236-2.022-1.86-3.607-3.873-3.832m-10.35 1.49a46.2 46.2 0 0 1 10.184 0c1.33.15 2.395 1.199 2.55 2.517a44.4 44.4 0 0 1 0 10.32a2.89 2.89 0 0 1-2.55 2.516a46.2 46.2 0 0 1-10.184 0a2.89 2.89 0 0 1-2.55-2.516a44.4 44.4 0 0 1 0-10.32a2.89 2.89 0 0 1 2.55-2.516"
+                    clip-rule="evenodd"
+                  />
+                </svg>
               </a>
             </li>
             <li>
-              <a href="">
-                <img src="/assets/images/x-icon.png" alt="Suivez-nous sur X" />
+              <a href="https://x.com/3ersi_dz" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3em"
+                  height="3em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="#6c6c6c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="m13.081 10.712l-4.786-6.71a.6.6 0 0 0-.489-.252H5.28a.6.6 0 0 0-.488.948l6.127 8.59m2.162-2.576l6.127 8.59a.6.6 0 0 1-.488.948h-2.526a.6.6 0 0 1-.489-.252l-4.786-6.71m2.162-2.576l5.842-6.962m-8.004 9.538L5.077 20.25"
+                  />
+                </svg>
               </a>
             </li>
             <li>
-              <a href="">
-                <img
-                  src="/assets/images/youtube-icon.png"
-                  alt="Suivez-nous sur Youtube"
-                />
+              <a href="https://www.youtube.com/@3ersitv272" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3em"
+                  height="3em"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="#6c6c6c" fill-rule="evenodd" clip-rule="evenodd">
+                    <path
+                      d="M10.386 8.357A.75.75 0 0 0 9.25 9v6a.75.75 0 0 0 1.136.643l5-3a.75.75 0 0 0 0-1.286zM13.542 12l-2.792 1.675v-3.35z"
+                    />
+                    <path
+                      d="M17.03 4.641a64.5 64.5 0 0 0-10.06 0l-2.241.176a2.975 2.975 0 0 0-2.703 2.475a28.6 28.6 0 0 0 0 9.416a2.975 2.975 0 0 0 2.703 2.475l2.24.176c3.349.262 6.713.262 10.062 0l2.24-.176a2.975 2.975 0 0 0 2.703-2.475c.52-3.117.52-6.299 0-9.416a2.975 2.975 0 0 0-2.703-2.475zM7.087 6.137a63 63 0 0 1 9.828 0l2.24.175c.676.053 1.229.56 1.34 1.228a27 27 0 0 1 0 8.92a1.475 1.475 0 0 1-1.34 1.228l-2.24.175a63 63 0 0 1-9.828 0l-2.24-.175a1.475 1.475 0 0 1-1.34-1.228a27 27 0 0 1 0-8.92a1.475 1.475 0 0 1 1.34-1.228z"
+                    />
+                  </g>
+                </svg>
               </a>
             </li>
             <li>
-              <a href="">
-                <img
-                  src="/assets/images/tiktok-icon.png"
-                  alt="Suivez-nous sur Tiktok"
-                />
+              <a href="" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="3em"
+                  height="3em"
+                  viewBox="0 0 48 48"
+                >
+                  <path
+                    fill="none"
+                    stroke="#6c6c6c"
+                    stroke-linejoin="round"
+                    stroke-width="3.833"
+                    d="M21.358 19.14q-8.833-.426-12.28 6.298c-3.446 6.725-.598 17.729 10.9 17.729c11.5 0 11.832-11.112 11.832-12.276V17.875q3.69 2.336 6.22 2.813q2.533.476 3.22.422v-6.476q-2.342-.282-4.05-1.076c-1.709-.794-5.096-2.997-5.096-6.226q.003.024 0-2.499h-7.118q-.031 23.724 0 26.058c.031 2.334-1.78 5.6-5.45 5.6c-3.672 0-5.483-3.263-5.483-5.367c0-1.288.443-3.155 2.272-4.538c1.085-.82 2.59-1.148 5.033-1.148z"
+                  />
+                </svg>
               </a>
             </li>
           </ul>
