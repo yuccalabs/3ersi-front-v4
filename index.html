@@ -38,14 +38,64 @@
       </div>
       <span></span>
       <div class="header-container">
+        <div class="hamburger" id="hamburger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="2rem"
+            height="2rem"
+            viewBox="0 0 24 24"
+          >
+            <rect
+              width="18"
+              height="2"
+              x="3"
+              y="11"
+              fill="currentColor"
+              rx=".95"
+              ry=".95"
+            />
+            <rect
+              width="18"
+              height="2"
+              x="3"
+              y="16"
+              fill="currentColor"
+              rx=".95"
+              ry=".95"
+            />
+            <rect
+              width="18"
+              height="2"
+              x="3"
+              y="6"
+              fill="currentColor"
+              rx=".95"
+              ry=".95"
+            />
+          </svg>
+        </div>
         <div id="logo">
-          <img src="/assets/images/logo.svg" alt="logo company" />
+          <a href="/">
+            <img src="/assets/images/logo.svg" alt="logo company"
+          /></a>
         </div>
         <nav id="navmenu" class="navmenu">
           <ul>
             <li>
               Salles Et Réception
-              <i class="fa-solid fa-caret-down"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2rem"
+                height="2rem"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M5.307 8.713A.75.75 0 0 1 6 8.25h12a.75.75 0 0 1 .53 1.28l-6 6a.75.75 0 0 1-1.06 0l-6-6a.75.75 0 0 1-.163-.817"
+                  clip-rule="evenodd"
+                />
+              </svg>
               <ul class="dropdown">
                 <li><a href="">salle des fetes</a></li>
                 <li><a href="">Décoration</a></li>
@@ -83,10 +133,8 @@
         <div class="subscirbe">
           <button class="sign-up-btn">Connexion</button>
         </div>
-        <div class="humberger" id="humberger">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <aside>
+
+        <aside class="">
           <div class="aside-content">
             <div class="remove-aside">
               <i class="fa-solid fa-xmark"></i>
@@ -97,7 +145,7 @@
                   Salles Et Réception
                   <i class="fa-solid fa-chevron-right"></i>
                 </div>
-                <ul class="dropdown">
+                <ul class="dropdown animate">
                   <li><a href="">Tesdira et Robes</a></li>
                   <li><a href="">Coiffure et beauté</a></li>
                   <li><a href="">Machta</a></li>
@@ -110,10 +158,10 @@
                   <i class="fa-solid fa-chevron-right"></i>
                 </div>
                 <ul class="dropdown">
-                  <li><a href="">Tesdira et Robes</a></li>
-                  <li><a href="">Coiffure et beauté</a></li>
-                  <li><a href="">Machta</a></li>
-                  <li><a href="">Bijoux</a></li>
+                  <li class="animate"><a href="">Tesdira et Robes</a></li>
+                  <li class="animate"><a href="">Coiffure et beauté</a></li>
+                  <li class="animate"><a href="">Machta</a></li>
+                  <li class="animate"><a href="">Bijoux</a></li>
                 </ul>
               </li>
               <li>
@@ -153,10 +201,53 @@
       <!-- Start Hero Section -->
       <section class="hero">
         <div class="container">
-          <div class="img-container"></div>
+          <div class="img-container" id="aos" data-visible="false"></div>
           <div class="hero-content">
-            <div class="hero-main-text">
-              <div>
+            <div class="list-appear">
+              <div class="list-overlay"></div>
+              <div class="list-content">
+                <div class="title-service">
+                  <h4>Que Chercher Vous ?</h4>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="3rem"
+                    height="3rem"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243"
+                    />
+                  </svg>
+                </div>
+                <div class="input-container">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2rem"
+                    height="2rem"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+                    />
+                  </svg>
+                  <input
+                    type="text"
+                    class="type-service-list-mob"
+                    placeholder="categorie de la prestataires"
+                  />
+                </div>
+                <ul class="type-service-list-mob-v"></ul>
+                <ul class="location-service-list-mob-v"></ul>
+              </div>
+            </div>
+            <div class="hero-main-text" id="aos" data-visible="false">
+              <div id="aos" data-visible="false">
                 <h1>Amusez-Vous en organisant votre mariage</h1>
                 <h3>
                   Commencez a planifier votre mariage avec nous,
@@ -165,21 +256,28 @@
                     >c’est gratuit !</span
                   >
                 </h3>
-                <div class="search-space">
+                <div class="search-space" id="aos" data-visible="false">
                   <form>
                     <div class="input-container">
                       <div>
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="2rem"
+                          height="2rem"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+                          />
+                        </svg>
                         <input
                           type="text"
                           placeholder="Que charchez-vous ?"
                           class="type-service"
                         />
-                        <ul class="type-service-list">
-                          <li>Salle des fetes</li>
-                          <li>Decoration</li>
-                          <li>Traituers</li>
-                        </ul>
+
+                        <ul class="type-service-list"></ul>
                       </div>
                       <div>
                         <i class="fa-solid fa-location-dot"></i>
@@ -205,8 +303,8 @@
       </section>
       <!-- End Hero Section -->
       <!-- Start best vendors Section -->
-      <section class="best-vendors section">
-        <div class="headline">
+      <section class="best-vendors section" id="aos" data-visible="false">
+        <div class="headline" id="aos" data-visible="false">
           <h2>Trouvez les meilleurs prestataires</h2>
           <h3>
             Contactez des experts du mariage pour réaliser votre journée de
@@ -338,8 +436,8 @@
       </section>
       <!-- End best vendors Section -->
       <!-- Start best Discount Section -->
-      <section class="discount section">
-        <div class="headline">
+      <section class="discount section" id="aos" data-visible="false">
+        <div class="headline" id="aos" data-visible="false">
           <h2>Les meilleures promotions</h2>
           <h3>
             Découvrez des offres incroyables pour profiter de prix imbattables
@@ -506,18 +604,40 @@
             </div>
           </div>
         </div>
-        <div class="arrows-container">
-          <span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
-          <span class="right-arrow"
-            ><i class="fa-solid fa-arrow-right"></i
-          ></span>
+        <div class="arrows-container" id="aos" data-visible="false">
+          <span class="left-arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M19.5 13H7.914l4.5 4.5L11 18.914L4.086 12L11 5.086L12.414 6.5l-4.5 4.5H19.5z"
+              />
+            </svg>
+          </span>
+          <span class="right-arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M4.5 11h11.586l-4.5-4.5L13 5.086L19.914 12L13 18.914L11.586 17.5l4.5-4.5H4.5z"
+              />
+            </svg>
+          </span>
         </div>
       </section>
       <!--  End best Discount Section -->
       <!-- Start Wedding Planner Section -->
-      <section class="wedding-planner section">
+      <section class="wedding-planner section" id="aos" data-visible="false">
         <div class="container">
-          <div class="text-content">
+          <div class="text-content" id="aos" data-visible="false">
             <h4>Nous organisons votre mariage !</h4>
             <p>
               Découvrez le service <b><i>Wedding Planner.</i></b> Gagnez du
@@ -526,9 +646,9 @@
             </p>
             <button>Bientôt disponible</button>
           </div>
-          <div class="img-container">
+          <div class="img-container" id="aos" data-visible="false">
             <img
-              src="/assets/images/wedd-plan.jpg"
+              src="/assets/images/wedd-plan.webp"
               alt="3ersi.com est la meilleur organisateur de mariage"
             />
           </div>
@@ -536,8 +656,8 @@
       </section>
       <!-- End Wedding Planner Section -->
       <!-- Start Articles Section -->
-      <section class="section articles">
-        <div class="headline-container">
+      <section class="section articles" id="aos" data-visible="false">
+        <div class="headline-container" id="aos" data-visible="false">
           <div class="headline-content">
             <h2>Articles, idées et conseils ...</h2>
             <h3>
@@ -550,7 +670,7 @@
             <i class="fa-solid fa-chevron-right"></i>
           </div>
         </div>
-        <div class="category-parent">
+        <div class="category-parent" id="aos" data-visible="false">
           <div class="pesoudo">
             <div class="category-container container-boxes">
               <div class="category">
@@ -585,7 +705,7 @@
             <!-- </div> -->
           </div>
         </div>
-        <div class="articles-parent">
+        <div class="articles-parent" id="aos" data-visible="false">
           <div class="pesoudo">
             <div class="articles-container container-boxes">
               <article class="article box">
@@ -771,7 +891,7 @@
           </ul>
         </div>
       </div>
-      <div class="copy-right">&copy; 2025 3ersi.com - Tous droits réser</div>
+      <div class="copy-right">&copy; 2025 3ersi.com - Tous Droits Réservés</div>
     </footer>
     <!-- End Footer Section -->
 

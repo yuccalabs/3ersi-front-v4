@@ -1,3 +1,4 @@
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"); */
 /*--------------------------------------------------------------
 # Font & Color Variables
 --------------------------------------------------------------*/
@@ -164,17 +165,44 @@ i {
   justify-content: center;
   cursor: pointer;
 }
-.arrows-container span i {
-  font-size: 1.2rem;
+.arrows-container span:hover {
+  background-color: var(--primary-color);
+  transition: var(--hover-transition);
 }
-.arrows-container span:hover i {
-  color: var(--primary-color);
+.arrows-container span:hover svg path {
+  fill: var(--third-color);
+  -webkit-transition: var(--hover-transition);
+  -o-transition: var(--hover-transition);
   transition: var(--hover-transition);
 }
 @media (max-width: 991px) {
   .arrows-container {
     display: none;
   }
+}
+/* Animation On Scroll */
+#aos {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+#aos[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+/*  */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate {
+  animation: fadeIn 0.6s ease-in-out forwards;
 }
 /*--------------------------------------------------------------
 # Start Header Section
@@ -268,6 +296,7 @@ i {
   box-shadow: var(--shadow-box);
   border-radius: 4px;
   z-index: 2;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .header .header-container .navmenu ul li.active .dropdown {
   display: block;
@@ -287,10 +316,10 @@ i {
 .header .header-container .navmenu ul li .dropdown li:last-child {
   border: none;
 }
-.header .header-container .humberger {
+.header .header-container .hamburger {
   display: none;
 }
-.header .header-container .humberger i {
+.header .header-container .hamburger svg {
   color: var(--primary-color);
   cursor: pointer;
   font-size: 4rem;
@@ -304,6 +333,12 @@ i {
   width: 100%;
   display: none;
   z-index: 2;
+}
+.header .header-container aside.show {
+  display: flex;
+}
+.no-scroll {
+  overflow: hidden;
 }
 .header .header-container aside .aside-content {
   width: 60%;
@@ -320,6 +355,7 @@ i {
 .header .header-container aside .aside-content .remove-aside i {
   font-size: 2.6rem;
   color: #8c8c8c;
+  cursor: pointer;
 }
 
 .header .header-container aside .aside-content ul li div {
@@ -386,7 +422,7 @@ i {
   .header .header-container {
     justify-content: space-between;
   }
-  .header .header-container .humberger {
+  .header .header-container .hamburger {
     display: block;
   }
 }
@@ -408,7 +444,7 @@ i {
   top: 0;
   left: 0;
   z-index: -1;
-  background: url("/assets/images/herosection.jpg") left / cover no-repeat;
+  background: url("/assets/images/herosection.webp") left / cover no-repeat;
 }
 .hero .img-container img {
   width: 100%;
@@ -469,8 +505,7 @@ i {
   position: relative;
   flex: 1 1 50%;
 }
-
-.hero .container .hero-content div i {
+.hero .container .hero-content form .input-container svg {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -518,6 +553,8 @@ i {
   top: 100%;
   left: 0;
   width: 100%;
+  max-height: 145px;
+  overflow-y: auto;
   background: #fff;
   box-shadow: var(--shadow-box);
   z-index: 2;
@@ -537,8 +574,85 @@ i {
 .hero .container .hero-content .location-service-list li:hover {
   color: var(--primary-color);
 }
+.hero .container .hero-content .list-appear {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+.hero .container .hero-content .list-appear .list-overlay {
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 10%;
+}
+.hero .container .hero-content .list-appear .list-content {
+  height: 90%;
 
-@media (max-width: 991px) {
+  background-color: var(--background-color);
+  border-radius: 1rem 1rem 0 0;
+  padding: 4rem 3rem;
+}
+.hero .container .hero-content .list-appear .list-content .title-service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero .container .hero-content .list-appear .list-content .title-service h4 {
+  font-size: 2rem;
+}
+.hero .container .hero-content .list-appear .list-content .input-container {
+  position: relative;
+  margin: 2rem 0 3rem;
+}
+.hero .container .hero-content .list-appear .list-content .input-container svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+.hero .container .hero-content .list-appear .input-container input {
+  border-radius: 1.4rem;
+  height: 5rem;
+  font-size: 1.8rem;
+}
+.hero
+  .container
+  .hero-content
+  .list-appear
+  .input-container
+  input::placeholder {
+  font-size: 1.8rem;
+}
+.hero .container .hero-content .list-appear .list-content ul {
+  overflow-y: auto;
+  height: 65%;
+}
+.hero .container .hero-content .list-appear .list-content ul li {
+  padding: 1.8rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  border-bottom: 1px solid #eee;
+}
+.hero .container .hero-content .list-appear ul::-webkit-scrollbar {
+  display: none;
+}
+.hero .container .hero-content .list-appear ul {
+  -ms-overflow-style: none; /* For Internet Explorer */
+  scrollbar-width: none; /* For Firefox */
+}
+@media (min-width: 991px) {
+  .hero .container .hero-content .type-service-list.show,
+  .hero .container .hero-content .location-service-list.show {
+    display: block;
+  }
+}
+@media (max-width: 992px) {
+  .hero .container .hero-content .list-appear.show {
+    display: block;
+  }
   .hero .container .hero-content form {
     flex-wrap: wrap;
     gap: 1rem;
@@ -581,6 +695,7 @@ i {
   }
   .hero .container .hero-content {
     align-items: end;
+    position: relative;
   }
 
   .hero .container .hero-content .hero-main-text {
@@ -758,6 +873,7 @@ i {
   font-weight: 300;
   margin: 2rem 0 3.2rem;
 }
+
 .wedding-planner .container .text-content button {
   padding: 8px 9px;
   background-color: var(--primary-color);
@@ -767,6 +883,14 @@ i {
   border: none;
   border-radius: 7px;
   cursor: pointer;
+}
+.wedding-planner .container .text-content button:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  -webkit-transition: var(--hover-transition);
+  -o-transition: var(--hover-transition);
+  transition: var(--hover-transition);
 }
 .wedding-planner .container .img-container {
   display: flex;
@@ -1018,4 +1142,17 @@ footer .copy-right {
   }
 }
 /* End Footer Section */
-
+/*--------------------------------------------------------------
+# Listing Page
+--------------------------------------------------------------*/
+/* Start Listing Page */
+.hero .container.listing {
+  height: 40vh;
+}
+.hero .container.listing .img-container {
+  background: url("/assets/images/best-prest.jpg") left / cover no-repeat;
+}
+.hero .container.listing .hero-main-text h1 {
+  font-size: 2.6rem;
+}
+/* End Listing Page */
