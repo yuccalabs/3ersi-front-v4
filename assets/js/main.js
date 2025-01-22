@@ -1,7 +1,7 @@
 "use strict";
 // control the navbar
 const navItems = document.querySelectorAll("#navmenu ul li");
-const humberger = document.querySelector("#humberger");
+const hamburger = document.querySelector("#hamburger");
 const aside = document.querySelector("aside");
 const asideContent = document.querySelector("aside .aside-content");
 const asideOverlay = document.querySelector("aside .aside-overlay");
@@ -20,6 +20,7 @@ navItems.forEach((navItem) => {
     });
   });
 });
+
 asideNavItems.forEach((aNavItem) => {
   aNavItem.addEventListener("click", () => {
     aNavItem.classList.toggle("active");
@@ -31,22 +32,28 @@ asideNavItems.forEach((aNavItem) => {
   });
 });
 
+function showElement(ele) {
+  ele.classList.add("show");
+}
+function hideElement(ele) {
+  ele.classList.remove("show");
+}
+
 // open the sidebar on mobile
-humberger.addEventListener("click", () => {
-  asideContent.style.transform = "translateX(0%)";
-  asideOverlay.style.width = "40%";
-  aside.style.display = "flex";
+hamburger.addEventListener("click", () => {
+  showElement(aside);
+  serviceListMob.classList.remove("show");
+  document.body.classList.add("no-scroll");
 });
+
 // remove the sidebar
 removeAside.addEventListener("click", () => {
-  asideContent.style.transform = "translateX(-100%)";
-  asideOverlay.style.width = "0%";
-  aside.style.display = "none";
+  hideElement(aside);
+  document.body.classList.remove("no-scroll");
 });
 asideOverlay.addEventListener("click", () => {
-  asideContent.style.transform = "translateX(-100%)";
-  asideOverlay.style.width = "0%";
-  aside.style.display = "none";
+  hideElement(aside);
+  document.body.classList.remove("no-scroll");
 });
 
 //
@@ -55,12 +62,11 @@ const listItems = [
   "Photos et vidéos",
   "Traiteurs",
   "Musique",
-  "Decoration",
+  "Décoration",
   "Gâteaux et pâtisseries",
   "Tenues de mariage",
   "Machta",
   "Coiffure & Beauté",
-  "Décoration",
   "Bijoux et accessoires",
 ];
 const listItemsTwo = [
@@ -94,7 +100,6 @@ const listItemsTwo = [
   "El Bayadh",
   "Illizi",
   "Bordj Bou Arreridj",
-  "Bouira",
   "Tamanrasset",
   "Tebessa",
   "Tlemcen",
@@ -124,19 +129,73 @@ const inputTypeService = document.querySelector(".type-service");
 const inputLocationService = document.querySelector(".location-service");
 const typeServiceList = document.querySelector(".type-service-list");
 const locationServiceList = document.querySelector(".location-service-list");
-
-function listServiceVisibilty(input, ulShowed, ulHidden) {
-  input.addEventListener("focus", () => {
-    ulShowed.style.display = "block";
-    ulHidden.style.display = "none";
-  });
-}
-listServiceVisibilty(inputTypeService, typeServiceList, locationServiceList);
-listServiceVisibilty(
-  inputLocationService,
-  locationServiceList,
-  typeServiceList
+const serviceListMob = document.querySelector(".list-appear");
+const serviceListMobOverlay = document.querySelector(
+  ".list-appear .list-overlay"
 );
+const serviceListMobUl = document.querySelector(
+  ".list-appear .type-service-list-mob-v"
+);
+const serviceListMobUlTow = document.querySelector(
+  ".list-appear .location-service-list-mob-v"
+);
+const titleService = document.querySelector(".list-appear .title-service h4");
+const inputService = document.querySelector(".list-appear input");
+const removeServiceList = document.querySelector(
+  ".list-appear .title-service svg"
+);
+
+// show the list when focusing on the input
+inputTypeService.addEventListener("focus", () => {
+  serviceListMobUlTow.style.display = "none";
+  serviceListMobUl.style.display = "block";
+
+  inputService.value = "";
+
+  showElement(typeServiceList);
+  showElement(serviceListMob);
+  hideElement(locationServiceList);
+
+  titleService.textContent = "Que Chercher Vous ?";
+  inputService.placeholder = "Chercher un service";
+
+  serviceListMobUl.innerHTML = "";
+  listItems.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    serviceListMobUl.appendChild(li);
+  });
+  document.body.classList.add("no-scroll");
+});
+
+inputLocationService.addEventListener("focus", () => {
+  serviceListMobUl.style.display = "none";
+  serviceListMobUlTow.style.display = "block";
+  inputService.value = "";
+  showElement(locationServiceList);
+  showElement(serviceListMob);
+  hideElement(typeServiceList);
+
+  titleService.textContent = "Ou ?";
+  inputService.placeholder = "Chercher une ville";
+
+  serviceListMobUlTow.innerHTML = "";
+  listItemsTwo.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    serviceListMobUlTow.appendChild(li);
+  });
+  document.body.classList.add("no-scroll");
+});
+
+serviceListMobOverlay.addEventListener("click", () => {
+  hideElement(serviceListMob);
+  document.body.classList.remove("no-scroll");
+});
+removeServiceList.addEventListener("click", () => {
+  hideElement(serviceListMob);
+  document.body.classList.remove("no-scroll");
+});
 
 // render the list when the input changes
 function renderList(input, ul, items) {
@@ -164,21 +223,23 @@ function renderList(input, ul, items) {
 }
 renderList(inputTypeService, typeServiceList, listItems);
 renderList(inputLocationService, locationServiceList, listItemsTwo);
+renderList(inputService, serviceListMobUl, listItems);
+renderList(inputService, serviceListMobUlTow, listItemsTwo);
 
 // close the dropDownMenu when clicking on other parts
 window.addEventListener("click", (e) => {
   navItems.forEach((item) => {
-    if (e.target !== item) {
+    if (e.target !== item && e.target !== item.children[0]) {
       item.classList.remove("active");
     }
   });
   if (e.target !== inputTypeService && e.target !== inputLocationService) {
-    locationServiceList.style.display = "none";
-    typeServiceList.style.display = "none";
+    hideElement(locationServiceList);
+    hideElement(typeServiceList);
   }
 });
 
-// scroll horizantallay in large view port
+// scroll horizantallay with Click button in large view port
 document.addEventListener("DOMContentLoaded", () => {
   function horizontalScroll(containerSelector, arrowSelector) {
     const container = document.querySelector(containerSelector);
@@ -205,4 +266,25 @@ document.addEventListener("DOMContentLoaded", () => {
   horizontalScroll(".discount-container", ".discount");
   horizontalScroll(".category-container", ".category-parent");
   horizontalScroll(".articles-container", ".articles-parent");
+});
+
+// Animation on scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("#aos");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.setAttribute("data-visible", "true");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
 });
