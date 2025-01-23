@@ -20,6 +20,7 @@ navItems.forEach((navItem) => {
     });
   });
 });
+
 asideNavItems.forEach((aNavItem) => {
   aNavItem.addEventListener("click", () => {
     aNavItem.classList.toggle("active");
@@ -42,10 +43,6 @@ function hideElement(ele) {
 hamburger.addEventListener("click", () => {
   showElement(aside);
   serviceListMob.classList.remove("show");
-  scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
   document.body.classList.add("no-scroll");
 });
 
@@ -148,18 +145,38 @@ const removeServiceList = document.querySelector(
   ".list-appear .title-service svg"
 );
 
-// handle input focus event on mobile devices
+// Function to handle input focus event on mobile devices
 function handleInputFocus(event) {
-  // prevent the keyboard from showing up on mobile devices
+  // Prevent the keyboard from showing up on mobile devices
   if (isMobileDevice()) {
     event.preventDefault();
   }
+  console.log("focus");
 }
 
-// detect if the user is on a mobile device
+// Function to detect if the user is on a mobile device
 function isMobileDevice() {
-  return /Mobi|Android/i.test(navigator.userAgent);
+  return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
+
+// Function to add readonly attribute based on screen size
+function addReadonlyAttribute() {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    inputTypeService.setAttribute("readonly", true);
+    inputLocationService.setAttribute("readonly", true);
+    console.log("i add it");
+  } else {
+    inputTypeService.removeAttribute("readonly");
+    inputLocationService.removeAttribute("readonly");
+    console.log("i remove it");
+  }
+}
+
+// Call the function to add readonly attribute on page load
+addReadonlyAttribute();
+
+// Call the function to add readonly attribute on window resize
+window.addEventListener("resize", addReadonlyAttribute);
 
 // show the list when focusing on the input
 inputTypeService.addEventListener("focus", (e) => {
@@ -182,6 +199,7 @@ inputTypeService.addEventListener("focus", (e) => {
     li.textContent = item;
     serviceListMobUl.appendChild(li);
   });
+
   scrollTo({
     top: 0,
     behavior: "smooth",
@@ -207,6 +225,7 @@ inputLocationService.addEventListener("focus", (e) => {
     li.textContent = item;
     serviceListMobUlTow.appendChild(li);
   });
+
   scrollTo({
     top: 0,
     behavior: "smooth",
