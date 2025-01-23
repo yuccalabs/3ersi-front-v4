@@ -417,6 +417,7 @@ i {
 @media (max-width: 769px) {
   .no-scroll {
     overflow: hidden;
+    -webkit-overflow-scrolling: none; /* For iOS Safari */
   }
 }
 .header .header-container aside .aside-content {
