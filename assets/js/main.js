@@ -151,12 +151,32 @@ function handleInputFocus(event) {
   if (isMobileDevice()) {
     event.preventDefault();
   }
+  console.log("focus");
 }
 
 // Function to detect if the user is on a mobile device
 function isMobileDevice() {
   return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
+
+// Function to add readonly attribute based on screen size
+function addReadonlyAttribute() {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    inputTypeService.setAttribute("readonly", true);
+    inputLocationService.setAttribute("readonly", true);
+    console.log("i add it");
+  } else {
+    inputTypeService.removeAttribute("readonly");
+    inputLocationService.removeAttribute("readonly");
+    console.log("i remove it");
+  }
+}
+
+// Call the function to add readonly attribute on page load
+addReadonlyAttribute();
+
+// Call the function to add readonly attribute on window resize
+window.addEventListener("resize", addReadonlyAttribute);
 
 // show the list when focusing on the input
 inputTypeService.addEventListener("focus", (e) => {
