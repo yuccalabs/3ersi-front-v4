@@ -413,9 +413,10 @@ i {
 .header .header-container aside.show {
   display: flex;
 }
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   .no-scroll {
     overflow: hidden;
+    -webkit-overflow-scrolling: none; /* For iOS Safari */
   }
 }
 .header .header-container aside .aside-content {

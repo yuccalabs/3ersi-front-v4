@@ -148,8 +148,22 @@ const removeServiceList = document.querySelector(
   ".list-appear .title-service svg"
 );
 
+// handle input focus event on mobile devices
+function handleInputFocus(event) {
+  // prevent the keyboard from showing up on mobile devices
+  if (isMobileDevice()) {
+    event.preventDefault();
+  }
+}
+
+// detect if the user is on a mobile device
+function isMobileDevice() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
+
 // show the list when focusing on the input
-inputTypeService.addEventListener("focus", () => {
+inputTypeService.addEventListener("focus", (e) => {
+  handleInputFocus(e);
   serviceListMobUlTow.style.display = "none";
   serviceListMobUl.style.display = "block";
 
@@ -175,7 +189,8 @@ inputTypeService.addEventListener("focus", () => {
   document.body.classList.add("no-scroll");
 });
 
-inputLocationService.addEventListener("focus", () => {
+inputLocationService.addEventListener("focus", (e) => {
+  handleInputFocus(e);
   serviceListMobUl.style.display = "none";
   serviceListMobUlTow.style.display = "block";
   inputService.value = "";
