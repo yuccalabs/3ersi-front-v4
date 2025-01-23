@@ -414,8 +414,10 @@ i {
 .header .header-container aside.show {
   display: flex;
 }
-.no-scroll {
-  overflow: hidden;
+@media (max-width: 769px) {
+  .no-scroll {
+    overflow: hidden;
+  }
 }
 .header .header-container aside .aside-content {
   width: 60%;
@@ -689,7 +691,10 @@ i {
 .hero .container .hero-content .location-service-list li:hover {
   color: var(--primary-color);
 }
-.hero .container .hero-content .list-appear {
+body {
+  position: relative;
+}
+body .list-appear {
   display: none;
   position: absolute;
   top: 0;
@@ -697,41 +702,48 @@ i {
   height: 100vh;
   z-index: 10;
 }
-.hero .container .hero-content .list-appear .list-overlay {
+body .list-appear .list-overlay {
   background-color: rgba(0, 0, 0, 0.25);
   height: 10%;
 }
-.hero .container .hero-content .list-appear .list-content {
+body .list-appear .list-content {
   height: 90%;
 
   background-color: var(--background-color);
   border-radius: 1rem 1rem 0 0;
   padding: 4rem 3rem;
 }
-.hero .container .hero-content .list-appear .list-content .title-service {
+body .list-appear .list-content .title-service {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.hero .container .hero-content .list-appear .list-content .title-service h4 {
+body .list-appear .list-content .title-service h4 {
   font-size: 2rem;
 }
-.hero .container .hero-content .list-appear .list-content .input-container {
+body .list-appear .list-content .input-container {
   position: relative;
   margin: 2rem 0 3rem;
 }
-.hero .container .hero-content .list-appear .list-content .input-container svg {
+body .list-appear .list-content .input-container svg {
   position: absolute;
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
   color: var(--primary-color);
-  font-size: 2rem;
 }
-.hero .container .hero-content .list-appear .input-container input {
+body .list-appear .input-container input {
+  width: 100%;
+  height: 5rem;
   border-radius: 1.4rem;
   height: 5rem;
   font-size: 1.8rem;
+  padding: 6px 8px 6px 35px;
+  border: 1px solid #6c6c6c;
+  color: var(--secondaly-color);
+}
+body .list-appear .input-container input:focus {
+  outline: none;
 }
 .hero
   .container
@@ -741,20 +753,20 @@ i {
   input::placeholder {
   font-size: 1.8rem;
 }
-.hero .container .hero-content .list-appear .list-content ul {
+body .list-appear .list-content ul {
   overflow-y: auto;
-  height: 65%;
+  height: 70%;
 }
-.hero .container .hero-content .list-appear .list-content ul li {
+body .list-appear .list-content ul li {
   padding: 1.8rem;
   font-size: 1.8rem;
   font-weight: 400;
   border-bottom: 1px solid #eee;
 }
-.hero .container .hero-content .list-appear ul::-webkit-scrollbar {
+body .list-appear ul::-webkit-scrollbar {
   display: none;
 }
-.hero .container .hero-content .list-appear ul {
+body .list-appear ul {
   -ms-overflow-style: none; /* For Internet Explorer */
   scrollbar-width: none; /* For Firefox */
 }
@@ -765,7 +777,7 @@ i {
   }
 }
 @media (max-width: 992px) {
-  .hero .container .hero-content .list-appear.show {
+  body .list-appear.show {
     display: block;
   }
   .hero .container .hero-content form {

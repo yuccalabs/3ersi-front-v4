@@ -165,6 +165,11 @@ inputTypeService.addEventListener("focus", () => {
     li.textContent = item;
     serviceListMobUl.appendChild(li);
   });
+
+  scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
   document.body.classList.add("no-scroll");
 });
 
@@ -184,6 +189,11 @@ inputLocationService.addEventListener("focus", () => {
     const li = document.createElement("li");
     li.textContent = item;
     serviceListMobUlTow.appendChild(li);
+  });
+
+  scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
   document.body.classList.add("no-scroll");
 });
