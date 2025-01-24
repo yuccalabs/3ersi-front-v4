@@ -30,8 +30,11 @@
       <div class="list-overlay"></div>
       <div class="list-content">
         <div class="title-service">
-          <h4>Que Chercher Vous ?</h4>
+          <h4></h4>
           <svg
+            tabindex="0"
+            role="button"
+            aria-label="fermer la liste"
             xmlns="http://www.w3.org/2000/svg"
             width="3rem"
             height="3rem"
@@ -49,6 +52,8 @@
         </div>
         <div class="input-container">
           <svg
+            role="img"
+            aria-label="rechercher une catégorie de service"
             xmlns="http://www.w3.org/2000/svg"
             width="3rem"
             height="3rem"
@@ -73,8 +78,10 @@
     <header class="header">
       <div class="vendors-gate">
         <h3 class="vendors-link" style="font-size: 1.4rem">
-          <a href="#"
-            ><svg
+          <a href="#" aria-label="s'inscrire en tant que prestataire">
+            <svg
+              role="img"
+              aria-label="s'inscrire en tant que prestataire"
               xmlns="http://www.w3.org/2000/svg"
               width="2rem"
               height="2rem"
@@ -101,6 +108,9 @@
       <div class="header-container">
         <div class="hamburger" id="hamburger">
           <svg
+            tabindex="0"
+            role="button"
+            aria-label="ouvrir le menu"
             xmlns="http://www.w3.org/2000/svg"
             width="2rem"
             height="2rem"
@@ -136,15 +146,22 @@
           </svg>
         </div>
         <div id="logo">
-          <a href="/">
+          <a href="/" aria-label="aller à la page d'accueil">
             <img src="/assets/images/logo.svg" alt="logo company"
           /></a>
         </div>
-        <nav id="navmenu" class="navmenu">
+        <nav id="navmenu" class="navmenu" aria-label="Main Navigation">
           <ul>
-            <li>
+            <li
+              role="button"
+              tabindex="0"
+              aria-expanded="false"
+              aria-controls="dropdown-salles"
+            >
               Salles Et Réception
               <svg
+                role="button"
+                aria-label="ouvrir la list des Salles Et Réception"
                 xmlns="http://www.w3.org/2000/svg"
                 width="2rem"
                 height="2rem"
@@ -158,17 +175,24 @@
                 />
               </svg>
               <ul class="dropdown">
-                <li><a href="">salle des fetes</a></li>
+                <li><a href="">Salle des Fêtes</a></li>
                 <li><a href="">Décoration</a></li>
                 <li><a href="">Musique</a></li>
-                <li><a href="">Photo & Video</a></li>
+                <li><a href="">Photo & Vidéo</a></li>
                 <li><a href="">Gâteaux et Pâtisseries</a></li>
                 <li><a href="">Traiteurs</a></li>
               </ul>
             </li>
-            <li>
+            <li
+              role="button"
+              tabindex="0"
+              aria-expanded="false"
+              aria-controls="dropdown-mariée"
+            >
               La Mariée
               <svg
+                role="button"
+                aria-label="ouvrir la list du La Mariée"
                 xmlns="http://www.w3.org/2000/svg"
                 width="2rem"
                 height="2rem"
@@ -182,17 +206,34 @@
                 />
               </svg>
               <ul class="dropdown">
-                <li><a href="">Tesdira et Robes</a></li>
-                <li><a href="">Coiffure et beauté</a></li>
-                <li><a href="">Machta</a></li>
-                <li><a href="">Bijoux</a></li>
+                <li>
+                  <a href="">Tesdira et Robes</a>
+                </li>
+                <li>
+                  <a href="">Coiffure et beauté</a>
+                </li>
+                <li>
+                  <a href="">Machta</a>
+                </li>
+                <li>
+                  <a href="">Bijoux</a>
+                </li>
               </ul>
             </li>
-            <li><a href="">Wedding Planner</a></li>
-            <li><a href="">Blog</a></li>
             <li>
+              <a href="">Wedding Planner</a>
+            </li>
+            <li><a href="">Blog</a></li>
+            <li
+              role="button"
+              tabindex="0"
+              aria-expanded="false"
+              aria-controls="dropdown-autres-services"
+            >
               Autres Services
               <svg
+                role="button"
+                aria-label="ouvrir la list des Autres Services"
                 xmlns="http://www.w3.org/2000/svg"
                 width="2rem"
                 height="2rem"
@@ -222,6 +263,9 @@
           <div class="aside-content">
             <div class="remove-aside">
               <svg
+                tabindex="0"
+                role="button"
+                aria-label="fermer le menu"
                 xmlns="http://www.w3.org/2000/svg"
                 width="3rem"
                 height="3rem"
@@ -237,11 +281,13 @@
                 />
               </svg>
             </div>
-            <ul id="asideList">
-              <li>
-                <div>
+            <ul id="asideList" role="menu">
+              <li role="menuitem">
+                <div aria-expanded="false" aria-controls="dropdown-salles">
                   Salles Et Réception
                   <svg
+                    role="button"
+                    aria-label="ouvrir le sous-menu des Salles Et Réception"
                     xmlns="http://www.w3.org/2000/svg"
                     width="2rem"
                     height="2rem"
@@ -253,17 +299,19 @@
                     />
                   </svg>
                 </div>
-                <ul class="dropdown animate">
+                <ul class="dropdown" id="dropdown-salles">
                   <li><a href="">Tesdira et Robes</a></li>
                   <li><a href="">Coiffure et beauté</a></li>
                   <li><a href="">Machta</a></li>
                   <li><a href="">Bijoux</a></li>
                 </ul>
               </li>
-              <li>
-                <div>
+              <li role="menuitem">
+                <div aria-expanded="false" aria-controls="dropdown-mariée">
                   La Mariée
                   <svg
+                    role="button"
+                    aria-label="ouvrir le sous-menu de La Mariée"
                     xmlns="http://www.w3.org/2000/svg"
                     width="2rem"
                     height="2rem"
@@ -275,25 +323,30 @@
                     />
                   </svg>
                 </div>
-                <ul class="dropdown">
-                  <li class="animate"><a href="">Tesdira et Robes</a></li>
-                  <li class="animate"><a href="">Coiffure et beauté</a></li>
-                  <li class="animate"><a href="">Machta</a></li>
-                  <li class="animate"><a href="">Bijoux</a></li>
+                <ul class="dropdown" id="dropdown-mariée">
+                  <li><a href="">Tesdira et Robes</a></li>
+                  <li><a href="">Coiffure et beauté</a></li>
+                  <li><a href="">Machta</a></li>
+                  <li><a href="">Bijoux</a></li>
                 </ul>
               </li>
-              <li>
+              <li role="menuitem">
                 <div>
                   <a href="">Wedding Planner</a>
                 </div>
               </li>
-              <li>
+              <li role="menuitem">
                 <div><a href="">Blog</a></div>
               </li>
-              <li>
-                <div>
+              <li role="menuitem">
+                <div
+                  aria-expanded="false"
+                  aria-controls="dropdown-autres-services"
+                >
                   Autres Services
                   <svg
+                    role="button"
+                    aria-label="ouvrir le sous-menu des Autres Services"
                     xmlns="http://www.w3.org/2000/svg"
                     width="2rem"
                     height="2rem"
@@ -305,7 +358,7 @@
                     />
                   </svg>
                 </div>
-                <ul class="dropdown">
+                <ul class="dropdown" id="dropdown-autres-services">
                   <li><a href="">Coiffure homme</a></li>
                   <li><a href="">Location de voiture</a></li>
                   <li><a href="">Voyage de noces</a></li>
@@ -346,6 +399,8 @@
                     <div class="input-container">
                       <div>
                         <svg
+                          role="img"
+                          aria-label="rechercher une catégorie de service"
                           xmlns="http://www.w3.org/2000/svg"
                           width="2rem"
                           height="2rem"
@@ -361,12 +416,13 @@
                           placeholder="Que charchez-vous ?"
                           class="type-service"
                         />
-
                         <ul class="type-service-list"></ul>
                       </div>
                       <div>
                         <div>
                           <svg
+                            role="img"
+                            aria-label="rechercher un lieu de service"
                             xmlns="http://www.w3.org/2000/svg"
                             width="2rem"
                             height="2rem"
@@ -394,7 +450,6 @@
           </div>
         </div>
       </section>
-
       <!-- End Hero Section -->
       <!-- Start best vendors Section -->
       <section class="best-vendors section" id="aos" data-visible="false">
@@ -408,254 +463,242 @@
         <div class="pesoudo">
           <div class="vendors-container container-boxes">
             <div class="box">
-              <img
-                src="/assets/images/best-prest.jpg"
-                alt="le meilleur prestataire"
-              />
-              <div class="icon-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="3rem"
-                  height="3rem"
-                  viewBox="0 0 14 14"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+              <a href="">
+                <img
+                  src="/assets/images/best-prest.jpg"
+                  alt="le meilleur prestataire"
+                />
+                <div class="icon-container">
+                  <svg
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="3rem"
+                    height="3rem"
+                    viewBox="0 0 14 14"
                   >
-                    <path
-                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
-                    />
-                    <path
-                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <div class="box-text-content">
-                <h4>Salle des fêtes</h4>
-                <p>
-                  Explorez des salles de fêtes exceptionnelles pour vos moments
-                  inoubliables.
-                </p>
-              </div>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                      />
+                      <path
+                        d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div class="box-text-content">
+                  <h4>Salle des fêtes</h4>
+                  <p>
+                    Explorez des salles de fêtes exceptionnelles pour vos
+                    moments inoubliables.
+                  </p>
+                </div>
+              </a>
             </div>
             <div class="box">
-              <img
-                src="/assets/images/best-prest.jpg"
-                alt="le meilleur prestataire"
-              />
-              <div class="icon-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="3rem"
-                  height="3rem"
-                  viewBox="0 0 14 14"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+              <a href="">
+                <img
+                  src="/assets/images/best-prest.jpg"
+                  alt="le meilleur prestataire"
+                />
+                <div class="icon-container">
+                  <svg
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="3rem"
+                    height="3rem"
+                    viewBox="0 0 14 14"
                   >
-                    <path
-                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
-                    />
-                    <path
-                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <div class="box-text-content">
-                <h4>Salle des fêtes</h4>
-                <p>
-                  Explorez des salles de fêtes exceptionnelles pour vos moments
-                  inoubliables.
-                </p>
-              </div>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                      />
+                      <path
+                        d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div class="box-text-content">
+                  <h4>Salle des fêtes</h4>
+                  <p>
+                    Explorez des salles de fêtes exceptionnelles pour vos
+                    moments inoubliables.
+                  </p>
+                </div>
+              </a>
             </div>
             <div class="box">
-              <img
-                src="/assets/images/best-prest.jpg"
-                alt="le meilleur prestataire"
-              />
-              <div class="icon-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="3rem"
-                  height="3rem"
-                  viewBox="0 0 14 14"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+              <a href="">
+                <img
+                  src="/assets/images/best-prest.jpg"
+                  alt="le meilleur prestataire"
+                />
+                <div class="icon-container">
+                  <svg
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="3rem"
+                    height="3rem"
+                    viewBox="0 0 14 14"
                   >
-                    <path
-                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
-                    />
-                    <path
-                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <div class="box-text-content">
-                <h4>Salle des fêtes</h4>
-                <p>
-                  Explorez des salles de fêtes exceptionnelles pour vos moments
-                  inoubliables.
-                </p>
-              </div>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                      />
+                      <path
+                        d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div class="box-text-content">
+                  <h4>Salle des fêtes</h4>
+                  <p>
+                    Explorez des salles de fêtes exceptionnelles pour vos
+                    moments inoubliables.
+                  </p>
+                </div>
+              </a>
             </div>
             <div class="box">
-              <img
-                src="/assets/images/best-prest.jpg"
-                alt="le meilleur prestataire"
-              />
-              <div class="icon-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="3rem"
-                  height="3rem"
-                  viewBox="0 0 14 14"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+              <a href="">
+                <img
+                  src="/assets/images/best-prest.jpg"
+                  alt="le meilleur prestataire"
+                />
+                <div class="icon-container">
+                  <svg
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="3rem"
+                    height="3rem"
+                    viewBox="0 0 14 14"
                   >
-                    <path
-                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
-                    />
-                    <path
-                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <div class="box-text-content">
-                <h4>Salle des fêtes</h4>
-                <p>
-                  Explorez des salles de fêtes exceptionnelles pour vos moments
-                  inoubliables.
-                </p>
-              </div>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                      />
+                      <path
+                        d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div class="box-text-content">
+                  <h4>Salle des fêtes</h4>
+                  <p>
+                    Explorez des salles de fêtes exceptionnelles pour vos
+                    moments inoubliables.
+                  </p>
+                </div>
+              </a>
             </div>
             <div class="box">
-              <img
-                src="/assets/images/best-prest.jpg"
-                alt="le meilleur prestataire"
-              />
-              <div class="icon-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="3rem"
-                  height="3rem"
-                  viewBox="0 0 14 14"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+              <a href="">
+                <img
+                  src="/assets/images/best-prest.jpg"
+                  alt="le meilleur prestataire"
+                />
+                <div class="icon-container">
+                  <svg
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="3rem"
+                    height="3rem"
+                    viewBox="0 0 14 14"
                   >
-                    <path
-                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
-                    />
-                    <path
-                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <div class="box-text-content">
-                <h4>Salle des fêtes</h4>
-                <p>
-                  Explorez des salles de fêtes exceptionnelles pour vos moments
-                  inoubliables.
-                </p>
-              </div>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                      />
+                      <path
+                        d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div class="box-text-content">
+                  <h4>Salle des fêtes</h4>
+                  <p>
+                    Explorez des salles de fêtes exceptionnelles pour vos
+                    moments inoubliables.
+                  </p>
+                </div>
+              </a>
             </div>
             <div class="box">
-              <img
-                src="/assets/images/best-prest.jpg"
-                alt="le meilleur prestataire"
-              />
-              <div class="icon-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="3rem"
-                  height="3rem"
-                  viewBox="0 0 14 14"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+              <a href="">
+                <img
+                  src="/assets/images/best-prest.jpg"
+                  alt="le meilleur prestataire"
+                />
+                <div class="icon-container">
+                  <svg
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="3rem"
+                    height="3rem"
+                    viewBox="0 0 14 14"
                   >
-                    <path
-                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
-                    />
-                    <path
-                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <div class="box-text-content">
-                <h4>Salle des fêtes</h4>
-                <p>
-                  Explorez des salles de fêtes exceptionnelles pour vos moments
-                  inoubliables.
-                </p>
-              </div>
-            </div>
-            <div class="box">
-              <img
-                src="/assets/images/best-prest.jpg"
-                alt="le meilleur prestataire"
-              />
-              <div class="icon-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="3rem"
-                  height="3rem"
-                  viewBox="0 0 14 14"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
-                    />
-                    <path
-                      d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <div class="box-text-content">
-                <h4>Salle des fêtes</h4>
-                <p>
-                  Explorez des salles de fêtes exceptionnelles pour vos moments
-                  inoubliables.
-                </p>
-              </div>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35V7.811ZM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25"
+                      />
+                      <path
+                        d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div class="box-text-content">
+                  <h4>Salle des fêtes</h4>
+                  <p>
+                    Explorez des salles de fêtes exceptionnelles pour vos
+                    moments inoubliables.
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
         <div class="arrows-container">
-          <span class="left-arrow">
+          <span
+            class="left-arrow"
+            role="button"
+            tabindex="0"
+            aria-label="faire défiler vers la gauche"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="2rem"
@@ -668,7 +711,12 @@
               />
             </svg>
           </span>
-          <span class="right-arrow">
+          <span
+            class="right-arrow"
+            role="button"
+            tabindex="0"
+            aria-label="faire défiler vers la deroite"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="2rem"
@@ -694,227 +742,256 @@
           </h3>
         </div>
         <div class="pesoudo">
-          <div class="container container-boxes">
+          <div class="discount-container container-boxes">
             <div class="box" data-discount="15 %">
-              <img
-                src="/assets/images/promo.jpg"
-                alt="Réduction spéciale pour nos prestataires de mariage."
-              />
-              <div class="discount-contant">
-                <div class="discount-info">
-                  <span>Bijoux</span>
-                  <div class="time">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="2rem"
-                      height="2rem"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
-                      />
-                    </svg>
-                    <span>Durée limitée</span>
+              <a href="">
+                <img
+                  src="/assets/images/promo.jpg"
+                  alt="Réduction spéciale pour nos prestataires de mariage."
+                />
+                <div class="discount-contant">
+                  <div class="discount-info">
+                    <span>Bijoux</span>
+                    <div class="time">
+                      <svg
+                        role="img"
+                        aria-label="Durée limitée pour cette promotion"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="2rem"
+                        height="2rem"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
+                        />
+                      </svg>
+                      <span>Durée limitée</span>
+                    </div>
+                  </div>
+                  <div class="discount-text">
+                    <h4>La Caverne des Joyaux</h4>
+                    <p>
+                      Bijoux acier inoxidable: argent, doré, Hermes, louis
+                      vuiton, channel
+                    </p>
+                  </div>
+                  <div class="price">
+                    <span class="new-price">99 DA</span>
+                    <span class="old-price">122 DA</span>
                   </div>
                 </div>
-                <div class="discount-text">
-                  <h4>La Caverne des Joyaux</h4>
-                  <p>
-                    Bijoux acier inoxidable: argent, doré, Hermes, louis vuiton,
-                    channel
-                  </p>
-                </div>
-                <div class="price">
-                  <span class="new-price">99 DA</span>
-                  <span class="old-price">122 DA</span>
-                </div>
-              </div>
+              </a>
             </div>
             <div class="box" data-discount="15 %">
-              <img
-                src="/assets/images/promo.jpg"
-                alt="Réduction spéciale pour nos prestataires de mariage."
-              />
-              <div class="discount-contant">
-                <div class="discount-info">
-                  <span>Bijoux</span>
-                  <div class="time">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="2rem"
-                      height="2rem"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
-                      />
-                    </svg>
-                    <span>Durée limitée</span>
+              <a href="">
+                <img
+                  src="/assets/images/promo.jpg"
+                  alt="Réduction spéciale pour nos prestataires de mariage."
+                />
+                <div class="discount-contant">
+                  <div class="discount-info">
+                    <span>Bijoux</span>
+                    <div class="time">
+                      <svg
+                        role="img"
+                        aria-label="Durée limitée pour cette promotion"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="2rem"
+                        height="2rem"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
+                        />
+                      </svg>
+                      <span>Durée limitée</span>
+                    </div>
+                  </div>
+                  <div class="discount-text">
+                    <h4>La Caverne des Joyaux</h4>
+                    <p>
+                      Bijoux acier inoxidable: argent, doré, Hermes, louis
+                      vuiton, channel
+                    </p>
+                  </div>
+                  <div class="price">
+                    <span class="new-price">99 DA</span>
+                    <span class="old-price">122 DA</span>
                   </div>
                 </div>
-                <div class="discount-text">
-                  <h4>La Caverne des Joyaux</h4>
-                  <p>
-                    Bijoux acier inoxidable: argent, doré, Hermes, louis vuiton,
-                    channel
-                  </p>
-                </div>
-                <div class="price">
-                  <span class="new-price">99 DA</span>
-                  <span class="old-price">122 DA</span>
-                </div>
-              </div>
+              </a>
             </div>
             <div class="box" data-discount="15 %">
-              <img
-                src="/assets/images/promo.jpg"
-                alt="Réduction spéciale pour nos prestataires de mariage."
-              />
-              <div class="discount-contant">
-                <div class="discount-info">
-                  <span>Bijoux</span>
-                  <div class="time">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="2rem"
-                      height="2rem"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
-                      />
-                    </svg>
-                    <span>Durée limitée</span>
+              <a href="">
+                <img
+                  src="/assets/images/promo.jpg"
+                  alt="Réduction spéciale pour nos prestataires de mariage."
+                />
+                <div class="discount-contant">
+                  <div class="discount-info">
+                    <span>Bijoux</span>
+                    <div class="time">
+                      <svg
+                        role="img"
+                        aria-label="Durée limitée pour cette promotion"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="2rem"
+                        height="2rem"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
+                        />
+                      </svg>
+                      <span>Durée limitée</span>
+                    </div>
+                  </div>
+                  <div class="discount-text">
+                    <h4>La Caverne des Joyaux</h4>
+                    <p>
+                      Bijoux acier inoxidable: argent, doré, Hermes, louis
+                      vuiton, channel
+                    </p>
+                  </div>
+                  <div class="price">
+                    <span class="new-price">99 DA</span>
+                    <span class="old-price">122 DA</span>
                   </div>
                 </div>
-                <div class="discount-text">
-                  <h4>La Caverne des Joyaux</h4>
-                  <p>
-                    Bijoux acier inoxidable: argent, doré, Hermes, louis vuiton,
-                    channel
-                  </p>
-                </div>
-                <div class="price">
-                  <span class="new-price">99 DA</span>
-                  <span class="old-price">122 DA</span>
-                </div>
-              </div>
+              </a>
             </div>
             <div class="box" data-discount="15 %">
-              <img
-                src="/assets/images/promo.jpg"
-                alt="Réduction spéciale pour nos prestataires de mariage."
-              />
-              <div class="discount-contant">
-                <div class="discount-info">
-                  <span>Bijoux</span>
-                  <div class="time">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="2rem"
-                      height="2rem"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
-                      />
-                    </svg>
-                    <span>Durée limitée</span>
+              <a href="">
+                <img
+                  src="/assets/images/promo.jpg"
+                  alt="Réduction spéciale pour nos prestataires de mariage."
+                />
+                <div class="discount-contant">
+                  <div class="discount-info">
+                    <span>Bijoux</span>
+                    <div class="time">
+                      <svg
+                        role="img"
+                        aria-label="Durée limitée pour cette promotion"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="2rem"
+                        height="2rem"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
+                        />
+                      </svg>
+                      <span>Durée limitée</span>
+                    </div>
+                  </div>
+                  <div class="discount-text">
+                    <h4>La Caverne des Joyaux</h4>
+                    <p>
+                      Bijoux acier inoxidable: argent, doré, Hermes, louis
+                      vuiton, channel
+                    </p>
+                  </div>
+                  <div class="price">
+                    <span class="new-price">99 DA</span>
+                    <span class="old-price">122 DA</span>
                   </div>
                 </div>
-                <div class="discount-text">
-                  <h4>La Caverne des Joyaux</h4>
-                  <p>
-                    Bijoux acier inoxidable: argent, doré, Hermes, louis vuiton,
-                    channel
-                  </p>
-                </div>
-                <div class="price">
-                  <span class="new-price">99 DA</span>
-                  <span class="old-price">122 DA</span>
-                </div>
-              </div>
+              </a>
             </div>
             <div class="box" data-discount="15 %">
-              <img
-                src="/assets/images/promo.jpg"
-                alt="Réduction spéciale pour nos prestataires de mariage."
-              />
-              <div class="discount-contant">
-                <div class="discount-info">
-                  <span>Bijoux</span>
-                  <div class="time">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="2rem"
-                      height="2rem"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
-                      />
-                    </svg>
-                    <span>Durée limitée</span>
+              <a href="">
+                <img
+                  src="/assets/images/promo.jpg"
+                  alt="Réduction spéciale pour nos prestataires de mariage."
+                />
+                <div class="discount-contant">
+                  <div class="discount-info">
+                    <span>Bijoux</span>
+                    <div class="time">
+                      <svg
+                        role="img"
+                        aria-label="Durée limitée pour cette promotion"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="2rem"
+                        height="2rem"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
+                        />
+                      </svg>
+                      <span>Durée limitée</span>
+                    </div>
+                  </div>
+                  <div class="discount-text">
+                    <h4>La Caverne des Joyaux</h4>
+                    <p>
+                      Bijoux acier inoxidable: argent, doré, Hermes, louis
+                      vuiton, channel
+                    </p>
+                  </div>
+                  <div class="price">
+                    <span class="new-price">99 DA</span>
+                    <span class="old-price">122 DA</span>
                   </div>
                 </div>
-                <div class="discount-text">
-                  <h4>La Caverne des Joyaux</h4>
-                  <p>
-                    Bijoux acier inoxidable: argent, doré, Hermes, louis vuiton,
-                    channel
-                  </p>
-                </div>
-                <div class="price">
-                  <span class="new-price">99 DA</span>
-                  <span class="old-price">122 DA</span>
-                </div>
-              </div>
+              </a>
             </div>
             <div class="box" data-discount="15 %">
-              <img
-                src="/assets/images/promo.jpg"
-                alt="Réduction spéciale pour nos prestataires de mariage."
-              />
-              <div class="discount-contant">
-                <div class="discount-info">
-                  <span>Bijoux</span>
-                  <div class="time">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="2rem"
-                      height="2rem"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
-                      />
-                    </svg>
-                    <span>Durée limitée</span>
+              <a href="">
+                <img
+                  src="/assets/images/promo.jpg"
+                  alt="Réduction spéciale pour nos prestataires de mariage."
+                />
+                <div class="discount-contant">
+                  <div class="discount-info">
+                    <span>Bijoux</span>
+                    <div class="time">
+                      <svg
+                        role="img"
+                        aria-label="Durée limitée pour cette promotion"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="2rem"
+                        height="2rem"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"
+                        />
+                      </svg>
+                      <span>Durée limitée</span>
+                    </div>
+                  </div>
+                  <div class="discount-text">
+                    <h4>La Caverne des Joyaux</h4>
+                    <p>
+                      Bijoux acier inoxidable: argent, doré, Hermes, louis
+                      vuiton, channel
+                    </p>
+                  </div>
+                  <div class="price">
+                    <span class="new-price">99 DA</span>
+                    <span class="old-price">122 DA</span>
                   </div>
                 </div>
-                <div class="discount-text">
-                  <h4>La Caverne des Joyaux</h4>
-                  <p>
-                    Bijoux acier inoxidable: argent, doré, Hermes, louis vuiton,
-                    channel
-                  </p>
-                </div>
-                <div class="price">
-                  <span class="new-price">99 DA</span>
-                  <span class="old-price">122 DA</span>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
         <div class="arrows-container" id="aos" data-visible="false">
-          <span class="left-arrow">
+          <span
+            class="left-arrow"
+            role="button"
+            tabindex="0"
+            aria-label="faire défiler vers la gauche"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="2rem"
@@ -927,7 +1004,12 @@
               />
             </svg>
           </span>
-          <span class="right-arrow">
+          <span
+            class="right-arrow"
+            role="button"
+            tabindex="0"
+            aria-label="faire défiler vers la deroite"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="2rem"
@@ -992,29 +1074,48 @@
         <div class="category-parent" id="aos" data-visible="false">
           <div class="pesoudo">
             <div class="category-container container-boxes">
-              <div class="category">
-                <h5>Decoration</h5>
-              </div>
-              <div class="category">
-                <h5>Decoration</h5>
-              </div>
-              <div class="category">
-                <h5>Decoration</h5>
-              </div>
-              <div class="category">
-                <h5>Decoration</h5>
-              </div>
-              <div class="category">
-                <h5>Decoration</h5>
-              </div>
-              <div class="category">
-                <h5>Decoration</h5>
-              </div>
-              <div class="category">
-                <h5>Decoration</h5>
-              </div>
+              <a href="">
+                <div class="category">
+                  <h5>Decoration</h5>
+                </div>
+              </a>
+              <a href="">
+                <div class="category">
+                  <h5>Decoration</h5>
+                </div>
+              </a>
+              <a href="">
+                <div class="category">
+                  <h5>Decoration</h5>
+                </div>
+              </a>
+              <a href="">
+                <div class="category">
+                  <h5>Decoration</h5>
+                </div>
+              </a>
+              <a href="">
+                <div class="category">
+                  <h5>Decoration</h5>
+                </div>
+              </a>
+              <a href="">
+                <div class="category">
+                  <h5>Decoration</h5>
+                </div>
+              </a>
+              <a href="">
+                <div class="category">
+                  <h5>Decoration</h5>
+                </div>
+              </a>
             </div>
-            <span class="left-arrow">
+            <span
+              class="left-arrow"
+              role="button"
+              tabindex="0"
+              aria-label="faire défiler vers la gauche"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="2rem"
@@ -1027,7 +1128,12 @@
                 />
               </svg>
             </span>
-            <span class="right-arrow">
+            <span
+              class="right-arrow"
+              role="button"
+              tabindex="0"
+              aria-label="faire défiler vers la deroite"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="2rem"
@@ -1046,100 +1152,148 @@
           <div class="pesoudo">
             <div class="articles-container container-boxes">
               <article class="article box">
-                <img
-                  src="/assets/images/best-disc.jpg"
-                  alt="Inspiration de mariage - Idées de décoration et thèmes."
-                />
-                <div class="article-content">
-                  <div class="article-info">
-                    <span>Category</span>
-                    <span>5 min read</span>
+                <a href="">
+                  <img
+                    src="/assets/images/best-disc.jpg"
+                    alt="Inspiration de mariage - Idées de décoration et thèmes."
+                  />
+                  <div class="article-content">
+                    <div class="article-info">
+                      <span>Category</span>
+                      <span>5 min read</span>
+                    </div>
+                    <p>
+                      5 Raisons pour lesquelles vous devez organiser un
+                      événement en tant qu’Entreprise !
+                    </p>
                   </div>
-                  <p>
-                    5 Raisons pour lesquelles vous devez organiser un événement
-                    en tant qu’Entreprise !
-                  </p>
-                </div>
+                </a>
               </article>
               <article class="article box">
-                <img
-                  src="/assets/images/best-disc.jpg"
-                  alt="Inspiration de mariage - Idées de décoration et thèmes."
-                />
-                <div class="article-content">
-                  <div class="article-info">
-                    <span>Category</span>
-                    <span>5 min read</span>
+                <a href="">
+                  <img
+                    src="/assets/images/best-disc.jpg"
+                    alt="Inspiration de mariage - Idées de décoration et thèmes."
+                  />
+                  <div class="article-content">
+                    <div class="article-info">
+                      <span>Category</span>
+                      <span>5 min read</span>
+                    </div>
+                    <p>
+                      5 Raisons pour lesquelles vous devez organiser un
+                      événement en tant qu’Entreprise !
+                    </p>
                   </div>
-                  <p>
-                    5 Raisons pour lesquelles vous devez organiser un événement
-                    en tant qu’Entreprise !
-                  </p>
-                </div>
+                </a>
               </article>
               <article class="article box">
-                <img
-                  src="/assets/images/best-disc.jpg"
-                  alt="Inspiration de mariage - Idées de décoration et thèmes."
-                />
-                <div class="article-content">
-                  <div class="article-info">
-                    <span>Category</span>
-                    <span>5 min read</span>
+                <a href="">
+                  <img
+                    src="/assets/images/best-disc.jpg"
+                    alt="Inspiration de mariage - Idées de décoration et thèmes."
+                  />
+                  <div class="article-content">
+                    <div class="article-info">
+                      <span>Category</span>
+                      <span>5 min read</span>
+                    </div>
+                    <p>
+                      5 Raisons pour lesquelles vous devez organiser un
+                      événement en tant qu’Entreprise !
+                    </p>
                   </div>
-                  <p>
-                    5 Raisons pour lesquelles vous devez organiser un événement
-                    en tant qu’Entreprise !
-                  </p>
-                </div>
+                </a>
               </article>
               <article class="article box">
-                <img
-                  src="/assets/images/best-disc.jpg"
-                  alt="Inspiration de mariage - Idées de décoration et thèmes."
-                />
-                <div class="article-content">
-                  <div class="article-info">
-                    <span>Category</span>
-                    <span>5 min read</span>
+                <a href="">
+                  <img
+                    src="/assets/images/best-disc.jpg"
+                    alt="Inspiration de mariage - Idées de décoration et thèmes."
+                  />
+                  <div class="article-content">
+                    <div class="article-info">
+                      <span>Category</span>
+                      <span>5 min read</span>
+                    </div>
+                    <p>
+                      5 Raisons pour lesquelles vous devez organiser un
+                      événement en tant qu’Entreprise !
+                    </p>
                   </div>
-                  <p>
-                    5 Raisons pour lesquelles vous devez organiser un événement
-                    en tant qu’Entreprise !
-                  </p>
-                </div>
+                </a>
               </article>
               <article class="article box">
-                <img
-                  src="/assets/images/best-disc.jpg"
-                  alt="Inspiration de mariage - Idées de décoration et thèmes."
-                />
-                <div class="article-content">
-                  <div class="article-info">
-                    <span>Category</span>
-                    <span>5 min read</span>
+                <a href="">
+                  <img
+                    src="/assets/images/best-disc.jpg"
+                    alt="Inspiration de mariage - Idées de décoration et thèmes."
+                  />
+                  <div class="article-content">
+                    <div class="article-info">
+                      <span>Category</span>
+                      <span>5 min read</span>
+                    </div>
+                    <p>
+                      5 Raisons pour lesquelles vous devez organiser un
+                      événement en tant qu’Entreprise !
+                    </p>
                   </div>
-                  <p>
-                    5 Raisons pour lesquelles vous devez organiser un événement
-                    en tant qu’Entreprise !
-                  </p>
-                </div>
+                </a>
               </article>
               <article class="article box">
-                <img
-                  src="/assets/images/best-disc.jpg"
-                  alt="Inspiration de mariage - Idées de décoration et thèmes."
-                />
-                <div class="article-content">
-                  <div class="article-info">
-                    <span>Category</span>
-                    <span>5 min read</span>
+                <a href="">
+                  <img
+                    src="/assets/images/best-disc.jpg"
+                    alt="Inspiration de mariage - Idées de décoration et thèmes."
+                  />
+                  <div class="article-content">
+                    <div class="article-info">
+                      <span>Category</span>
+                      <span>5 min read</span>
+                    </div>
+                    <p>
+                      5 Raisons pour lesquelles vous devez organiser un
+                      événement en tant qu’Entreprise !
+                    </p>
                   </div>
-                  <p>
-                    5 Raisons pour lesquelles vous devez organiser un événement
-                    en tant qu’Entreprise !
-                  </p>
-                </div>
+                </a>
+              </article>
+              <article class="article box">
+                <a href="">
+                  <img
+                    src="/assets/images/best-disc.jpg"
+                    alt="Inspiration de mariage - Idées de décoration et thèmes."
+                  />
+                  <div class="article-content">
+                    <div class="article-info">
+                      <span>Category</span>
+                      <span>5 min read</span>
+                    </div>
+                    <p>
+                      5 Raisons pour lesquelles vous devez organiser un
+                      événement en tant qu’Entreprise !
+                    </p>
+                  </div>
+                </a>
+              </article>
+              <article class="article box">
+                <a href="">
+                  <img
+                    src="/assets/images/best-disc.jpg"
+                    alt="Inspiration de mariage - Idées de décoration et thèmes."
+                  />
+                  <div class="article-content">
+                    <div class="article-info">
+                      <span>Category</span>
+                      <span>5 min read</span>
+                    </div>
+                    <p>
+                      5 Raisons pour lesquelles vous devez organiser un
+                      événement en tant qu’Entreprise !
+                    </p>
+                  </div>
+                </a>
               </article>
             </div>
           </div>
@@ -1147,8 +1301,8 @@
             <a href="">Lire plus Articles...</a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="2rem"
-              height="2rem"
+              width="3rem"
+              height="3rem"
               viewBox="0 0 24 24"
             >
               <path
@@ -1158,7 +1312,12 @@
             </svg>
           </div>
           <div class="arrows-container">
-            <span class="left-arrow">
+            <span
+              class="left-arrow"
+              role="button"
+              tabindex="0"
+              aria-label="faire défiler vers la gauche"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="2rem"
@@ -1171,7 +1330,12 @@
                 />
               </svg>
             </span>
-            <span class="right-arrow">
+            <span
+              class="right-arrow"
+              role="button"
+              tabindex="0"
+              aria-label="faire défiler vers la deroite"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="2rem"
@@ -1242,21 +1406,27 @@
         <div class="footer-col">
           <h5>Téléchargez l'application Maintanent</h5>
           <div class="footer-logo">
-            <img
-              src="/assets/images/logo.svg"
-              alt="logo of 3ersi.com company"
-            />
-            <p>GUIDE DU MARIAGE EN ALGERIE</p>
+            <a href="">
+              <img
+                src="/assets/images/logo.svg"
+                alt="logo of 3ersi.com company"
+              />
+              <p>GUIDE DU MARIAGE EN ALGERIE</p>
+            </a>
           </div>
           <div class="app-download">
-            <img
-              src="/assets/images/app store.png"
-              alt="Téléchargez l'application sur apple store"
-            />
-            <img
-              src="/assets/images/play store.png"
-              alt="Téléchargez l'application sur plqy store"
-            />
+            <a href="">
+              <img
+                src="/assets/images/app store.png"
+                alt="Téléchargez l'application sur apple store"
+              />
+            </a>
+            <a href="">
+              <img
+                src="/assets/images/play store.png"
+                alt="Téléchargez l'application sur plqy store"
+              />
+            </a>
           </div>
         </div>
         <div class="footer-col">
@@ -1265,6 +1435,8 @@
             <li>
               <a href="https://www.instagram.com/3ersi_dz/" target="_blank">
                 <svg
+                  role="button"
+                  aria-label="visitez notre compte instagram"
                   xmlns="http://www.w3.org/2000/svg"
                   width="3em"
                   height="3em"
@@ -1289,6 +1461,8 @@
             <li>
               <a href="https://x.com/3ersi_dz" target="_blank">
                 <svg
+                  role="button"
+                  aria-label="visitez notre compte X"
                   xmlns="http://www.w3.org/2000/svg"
                   width="3em"
                   height="3em"
@@ -1308,6 +1482,8 @@
             <li>
               <a href="https://www.youtube.com/@3ersitv272" target="_blank">
                 <svg
+                  role="button"
+                  aria-label="visitez notre compte youtube"
                   xmlns="http://www.w3.org/2000/svg"
                   width="3em"
                   height="3em"
@@ -1327,6 +1503,8 @@
             <li>
               <a href="" target="_blank">
                 <svg
+                  role="button"
+                  aria-label="visitez notre compte Tik Tok"
                   xmlns="http://www.w3.org/2000/svg"
                   width="3em"
                   height="3em"
@@ -1350,6 +1528,6 @@
     <!-- End Footer Section -->
 
     <!-- Main JS File -->
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/main.js" defer></script>
   </body>
 </html>
