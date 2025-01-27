@@ -151,7 +151,6 @@ function handleInputFocus(event) {
   if (isMobileDevice()) {
     event.preventDefault();
   }
-  console.log("focus");
 }
 
 // Function to detect if the user is on a mobile device
@@ -164,11 +163,9 @@ function addReadonlyAttribute() {
   if (window.matchMedia("(max-width: 768px)").matches) {
     inputTypeService.setAttribute("readonly", true);
     inputLocationService.setAttribute("readonly", true);
-    console.log("i add it");
   } else {
     inputTypeService.removeAttribute("readonly");
     inputLocationService.removeAttribute("readonly");
-    console.log("i remove it");
   }
 }
 
@@ -332,4 +329,36 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((section) => {
     observer.observe(section);
   });
+});
+
+// control the tabs in filter Section
+const filterSection = document.querySelector(".filter-section");
+const filterIcon = document.querySelector(".filter-icon");
+const closeFilterIcon = document.querySelector(".close-filter");
+const filterCategories = document.querySelectorAll(".filter-category");
+const filterCategoriesItem = document.querySelectorAll(".filter-category div");
+const filterOverlay = document.querySelector(".filter-overlay");
+
+filterCategoriesItem.forEach((category) => {
+  category.addEventListener("click", () => {
+    category.parentElement.classList.toggle("show");
+  });
+});
+
+filterIcon.addEventListener("click", () => {
+  showElement(filterSection);
+  scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+  document.body.classList.add("no-scroll");
+});
+
+filterOverlay.addEventListener("click", () => {
+  hideElement(filterSection);
+  document.body.classList.remove("no-scroll");
+});
+closeFilterIcon.addEventListener("click", () => {
+  hideElement(filterSection);
+  document.body.classList.remove("no-scroll");
 });
