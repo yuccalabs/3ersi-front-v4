@@ -338,6 +338,10 @@ const closeFilterIcon = document.querySelector(".close-filter");
 const filterCategories = document.querySelectorAll(".filter-category");
 const filterCategoriesItem = document.querySelectorAll(".filter-category div");
 const filterOverlay = document.querySelector(".filter-overlay");
+const filterApplied = document.querySelector(".filter-applied");
+const rangeLabel = document.querySelectorAll(".filter-item label span");
+const clearFilter = document.querySelector(".filter-applied-header button");
+const rangeInputs = document.querySelectorAll('input[type="range"]');
 
 filterCategoriesItem.forEach((category) => {
   category.addEventListener("click", () => {
@@ -361,4 +365,33 @@ filterOverlay.addEventListener("click", () => {
 closeFilterIcon.addEventListener("click", () => {
   hideElement(filterSection);
   document.body.classList.remove("no-scroll");
+});
+
+// // control the checkbox
+// rangeLabel.forEach((input) => {
+//   input.addEventListener("click", (e) => {
+//     const value = e.target.textContent;
+//     const li = document.createElement("li");
+//     li.textContent = value;
+//     filterApplied.appendChild(li);
+//   });
+// });
+
+// clearFilter.addEventListener("click", () => {
+//   filterApplied.textContent = "";
+// });
+
+rangeInputs.forEach((input, ind) => {
+  // Update the background of the range input
+  const updateBackground = () => {
+    const value = ((input.value - input.min) / (input.max - input.min)) * 100;
+    input.style.background = `linear-gradient(to right, var(--primary-color) ${value}%, #ddd ${value}%)`;
+    rangeLabel[ind].textContent = input.value;
+  };
+
+  // Initial background update
+  updateBackground();
+
+  // Update background on input change
+  input.addEventListener("input", updateBackground);
 });

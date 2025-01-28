@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // carousel for vendors-list section
 document.addEventListener("DOMContentLoaded", () => {
-  const OPTIONSVlIST = {};
+  const OPTIONSVlIST = { loop: true };
 
   const emblaVList = document.querySelectorAll(".vendor-card .embla");
 

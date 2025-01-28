@@ -417,6 +417,7 @@
                         </svg>
                         <input
                           type="text"
+                          value="salle des fetes"
                           placeholder="Que charchez-vous ?"
                           class="type-service"
                         />
@@ -499,26 +500,27 @@
               <h4>Filtre</h4>
             </div>
             <div class="filter-content">
+              <!-- <div class="">
+                <div class="filter-applied-header">
+                  <h5>Filtre Appliqué</h5>
+                  <button>
+                    effacer
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1.2rem"
+                      height="1.2rem"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M6.22 7.28a.75.75 0 0 1 1.06-1.06L12 10.938l4.719-4.718a.75.75 0 1 1 1.06 1.06L13.06 12l4.718 4.719a.75.75 0 1 1-1.06 1.06l-4.719-4.718l-4.719 4.718a.75.75 0 1 1-1.06-1.06L10.938 12z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <ul class="filter-applied"></ul>
+              </div> -->
               <ul>
-                <li class="filter-category filter-applied">
-                  <div>
-                    <h5>Filtre Appliqué</h5>
-                    <button>
-                      effacer
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1.2rem"
-                        height="1.2rem"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M6.22 7.28a.75.75 0 0 1 1.06-1.06L12 10.938l4.719-4.718a.75.75 0 1 1 1.06 1.06L13.06 12l4.718 4.719a.75.75 0 1 1-1.06 1.06l-4.719-4.718l-4.719 4.718a.75.75 0 1 1-1.06-1.06L10.938 12z"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </li>
                 <li class="filter-category">
                   <div>
                     <svg
@@ -538,16 +540,14 @@
                   </div>
                   <ul>
                     <li class="filter-item">
-                      <input type="checkbox" id="capacite-1" />
-                      <label for="capacite-1">90 - 240 invités</label>
-                    </li>
-                    <li class="filter-item">
-                      <input type="checkbox" id="capacite-2" />
-                      <label for="capacite-2">240 - 500 invités</label>
-                    </li>
-                    <li class="filter-item">
-                      <input type="checkbox" id="capacite-3" />
-                      <label for="capacite-3">500 - 1000 invités</label>
+                      <input
+                        type="range"
+                        id="capacite-1"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                      <label for="capacite-1"><span></span> invités</label>
                     </li>
                   </ul>
                 </li>
@@ -570,16 +570,14 @@
                   </div>
                   <ul class="">
                     <li class="filter-item">
-                      <input type="checkbox" id="capacite-1" />
-                      <label for="capacite-1">10.000 DA</label>
-                    </li>
-                    <li class="filter-item">
-                      <input type="checkbox" id="capacite-2" />
-                      <label for="capacite-2">10.000 DA - 20.000 DA</label>
-                    </li>
-                    <li class="filter-item">
-                      <input type="checkbox" id="capacite-3" />
-                      <label for="capacite-3">plus 20.000 DA</label>
+                      <input
+                        type="range"
+                        id="capacite-1"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                      <label for="capacite-1"><span></span> DA</label>
                     </li>
                   </ul>
                 </li>
@@ -600,6 +598,52 @@
                     </svg>
                     Services
                   </div>
+                  <ul class="services">
+                    <li class="filter-item">
+                      <input type="checkbox" id="service-1" />
+                      <label for="service-1">Salles de dîner</label>
+                    </li>
+                    <li class="filter-item">
+                      <input type="checkbox" id="service-2" />
+                      <label for="service-2">Hotel</label>
+                    </li>
+                    <li class="filter-item">
+                      <input type="checkbox" id="service-3" />
+                      <label for="service-3">Salles des fêtes</label>
+                    </li>
+                    <li class="filter-item">
+                      <input type="checkbox" id="service-4" />
+                      <label for="service-4">Autorise la musique</label>
+                    </li>
+                    <li class="filter-item">
+                      <input type="checkbox" id="service-5" />
+                      <label for="service-5">Autorise la restauration</label>
+                    </li>
+                    <li class="filter-item">
+                      <input type="checkbox" id="service-6" />
+                      <label for="service-6">Propose un traiteur</label>
+                    </li>
+                    <li class="filter-item">
+                      <input type="checkbox" id="service-7" />
+                      <label for="service-7">Location en après-midi</label>
+                    </li>
+                    <li class="filter-item">
+                      <input type="checkbox" id="service-8" />
+                      <label for="service-8"
+                        >Location pour dîner (soirée)</label
+                      >
+                    </li>
+                    <li class="filter-item">
+                      <input type="checkbox" id="service-9" />
+                      <label for="service-9"
+                        >Location en soirée (jusqu'à 3h)</label
+                      >
+                    </li>
+                    <li class="filter-item">
+                      <input type="checkbox" id="service-10" />
+                      <label for="service-10">En Promotion</label>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>
