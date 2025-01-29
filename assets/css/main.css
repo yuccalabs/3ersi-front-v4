@@ -190,10 +190,14 @@ i {
   cursor: pointer;
   overflow: hidden;
 }
-.box > a:hover img {
-  transform: scale(1.1);
-  transition: 0.5s;
+.box:hover {
+  transform: translateY(-10px);
+  transition: 0.3s ease-in-out;
 }
+/* .box > a:hover img {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+} */
 /* arrow style */
 .arrows-container {
   display: -webkit-box;
@@ -1749,47 +1753,17 @@ footer .copy-right {
 .listing-section .filter-section .filter-content {
   margin-top: 1.5rem;
   font-size: 1.4rem;
+  /* position: relative; */
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .listing-section .filter-section .filter-content li {
   padding: 1.5rem 0;
   position: relative;
   border-bottom: 2px solid #eee;
 }
-/* .listing-section .filter-section .filter-content .filter-applied-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
-/* .listing-section .filter-section .filter-content .filter-applied-header button {
-  background: none;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 2px 3px;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: #8c8c8c;
-  font-size: 1.2rem;
-  font-weight: 200;
-  cursor: pointer;
-} */
-/* .listing-section .filter-section .filter-content .filter-applied {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-  height: auto;
-  margin-block: 1rem;
-} */
-/* .listing-section .filter-section .filter-content .filter-applied li {
-  width: fit-content;
-  padding: 0.5rem;
-  background-color: var(--primary-color);
-  color: var(--third-color);
-  border-radius: 5px;
-  font-size: 1.4rem;
-  font-weight: 200;
-} */
 .listing-section .filter-section .filter-content .filter-category div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1805,7 +1779,6 @@ footer .copy-right {
 .listing-section .filter-section .filter-content .filter-category div svg {
   color: #8c8c8c;
 }
-
 .listing-section .filter-section .filter-content li:last-child {
   border-bottom: none;
 }
@@ -1822,7 +1795,7 @@ footer .copy-right {
   .filter-content
   .filter-category.show
   ul.services {
-  height: 350px;
+  height: 200px;
   overflow-y: auto;
 }
 .listing-section .filter-section .filter-content .filter-category.show div svg {
@@ -1936,6 +1909,40 @@ input[type="range"]:hover {
   cursor: pointer;
 }
 
+.listing-section .filter-section .filter-applied {
+  /* position: absolute;
+  bottom: 0; */
+  width: 100%;
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 2rem;
+}
+.listing-section .filter-section .filter-applied button {
+  padding: 9px 14px;
+  font-size: 1.2rem;
+  font-weight: 200;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.listing-section .filter-section .filter-applied button.show-results {
+  background-color: var(--primary-color);
+  color: var(--third-color);
+}
+.listing-section .filter-section .filter-applied button.show-results:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  -webkit-transition: var(--hover-transition);
+  -o-transition: var(--hover-transition);
+  transition: var(--hover-transition);
+}
+.listing-section .filter-section .filter-applied button.clear {
+  background-color: #eee;
+  color: var(--secondaly-color);
+}
 @media (max-width: 768px) {
   .listing-section .filter-section {
     display: none;
@@ -1972,6 +1979,8 @@ input[type="range"]:hover {
     padding: 4rem 3rem;
     overflow-y: auto;
     border-radius: 7px 7px 0 0;
+    display: flex;
+    flex-direction: column;
   }
   .listing-section .filter-section .filter-header h4 {
     font-size: 2.2rem;
@@ -1985,11 +1994,22 @@ input[type="range"]:hover {
     .filter-section
     .filter-content
     .filter-category.show
+    ul.services {
+    height: 320px;
+  }
+  .listing-section
+    .filter-section
+    .filter-content
+    .filter-category.show
     ul::-webkit-scrollbar {
     display: none;
   }
   .listing-section .filter-section .filter-category .filter-item label {
     font-size: 1.8rem;
+  }
+  .listing-section .filter-section .filter-applied button {
+    font-size: 1.8rem;
+    font-weight: 400;
   }
 }
 /* End Filter Section */
