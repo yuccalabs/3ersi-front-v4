@@ -2196,7 +2196,7 @@ input[type="range"]:hover {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
   -webkit-transition: var(--hover-transition);
-  -o-transition: var(--hover-transition);
+  /* -o-transition: var(--hover-transition); */
   transition: var(--hover-transition);
 }
 .vendor-details .video-slide {
