@@ -32,6 +32,14 @@ asideNavItems.forEach((aNavItem) => {
   });
 });
 
+window.addEventListener("click", (e) => {
+  navItems.forEach((item) => {
+    if (e.target !== item && e.target !== item.children[0]) {
+      item.classList.remove("active");
+    }
+  });
+});
+
 function showElement(ele) {
   ele.classList.add("show");
 }
@@ -270,11 +278,6 @@ renderList(inputService, serviceListMobUlTow, listItemsTwo);
 
 // close the dropDownMenu when clicking on other parts
 window.addEventListener("click", (e) => {
-  navItems.forEach((item) => {
-    if (e.target !== item && e.target !== item.children[0]) {
-      item.classList.remove("active");
-    }
-  });
   if (e.target !== inputTypeService && e.target !== inputLocationService) {
     hideElement(locationServiceList);
     hideElement(typeServiceList);
@@ -289,21 +292,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const rightArrow = document.querySelector(`${arrowSelector} .right-arrow`);
     const scrollAmount = 600;
 
-    leftArrow.addEventListener("click", () => {
-      container.scrollBy({
-        left: -scrollAmount,
-        behavior: "smooth",
+    if (container && leftArrow && rightArrow) {
+      leftArrow.addEventListener("click", () => {
+        container.scrollBy({
+          left: -scrollAmount,
+          behavior: "smooth",
+        });
       });
-    });
 
-    rightArrow.addEventListener("click", () => {
-      container.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth",
+      rightArrow.addEventListener("click", () => {
+        container.scrollBy({
+          left: scrollAmount,
+          behavior: "smooth",
+        });
       });
-    });
+    } else {
+      console.log(
+        `Elements not found for ${containerSelector} and ${arrowSelector}`
+      );
+    }
   }
-
   horizontalScroll(".vendors-container", ".best-vendors");
   horizontalScroll(".discount-container", ".discount");
   horizontalScroll(".category-container", ".category-parent");
@@ -335,12 +343,12 @@ document.addEventListener("DOMContentLoaded", () => {
 const filterSection = document.querySelector(".filter-section");
 const filterIcon = document.querySelector(".filter-icon");
 const closeFilterIcon = document.querySelector(".close-filter");
-const filterCategories = document.querySelectorAll(".filter-category");
+// const filterCategories = document.querySelectorAll(".filter-category");
 const filterCategoriesItem = document.querySelectorAll(".filter-category div");
 const filterOverlay = document.querySelector(".filter-overlay");
-const filterApplied = document.querySelector(".filter-applied");
+// const filterApplied = document.querySelector(".filter-applied");
 const rangeLabel = document.querySelectorAll(".filter-item label span");
-const clearFilter = document.querySelector(".filter-applied-header button");
+// const clearFilter = document.querySelector(".filter-applied-header button");
 const rangeInputs = document.querySelectorAll('input[type="range"]');
 
 filterCategoriesItem.forEach((category) => {
@@ -366,20 +374,6 @@ closeFilterIcon.addEventListener("click", () => {
   hideElement(filterSection);
   document.body.classList.remove("no-scroll");
 });
-
-// // control the checkbox
-// rangeLabel.forEach((input) => {
-//   input.addEventListener("click", (e) => {
-//     const value = e.target.textContent;
-//     const li = document.createElement("li");
-//     li.textContent = value;
-//     filterApplied.appendChild(li);
-//   });
-// });
-
-// clearFilter.addEventListener("click", () => {
-//   filterApplied.textContent = "";
-// });
 
 rangeInputs.forEach((input, ind) => {
   // Update the background of the range input
