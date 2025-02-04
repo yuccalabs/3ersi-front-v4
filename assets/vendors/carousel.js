@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const emblaHero_slides = document.querySelectorAll(".hero .embla__slide");
 
   const imgSrc = [
-    "assets/images/hero-slider/1.jpg",
-    "assets/images/hero-slider/2.jpg",
-    "assets/images/hero-slider/3.jpg",
-    "assets/images/hero-slider/4.jpg",
+    "/assets/images/hero-slider/1.jpg",
+    "/assets/images/hero-slider/2.jpg",
+    "/assets/images/hero-slider/3.jpg",
+    "/assets/images/hero-slider/4.jpg",
   ];
 
   emblaHero_slides.forEach((slide, i) => {
