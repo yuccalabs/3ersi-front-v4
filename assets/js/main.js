@@ -1,4 +1,5 @@
 "use strict";
+
 // Animation on scroll
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("#aos");
@@ -26,7 +27,7 @@ const hamburger = document.querySelector("#hamburger");
 const aside = document.querySelector("aside");
 const asideContent = document.querySelector("aside .aside-content");
 const asideOverlay = document.querySelector("aside .aside-overlay");
-const removeAside = document.querySelector(".remove-aside");
+const removeAside = document.querySelector("aside .remove-aside");
 const asideNavItems = document.querySelectorAll("#asideList li");
 const asideDropMenu = document.querySelector("#asideList li");
 
@@ -62,6 +63,7 @@ asideNavItems.forEach((aNavItem) => {
   });
 });
 
+// close the opened navitems
 window.addEventListener("click", (e) => {
   navItems.forEach((item) => {
     if (e.target !== item && e.target !== item.children[0]) {
@@ -174,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const titleService = document.querySelector(".list-appear .title-service h4");
   const inputService = document.querySelector(".list-appear input");
   const removeServiceList = document.querySelector(
-    ".list-appear .title-service svg"
+    ".list-appear .title-service img"
   );
 
   // Function to handle input focus event on mobile devices
@@ -349,14 +351,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterSection = document.querySelector(".filter-section");
   const filterIcon = document.querySelector(".filter-icon");
   const closeFilterIcon = document.querySelector(".close-filter");
-  // const filterCategories = document.querySelectorAll(".filter-category");
   const filterCategoriesItem = document.querySelectorAll(
     ".filter-category div"
   );
   const filterOverlay = document.querySelector(".filter-overlay");
-  // const filterApplied = document.querySelector(".filter-applied");
   const rangeLabel = document.querySelectorAll(".filter-item label span");
-  // const clearFilter = document.querySelector(".filter-applied-header button");
   const rangeInputs = document.querySelectorAll('input[type="range"]');
 
   filterCategoriesItem.forEach((category) => {
@@ -399,9 +398,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// control the like button
 document.addEventListener("DOMContentLoaded", () => {
-  // like button
-  const likeBtns = document.querySelectorAll(".like-btn svg");
+  const likeBtns = document.querySelectorAll(".like-btn img");
 
   likeBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
