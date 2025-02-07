@@ -959,7 +959,7 @@ main {
   box-shadow: 0px 0px 4px;
 }
 .best-vendors .vendors-container .box .icon-container img {
-  width: 3.4rem;
+  width: 2.6rem;
   transition: var(--stroke-transition);
 }
 .best-vendors .vendors-container .box:hover .icon-container img {
@@ -1691,6 +1691,7 @@ footer .copy-right {
   margin: auto;
   cursor: pointer;
   transition: var(--stroke-transition);
+  /* filter: brightness(0) saturate(100%) invert(100%); */
 }
 .listing-section .vendor-card .vendor-info .info-header img.active {
   filter: var(--stroke-color);
@@ -1714,7 +1715,7 @@ footer .copy-right {
   flex-basis: 82%;
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   font-weight: 100;
   color: #4b4b4b;
 }
@@ -2178,20 +2179,14 @@ body .call-vendor-mob {
   right: 7%;
   z-index: 99;
 }
-.vendor-details .img-container .like-btn svg path {
-  stroke: var(--third-color);
-  color: transparent;
-  cursor: pointer;
-  transition: var(--hover-transition);
+.vendor-details .img-container .like-btn img {
+  transition: var(--stroke-transition);
+  filter: opacity(30%);
 }
-.vendor-details .img-container .like-btn svg:hover path {
-  color: var(--primary-color);
-  stroke: transparent;
+.vendor-details .img-container .like-btn img.active {
+  filter: var(--stroke-color);
 }
-.vendor-details .img-container .like-btn svg.active path {
-  color: var(--primary-color);
-  stroke: transparent;
-}
+
 .vendor-details .embla {
   width: 100%;
   height: 100%;
@@ -2257,37 +2252,8 @@ body .call-vendor-mob {
   align-items: center;
   justify-content: center;
 }
-.vendor-details .embla__button:disabled {
-  color: var(--detail-high-contrast);
-}
-.vendor-details .embla__button__svg {
-  width: 75%;
-  height: 75%;
-}
-.vendor-details .embla__dots {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 1rem;
-  padding: 1rem;
-}
-.embla__dot {
-  background-color: transparent;
-  display: inline-flex;
-  cursor: pointer;
-  width: 0.7rem;
-  height: 0.7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid var(--third-color);
-}
-.embla__dot.is-selected {
-  background-color: var(--third-color);
+.vendor-details .embla__button img {
+  filter: brightness(0) saturate(100%) invert(100%);
 }
 .vendor-details .video-slide {
   width: 100%;
@@ -2321,8 +2287,8 @@ body .call-vendor-mob {
   color: #6c6c6c;
   padding-block: 0.5rem;
 }
-.vendor-details .vendor-info-card ul li svg {
-  color: var(--primary-color);
+.vendor-details .vendor-info-card ul li img {
+  filter: var(--stroke-color);
 }
 .vendor-details .vendor-info-card .call-vendor {
   width: 100%;
@@ -2340,6 +2306,9 @@ body .call-vendor-mob {
   font-size: 1.2rem;
   font-weight: 300;
 }
+.vendor-details .vendor-info-card .call-vendor img {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
 .vendor-details .vendor-info-card .call-vendor:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
@@ -2348,7 +2317,6 @@ body .call-vendor-mob {
   -o-transition: var(--hover-transition);
   transition: var(--hover-transition);
 }
-
 .vendor-intro {
   width: 65%;
   margin-block: 5rem;
@@ -2547,7 +2515,7 @@ body .call-vendor-mob {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
-  margin-block: 0.8rem;
+  margin: 0.8rem 0 1rem;
 }
 .sugg-section .sugg-container .box .vendor-services-provided ul {
   display: flex;
@@ -2563,6 +2531,11 @@ body .call-vendor-mob {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+}
+.sugg-section .sugg-container .box .vendor-services-provided ul li img {
+  filter: var(--storke-secondary-color);
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .sugg-section .sugg-container .box .vendor-services-provided button {
   width: 100%;
