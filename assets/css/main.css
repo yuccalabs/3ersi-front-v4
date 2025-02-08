@@ -1691,7 +1691,6 @@ footer .copy-right {
   margin: auto;
   cursor: pointer;
   transition: var(--stroke-transition);
-  /* filter: brightness(0) saturate(100%) invert(100%); */
 }
 .listing-section .vendor-card .vendor-info .info-header img.active {
   filter: var(--stroke-color);
@@ -2577,4 +2576,99 @@ body .call-vendor-mob {
 /* End Suggestions Section */
 /*--------------------------------------------------------------
 # End Detils Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Start About Us Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Start About Us Section
+--------------------------------------------------------------*/
+.about-us-section .about-text-container {
+  width: 80%;
+  margin-inline: auto;
+  text-align: center;
+}
+.about-us-section .about-text-container p {
+  font-size: 1.8rem;
+  line-height: 2;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+.about-us-section .about-text-container p span {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+/*--------------------------------------------------------------
+# End About Us Section
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Start Sub About Us Sections
+--------------------------------------------------------------*/
+.about-sub-section {
+  display: flex;
+  gap: 4rem;
+}
+.about-sub-section .text-content {
+  flex: 1 1 60%;
+}
+.about-sub-section .text-content p {
+  font-size: 1.4rem;
+  line-height: 2;
+  color: #2c2c2c;
+  font-weight: 400;
+  margin-block: 2rem;
+}
+.about-sub-section .text-content p span {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+.our-goal-section .img-container {
+  flex: 1 1 40%;
+  text-align: center;
+}
+.our-goal-section .img-container img {
+  width: 80%;
+  max-width: 80%;
+  height: auto;
+  border-radius: 2rem;
+}
+.our-client-section {
+  align-items: center;
+  gap: 4rem;
+}
+.our-client-section .img-container {
+  flex: 1 1 30%;
+}
+.our-client-section .img-container img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 2rem;
+}
+@media (max-width: 768px) {
+  .about-us-section .about-text-container {
+    width: 100%;
+  }
+  .about-sub-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .our-client-section {
+    flex-direction: column-reverse;
+  }
+  .about-sub-section .text-content p {
+    font-size: 1.6rem;
+  }
+  .our-goal-section .img-container img,
+  .our-client-section .img-container img {
+    width: 80%;
+  }
+}
+/*--------------------------------------------------------------
+# End Sub About Us Sections
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# End About Us Page
 --------------------------------------------------------------*/
