@@ -26,26 +26,6 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
-    <div class="list-appear">
-      <div class="list-overlay"></div>
-      <div class="list-content">
-        <div class="title-service">
-          <h4></h4>
-          <img src="/assets/images/icons/xMark.svg" alt="" />
-        </div>
-        <div class="input-container">
-          <img src="/assets/images/icons/search.svg" alt="" />
-          <input
-            type="text"
-            class="type-service-list-mob"
-            placeholder="categorie de la prestataires"
-          />
-        </div>
-        <ul class="type-service-list-mob-v"></ul>
-        <ul class="location-service-list-mob-v"></ul>
-      </div>
-    </div>
-    <!-- Start Header Section -->
     <header class="header">
       <div class="vendors-gate">
         <h3 class="vendors-link">
@@ -435,421 +415,114 @@
     </header>
     <!-- End Header Section -->
     <main id="main" class="main">
-      <!-- Start Hero Section -->
-      <section class="hero">
-        <div class="container listing">
-          <div class="img-container">
-            <section class="embla">
-              <div class="embla__viewport">
-                <div class="embla__container">
-                  <div class="embla__slide"></div>
-                  <div class="embla__slide"></div>
-                  <div class="embla__slide"></div>
-                  <div class="embla__slide"></div>
-                </div>
+      <!-- Start Contact Headline Section-->
+      <section class="section contact headline">
+        <span>
+          <img src="/assets/images/icons/contact.svg" alt="" />
+        </span>
+        <h2>Contactez Nous</h2>
+        <h3>
+          Nous sommes là pour vous aider à rendre votre jour spécial parfait.
+          Contactez nos experts en mariage.
+        </h3>
+      </section>
+      <!-- End Contact Headline Section-->
+      <!-- Start Contact Us Section-->
+      <section class="section contact-section">
+        <section class="get-in-touch">
+          <h4>Prenez contact</h4>
+          <ul>
+            <li>
+              <div class="icon-container">
+                <img src="/assets/images/icons/phone-outline.svg" alt="" />
               </div>
-            </section>
-          </div>
-          <div class="hero-content">
-            <div class="hero-main-text">
+              <div class="item-info">
+                <h5>Telephone</h5>
+                <span>0671000294 / 0560847743</span>
+              </div>
+            </li>
+            <li>
+              <div class="icon-container">
+                <img src="/assets/images/icons/email.svg" alt="" />
+              </div>
+              <div class="item-info">
+                <h5>E-mail</h5>
+                <span>contact@yuccalabs.com</span>
+              </div>
+            </li>
+            <li>
+              <div class="icon-container">
+                <img src="/assets/images/icons/mdi--location.svg" alt="" />
+              </div>
+              <div class="item-info">
+                <h5>Bereau</h5>
+                <span>01 Av. de l'Indépendance, Sidi M'Hamed 16000</span>
+              </div>
+            </li>
+            <li>
+              <div class="icon-container">
+                <img src="/assets/images/icons/clock.svg" alt="" />
+              </div>
+              <div class="item-info">
+                <h5>Horaires De Travail</h5>
+                <span>dimanche - jeudi - 8h00-17h00</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Start Contact Form Section-->
+        <section class="send-message">
+          <h4>Envoyer un message</h4>
+          <form>
+            <div class="input-container">
+              <div class="">
+                <label for="fullname">Nom et Prenom</label>
+                <input
+                  type="text"
+                  id="fullname"
+                  placeholder="entrez votre nom complet..."
+                  required
+                />
+              </div>
               <div>
-                <h1>Explorez toute les Bijoux dans la algerie</h1>
-                <div class="search-space">
-                  <form>
-                    <div class="input-container">
-                      <div>
-                        <img src="/assets/images/icons/search.svg" alt="" />
-                        <input
-                          type="text"
-                          value="Bijoux"
-                          placeholder="Que charchez-vous ?"
-                          class="type-service"
-                        />
-                        <ul class="type-service-list"></ul>
-                      </div>
-                      <div>
-                        <div>
-                          <img
-                            src="/assets/images/icons/mdi--location.svg"
-                            alt=""
-                          />
-                          <input
-                            type="text"
-                            placeholder="Ou ?"
-                            class="location-service"
-                          />
-                        </div>
-                        <ul class="location-service-list"></ul>
-                      </div>
-                    </div>
-                    <button type="submit" class="search-btn">Recharche</button>
-                  </form>
-                </div>
+                <label for="phone">Téléphone</label>
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder="entrez votre numéro de téléphone..."
+                  maxlength="13"
+                  minlength="13"
+                  required
+                />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Hero Section -->
-      <!-- Start Listing Section -->
-      <section class="listing-section">
-        <section class="filter-section" id="aos" data-visible="false">
-          <div class="filter-overlay"></div>
-          <div class="filter-container">
-            <div class="filter-header">
-              <img
-                class="filter-icon-mob-v"
-                src="/assets/images/icons/filter.svg"
-                alt=""
+            <div>
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="entrez votre email..."
+                required
               />
-              <img
-                src="/assets/images/icons/close-filter.svg"
-                class="close-filter"
-                alt=""
-              />
-              <h4>Filtre</h4>
             </div>
-            <div class="filter-content">
-              <ul>
-                <li class="filter-category show">
-                  <div>
-                    <img src="/assets/images/icons/small-chevron.svg" alt="" />
-                    Filter par:
-                  </div>
-                  <ul class="services">
-                    <li class="filter-item">
-                      <input type="checkbox" id="service-1" />
-                      <label for="service-1">Or</label>
-                    </li>
-                    <li class="filter-item">
-                      <input type="checkbox" id="service-2" />
-                      <label for="service-2">Argent</label>
-                    </li>
-                    <li class="filter-item">
-                      <input type="checkbox" id="service-3" />
-                      <label for="service-3">Pierres Précieuses</label>
-                    </li>
-                    <li class="filter-item">
-                      <input type="checkbox" id="service-4" />
-                      <label for="service-4">Bijoux Personnalisés</label>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <div class="filter-applied">
-                <button class="clear">effacer filter</button>
-                <button class="show-results">Voir Results</button>
-              </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                placeholder="parlez-nous de votre journée spéciale..."
+                required
+              ></textarea>
             </div>
-          </div>
-        </section>
-        <section class="vendors-list-container" id="aos" data-visible="false">
-          <div class="vendors-list-header">
-            <span>
-              <img
-                class="results-icon"
-                src="/assets/images/icons/result-icon.svg"
-                alt=""
-              />
-              109 Results</span
-            >
-            <img
-              class="filter-icon"
-              src="/assets/images/icons/filter.svg"
-              alt=""
-            />
-          </div>
-          <section class="vendors-list">
-            <div class="vendor-card" id="aos" data-visible="false">
-              <div class="img-container">
-                <section class="embla">
-                  <div class="embla__viewport">
-                    <div class="embla__container">
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/2.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/3.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/4.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="embla__controls">
-                    <div class="embla__buttons">
-                      <button
-                        class="embla__button embla__button--prev"
-                        type="button"
-                      >
-                        <img
-                          src="/assets/images/icons/chevron-left.svg"
-                          alt=""
-                        />
-                      </button>
-
-                      <button
-                        class="embla__button embla__button--next"
-                        type="button"
-                      >
-                        <img
-                          src="/assets/images/icons/chevron-right.svg"
-                          alt=""
-                        />
-                      </button>
-                    </div>
-                    <div class="embla__dots"></div>
-                  </div>
-                </section>
-              </div>
-              <div class="vendor-info">
-                <div class="info-header">
-                  <h4>La Caverne des Joyaux</h4>
-                  <span class="like-btn">
-                    <img src="/assets/images/icons/like-btn.svg" alt="" />
-                  </span>
-                </div>
-                <p>
-                  La salle des fêtes Lydia dispose d'une grande salle
-                  magnifiquement décorée et d'une capacité de 240 personnes en
-                  plus d'une petite salle d'une capacité 200 invités. Une
-                  décoration gracieuse, épurée et chic ........
-                </p>
-                <div class="vendor-services-provided">
-                  <ul>
-                    <li>
-                      <img src="/assets/images/icons/location.svg" alt="" />
-                      <span>Cheraga-Alger</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/ring.svg" alt="" />
-                      <span>Or</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/ring.svg" alt="" />
-                      <span>Argent</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/neckless.svg" alt="" />
-                      <span>Bijoux Personnalisés</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/diamond.svg" alt="" />
-                      <span>Pierres Précieuses</span>
-                    </li>
-                  </ul>
-                  <a href="../details/jewelry-details.html">
-                    <button>Plus Details . . .</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="vendor-card" id="aos" data-visible="false">
-              <div class="img-container">
-                <section class="embla">
-                  <div class="embla__viewport">
-                    <div class="embla__container">
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/2.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/3.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/4.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="embla__controls">
-                    <div class="embla__buttons">
-                      <button
-                        class="embla__button embla__button--prev"
-                        type="button"
-                      >
-                        <img
-                          src="/assets/images/icons/chevron-left.svg"
-                          alt=""
-                        />
-                      </button>
-
-                      <button
-                        class="embla__button embla__button--next"
-                        type="button"
-                      >
-                        <img
-                          src="/assets/images/icons/chevron-right.svg"
-                          alt=""
-                        />
-                      </button>
-                    </div>
-                    <div class="embla__dots"></div>
-                  </div>
-                </section>
-              </div>
-              <div class="vendor-info">
-                <div class="info-header">
-                  <h4>La Caverne des Joyaux</h4>
-                  <span class="like-btn">
-                    <img src="/assets/images/icons/like-btn.svg" alt="" />
-                  </span>
-                </div>
-                <p>
-                  La salle des fêtes Lydia dispose d'une grande salle
-                  magnifiquement décorée et d'une capacité de 240 personnes en
-                  plus d'une petite salle d'une capacité 200 invités. Une
-                  décoration gracieuse, épurée et chic ........
-                </p>
-                <div class="vendor-services-provided">
-                  <ul>
-                    <li>
-                      <img src="/assets/images/icons/location.svg" alt="" />
-                      <span>Cheraga-Alger</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/ring.svg" alt="" />
-                      <span>Or</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/ring.svg" alt="" />
-                      <span>Argent</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/neckless.svg" alt="" />
-                      <span>Bijoux Personnalisés</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/diamond.svg" alt="" />
-                      <span>Pierres Précieuses</span>
-                    </li>
-                  </ul>
-                  <a href="../details/jewelry-details.html">
-                    <button>Plus Details . . .</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="vendor-card" id="aos" data-visible="false">
-              <div class="img-container">
-                <section class="embla">
-                  <div class="embla__viewport">
-                    <div class="embla__container">
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/2.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/3.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/4.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="embla__controls">
-                    <div class="embla__buttons">
-                      <button
-                        class="embla__button embla__button--prev"
-                        type="button"
-                      >
-                        <img
-                          src="/assets/images/icons/chevron-left.svg"
-                          alt=""
-                        />
-                      </button>
-
-                      <button
-                        class="embla__button embla__button--next"
-                        type="button"
-                      >
-                        <img
-                          src="/assets/images/icons/chevron-right.svg"
-                          alt=""
-                        />
-                      </button>
-                    </div>
-                    <div class="embla__dots"></div>
-                  </div>
-                </section>
-              </div>
-              <div class="vendor-info">
-                <div class="info-header">
-                  <h4>La Caverne des Joyaux</h4>
-                  <span class="like-btn">
-                    <img src="/assets/images/icons/like-btn.svg" alt="" />
-                  </span>
-                </div>
-                <p>
-                  La salle des fêtes Lydia dispose d'une grande salle
-                  magnifiquement décorée et d'une capacité de 240 personnes en
-                  plus d'une petite salle d'une capacité 200 invités. Une
-                  décoration gracieuse, épurée et chic ........
-                </p>
-                <div class="vendor-services-provided">
-                  <ul>
-                    <li>
-                      <img src="/assets/images/icons/location.svg" alt="" />
-                      <span>Cheraga-Alger</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/ring.svg" alt="" />
-                      <span>Or</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/ring.svg" alt="" />
-                      <span>Argent</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/neckless.svg" alt="" />
-                      <span>Bijoux Personnalisés</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/diamond.svg" alt="" />
-                      <span>Pierres Précieuses</span>
-                    </li>
-                  </ul>
-                  <a href="../details/jewelry-details.html">
-                    <button>Plus Details . . .</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="vendors-list-pagination">
-            <button class="prev-page">
-              <img src="/assets/images/icons/small-chevron-left.svg" alt="" />
+            <button>
+              <img src="/assets/images/icons/send.svg" alt="" />
+              Envoyer un message
             </button>
-            <div class="page-num">
-              <span class="curr-page"><a href=""> 1 </a></span>
-              <span><a href="">2</a></span>
-              <span><a href="">3</a></span>
-            </div>
-            <button class="next-page">
-              <img src="/assets/images/icons/small-chevron.svg" alt="" />
-            </button>
-          </section>
+          </form>
         </section>
+        <!-- End Contact Form Section-->
       </section>
-      <!-- End Listing Section -->
+      <!-- End Contact Us Section-->
     </main>
     <!-- Start Footer Section -->
     <footer>
@@ -946,9 +619,5 @@
     <!-- End Footer Section -->
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
-    <!-- external packages -->
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
-    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
-    <script src="/assets/vendors/carousel.js"></script>
   </body>
 </html>

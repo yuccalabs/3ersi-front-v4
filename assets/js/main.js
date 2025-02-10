@@ -346,8 +346,8 @@ document.addEventListener("DOMContentLoaded", () => {
   horizontalScroll(".sugg-container", ".sugg-section");
 });
 
+// control the tabs in filter Section
 document.addEventListener("DOMContentLoaded", () => {
-  // control the tabs in filter Section
   const filterSection = document.querySelector(".filter-section");
   const filterIcon = document.querySelector(".filter-icon");
   const closeFilterIcon = document.querySelector(".close-filter");
@@ -405,6 +405,25 @@ document.addEventListener("DOMContentLoaded", () => {
   likeBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       btn.classList.toggle("active");
+    });
+  });
+});
+
+// control faq list
+document.addEventListener("DOMContentLoaded", () => {
+  const faqTitles = document.querySelectorAll(".faq-question");
+
+  faqTitles.forEach((title) => {
+    title.addEventListener("click", () => {
+      const answer = title.nextElementSibling;
+      const chevronIcon = title.querySelector("img");
+      if (answer.classList.contains("show")) {
+        answer.classList.remove("show");
+        chevronIcon.style.rotate = "0deg";
+      } else {
+        answer.classList.add("show");
+        chevronIcon.style.rotate = "180deg";
+      }
     });
   });
 });

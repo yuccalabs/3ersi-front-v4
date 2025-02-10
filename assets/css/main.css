@@ -1812,6 +1812,9 @@ footer .copy-right {
   .listing-section .vendors-list .vendor-card .vendor-info {
     padding: 1rem;
   }
+  .listing-section .vendors-list .vendor-card .vendor-info .info-header img {
+    width: 3.5rem;
+  }
   .listing-section .vendors-list .vendor-card .vendor-info p {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -2076,7 +2079,6 @@ input[type="range"]:hover {
   .listing-section .filter-section .filter-header .close-filter {
     display: inline;
   }
-
   .listing-section .filter-section .filter-container {
     position: absolute;
     width: 100%;
@@ -2092,7 +2094,12 @@ input[type="range"]:hover {
     font-size: 2.2rem;
     font-weight: 400;
   }
-  .listing-section .filter-section .filter-content {
+  .listing-section
+    .filter-section
+    .filter-header
+    .listing-section
+    .filter-section
+    .filter-content {
     box-shadow: none;
     font-size: 2.4rem;
   }
@@ -2315,6 +2322,9 @@ body .call-vendor-mob {
   -webkit-transition: var(--hover-transition);
   -o-transition: var(--hover-transition);
   transition: var(--hover-transition);
+}
+.vendor-details .vendor-info-card .call-vendor:hover img {
+  filter: var(--stroke-color);
 }
 .vendor-intro {
   width: 65%;
@@ -2671,4 +2681,252 @@ body .call-vendor-mob {
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # End About Us Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Start FAQ Page
+--------------------------------------------------------------*/
+.faq.headline img {
+  filter: var(--stroke-color);
+}
+.faq-container .faq-content {
+  width: 50%;
+  margin-inline: auto;
+}
+.faq-container .faq-content li.faq-question {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border: 1px solid #dac5c5;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  transition: var(--hover-transition);
+}
+.faq-container .faq-content ul .faq-question:hover {
+  background-color: #f5f5f5;
+}
+.faq-container .faq-content .faq-question h4 {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.faq-container .faq-content .faq-question img {
+  transition: var(--hover-transition);
+}
+.faq-container .faq-content .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 2;
+  border: none;
+  border-radius: 0.7rem;
+  margin-bottom: 2rem;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out,
+    border 0.3s ease-out;
+}
+.faq-container .faq-content .faq-answer ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+.faq-container .faq-content .faq-answer ul li {
+  list-style-type: disc;
+}
+.faq-container .faq-content .faq-answer.show {
+  max-height: 500px;
+  padding: 1rem 1rem 0.6rem;
+  border: 1px solid #dac5c5;
+  border-top: none;
+}
+.faq-container .faq-content .contact-us {
+  text-align: center;
+  margin-block: 2rem;
+}
+.faq-container .faq-content .contact-us h6 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.faq-container .faq-content .contact-us button {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  color: var(--third-color);
+  border-radius: 7px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  transition: var(--hover-transition);
+}
+.faq-container .faq-content .contact-us button:hover {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  background-color: var(--background-color);
+}
+@media (max-width: 768px) {
+  .faq-container .faq-content {
+    width: 100%;
+  }
+  .faq-container .faq-content .faq-answer,
+  .faq-container .faq-content .faq-question h4 {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  .faq-container .faq-content .contact-us h6,
+  .faq-container .faq-content .contact-us button {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  .faq-container .faq-content .contact-us h6 span {
+    display: block;
+    margin-top: 1rem;
+  }
+}
+/*--------------------------------------------------------------
+# End FAQ Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Start Contact Us Page
+--------------------------------------------------------------*/
+.contact.headline img {
+  filter: var(--stroke-color);
+}
+.contact-section {
+  width: 80%;
+  display: flex;
+  gap: 1rem;
+}
+.contact-section .get-in-touch {
+  flex-basis: 40%;
+  background-color: #f6f6f6;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+}
+.contact-section .get-in-touch h4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.contact-section .get-in-touch ul {
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+.contact-section .get-in-touch ul li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+.contact-section .get-in-touch ul li .icon-container {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(236, 97, 92, 0.15);
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-section .get-in-touch ul li .icon-container img {
+  filter: var(--stroke-color);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.contact-section .get-in-touch ul li .item-info h5 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 0.7rem;
+}
+.contact-section .get-in-touch ul li .item-info span {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+.contact-section .send-message {
+  flex: 1 1 60%;
+  padding: 2rem 1rem;
+}
+.contact-section .send-message h4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.contact-section .send-message form {
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-section .send-message form .input-container {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.contact-section .send-message form .input-container div {
+  flex: 1;
+}
+.contact-section .send-message form label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.contact-section .send-message form input {
+  width: 100%;
+  height: 42px;
+  padding-left: 1rem;
+  border: 1px solid #4b4b4b;
+  border-radius: 0.5rem;
+  outline: none;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.contact-section .send-message form textarea {
+  width: 100%;
+  height: 78px;
+  padding: 2rem 1rem;
+  resize: none;
+  font-size: 1.2rem;
+  font-weight: 300;
+  border-radius: 0.5rem;
+  border: 1px solid #4b4b4b;
+}
+.contact-section .send-message form textarea:focus {
+  outline: none;
+}
+.contact-section .send-message form button {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--third-color);
+  padding: 1rem 1rem;
+  background-color: var(--primary-color);
+  margin-left: auto;
+  border-radius: 0.7rem;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  transition: var(--hover-transition);
+}
+.contact-section .send-message form button img {
+  filter: brightness(0) saturate(100%) invert(100%);
+  transition: var(--stroke-transition);
+}
+.contact-section .send-message form button:hover {
+  border: 1px solid var(--primary-color);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+.contact-section .send-message form button:hover img {
+  filter: var(--stroke-color);
+}
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+  }
+  .contact-section .send-message .input-container {
+    flex-direction: column;
+  }
+  .contact-section .send-message form input,
+  .contact-section .send-message form textarea {
+    margin-bottom: 2rem;
+  }
+}
+/*--------------------------------------------------------------
+# End Contact Us Page
 --------------------------------------------------------------*/
