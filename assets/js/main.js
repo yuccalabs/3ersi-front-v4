@@ -427,3 +427,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// control the contact form
+const textareaInput = document.querySelector(".contact-section textarea");
+const readyPromptList = document.querySelector(
+  ".textarea-container .ready-prompt"
+);
+const readyPromptListItems = document.querySelectorAll(
+  ".textarea-container .ready-prompt li"
+);
+
+textareaInput.addEventListener("focus", () => {
+  showElement(readyPromptList);
+});
+textareaInput.addEventListener("input", () => {
+  hideElement(readyPromptList);
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target !== readyPromptList && e.target !== textareaInput) {
+    hideElement(readyPromptList);
+  }
+});
+
+readyPromptListItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const itemValue = item.querySelector("p").innerText;
+    textareaInput.value = itemValue;
+  });
+});

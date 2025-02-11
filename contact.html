@@ -506,13 +506,40 @@
                 required
               />
             </div>
-            <div>
-              <label for="message">Message</label>
+            <div class="textarea-container">
+              <label for="message">Votre message</label>
               <textarea
                 id="message"
                 placeholder="parlez-nous de votre journée spéciale..."
                 required
               ></textarea>
+              <ul class="ready-prompt">
+                <li class="prompt-1">
+                  <h6>Demande de devis</h6>
+                  <p>
+                    Bonjour, je suis intéressé par un devis pour vos services.
+                    Pourriez-vous me fournir des informations détaillées sur les
+                    tarifs pour [service spécifique] ? Merci !
+                  </p>
+                </li>
+                <li class="prompt-2">
+                  <h6>Informations sur le service</h6>
+                  <p>
+                    Bonjour, J’aimerais en savoir plus sur votre service [nom du
+                    service]. Pourriez-vous me donner plus de détails sur ce
+                    qu’il inclut et son fonctionnement ? Merci
+                  </p>
+                </li>
+                <li class="prompt-3">
+                  <h6>Réserver un service</h6>
+                  <p>
+                    Bonjour, J’aimerais réserver vos services pour le
+                    [date/heure]. Ce créneau est-il disponible ? Quelles sont
+                    les prochaines étapes pour confirmer la réservation ? Merci
+                    !
+                  </p>
+                </li>
+              </ul>
             </div>
             <button>
               <img src="/assets/images/icons/send.svg" alt="" />
