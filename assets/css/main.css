@@ -329,7 +329,9 @@ body .list-appear .input-container input:focus {
 body .list-appear .input-container input::placeholder {
   font-size: 1.8rem;
 }
-body .list-appear .list-content ul {
+body .list-appear .list-content .type-service-list-mob-v,
+body .list-appear .list-content .location-service-list-mob-v {
+  display: none;
   overflow-y: auto;
   height: 70%;
 }
@@ -342,6 +344,7 @@ body .list-appear .list-content ul li {
   font-weight: 400;
   border-bottom: 1px solid #eee;
 }
+
 body .list-appear ul {
   -ms-overflow-style: none; /* For Internet Explorer */
   scrollbar-width: none; /* For Firefox */
@@ -352,6 +355,11 @@ body .list-appear ul {
     -webkit-overflow-scrolling: none; /* For iOS Safari */
   }
   body .list-appear.show {
+    display: block;
+  }
+
+  body .list-appear .list-content .type-service-list-mob-v.show,
+  body .list-appear .list-content .location-service-list-mob-v.show {
     display: block;
   }
 }
@@ -1053,6 +1061,14 @@ main {
   color: #6c6c6c;
   font-weight: 300;
   line-height: 2rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 .discount .discount-container .box .price .new-price {
   font-size: 2.2rem;
@@ -1108,7 +1124,11 @@ main {
   font-weight: 300;
   margin: 2rem 0 3.2rem;
 }
-
+.wedding-planner .container .text-content p span {
+  font-weight: 500;
+  font-style: italic;
+  color: var(--primary-color);
+}
 .wedding-planner .container .text-content button {
   padding: 8px 9px;
   background-color: var(--primary-color);
@@ -1343,6 +1363,14 @@ main {
   line-height: 1.6;
   font-weight: 500;
   margin: 8px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 .articles .headline-container .more-articles:hover img {
   filter: var(--stroke-color);
@@ -1700,6 +1728,14 @@ footer .copy-right {
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 2.6rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 .listing-section .vendors-list .vendor-card .vendor-services-provided {
   display: flex;
@@ -2566,9 +2602,10 @@ body .call-vendor-mob {
   font-size: 1.6rem;
 }
 .sugg-section .sugg-container .box .vendor-info p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  color: #6c6c6c;
   font-weight: 300;
-  line-height: 1.6rem;
+  line-height: 2rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -2577,7 +2614,7 @@ body .call-vendor-mob {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
-  margin: 0.8rem 0 1rem;
+  margin-block: 0.6rem 1rem;
 }
 .sugg-section .sugg-container .box .vendor-services-provided ul {
   display: flex;
@@ -3112,11 +3149,17 @@ body .call-vendor-mob {
 .hero-planner .text-container {
   text-align: center;
 }
-.hero-planner .text-container .headline img {
+.hero-planner .headline.mob-v {
+  display: none;
+}
+.hero-planner .headline {
+  display: block;
+}
+.hero-planner .headline img {
   width: 5rem;
   height: 5rem;
 }
-.hero-planner .text-container .headline h2 {
+.hero-planner .headline h2 {
   font-size: 3.6rem;
   margin-block: 1rem;
 }
@@ -3158,6 +3201,12 @@ body .call-vendor-mob {
     flex-basis: 320px;
     width: 320px;
     text-align: center;
+  }
+  .hero-planner .headline.mob-v {
+    display: block;
+  }
+  .hero-planner .headline {
+    display: none;
   }
   .hero-planner .img-container > div.img-two {
     left: 0;
@@ -3223,15 +3272,7 @@ body .call-vendor-mob {
 .wedd-org-section .form-section form.personall-info .input-container {
   grid-template-columns: 1fr 1fr;
 }
-@media (max-width: 768px) {
-  .wedd-org-section .form-section form.personall-info,
-  .wedd-org-section .form-section form {
-    width: 100%;
-  }
-  .wedd-org-section .form-section form.personall-info .input-container {
-    grid-template-columns: 1fr;
-  }
-}
+
 .wedd-org-section .form-section form label {
   display: block;
   margin-bottom: 0.8rem;
@@ -3429,7 +3470,15 @@ body .call-vendor-mob {
   font-weight: 300;
   color: var(--secondaly-color);
 }
-
+@media (max-width: 768px) {
+  .wedd-org-section .form-section form.personall-info,
+  .wedd-org-section .form-section form {
+    width: 100%;
+  }
+  .wedd-org-section .form-section form.personall-info .input-container {
+    grid-template-columns: 1fr;
+  }
+}
 /* End Wedding Organaistaion Section */
 /*--------------------------------------------------------------
 # End Wedding Planner Page
