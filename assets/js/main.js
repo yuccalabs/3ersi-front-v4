@@ -75,6 +75,19 @@ window.addEventListener("click", (e) => {
 
 // Render dynamic lists
 document.addEventListener("DOMContentLoaded", () => {
+  const iconsList = [
+    "/assets/images/navmenu-icons/salle-des-fetes-48x48.svg",
+    "/assets/images/navmenu-icons/multimédia-48x48.svg",
+    "/assets/images/navmenu-icons/traiteur-48x48.svg",
+    "/assets/images/navmenu-icons/music-48x48.svg",
+    "/assets/images/navmenu-icons/décoration-48x48.svg",
+    "/assets/images/navmenu-icons/gateaux-48x48.svg",
+    "/assets/images/navmenu-icons/invite-svgrepo-com.svg",
+    "/assets/images/navmenu-icons/machta-48x48.svg",
+    "/assets/images/navmenu-icons/beauté&soins-48x48.svg",
+    "/assets/images/navmenu-icons/bijoux-48x48.svg",
+  ];
+
   const listItems = [
     "Salles des fêtes",
     "Photos et vidéos",
@@ -255,20 +268,28 @@ document.addEventListener("DOMContentLoaded", () => {
       const inputValue = input.value.toLowerCase();
       ul.innerHTML = items
         .filter((item) => item.toLowerCase().includes(inputValue))
-        .map((item) => `<li>${item}</li>`)
+        .map(
+          (item) => `<li><img src="${iconsList[index]}" alt="" /> ${item}</li>`
+        )
         .join("");
       // Fill the input with the Item Text
       ul.querySelectorAll("li").forEach((item) =>
         item.addEventListener("click", (e) => {
-          input.value = e.target.innerHTML;
+          input.value = e.target.innerText;
         })
       );
     });
-    ul.innerHTML = items.map((item) => `<li>${item}</li>`).join(""); // Initial render
+    ul.innerHTML = items
+      .map(
+        (item, index) =>
+          `<li><img src="${iconsList[index]}" alt="service-${item}" /> ${item}</li>`
+      )
+      .join(""); // Initial render
+
     // Fill the input with the Item Text
     ul.querySelectorAll("li").forEach((item) =>
       item.addEventListener("click", (e) => {
-        input.value = e.target.innerHTML;
+        input.value = e.target.innerText;
       })
     );
   };
@@ -406,4 +427,97 @@ document.addEventListener("DOMContentLoaded", () => {
         () => (textareaInput.value = item.querySelector("p").innerText)
       );
     });
+});
+
+// Control the Auth Popup
+const connexionBtn = document.querySelectorAll("#Connexion");
+const popupSection = document.querySelector(".popup-auth");
+// const popupContainer = document.querySelector(
+//   ".popup-auth .popup-auth-container"
+// );
+const loginPopup = document.querySelector(".popup-auth .popup-login");
+const signupPopup = document.querySelector(".popup-auth .popup-signup");
+const hidePopup = document.querySelectorAll(".popup-auth .close-btn img");
+const switchLogin = document.querySelector(
+  ".popup-auth .popup-signup .switch-popup"
+);
+const switchSignup = document.querySelector(
+  ".popup-auth .popup-login .switch-popup"
+);
+
+// Display Login popup
+function showLoginPopup() {
+  showElement(popupSection);
+  showElement(loginPopup);
+  hideElement(signupPopup);
+}
+
+// Display Sign up popup
+function showSignupPopup() {
+  showElement(popupSection);
+  showElement(signupPopup);
+  hideElement(loginPopup);
+}
+
+// Hide All popups
+function hideAllPopups() {
+  hideElement(popupSection);
+  hideElement(loginPopup);
+  hideElement(signupPopup);
+}
+
+// Switch Between Login and Signup Popups
+function switchPopup(event) {
+  if (event.target === switchSignup) {
+    showSignupPopup();
+  } else if (event.target === switchLogin) {
+    showLoginPopup();
+  }
+}
+
+// Controle the Popups
+function authGateVisibility() {
+  // Show login popup when Connexion buttons are clicked
+  connexionBtn.forEach((btn) => {
+    btn.addEventListener("click", showLoginPopup);
+  });
+
+  // Switch Between Popups
+  if (switchSignup && switchLogin) {
+    switchSignup.addEventListener("click", switchPopup);
+    switchLogin.addEventListener("click", switchPopup);
+  }
+
+  // Hide all popups when close buttons are clicked
+  hidePopup.forEach((btn) => {
+    btn.addEventListener("click", hideAllPopups);
+  });
+
+  // Close popup when clicking outside the container
+  popupSection.addEventListener("click", (event) => {
+    if (event.target === popupSection) {
+      hideAllPopups();
+    }
+  });
+
+  // Close popup on pressing the Escape key
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      hideAllPopups();
+    }
+  });
+}
+
+authGateVisibility();
+
+// Change the language
+const langSelected = document.querySelector("#lang-switcher");
+const bodyEle = document.querySelector("body");
+
+langSelected.addEventListener("change", () => {
+  if (langSelected.value === "ar") {
+    bodyEle.setAttribute("lang", langSelected.value);
+  } else {
+    bodyEle.removeAttribute("lang");
+  }
 });

@@ -235,7 +235,7 @@
           </ul>
         </nav>
         <div class="subscirbe">
-          <button class="sign-up-btn">Connexion</button>
+          <button class="sign-up-btn" id="Connexion">Connexion</button>
         </div>
         <aside>
           <div class="aside-content">
@@ -426,7 +426,7 @@
               </li>
               <li>
                 <div>
-                  <button class="sign-up-btn">Connexion</button>
+                  <button class="sign-up-btn" id="Connexion">Connexion</button>
                 </div>
               </li>
             </ul>
@@ -666,6 +666,143 @@
       <div class="copy-right">&copy; 2025 3ersi.com - Tous Droits Réservés</div>
     </footer>
     <!-- End Footer Section -->
+    <!-- Start Popup Authentication -->
+    <div class="popup-auth" id="popup-auth">
+      <div class="popup-signup">
+        <div class="popup-header">
+          <span class="close-btn" id="close-popup"
+            ><img src="/assets/images/icons/xMark.svg" alt=""
+          /></span>
+          <h5>Create Account</h5>
+          <p>Join us to start planning your wedding</p>
+        </div>
+        <div class="popup-content">
+          <form>
+            <div class="input-container">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your ID"
+                  name="username"
+                  required
+                />
+                <img src="/assets/images/icons/person.svg" alt="" />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  id="fullname"
+                  placeholder="Entrez le nom complet"
+                  name="fullname"
+                  required
+                />
+                <img src="/assets/images/icons/person.svg" alt="" />
+              </div>
+            </div>
+            <div class="input-container">
+              <div>
+                <input
+                  type="text"
+                  id="phone-number"
+                  placeholder="Entrez le numéro de telephone"
+                  name="phone-number"
+                  required
+                />
+                <img src="/assets/images/icons/person.svg" alt="" />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Entrez le email"
+                  name="email"
+                  required
+                />
+                <img src="/assets/images/icons/person.svg" alt="" />
+              </div>
+            </div>
+            <div class="input-container">
+              <input
+                type="password"
+                placeholder="entre mot de passe"
+                name="password"
+                required
+              />
+              <img src="/assets/images/icons/lock.svg" alt="" />
+            </div>
+            <div class="input-container">
+              <input
+                type="password"
+                placeholder="confirme le mot de passe"
+                name="password"
+                required
+              />
+              <img src="/assets/images/icons/lock.svg" alt="" />
+            </div>
+            <div class="radio-btn">
+              <div>
+                <input type="radio" id="radio1" name="customRadio" checked />
+                <label for="radio1" class="custom-radio"> Je me marie </label>
+              </div>
+              <div>
+                <input type="radio" id="radio2" name="customRadio" />
+                <label for="radio2" class="custom-radio">
+                  Je suis prestataire
+                </label>
+              </div>
+            </div>
+            <button type="submit">Se connecter</button>
+          </form>
+        </div>
+        <div class="popup-footer">
+          <p>
+            Already have an account? <span class="switch-popup">Log in</span>
+          </p>
+        </div>
+      </div>
+      <div class="popup-login">
+        <div class="popup-header">
+          <span class="close-btn" id="close-popup"
+            ><img src="/assets/images/icons/xMark.svg" alt=""
+          /></span>
+          <h5>Welcome Back!</h5>
+          <p>Sign in to access your account</p>
+        </div>
+        <div class="popup-content">
+          <form>
+            <div class="input-container">
+              <input
+                type="text"
+                placeholder="id, email ou numéro de telephone"
+                name="username"
+                required
+              />
+              <img src="/assets/images/icons/person.svg" alt="" />
+            </div>
+            <div class="input-container">
+              <input
+                type="password"
+                placeholder="mot de passe"
+                name="password"
+                required
+              />
+              <img src="/assets/images/icons/lock.svg" alt="" />
+            </div>
+            <button type="submit">Se connecter</button>
+          </form>
+        </div>
+        <div class="popup-footer">
+          <p>
+            Don't have an account? <span class="switch-popup">sign up</span>
+          </p>
+          <button>
+            <img src="/assets/images/icons/facebook.svg" alt="" />
+            Access via Facebook
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- End Popup Authentication -->
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
   </body>

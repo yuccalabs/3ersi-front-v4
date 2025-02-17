@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
+    <!-- Start Mob-search-list -->
     <div class="list-appear">
       <div class="list-overlay"></div>
       <div class="list-content">
@@ -45,6 +46,7 @@
         <ul class="location-service-list-mob-v"></ul>
       </div>
     </div>
+    <!-- End Mob-search-list -->
     <!-- Start Header Section -->
     <header class="header">
       <div class="vendors-gate">
@@ -65,7 +67,7 @@
         </div>
         <div id="logo">
           <a href="/" aria-label="aller à la page d'accueil">
-            <img src="/assets/images/icons/logo.svg" alt="logo company"
+            <img src="/assets/images/logo.svg" alt="logo company"
           /></a>
         </div>
         <nav id="navmenu" class="navmenu" aria-label="Main Navigation">
@@ -254,7 +256,11 @@
           </ul>
         </nav>
         <div class="subscirbe">
-          <button class="sign-up-btn">Connexion</button>
+          <button class="sign-up-btn" id="Connexion">Connexion</button>
+          <select id="lang-switcher">
+            <option value="fr">FR</option>
+            <option value="ar">AR</option>
+          </select>
         </div>
         <aside>
           <div class="aside-content">
@@ -286,7 +292,6 @@
                         src="/assets/images/navmenu-icons/décoration-48x48.svg"
                         alt="décoration-icône"
                       />
-
                       Décoration</a
                     >
                   </li>
@@ -444,8 +449,12 @@
                 </ul>
               </li>
               <li>
-                <div>
-                  <button class="sign-up-btn">Connexion</button>
+                <div class="subscirbe-mob">
+                  <button class="sign-up-btn" id="Connexion">Connexion</button>
+                  <select id="lang-switcher">
+                    <option value="fr">FR</option>
+                    <option value="ar">AR</option>
+                  </select>
                 </div>
               </li>
             </ul>
@@ -479,7 +488,6 @@
                           src="/assets/images/icons/search.svg"
                           alt="recherche-icône"
                         />
-
                         <input
                           type="text"
                           placeholder="Que charchez-vous ?"
@@ -962,7 +970,9 @@
               bénéficiez de notre expertise et profitez des meilleures offres
               disponibles sur le marché.
             </p>
-            <button>Bientôt disponible</button>
+            <a href="/wedd-plan/wedding-planner.html">
+              <button>Bientôt disponible</button>
+            </a>
           </div>
           <div class="img-container" id="aos" data-visible="false">
             <img
@@ -1281,10 +1291,9 @@
           <div class="footer-logo">
             <a href="">
               <img
-                src="/assets/images/icons/logo.svg"
+                src="/assets/images/logo.svg"
                 alt="logo of 3ersi.com company"
               />
-              <p>GUIDE DU MARIAGE EN ALGERIE</p>
             </a>
           </div>
           <div class="app-download">
@@ -1334,7 +1343,146 @@
       <div class="copy-right">&copy; 2025 3ersi.com - Tous Droits Réservés</div>
     </footer>
     <!-- End Footer Section -->
-
+    <!-- Start Popup Authintication -->
+    <!-- Start Popup Authentication -->
+    <div class="popup-auth" id="popup-auth">
+      <div class="popup-signup">
+        <div class="popup-header">
+          <span class="close-btn" id="close-popup"
+            ><img src="/assets/images/icons/xMark.svg" alt=""
+          /></span>
+          <h5>Créer un compte</h5>
+          <p>Créez un compte pour profiter de nos services</p>
+        </div>
+        <div class="popup-content">
+          <form>
+            <div class="input-container">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Votre ID"
+                  name="username"
+                  required
+                />
+                <img src="/assets/images/icons/id.svg" alt="" />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  id="fullname"
+                  placeholder="Nom complet"
+                  name="fullname"
+                  required
+                />
+                <img src="/assets/images/icons/person.svg" alt="" />
+              </div>
+            </div>
+            <div class="input-container">
+              <div>
+                <input
+                  type="text"
+                  id="phone-number"
+                  placeholder="Numéro de téléphone"
+                  name="phone-number"
+                  required
+                />
+                <img src="/assets/images/icons/phone.svg" alt="" />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Adresse e-mail"
+                  name="email"
+                  required
+                />
+                <img src="/assets/images/icons/email.svg" alt="" />
+              </div>
+            </div>
+            <div class="input-container">
+              <input
+                type="password"
+                placeholder="Entrez un mot de passe"
+                name="password"
+                required
+              />
+              <img src="/assets/images/icons/lock.svg" alt="" />
+            </div>
+            <div class="input-container">
+              <input
+                type="password"
+                placeholder="Confirmez le mot de passe"
+                name="password"
+                required
+              />
+              <img src="/assets/images/icons/lock.svg" alt="" />
+            </div>
+            <div class="radio-btn">
+              <div>
+                <input type="radio" id="radio1" name="customRadio" checked />
+                <label for="radio1" class="custom-radio"> Je me marie </label>
+              </div>
+              <div>
+                <input type="radio" id="radio2" name="customRadio" />
+                <label for="radio2" class="custom-radio">
+                  Je suis prestataire
+                </label>
+              </div>
+            </div>
+            <button type="submit">S'inscrire</button>
+          </form>
+        </div>
+        <div class="popup-footer">
+          <p>
+            Vous avez déjà un compte ?
+            <span class="switch-popup">Connectez-vous</span>
+          </p>
+        </div>
+      </div>
+      <div class="popup-login">
+        <div class="popup-header">
+          <span class="close-btn" id="close-popup"
+            ><img src="/assets/images/icons/xMark.svg" alt=""
+          /></span>
+          <h5>Bienvenue de retour !</h5>
+          <p>Connectez-vous pour accéder à votre compte</p>
+        </div>
+        <div class="popup-content">
+          <form>
+            <div class="input-container">
+              <input
+                type="text"
+                placeholder="ID, e-mail ou numéro de téléphone"
+                name="username"
+                required
+              />
+              <img src="/assets/images/icons/id.svg" alt="" />
+            </div>
+            <div class="input-container">
+              <input
+                type="password"
+                placeholder="Mot de passe"
+                name="password"
+                required
+              />
+              <img src="/assets/images/icons/lock.svg" alt="" />
+            </div>
+            <button type="submit">Se connecter</button>
+          </form>
+        </div>
+        <div class="popup-footer">
+          <p>
+            Vous n'avez pas de compte ?
+            <span class="switch-popup">Inscrivez-vous</span>
+          </p>
+          <button>
+            <img src="/assets/images/icons/facebook.svg" alt="" />
+            Accéder via Facebook
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- End Popup Authentication -->
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
   </body>
