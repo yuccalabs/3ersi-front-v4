@@ -90,6 +90,7 @@ body {
 body.arabic {
   font-family: "Cairo", serif; /* or any Arabic font you prefer */
   text-align: right;
+  direction: rtl;
 }
 a {
   color: var(--secondaly-color);
@@ -229,6 +230,7 @@ i {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 1rem;
+  direction: ltr;
 }
 .arrows-container span {
   width: 30px;
@@ -273,6 +275,10 @@ i {
 }
 body {
   position: relative;
+}
+body.no-scroll {
+  overflow: hidden;
+  -webkit-overflow-scrolling: none; /* For iOS Safari */
 }
 body .list-appear {
   display: none;
@@ -334,7 +340,6 @@ body .list-appear .input-container input {
 }
 body.arabic .list-appear .input-container input {
   padding: 6px 35px 6px 8px;
-  direction: rtl;
 }
 body .list-appear .input-container input:focus {
   outline: none;
@@ -374,10 +379,6 @@ body .list-appear ul {
   scrollbar-width: none; /* For Firefox */
 }
 @media (max-width: 768px) {
-  .no-scroll {
-    overflow: hidden;
-    -webkit-overflow-scrolling: none; /* For iOS Safari */
-  }
   body .list-appear.show {
     display: block;
   }
@@ -385,11 +386,6 @@ body .list-appear ul {
   body .list-appear .list-content .type-service-list-mob-v.show,
   body .list-appear .list-content .location-service-list-mob-v.show {
     display: block;
-  }
-  body.arabic .list-appear .list-content .type-service-list-mob-v.show,
-  body.arabic .list-appear .list-content .location-service-list-mob-v.show,
-  body.arabic .list-appear .list-content .title-service {
-    direction: rtl;
   }
 }
 /*--------------------------------------------------------------
@@ -400,6 +396,9 @@ body .list-appear ul {
   -webkit-box-shadow: var(--shadow-box);
   box-shadow: var(--shadow-box);
   position: relative;
+}
+body.arabic .header {
+  direction: ltr;
 }
 .header .vendors-gate {
   width: var(--width-section);
@@ -797,7 +796,9 @@ main {
   -ms-flex-pack: end;
   justify-content: end;
 }
-
+body.arabic .hero .container .hero-content {
+  justify-content: start;
+}
 .hero .container .hero-main-text {
   width: 56%;
   padding: 2rem;
@@ -816,9 +817,7 @@ main {
   justify-content: end;
   position: relative;
 }
-body.arabic .hero .container .hero-main-text {
-  direction: rtl;
-}
+
 .hero .container .hero-content .hero-main-text::after {
   content: "";
   display: none;
@@ -858,9 +857,6 @@ body.arabic .hero .container .hero-content .search-space {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-body.arabic .hero .container .hero-content form {
-  direction: rtl;
 }
 .hero .container .hero-content form > div {
   width: 78%;
@@ -1225,15 +1221,11 @@ body.arabic .discount .discount-container .box .discount-info .time {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
-  direction: rtl;
 }
 .discount .discount-container .box .price {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-body.arabic .discount .discount-container .box .price {
-  direction: rtl;
 }
 .discount .discount-container .box .price .new-price {
   font-size: 2.2rem;
@@ -1275,9 +1267,6 @@ body.arabic .discount .discount-container .box .price .new-price {
   padding: 4rem;
   gap: 1rem;
   height: 100%;
-}
-body.arabic .wedding-planner .container {
-  direction: rtl;
 }
 .wedding-planner .container div {
   -webkit-box-flex: 1;
@@ -1394,9 +1383,7 @@ body.arabic .wedding-planner .container .img-container::after {
   justify-content: space-between;
   margin: 2rem 0;
 }
-body.arabic .articles .headline-container {
-  direction: rtl;
-}
+
 .articles .headline-container .headline-content {
   width: 50%;
 }
@@ -1420,9 +1407,6 @@ body.arabic .articles .headline-container {
   -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
-}
-body.arabic .articles .headline-container .more-articles {
-  direction: rtl;
 }
 .articles .headline-container .more-articles a {
   font-size: 1.4rem;
@@ -1547,9 +1531,7 @@ body.arabic .articles .category-container .category h5 {
   font-size: 1.2rem;
   font-weight: 300;
 }
-body.arabic .articles .article .article-content .article-info {
-  direction: rtl;
-}
+
 .articles .article .article-content p {
   font-size: 1.4rem;
   line-height: 1.6;
@@ -1565,7 +1547,6 @@ body.arabic .articles .article .article-content .article-info {
   white-space: normal;
 }
 body.arabic .articles .article .article-content p {
-  direction: rtl;
   font-size: 1.6rem;
   font-weight: 500;
 }
@@ -1592,9 +1573,6 @@ body.arabic .articles .article .article-content p {
     text-decoration: underline;
     padding: 2rem;
   }
-  body.arabic .articles .more-articles.mob-v {
-    direction: rtl;
-  }
   body.arabic .articles .more-articles.mob-v img {
     transform: rotate(180deg);
   }
@@ -1606,7 +1584,6 @@ body.arabic .articles .article .article-content p {
 /* Start Footer Section */
 footer {
   background-color: #eee;
-  direction: rtl;
 }
 footer .footer-container {
   width: var(--width-section);
@@ -1813,6 +1790,7 @@ footer .copy-right {
 .listing-section .vendors-list .vendor-card .img-container {
   width: 250px;
   border-radius: 1rem;
+  direction: ltr;
 }
 .listing-section .embla {
   width: 100%;
@@ -2009,6 +1987,7 @@ footer .copy-right {
   padding-top: 2rem;
   gap: 3rem;
   border-top: 1px solid #eee;
+  direction: ltr;
 }
 .listing-section .vendors-list-container .vendors-list-pagination .page-num {
   display: flex;
@@ -2169,6 +2148,7 @@ footer .copy-right {
 }
 .listing-section .filter-section .filter-content .filter-category div img {
   filter: var(--storke-secondary-color);
+  transform: rotate(180deg);
 }
 .listing-section .filter-section .filter-content li:last-child {
   border-bottom: none;
@@ -2424,6 +2404,7 @@ body .call-vendor-mob {
 .vendor-details .img-container {
   flex: 0 0 65%;
   position: relative;
+  direction: ltr;
 }
 .vendor-details .img-container {
   width: 100%;
@@ -2434,6 +2415,10 @@ body .call-vendor-mob {
   top: 7%;
   right: 7%;
   z-index: 99;
+}
+body.arabic .vendor-details .img-container .like-btn {
+  right: auto;
+  left: 7%;
 }
 .vendor-details .img-container .like-btn img {
   transition: var(--stroke-transition);
@@ -2744,11 +2729,15 @@ body .call-vendor-mob {
   font-weight: 400;
   color: #383838;
 }
+body.arabic .services-section .equipments ul li div h6 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
 .services-section .equipments ul li > span {
   width: fit-content;
   padding: 5px 8px;
   border-radius: 7px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .services-section .equipments ul li > span.included {
   background-color: rgba(21, 128, 61, 0.15);
@@ -2768,6 +2757,10 @@ body .call-vendor-mob {
   font-size: 1.6rem;
   font-weight: 400;
 }
+body.arabic .services-section .services-price ul li div h6 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
 .services-section .services-price ul li div span {
   color: #6c6c6c;
   font-weight: 200;
@@ -2779,6 +2772,10 @@ body .call-vendor-mob {
   font-size: 1.6rem;
   font-weight: 500;
   text-align: right;
+}
+body.arabic .services-section .services-price ul li > span {
+  font-size: 1.8rem;
+  text-align: left;
 }
 @media (max-width: 768px) {
   .services-section {
@@ -2801,7 +2798,6 @@ body .call-vendor-mob {
 }
 /* End services section */
 /* Start Suggestions Section */
-
 .sugg-section .sugg-container .box {
   flex: 0 0 calc(280px - 10px);
 }
@@ -2815,6 +2811,9 @@ body .call-vendor-mob {
 }
 .sugg-section .sugg-container .box .vendor-info h4 {
   font-size: 1.8rem;
+}
+body.arabic .sugg-section .sugg-container .box .vendor-info h4 {
+  font-size: 2rem;
 }
 .sugg-section .sugg-container .box .vendor-info p {
   font-size: 1.3rem;
@@ -2830,6 +2829,9 @@ body .call-vendor-mob {
   text-overflow: ellipsis;
   white-space: normal;
   margin-block: 0.6rem 1.5rem;
+}
+body.arabic .sugg-section .sugg-container .box .vendor-info p {
+  font-size: 1.5rem;
 }
 .sugg-section .sugg-container .box .vendor-services-provided ul {
   display: flex;
@@ -3790,7 +3792,6 @@ body .call-vendor-mob {
 body.arabic .popup-auth .popup-content form input {
   padding-left: 0;
   padding-right: 4rem;
-  direction: rtl;
 }
 .popup-auth .popup-content form input:focus {
   border-color: var(--primary-color);
@@ -3866,9 +3867,7 @@ body.arabic .popup-auth .popup-content form > div img {
   gap: 3rem;
   margin-block: 1rem;
 }
-body.arabic .popup-auth .popup-content form .radio-btn {
-  direction: rtl;
-}
+
 .popup-auth .popup-content form .radio-btn > div {
   display: flex;
   align-items: center;

@@ -236,8 +236,8 @@ document.addEventListener("DOMContentLoaded", () => {
     showList(
       typeServiceList,
       serviceListMobUl,
-      "Que Chercher Vous ?",
-      "Chercher un service",
+      "عن ماذا تبحث ؟",
+      "إبحث عن خدمة",
       listItems
     );
   });
@@ -248,8 +248,8 @@ document.addEventListener("DOMContentLoaded", () => {
     showList(
       locationServiceList,
       serviceListMobUlTow,
-      "Ou ?",
-      "Chercher une ville",
+      "أين ؟",
+      "إبحث عن مدينة",
       listItemsTwo
     );
   });
@@ -479,7 +479,10 @@ function switchPopup(event) {
 function authGateVisibility() {
   // Show login popup when Connexion buttons are clicked
   connexionBtn.forEach((btn) => {
-    btn.addEventListener("click", showLoginPopup);
+    btn.addEventListener("click", () => {
+      showLoginPopup();
+      document.body.classList.add("no-scroll");
+    });
   });
 
   // Switch Between Popups
@@ -490,13 +493,17 @@ function authGateVisibility() {
 
   // Hide all popups when close buttons are clicked
   hidePopup.forEach((btn) => {
-    btn.addEventListener("click", hideAllPopups);
+    btn.addEventListener("click", () => {
+      hideAllPopups();
+      document.body.classList.remove("no-scroll");
+    });
   });
 
   // Close popup when clicking outside the container
   popupSection.addEventListener("click", (event) => {
     if (event.target === popupSection) {
       hideAllPopups();
+      document.body.classList.remove("no-scroll");
     }
   });
 
@@ -504,6 +511,7 @@ function authGateVisibility() {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       hideAllPopups();
+      document.body.classList.remove("no-scroll");
     }
   });
 }
