@@ -89,72 +89,72 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const listItems = [
-    "قاعات الحفلات",
-    "التصوير والفيديو",
-    "خدمات التموين",
-    "الموسيقى",
-    "الديكور",
-    "الحلويات والكيك",
-    "ملابس الزفاف",
-    "المشطة",
-    "تصفيف الشعر والجمال",
-    "المجوهرات والإكسسوارات",
+    "Salles des fêtes",
+    "Photos et vidéos",
+    "Traiteurs",
+    "Musique",
+    "Décoration",
+    "Gâteaux et pâtisseries",
+    "Tenues de mariage",
+    "Machta",
+    "Coiffure & Beauté",
+    "Bijoux et accessoires",
   ];
 
   const listItemsTwo = [
-    "الجزائر",
-    "وهران",
-    "البليدة",
-    "تيبازة",
-    "تيزي وزو",
-    "بومرداس",
-    "أدرار",
-    "الشلف",
-    "الأغواط",
-    "أم البواقي",
-    "باتنة",
-    "بجاية",
-    "بسكرة",
-    "بشار",
-    "الجلفة",
-    "سطيف",
-    "سعيدة",
-    "سكيكدة",
-    "سيدي بلعباس",
-    "عنابة",
-    "قالمة",
-    "قسنطينة",
-    "المدية",
-    "مستغانم",
-    "المسيلة",
-    "معسكر",
-    "ورقلة",
-    "البيض",
-    "إليزي",
-    "برج بوعريريج",
-    "تمنراست",
-    "تبسة",
-    "تلمسان",
-    "تيارت",
-    "تندوف",
-    "خنشلة",
-    "سوق أهراس",
-    "ميلة",
-    "عين الدفلى",
-    "النعامة",
-    "عين تموشنت",
-    "غرداية",
-    "غليزان",
-    "تيميمون",
-    "برج باجي مختار",
-    "أولاد جلال",
-    "بني عباس",
-    "عين صالح",
-    "عين قزام",
-    "تقرت",
-    "جانت",
-    "المغير",
-    "المنيعة",
+    "Alger",
+    "Oran",
+    "Blida",
+    "Tipaza",
+    "Tizi Ouzou",
+    "Boumerdes",
+    "Adrar",
+    "Chlef",
+    "Laghouat",
+    "Oum El Bouaghi",
+    "Batna",
+    "Bejaia",
+    "Biskra",
+    "Bechar",
+    "Djelfa",
+    "Setif",
+    "Saida",
+    "Skikda",
+    "Sidi Bel Abbes",
+    "Annaba",
+    "Guelma",
+    "Constantine",
+    "Medea",
+    "Mostaganem",
+    "M'Sila",
+    "Mascara",
+    "Ouargla",
+    "El Bayadh",
+    "Illizi",
+    "Bordj Bou Arreridj",
+    "Tamanrasset",
+    "Tebessa",
+    "Tlemcen",
+    "Tiaret",
+    "Tindouf",
+    "Khenchela",
+    "Souk Ahras",
+    "Mila",
+    "Ain Defla",
+    "Naama",
+    "Ain Temouchent",
+    "Ghardaia",
+    "Relizane",
+    "Timimoun",
+    "Bordj Badji Mokhtar",
+    "Ouled Djellal",
+    "Beni Abbes",
+    "In Salah",
+    "In Guezzam",
+    "Touggourt",
+    "Djanet",
+    "El M'Ghair",
+    "El Meniaa",
   ];
 
   // Input fields
@@ -219,15 +219,16 @@ document.addEventListener("DOMContentLoaded", () => {
       inputService.placeholder = placeholder;
       inputService.value = "";
       renderList(inputService, mobileList, items);
+      scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      // Disable the scroll
+      document.body.classList.add("no-scroll");
     } else {
       // Desktop view
       showElement(list);
     }
-    scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-    document.body.classList.add("no-scroll");
   };
 
   // Show type service list
@@ -258,6 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
   [serviceListMobOverlay, removeServiceList].forEach((ele) => {
     ele.addEventListener("click", () => {
       hideAllLists();
+      // Enable the scroll
       document.body.classList.remove("no-scroll");
     });
   });
@@ -267,9 +269,11 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("input", () => {
       const inputValue = input.value.toLowerCase();
       ul.innerHTML = items
-        .filter((item) => item.toLowerCase().includes(inputValue))
+        .map((item, index) => ({ item, index }))
+        .filter(({ item }) => item.toLowerCase().includes(inputValue))
         .map(
-          (item) => `<li><img src="${iconsList[index]}" alt="" /> ${item}</li>`
+          ({ item, index }) =>
+            `<li><img src="${iconsList[index]}" alt="" /> ${item}</li>`
         )
         .join("");
       // Fill the input with the Item Text
@@ -432,9 +436,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Control the Auth Popup
 const connexionBtn = document.querySelectorAll("#Connexion");
 const popupSection = document.querySelector(".popup-auth");
-// const popupContainer = document.querySelector(
-//   ".popup-auth .popup-auth-container"
-// );
+
 const loginPopup = document.querySelector(".popup-auth .popup-login");
 const signupPopup = document.querySelector(".popup-auth .popup-signup");
 const hidePopup = document.querySelectorAll(".popup-auth .close-btn img");
@@ -522,10 +524,48 @@ authGateVisibility();
 const langSelected = document.querySelector("#lang-switcher");
 const bodyEle = document.querySelector("body");
 
+// Language switch event listener
 langSelected.addEventListener("change", () => {
-  if (langSelected.value === "ar") {
+  const selectedLang = langSelected.value;
+
+  if (selectedLang === "ar") {
     bodyEle.classList.add("arabic");
   } else {
     bodyEle.classList.remove("arabic");
+  }
+
+  redirectToLanguage(selectedLang);
+});
+
+// ************************************************
+// - Note this function is just for demonstration purpose
+// ************************************************
+
+function redirectToLanguage(lang) {
+  // Save the selected language in localStorage
+  localStorage.setItem("selectedLanguage", lang);
+
+  let currentPath = window.location.pathname;
+  let newURL;
+
+  // Check if the current path already contains the language
+  if (!currentPath.startsWith("/fr/") && !currentPath.startsWith("/ar/")) {
+    newURL = `${window.location.origin}/${lang}${currentPath}`;
+  } else {
+    newURL = currentPath.replace(/\/(fr|ar)\//, `/${lang}/`);
+  }
+  window.location.href = newURL;
+}
+
+// Apply the class on page load based on localStorage
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("selectedLanguage");
+
+  if (savedLang === "ar") {
+    bodyEle.classList.add("arabic");
+    langSelected.value = "ar"; // Set the select value to Arabic
+  } else {
+    bodyEle.classList.remove("arabic");
+    langSelected.value = "fr"; // Set the select value to French
   }
 });

@@ -26,27 +26,12 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
-    <!-- Start Mob-search-list -->
-    <div class="list-appear">
-      <div class="list-overlay"></div>
-      <div class="list-content">
-        <div class="title-service">
-          <h4></h4>
-          <img src="/assets/images/icons/xMark.svg" alt="masquer-icône" />
-        </div>
-        <div class="input-container">
-          <img src="/assets/images/icons/search.svg" alt="recherche-icône" />
-          <input
-            type="text"
-            class="type-service-list-mob"
-            placeholder="categorie de la prestataires"
-          />
-        </div>
-        <ul class="type-service-list-mob-v"></ul>
-        <ul class="location-service-list-mob-v"></ul>
-      </div>
+    <div class="call-vendor-mob">
+      <button>
+        <img src="/assets/images/icons/phone.svg" alt="">
+        <span>Appelez maintenant</span>
+      </button>
     </div>
-    <!-- End Mob-search-list -->
     <!-- Start Header Section -->
     <header class="header">
       <div class="vendors-gate">
@@ -465,649 +450,146 @@
     </header>
     <!-- End Header Section -->
     <main id="main" class="main">
-      <!-- Start Hero Section -->
-      <section class="hero">
-        <div class="container">
-          <div class="img-container"></div>
-          <div class="hero-content">
-            <div class="hero-main-text">
-              <div>
-                <h1>Amusez-Vous en organisant votre mariage</h1>
-                <h3>
-                  Commencez a planifier votre mariage avec nous,
-                  <span
-                    style="font-weight: bold; color: #222; font-style: italic"
-                    >c’est gratuit !</span
-                  >
-                </h3>
-                <div class="search-space">
-                  <form>
-                    <div class="input-container">
-                      <div>
-                        <img
-                          src="/assets/images/icons/search.svg"
-                          alt="recherche-icône"
-                        />
-                        <input
-                          type="text"
-                          placeholder="Que charchez-vous ?"
-                          class="type-service"
-                        />
-                        <ul class="type-service-list"></ul>
-                      </div>
-                      <div>
-                        <div>
-                          <img
-                            src="/assets/images/icons/mdi--location.svg"
-                            alt="localisation-icone"
-                          />
-                          <input
-                            type="text"
-                            placeholder="Ou ?"
-                            class="location-service"
-                          />
-                        </div>
-                        <ul class="location-service-list"></ul>
-                      </div>
-                    </div>
-                    <button type="submit" class="search-btn">Recharche</button>
-                  </form>
+      <section class="section">
+        <section class="vendor-details">
+          <div class="img-container">
+            <section class="embla">
+              <div class="embla__viewport">
+                <div class="embla__container">
+                  <div class="embla__slide">
+                    <img src="/assets/images/hero-slider/1.jpg" alt="" />
+                  </div>
+                  <div class="embla__slide">
+                    <video class="video-slide" controls>
+                      <source
+                        src="/assets/images/hero-slider/vid1.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div class="embla__slide">
+                    <video class="video-slide" controls>
+                      <source
+                        src="/assets/images/hero-slider/vid2.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
                 </div>
               </div>
-            </div>
+
+              <div class="embla__controls">
+                <div class="embla__buttons">
+                  <button
+                    class="embla__button embla__button--prev"
+                    type="button"
+                  >
+                    <img
+                      src="/assets/images/icons/chevron-left.svg"
+                      alt=""
+                    />
+                  </button>
+
+                  <button
+                    class="embla__button embla__button--next"
+                    type="button"
+                  >
+                    <img
+                      src="/assets/images/icons/chevron-right.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                
+              </div>
+            </section>
           </div>
+          <div class="vendor-info-card">
+            <h1>Les Merles D'Alger</h1>
+            <ul>
+              <li>
+                <img src="/assets/images/icons/location.svg" alt="">
+                <span>Route Ouled fayet, vers Chéraga,Cheraga</span>
+              </li>
+            </ul>
+            <div class="map-frame-container">
+              <div style="width: 100%">
+                <iframe
+                  width="100%"
+                  height="150"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%D9%82%D8%A7%D8%B9%D8%A9%20%D8%AD%D9%81%D9%84%D8%A7%D8%AA%20%D9%84%D9%8A%D8%AF%D9%8A%D8%A7+(My%20Business%20Names)&amp;t=p&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                  ><a href="https://www.gps.ie/">gps trackers</a></iframe
+                >
+              </div>
+            </div>
+            <button class="call-vendor">
+              <img src="/assets/images/icons/phone.svg" alt="">
+              <span>Appeler Maintenant!</span>
+            </button>
+          </div>
+        </section>
+        <section class="vendor-intro">
+          <h5>Introduction Les Merles d'Alger:</h5>
+          <p>
+            Les Merles d'Alger, c'est ainsi que se nomme notre orchestre de
+            musique algérienne. Passionnés par la variété musicale de notre pays
+            ainsi que par le charme envoûtant des mélodies orientales, nous vous
+            proposant un spectacle merveilleux de leurs accords enchanteurs pour
+            égayer vos soirées et vos dîners de gala. Nous, Les Merles d'Alger,
+            rythmons également vos célébrations de mariages et autres festivités
+            pour faire de ce jour un souvenir mémorable.
+          </p>
+        </section>
+      </section>
+      <section class="section services-section">
+        <div class="equipments">
+          <h5>Équipements</h5>
+          <ul>
+            <li>
+              <div>
+                <span>
+                  <img src="/assets/images/icons/music.svg" alt="">
+                </span>
+                <h6>DJ</h6>
+              </div>
+              <span class="included">Inclus</span>
+            </li>
+            <li>
+              <div>
+                <span>
+                  <img src="/assets/images/icons/music.svg" alt="">
+                </span>
+                <h6>Zerna</h6>
+              </div>
+              <span class="excluded">Non inclus</span>
+            </li>
+            <li>
+              <div>
+                <span>
+                  <img src="/assets/images/icons/music.svg" alt="">
+                </span>
+                <h6>Chanteur(euse) & son orchestre</h6>
+              </div>
+              <span class="excluded">Non inclus</span>
+            </li>
+          </ul>
         </div>
       </section>
-      <!-- End Hero Section -->
-      <!-- Start best vendors Section -->
-      <section class="best-vendors section" id="aos" data-visible="false">
-        <div class="headline" id="aos" data-visible="false">
-          <h2>Trouvez les meilleurs prestataires</h2>
-          <h3>
-            Contactez des experts du mariage pour réaliser votre journée de
-            rêve.
-          </h3>
-        </div>
-        <div class="pesoudo">
-          <div class="vendors-container container-boxes">
-            <div class="box">
-              <a href="/fr/listing/reception-room.html">
-                <img
-                  src="/assets/images/best-prest.jpg"
-                  alt="le meilleur prestataire"
-                />
-                <div class="icon-container">
-                  <img
-                    src="/assets/images/navmenu-icons/wedding-reception.png"
-                    alt="salle-des-fetes-icône"
-                  />
-                </div>
-                <div class="box-text-content">
-                  <h4>Salle des fêtes</h4>
-                  <p>
-                    Explorez des salles de fêtes exceptionnelles pour vos
-                    moments inoubliables.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="box">
-              <a href="/fr/listing/multimedia-service.html">
-                <img
-                  src="/assets/images/best-prest.jpg"
-                  alt="le meilleur prestataire"
-                />
-                <div class="icon-container">
-                  <img
-                    src="/assets/images/navmenu-icons/photo-camera.png"
-                    alt="photo&video-icône"
-                  />
-                </div>
-                <div class="box-text-content">
-                  <h4>Photo & Videos</h4>
-                  <p>
-                    Explorez des salles de fêtes exceptionnelles pour vos
-                    moments inoubliables.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="box">
-              <a href="/fr/listing/beauty-service.html">
-                <img
-                  src="/assets/images/best-prest.jpg"
-                  alt="le meilleur prestataire"
-                />
-                <div class="icon-container">
-                  <img
-                    src="/assets/images/navmenu-icons/women.png"
-                    alt="beauté&soins-icone"
-                  />
-                </div>
-                <div class="box-text-content">
-                  <h4>Coiffure & Soins</h4>
-                  <p>
-                    Explorez des salles de fêtes exceptionnelles pour vos
-                    moments inoubliables.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="box">
-              <a href="/fr/listing/decorator.html">
-                <img
-                  src="/assets/images/best-prest.jpg"
-                  alt="le meilleur prestataire"
-                />
-                <div class="icon-container">
-                  <img
-                    src="/assets/images/navmenu-icons/party.png"
-                    alt="décoration-icône"
-                  />
-                </div>
-                <div class="box-text-content">
-                  <h4>Decoration</h4>
-                  <p>
-                    Explorez des salles de fêtes exceptionnelles pour vos
-                    moments inoubliables.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="box">
-              <a href="/fr/listing/cake-maker.html">
-                <img
-                  src="/assets/images/best-prest.jpg"
-                  alt="le meilleur prestataire"
-                />
-                <div class="icon-container">
-                  <img
-                    src="/assets/images/navmenu-icons/cake.png"
-                    alt="gateaux-icône"
-                  />
-                </div>
-                <div class="box-text-content">
-                  <h4>Gâteaux et Pâtisseries</h4>
-                  <p>
-                    Explorez des salles de fêtes exceptionnelles pour vos
-                    moments inoubliables.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="box">
-              <a href="/fr/listing/music-service.html">
-                <img
-                  src="/assets/images/best-prest.jpg"
-                  alt="le meilleur prestataire"
-                />
-                <div class="icon-container">
-                  <img
-                    src="/assets/images/navmenu-icons/music.png"
-                    alt="musique-icône"
-                  />
-                </div>
-                <div class="box-text-content">
-                  <h4>Musique</h4>
-                  <p>
-                    Explorez des salles de fêtes exceptionnelles pour vos
-                    moments inoubliables.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="box">
-              <a href="/fr/listing/caterer.html">
-                <img
-                  src="/assets/images/best-prest.jpg"
-                  alt="le meilleur prestataire"
-                />
-                <div class="icon-container">
-                  <img
-                    src="/assets/images/navmenu-icons/dinner.png"
-                    alt="traiteur-icône"
-                  />
-                </div>
-                <div class="box-text-content">
-                  <h4>Traiteur</h4>
-                  <p>
-                    Explorez des salles de fêtes exceptionnelles pour vos
-                    moments inoubliables.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="box">
-              <a href="/fr/listing/dress-maker.html">
-                <img
-                  src="/assets/images/best-prest.jpg"
-                  alt="le meilleur prestataire"
-                />
-                <div class="icon-container">
-                  <img
-                    src="/assets/images/navmenu-icons/dress.png"
-                    alt="robes-icône"
-                  />
-                </div>
-                <div class="box-text-content">
-                  <h4>Tesdira Et Robes</h4>
-                  <p>
-                    Explorez des salles de fêtes exceptionnelles pour vos
-                    moments inoubliables.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="box">
-              <a href="/fr/listing/machta.html">
-                <img
-                  src="/assets/images/best-prest.jpg"
-                  alt="le meilleur prestataire"
-                />
-                <div class="icon-container">
-                  <img
-                    src="/assets/images/navmenu-icons/hair-styling.png"
-                    alt="machta-icone"
-                  />
-                </div>
-                <div class="box-text-content">
-                  <h4>Machta</h4>
-                  <p>
-                    Explorez des salles de fêtes exceptionnelles pour vos
-                    moments inoubliables.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="box">
-              <a href="/fr/listing/jewelry.html">
-                <img
-                  src="/assets/images/best-prest.jpg"
-                  alt="le meilleur prestataire"
-                />
-                <div class="icon-container">
-                  <img
-                    src="/assets/images/navmenu-icons/rings.png"
-                    alt="bijoux-icon"
-                  />
-                </div>
-                <div class="box-text-content">
-                  <h4>Bijoux</h4>
-                  <p>
-                    Explorez des salles de fêtes exceptionnelles pour vos
-                    moments inoubliables.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="arrows-container" id="aos" data-visible="false">
-          <span
-            class="left-arrow"
-            role="button"
-            tabindex="0"
-            aria-label="faire défiler vers la gauche"
-          >
-            <img src="/assets/images/icons/arrow-left.svg" alt="flèche-icône" />
-          </span>
-          <span
-            class="right-arrow"
-            role="button"
-            tabindex="0"
-            aria-label="faire défiler vers la deroite"
-          >
-            <img
-              src="/assets/images/icons/arrow-right.svg"
-              alt="flèche-icône"
-            />
-          </span>
-        </div>
-      </section>
-      <!-- End best vendors Section -->
-      <!-- Start best Discount Section -->
-      <section class="discount section" id="aos" data-visible="false">
-        <div class="headline" id="aos" data-visible="false">
-          <h2>Les meilleures promotions</h2>
-          <h3>
-            Découvrez des offres incroyables pour profiter de prix imbattables
-            dès maintenant !
-          </h3>
-        </div>
-        <div class="pesoudo">
-          <div class="discount-container container-boxes">
-            <div class="box" data-discount="15 %">
-              <a href="">
-                <img
-                  src="/assets/images/promo.jpg"
-                  alt="Réduction spéciale pour nos prestataires de mariage."
-                />
-                <div class="discount-contant">
-                  <div class="discount-info">
-                    <span>Bijoux</span>
-                    <div class="time">
-                      <img
-                        src="/assets/images/icons/clock.svg"
-                        alt="temps-icone"
-                      />
-                      <span>Durée limitée</span>
-                    </div>
-                  </div>
-                  <div class="discount-text">
-                    <h4>La Caverne des Joyaux</h4>
-                    <p>
-                      Bijoux acier inoxidable: argent, doré, Hermes, louis
-                      vuiton, channel Bijoux acier inoxidable: argent, doré,
-                      Hermes, louis vuiton, channel
-                    </p>
-                  </div>
-                  <div class="price">
-                    <span class="new-price">99 DA</span>
-                    <span class="old-price">122 DA</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="box" data-discount="15 %">
-              <a href="">
-                <img
-                  src="/assets/images/promo.jpg"
-                  alt="Réduction spéciale pour nos prestataires de mariage."
-                />
-                <div class="discount-contant">
-                  <div class="discount-info">
-                    <span>Bijoux</span>
-                    <div class="time">
-                      <img
-                        src="/assets/images/icons/clock.svg"
-                        alt="temps-icone"
-                      />
-                      <span>Durée limitée</span>
-                    </div>
-                  </div>
-                  <div class="discount-text">
-                    <h4>La Caverne des Joyaux</h4>
-                    <p>
-                      Bijoux acier inoxidable: argent, doré, Hermes, louis
-                      vuiton, channel
-                    </p>
-                  </div>
-                  <div class="price">
-                    <span class="new-price">99 DA</span>
-                    <span class="old-price">122 DA</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="box" data-discount="15 %">
-              <a href="">
-                <img
-                  src="/assets/images/promo.jpg"
-                  alt="Réduction spéciale pour nos prestataires de mariage."
-                />
-                <div class="discount-contant">
-                  <div class="discount-info">
-                    <span>Bijoux</span>
-                    <div class="time">
-                      <img
-                        src="/assets/images/icons/clock.svg"
-                        alt="temps-icone"
-                      />
-                      <span>Durée limitée</span>
-                    </div>
-                  </div>
-                  <div class="discount-text">
-                    <h4>La Caverne des Joyaux</h4>
-                    <p>
-                      Bijoux acier inoxidable: argent, doré, Hermes, louis
-                      vuiton, channel Bijoux acier inoxidable: argent, doré,
-                      Hermes, louis vuiton, channel Bijoux acier inoxidable:
-                      argent, doré, Hermes, louis vuiton, channel Bijoux acier
-                      inoxidable: argent, doré, Hermes, louis vuiton, channel
-                    </p>
-                  </div>
-                  <div class="price">
-                    <span class="new-price">99 DA</span>
-                    <span class="old-price">122 DA</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="box" data-discount="15 %">
-              <a href="">
-                <img
-                  src="/assets/images/promo.jpg"
-                  alt="Réduction spéciale pour nos prestataires de mariage."
-                />
-                <div class="discount-contant">
-                  <div class="discount-info">
-                    <span>Bijoux</span>
-                    <div class="time">
-                      <img
-                        src="/assets/images/icons/clock.svg"
-                        alt="temps-icone"
-                      />
-                      <span>Durée limitée</span>
-                    </div>
-                  </div>
-                  <div class="discount-text">
-                    <h4>La Caverne des Joyaux</h4>
-                    <p>
-                      Bijoux acier inoxidable: argent, doré, Hermes, louis
-                      vuiton, channel
-                    </p>
-                  </div>
-                  <div class="price">
-                    <span class="new-price">99 DA</span>
-                    <span class="old-price">122 DA</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="box" data-discount="15 %">
-              <a href="">
-                <img
-                  src="/assets/images/promo.jpg"
-                  alt="Réduction spéciale pour nos prestataires de mariage."
-                />
-                <div class="discount-contant">
-                  <div class="discount-info">
-                    <span>Bijoux</span>
-                    <div class="time">
-                      <img
-                        src="/assets/images/icons/clock.svg"
-                        alt="temps-icone"
-                      />
-                      <span>Durée limitée</span>
-                    </div>
-                  </div>
-                  <div class="discount-text">
-                    <h4>La Caverne des Joyaux</h4>
-                    <p>
-                      Bijoux acier inoxidable: argent, doré, Hermes, louis
-                      vuiton, channel
-                    </p>
-                  </div>
-                  <div class="price">
-                    <span class="new-price">99 DA</span>
-                    <span class="old-price">122 DA</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="arrows-container" id="aos" data-visible="false">
-          <span
-            class="left-arrow"
-            role="button"
-            tabindex="0"
-            aria-label="faire défiler vers la gauche"
-          >
-            <img src="/assets/images/icons/arrow-left.svg" alt="flèche-icône" />
-          </span>
-          <span
-            class="right-arrow"
-            role="button"
-            tabindex="0"
-            aria-label="faire défiler vers la deroite"
-          >
-            <img
-              src="/assets/images/icons/arrow-right.svg"
-              alt="flèche-icône"
-            />
-          </span>
-        </div>
-      </section>
-      <!--  End best Discount Section -->
-        <!-- Start Our Suggestions Section -->
+      <!-- End Services Section -->
+      <!-- Start Our Suggestions Section -->
       <section class="section sugg-section">
         <div class="headline">
-          <h2>Les Prestatires les plus consultés</h2>
-          <h3>Une selection de prestataires les plus sollicités sur notre plateforme. Réservez vos dates sans plus tarder.</h3>
+          <h2>Nos suggestions</h2>
+          <h3>Découvrez nos prestataires de confiance pour votre grand jour</h3>
         </div>
         <div class="pesoudo">
           <div class="sugg-container container-boxes">
-            <div class="box">
-              <a href="">
-                <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                <div class="vendor-info">
-                  <h4>salle de fete Lydia</h4>
-                  <p>
-                    La salle des fêtes Lydia dispose d'une grande salle
-                    magnifiquement décorée et d'une capacité de 240 personnes en
-                    plus d'une petite salle d'une capacité 200 invités. Une
-                    décoration gracieuse, épurée et chic ........
-                  </p>
-                  <div class="vendor-services-provided">
-                    <ul>
-                      <li>
-                        <img src="/assets/images/icons/location.svg" alt="">
-                        <span>Cheraga-Alger</span>
-                      </li>
-                      <li>
-                       <img src="/assets/images/icons/people.svg" alt="">
-                        <span>90 - 240 invités</span>
-                      </li>
-                      <li>
-                        <img src="/assets/images/icons/caterer.svg" alt="">
-                        <span>Traiteur</span>
-                      </li>
-                      <li>
-                        <img src="/assets/images/icons/money.svg" alt="">
-                        <span>A partir de 200.000 DA</span>
-                      </li>
-                    </ul>
-                    <button>Plus Details . . .</button>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="box">
-              <a href="">
-                <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                <div class="vendor-info">
-                  <h4>salle de fete Lydia</h4>
-                  <p>
-                    La salle des fêtes Lydia dispose d'une grande salle
-                    magnifiquement décorée et d'une capacité de 240 personnes en
-                    plus d'une petite salle d'une capacité 200 invités. Une
-                    décoration gracieuse, épurée et chic ........
-                  </p>
-                  <div class="vendor-services-provided">
-                    <ul>
-                      <li>
-                        <img src="/assets/images/icons/location.svg" alt="">
-                        <span>Cheraga-Alger</span>
-                      </li>
-                      <li>
-                       <img src="/assets/images/icons/people.svg" alt="">
-                        <span>90 - 240 invités</span>
-                      </li>
-                      <li>
-                        <img src="/assets/images/icons/caterer.svg" alt="">
-                        <span>Traiteur</span>
-                      </li>
-                      <li>
-                        <img src="/assets/images/icons/money.svg" alt="">
-                        <span>A partir de 200.000 DA</span>
-                      </li>
-                    </ul>
-                    <button>Plus Details . . .</button>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="box">
-              <a href="">
-                <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                <div class="vendor-info">
-                  <h4>salle de fete Lydia</h4>
-                  <p>
-                    La salle des fêtes Lydia dispose d'une grande salle
-                    magnifiquement décorée et d'une capacité de 240 personnes en
-                    plus d'une petite salle d'une capacité 200 invités. Une
-                    décoration gracieuse, épurée et chic ........
-                  </p>
-                  <div class="vendor-services-provided">
-                    <ul>
-                      <li>
-                        <img src="/assets/images/icons/location.svg" alt="">
-                        <span>Cheraga-Alger</span>
-                      </li>
-                      <li>
-                       <img src="/assets/images/icons/people.svg" alt="">
-                        <span>90 - 240 invités</span>
-                      </li>
-                      <li>
-                        <img src="/assets/images/icons/caterer.svg" alt="">
-                        <span>Traiteur</span>
-                      </li>
-                      <li>
-                        <img src="/assets/images/icons/money.svg" alt="">
-                        <span>A partir de 200.000 DA</span>
-                      </li>
-                    </ul>
-                    <button>Plus Details . . .</button>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="box">
-              <a href="">
-                <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                <div class="vendor-info">
-                  <h4>salle de fete Lydia</h4>
-                  <p>
-                    La salle des fêtes Lydia dispose d'une grande salle
-                    magnifiquement décorée et d'une capacité de 240 personnes en
-                    plus d'une petite salle d'une capacité 200 invités. Une
-                    décoration gracieuse, épurée et chic ........
-                  </p>
-                  <div class="vendor-services-provided">
-                    <ul>
-                      <li>
-                        <img src="/assets/images/icons/location.svg" alt="">
-                        <span>Cheraga-Alger</span>
-                      </li>
-                      <li>
-                       <img src="/assets/images/icons/people.svg" alt="">
-                        <span>90 - 240 invités</span>
-                      </li>
-                      <li>
-                        <img src="/assets/images/icons/caterer.svg" alt="">
-                        <span>Traiteur</span>
-                      </li>
-                      <li>
-                        <img src="/assets/images/icons/money.svg" alt="">
-                        <span>A partir de 200.000 DA</span>
-                      </li>
-                    </ul>
-                    <button>Plus Details . . .</button>
-                  </div>
-                </div>
-              </a>
-            </div>
             <div class="box">
               <a href="">
                 <img src="/assets/images/hero-slider/1.jpg" alt="" />
@@ -1164,29 +646,6 @@
         </div>
       </section>
       <!-- End Our Suggestions Section -->
-      <!-- Start Wedding Planner Section -->
-      <section class="wedding-planner section" id="aos" data-visible="false">
-        <div class="container">
-          <div class="text-content" id="aos" data-visible="false">
-            <h4>Nous organisons votre mariage !</h4>
-            <p>
-              Découvrez le service <span>Wedding Planner</span> Gagnez du temps,
-              bénéficiez de notre expertise et profitez des meilleures offres
-              disponibles sur le marché.
-            </p>
-            <a href="/wedd-plan/wedding-planner.html">
-              <button>Bientôt disponible</button>
-            </a>
-          </div>
-          <div class="img-container" id="aos" data-visible="false">
-            <img
-              src="/assets/images/wedd-plan.webp"
-              alt="3ersi.com est la meilleur organisateur de mariage"
-            />
-          </div>
-        </div>
-      </section>
-      <!-- End Wedding Planner Section -->
       <!-- Start Articles Section -->
       <section class="section articles" id="aos" data-visible="false">
         <div class="headline-container" id="aos" data-visible="false">
@@ -1199,10 +658,7 @@
           </div>
           <div class="more-articles">
             <a href="">Lire plus Articles...</a>
-            <img
-              src="/assets/images/icons/small-chevron.svg"
-              alt="icône de flèche"
-            />
+            <img src="/assets/images/icons/small-chevron.svg" alt="" />
           </div>
         </div>
         <div class="category-parent" id="aos" data-visible="false">
@@ -1250,10 +706,7 @@
               tabindex="0"
               aria-label="faire défiler vers la gauche"
             >
-              <img
-                src="/assets/images/icons/chevron-left.svg"
-                alt="icône de flèche"
-              />
+              <img src="/assets/images/icons/chevron-left.svg" alt="" />
             </span>
             <span
               class="right-arrow"
@@ -1261,10 +714,7 @@
               tabindex="0"
               aria-label="faire défiler vers la deroite"
             >
-              <img
-                src="/assets/images/icons/chevron-right.svg"
-                alt="icône de flèche"
-              />
+              <img src="/assets/images/icons/chevron-right.svg" alt="" />
             </span>
           </div>
         </div>
@@ -1419,10 +869,7 @@
           </div>
           <div class="more-articles mob-v">
             <a href="">Lire plus Articles...</a>
-            <img
-              src="/assets/images/icons/small-chevron.svg"
-              alt="icône de flèche"
-            />
+            <img src="/assets/images/icons/small-chevron.svg" alt="" />
           </div>
           <div class="arrows-container" id="aos" data-visible="false">
             <span
@@ -1431,10 +878,7 @@
               tabindex="0"
               aria-label="faire défiler vers la gauche"
             >
-              <img
-                src="/assets/images/icons/arrow-left.svg"
-                alt="icône de flèche"
-              />
+              <img src="/assets/images/icons/arrow-left.svg" alt="" />
             </span>
             <span
               class="right-arrow"
@@ -1442,17 +886,14 @@
               tabindex="0"
               aria-label="faire défiler vers la deroite"
             >
-              <img
-                src="/assets/images/icons/arrow-right.svg"
-                alt="icône de flèche"
-              />
+              <img src="/assets/images/icons/arrow-right.svg" alt="" />
             </span>
           </div>
         </div>
       </section>
       <!-- End Articles Section -->
     </main>
-    <!-- Start Footer Section -->
+     <!-- Start Footer Section -->
     <footer>
       <div class="footer-container">
         <div class="footer-col">
@@ -1688,7 +1129,12 @@
       </div>
     </div>
     <!-- End Popup Authentication -->
+
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
+    <!-- external packages -->
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+    <script src="/assets/vendors/carousel.js"></script>
   </body>
-</html>
+</html> 
