@@ -237,8 +237,8 @@ document.addEventListener("DOMContentLoaded", () => {
     showList(
       typeServiceList,
       serviceListMobUl,
-      "عن ماذا تبحث ؟",
-      "إبحث عن خدمة",
+      "Que Chercher Vous ?",
+      "Chercher un service",
       listItems
     );
   });
@@ -249,8 +249,8 @@ document.addEventListener("DOMContentLoaded", () => {
     showList(
       locationServiceList,
       serviceListMobUlTow,
-      "أين ؟",
-      "إبحث عن مدينة",
+      "Ou ?",
+      "Chercher une ville",
       listItemsTwo
     );
   });
@@ -520,26 +520,13 @@ function authGateVisibility() {
 
 authGateVisibility();
 
-// Change the language
-const langSelected = document.querySelector("#lang-switcher");
-const bodyEle = document.querySelector("body");
-
-// Language switch event listener
-langSelected.addEventListener("change", () => {
-  const selectedLang = langSelected.value;
-
-  if (selectedLang === "ar") {
-    bodyEle.classList.add("arabic");
-  } else {
-    bodyEle.classList.remove("arabic");
-  }
-
-  redirectToLanguage(selectedLang);
-});
-
 // ************************************************
 // - Note this function is just for demonstration purpose
 // ************************************************
+
+// Change the language
+const langSelected = document.querySelectorAll("#lang-switcher");
+const bodyEle = document.querySelector("body");
 
 function redirectToLanguage(lang) {
   // Save the selected language in localStorage
@@ -563,9 +550,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (savedLang === "ar") {
     bodyEle.classList.add("arabic");
-    langSelected.value = "ar"; // Set the select value to Arabic
+    langSelected.forEach((switcher) => (switcher.value = "ar")); // Set the select value to Arabic
   } else {
     bodyEle.classList.remove("arabic");
-    langSelected.value = "fr"; // Set the select value to French
+    langSelected.forEach((switcher) => (switcher.value = "fr")); // Set the select value to French
   }
+});
+
+// Language switch event listener
+langSelected.forEach((switcher) => {
+  switcher.addEventListener("change", () => {
+    const lang = switcher.value;
+
+    if (lang === "ar") {
+      bodyEle.classList.add("arabic");
+    } else {
+      bodyEle.classList.remove("arabic");
+    }
+
+    redirectToLanguage(lang);
+  });
 });
