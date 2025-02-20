@@ -1256,7 +1256,7 @@ body.arabic .discount .discount-container .box .price .new-price {
   -webkit-box-shadow: var(--shadow-box);
   box-shadow: var(--shadow-box);
   border-radius: 15px;
-  height: 35rem;
+  min-height: 30rem;
 }
 .wedding-planner .container {
   display: -webkit-box;
@@ -1272,10 +1272,9 @@ body.arabic .discount .discount-container .box .price .new-price {
   flex: 1 1 50%;
 }
 .wedding-planner .container .text-content h4 {
-  font-size: 3.6rem;
+  font-size: 3rem;
   line-height: 1.5;
   font-weight: bold;
-  width: 80%;
 }
 .wedding-planner .container .text-content p {
   color: rgba(0, 0, 0, 0.7);
@@ -1414,6 +1413,10 @@ body.arabic .wedding-planner .container .img-container::after {
 .articles .headline-container .more-articles a {
   font-size: 1.4rem;
   text-decoration: underline;
+}
+.articles .headline-container .more-articles img {
+  width: 2rem;
+  height: 2rem;
 }
 body.arabic .articles .headline-container .more-articles img {
   transform: rotate(180deg);
@@ -1783,6 +1786,8 @@ footer .copy-right {
 }
 .listing-section .vendors-list-container .vendors-list-header span img {
   filter: var(--storke-secondary-color);
+  width: 2rem;
+  height: 2rem;
 }
 .listing-section .vendors-list-header .filter-icon {
   display: none;
@@ -1868,6 +1873,8 @@ footer .copy-right {
 }
 .listing-section .embla__button img {
   filter: brightness(0) saturate(100%) invert(100%);
+  width: 3rem;
+  height: 3rem;
 }
 .listing-section .embla__dots {
   position: absolute;
@@ -1916,6 +1923,8 @@ footer .copy-right {
   margin: auto;
   cursor: pointer;
   transition: var(--stroke-transition);
+  width: 3rem;
+  height: 3rem;
 }
 .listing-section .vendor-card .vendor-info .info-header img.active {
   filter: var(--stroke-color);
@@ -1924,7 +1933,7 @@ footer .copy-right {
 .listing-section .vendors-list .vendor-card .vendor-info p {
   font-size: 1.6rem;
   font-weight: 300;
-  line-height: 2.6rem;
+  line-height: 1.5;
   color: #383838;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1948,8 +1957,8 @@ footer .copy-right {
   display: flex;
   align-items: center;
   gap: 2rem;
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: #4b4b4b;
 }
 .listing-section .vendors-list .vendor-card .vendor-services-provided li {
@@ -1959,6 +1968,8 @@ footer .copy-right {
 }
 .listing-section .vendors-list .vendor-card .vendor-services-provided li img {
   filter: var(--storke-secondary-color);
+  width: 1.7rem;
+  height: 1.7rem;
 }
 .listing-section .vendors-list .vendor-card .vendor-services-provided a {
   flex-basis: 18%;
@@ -2049,6 +2060,7 @@ footer .copy-right {
   }
   .listing-section .vendors-list .vendor-card .vendor-info .info-header img {
     width: 3.5rem;
+    height: 3.5rem;
   }
   .listing-section .vendors-list .vendor-card .vendor-info p {
     display: -webkit-box;
@@ -2154,14 +2166,10 @@ footer .copy-right {
 }
 .listing-section .filter-section .filter-content .filter-category div img {
   filter: var(--storke-secondary-color);
+  width: 2rem;
+  height: 2rem;
 }
-body.arabic
-  .listing-section
-  .filter-section
-  .filter-content
-  .filter-category
-  div
-  img {
+body.arabic .listing-section .filter-content .filter-category div img {
   transform: rotate(180deg);
 }
 .listing-section .filter-section .filter-content li:last-child {
@@ -2512,6 +2520,8 @@ body.arabic .vendor-details .img-container .like-btn {
 }
 .vendor-details .embla__button img {
   filter: brightness(0) saturate(100%) invert(100%);
+  width: 3rem;
+  height: 3rem;
 }
 .vendor-details .video-slide {
   width: 100%;
@@ -2744,6 +2754,10 @@ body.arabic .vendor-details .img-container .like-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.services-section .equipments ul li div span img {
+  width: 1.7rem;
+  height: 1.7rem;
 }
 .services-section .equipments ul li div h6 {
   font-size: 1.4rem;
@@ -3043,6 +3057,8 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
 }
 .faq-container .faq-content .faq-question img {
   transition: var(--hover-transition);
+  width: 2rem;
+  height: 2rem;
 }
 .faq-container .faq-content .faq-answer {
   max-height: 0;
@@ -3293,6 +3309,8 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
 .contact-section .send-message form button img {
   filter: brightness(0) saturate(100%) invert(100%);
   transition: var(--stroke-transition);
+  width: 1.6rem;
+  height: 1.6rem;
 }
 .contact-section .send-message form button:hover {
   border: 1px solid var(--primary-color);
@@ -3535,6 +3553,13 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   font-weight: 300;
 }
 .wedd-org-section .form-section form .input-container input[type="date"] {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #4b4b4b;
+  border-radius: 0.5rem;
+  outline: none;
+  margin-bottom: 1rem;
+  font-weight: 300;
   padding: 1rem;
   font-size: 1.4rem;
 }
@@ -3552,7 +3577,8 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   position: absolute;
   right: 2%;
   top: 50%;
-  width: 1.7rem;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 .wedd-org-section .form-section form .input-container > div:hover img {
   filter: var(--stroke-color);
@@ -3590,6 +3616,8 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
 }
 .wedd-org-section .form-section form button img {
   filter: brightness(0) saturate(100%) invert(100%);
+  width: 2rem;
+  height: 2rem;
 }
 .wedd-org-section .form-section form button:hover img {
   filter: var(--stroke-color);

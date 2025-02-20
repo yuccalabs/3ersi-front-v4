@@ -530,7 +530,11 @@ const bodyEle = document.querySelector("body");
 
 function redirectToLanguage(lang) {
   // Save the selected language in localStorage
-  localStorage.setItem("selectedLanguage", lang);
+  if (lang === "ar") {
+    localStorage.setItem("selectedLanguage", lang);
+  } else {
+    localStorage.removeItem("selectedLanguage");
+  }
 
   let currentPath = window.location.pathname;
   let newURL;
@@ -544,7 +548,7 @@ function redirectToLanguage(lang) {
   window.location.href = newURL;
 }
 
-// Apply the class on page load based on localStorage
+// // Apply the class on page load based on localStorage
 document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("selectedLanguage");
 
