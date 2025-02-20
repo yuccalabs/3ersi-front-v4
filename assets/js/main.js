@@ -539,12 +539,16 @@ function redirectToLanguage(lang) {
   let currentPath = window.location.pathname;
   let newURL;
 
-  // Check if the current path already contains the language
-  if (!currentPath.startsWith("/fr/") && !currentPath.startsWith("/ar/")) {
-    newURL = `${window.location.origin}/${lang}${currentPath}`;
+  // Check if the current path already contains a language segment
+  if (/^\/(fr|ar)\//.test(currentPath)) {
+    // Replace the existing language
+    newURL = currentPath.replace(/^\/(fr|ar)/, `/${lang}`);
   } else {
-    newURL = currentPath.replace(/\/(fr|ar)\//, `/${lang}/`);
+    // add the language segment if there's no
+    newURL = `/${lang}${currentPath}`;
   }
+
+  // Redirect to the new URL
   window.location.href = newURL;
 }
 
