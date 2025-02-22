@@ -26,29 +26,6 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
-    <!-- Start Mob-search-list -->
-    <div class="list-appear">
-      <div class="list-overlay"></div>
-      <div class="list-content">
-        <div class="title-service">
-          <h4></h4>
-          <img src="/assets/images/icons/xMark.svg" alt="إخفاء الأيقونة" />
-        </div>
-        <div class="input-container">
-          <img src="/assets/images/icons/search.svg" alt="أيقونة البحث" />
-          <input
-            type="text"
-            class="type-service-list-mob"
-            placeholder="فئة مقدمي الخدمات"
-          />
-        </div>
-        <ul class="type-service-list-mob-v"></ul>
-        <ul class="location-service-list-mob-v"></ul>
-      </div>
-    </div>
-    <!-- End Mob-search-list -->
-
-    <!-- Start Header Section -->
     <!-- Start Header Section -->
     <header class="header">
       <div class="vendors-gate">
@@ -470,418 +447,140 @@
     </header>
     <!-- End Header Section -->
     <main id="main" class="main">
-      <!-- Start Hero Section -->
-      <section class="hero">
-        <div class="container listing">
-          <div class="img-container">
-            <section class="embla">
-              <div class="embla__viewport">
-                <div class="embla__container">
-                  <div class="embla__slide"></div>
-                  <div class="embla__slide"></div>
-                  <div class="embla__slide"></div>
-                  <div class="embla__slide"></div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div class="hero-content">
-            <div class="hero-main-text">
-              <div>
-                <h1>استكشف جميع أنواع المجوهرات في الجزائر</h1>
-                <div class="search-space">
-                  <form>
-                    <div class="input-container">
-                      <div>
-                        <img src="/assets/images/icons/search.svg" alt="" />
-                        <input
-                          type="text"
-                          value="المجوهرات"
-                          placeholder="ماذا تبحث عن؟"
-                          class="type-service"
-                        />
-                        <ul class="type-service-list"></ul>
-                      </div>
-                      <div>
-                        <div>
-                          <img
-                            src="/assets/images/icons/mdi--location.svg"
-                            alt=""
-                          />
-                          <input
-                            type="text"
-                            placeholder="أين؟"
-                            class="location-service"
-                          />
-                        </div>
-                        <ul class="location-service-list"></ul>
-                      </div>
-                    </div>
-                    <button type="submit" class="search-btn">بحث</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Start Contact Headline Section-->
+      <section class="section contact headline">
+        <span>
+          <img src="/assets/images/icons/contact.svg" alt="" />
+        </span>
+        <h2>اتصلوا بنا</h2>
+        <h3>
+          نحن هنا لمساعدتكم في جعل يومكم المميز مثالياً. تواصلوا مع خبرائنا في
+          تنظيم حفلات الزفاف.
+        </h3>
       </section>
-      <!-- End Hero Section -->
-      <!-- Start Listing Section -->
-      <section class="listing-section">
-        <section class="filter-section" id="aos" data-visible="false">
-          <div class="filter-overlay"></div>
-          <div class="filter-container">
-            <div class="filter-header">
-              <img
-                class="filter-icon-mob-v"
-                src="/assets/images/icons/filter.svg"
-                alt=""
-              />
-              <img
-                src="/assets/images/icons/close-filter.svg"
-                class="close-filter"
-                alt=""
-              />
-              <h4>التصفية</h4>
+
+      <!-- End Contact Headline Section-->
+      <!-- Start Contact Us Section-->
+      <section class="section contact-section">
+        <section class="get-in-touch">
+          <h4>تواصل معنا</h4>
+          <ul>
+            <li>
+              <div class="icon-container">
+                <img src="/assets/images/icons/phone-outline.svg" alt="" />
+              </div>
+              <div class="item-info">
+                <h5>الهاتف</h5>
+                <span>0671000294 / 0560847743</span>
+              </div>
+            </li>
+            <li>
+              <div class="icon-container">
+                <img src="/assets/images/icons/email.svg" alt="" />
+              </div>
+              <div class="item-info">
+                <h5>البريد الإلكتروني</h5>
+                <span>contact@yuccalabs.com</span>
+              </div>
+            </li>
+            <li>
+              <div class="icon-container">
+                <img src="/assets/images/icons/mdi--location.svg" alt="" />
+              </div>
+              <div class="item-info">
+                <h5>المكتب</h5>
+                <span>01 شارع الاستقلال، سيدي امحمد 16000</span>
+              </div>
+            </li>
+            <li>
+              <div class="icon-container">
+                <img src="/assets/images/icons/clock.svg" alt="" />
+              </div>
+              <div class="item-info">
+                <h5>ساعات العمل</h5>
+                <span>الأحد - الخميس - 08:00 - 17:00</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Start Contact Form Section-->
+        <section class="send-message">
+          <h4>إرسال رسالة</h4>
+          <form>
+            <div class="input-container">
+              <div class="">
+                <label for="fullname">الاسم واللقب</label>
+                <input
+                  type="text"
+                  id="fullname"
+                  placeholder="أدخل اسمك الكامل..."
+                  required
+                />
+              </div>
+              <div>
+                <label for="phone">الهاتف</label>
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder="أدخل رقم هاتفك..."
+                  maxlength="13"
+                  minlength="13"
+                  required
+                />
+              </div>
             </div>
-            <div class="filter-content">
-              <ul>
-                <li class="filter-category show">
-                  <div>
-                    <img src="/assets/images/icons/small-chevron.svg" alt="" />
-                    التصفية حسب:
-                  </div>
-                  <ul class="services">
-                    <li class="filter-item">
-                      <input type="checkbox" id="service-1" />
-                      <label for="service-1">ذهب</label>
-                    </li>
-                    <li class="filter-item">
-                      <input type="checkbox" id="service-2" />
-                      <label for="service-2">فضة</label>
-                    </li>
-                    <li class="filter-item">
-                      <input type="checkbox" id="service-3" />
-                      <label for="service-3">أحجار كريمة</label>
-                    </li>
-                    <li class="filter-item">
-                      <input type="checkbox" id="service-4" />
-                      <label for="service-4">مجوهرات مخصصة</label>
-                    </li>
-                  </ul>
+            <div>
+              <label for="email">البريد الإلكتروني</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="أدخل بريدك الإلكتروني..."
+                required
+              />
+            </div>
+            <div class="textarea-container">
+              <label for="message">رسالتك</label>
+              <textarea
+                id="message"
+                placeholder="أخبرنا عن يومك المميز..."
+                required
+              ></textarea>
+              <ul class="ready-prompt">
+                <li class="prompt-1">
+                  <h6>طلب عرض أسعار</h6>
+                  <p>
+                    مرحبًا، أنا مهتم بالحصول على عرض أسعار لخدماتكم. هل يمكنكم
+                    تزويدي بمعلومات تفصيلية حول الأسعار لـ [الخدمة المحددة]؟
+                    شكرًا!
+                  </p>
+                </li>
+                <li class="prompt-2">
+                  <h6>معلومات عن الخدمة</h6>
+                  <p>
+                    مرحبًا، أود معرفة المزيد عن خدمتك [اسم الخدمة]. هل يمكنكم
+                    إعطائي تفاصيل إضافية حول ما تتضمنه وكيف تعمل؟ شكرًا.
+                  </p>
+                </li>
+                <li class="prompt-3">
+                  <h6>حجز خدمة</h6>
+                  <p>
+                    مرحبًا، أرغب في حجز خدماتكم في [التاريخ/الوقت]. هل هذا
+                    الموعد متاح؟ ما هي الخطوات التالية لتأكيد الحجز؟ شكرًا!
+                  </p>
                 </li>
               </ul>
-              <div class="filter-applied">
-                <button class="clear">مسح التصفية</button>
-                <button class="show-results">عرض النتائج</button>
-              </div>
             </div>
-          </div>
-        </section>
-        <section class="vendors-list-container" id="aos" data-visible="false">
-          <div class="vendors-list-header">
-            <span>
-              <img
-                class="results-icon"
-                src="/assets/images/icons/result-icon.svg"
-                alt=""
-              />
-              109 Results</span
-            >
-            <img
-              class="filter-icon"
-              src="/assets/images/icons/filter.svg"
-              alt=""
-            />
-          </div>
-          <section class="vendors-list">
-            <div class="vendor-card" id="aos" data-visible="false">
-              <div class="img-container">
-                <section class="embla">
-                  <div class="embla__viewport">
-                    <div class="embla__container">
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/2.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/3.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/4.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="embla__controls">
-                    <div class="embla__buttons">
-                      <button
-                        class="embla__button embla__button--prev"
-                        type="button"
-                      >
-                        <img
-                          src="/assets/images/icons/chevron-left.svg"
-                          alt=""
-                        />
-                      </button>
-
-                      <button
-                        class="embla__button embla__button--next"
-                        type="button"
-                      >
-                        <img
-                          src="/assets/images/icons/chevron-right.svg"
-                          alt=""
-                        />
-                      </button>
-                    </div>
-                    <div class="embla__dots"></div>
-                  </div>
-                </section>
-              </div>
-              <div class="vendor-info">
-                <div class="info-header">
-                  <h4>كهف الجواهر</h4>
-                  <span class="like-btn">
-                    <img src="/assets/images/icons/like-btn.svg" alt="" />
-                  </span>
-                </div>
-                <p>
-                  قاعة حفلات ليديا تحتوي على قاعة كبيرة مزينة بشكل رائع بسعة 240
-                  شخصًا، بالإضافة إلى قاعة صغيرة تتسع لـ 200 ضيف. ديكور أنيق،
-                  راقٍ وجذاب...
-                </p>
-                <div class="vendor-services-provided">
-                  <ul>
-                    <li>
-                      <img src="/assets/images/icons/location.svg" alt="" />
-                      <span>الشراقة - الجزائر</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/ring.svg" alt="" />
-                      <span>ذهب</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/ring.svg" alt="" />
-                      <span>فضة</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/neckless.svg" alt="" />
-                      <span>مجوهرات مخصصة</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/diamond.svg" alt="" />
-                      <span>أحجار كريمة</span>
-                    </li>
-                  </ul>
-                  <a href="../details/jewelry-details.html">
-                    <button>المزيد من التفاصيل...</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="vendor-card" id="aos" data-visible="false">
-              <div class="img-container">
-                <section class="embla">
-                  <div class="embla__viewport">
-                    <div class="embla__container">
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/2.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/3.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/4.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="embla__controls">
-                    <div class="embla__buttons">
-                      <button
-                        class="embla__button embla__button--prev"
-                        type="button"
-                      >
-                        <img
-                          src="/assets/images/icons/chevron-left.svg"
-                          alt=""
-                        />
-                      </button>
-
-                      <button
-                        class="embla__button embla__button--next"
-                        type="button"
-                      >
-                        <img
-                          src="/assets/images/icons/chevron-right.svg"
-                          alt=""
-                        />
-                      </button>
-                    </div>
-                    <div class="embla__dots"></div>
-                  </div>
-                </section>
-              </div>
-              <div class="vendor-info">
-                <div class="info-header">
-                  <h4>كهف الجواهر</h4>
-                  <span class="like-btn">
-                    <img src="/assets/images/icons/like-btn.svg" alt="" />
-                  </span>
-                </div>
-                <p>
-                  قاعة حفلات ليديا تحتوي على قاعة كبيرة مزينة بشكل رائع بسعة 240
-                  شخصًا، بالإضافة إلى قاعة صغيرة تتسع لـ 200 ضيف. ديكور أنيق،
-                  راقٍ وجذاب...
-                </p>
-                <div class="vendor-services-provided">
-                  <ul>
-                    <li>
-                      <img src="/assets/images/icons/location.svg" alt="" />
-                      <span>الشراقة - الجزائر</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/ring.svg" alt="" />
-                      <span>ذهب</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/ring.svg" alt="" />
-                      <span>فضة</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/neckless.svg" alt="" />
-                      <span>مجوهرات مخصصة</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/diamond.svg" alt="" />
-                      <span>أحجار كريمة</span>
-                    </li>
-                  </ul>
-                  <a href="../details/jewelry-details.html">
-                    <button>المزيد من التفاصيل...</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="vendor-card" id="aos" data-visible="false">
-              <div class="img-container">
-                <section class="embla">
-                  <div class="embla__viewport">
-                    <div class="embla__container">
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/2.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/3.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/4.jpg" alt="" />
-                      </div>
-                      <div class="embla__slide">
-                        <img src="/assets/images/hero-slider/1.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="embla__controls">
-                    <div class="embla__buttons">
-                      <button
-                        class="embla__button embla__button--prev"
-                        type="button"
-                      >
-                        <img
-                          src="/assets/images/icons/chevron-left.svg"
-                          alt=""
-                        />
-                      </button>
-
-                      <button
-                        class="embla__button embla__button--next"
-                        type="button"
-                      >
-                        <img
-                          src="/assets/images/icons/chevron-right.svg"
-                          alt=""
-                        />
-                      </button>
-                    </div>
-                    <div class="embla__dots"></div>
-                  </div>
-                </section>
-              </div>
-              <div class="vendor-info">
-                <div class="info-header">
-                  <h4>كهف الجواهر</h4>
-                  <span class="like-btn">
-                    <img src="/assets/images/icons/like-btn.svg" alt="" />
-                  </span>
-                </div>
-                <p>
-                  قاعة حفلات ليديا تحتوي على قاعة كبيرة مزينة بشكل رائع بسعة 240
-                  شخصًا، بالإضافة إلى قاعة صغيرة تتسع لـ 200 ضيف. ديكور أنيق،
-                  راقٍ وجذاب...
-                </p>
-                <div class="vendor-services-provided">
-                  <ul>
-                    <li>
-                      <img src="/assets/images/icons/location.svg" alt="" />
-                      <span>الشراقة - الجزائر</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/ring.svg" alt="" />
-                      <span>ذهب</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/ring.svg" alt="" />
-                      <span>فضة</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/neckless.svg" alt="" />
-                      <span>مجوهرات مخصصة</span>
-                    </li>
-                    <li>
-                      <img src="/assets/images/icons/diamond.svg" alt="" />
-                      <span>أحجار كريمة</span>
-                    </li>
-                  </ul>
-                  <a href="../details/jewelry-details.html">
-                    <button>المزيد من التفاصيل...</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="vendors-list-pagination">
-            <button class="prev-page">
-              <img src="/assets/images/icons/small-chevron-left.svg" alt="" />
+            <button>
+              <img src="/assets/images/icons/send.svg" alt="" />
+              إرسال رسالة
             </button>
-            <div class="page-num">
-              <span class="curr-page"><a href=""> 1 </a></span>
-              <span><a href="">2</a></span>
-              <span><a href="">3</a></span>
-            </div>
-            <button class="next-page">
-              <img src="/assets/images/icons/small-chevron.svg" alt="" />
-            </button>
-          </section>
+          </form>
         </section>
+
+        <!-- End Contact Form Section-->
       </section>
-      <!-- End Listing Section -->
+      <!-- End Contact Us Section-->
     </main>
     <!-- Start Footer Section -->
     <footer>
@@ -1124,9 +823,5 @@
     <!-- End Popup Authentication -->
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
-    <!-- external packages -->
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
-    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
-    <script src="/assets/vendors/carousel.js"></script>
   </body>
 </html>
