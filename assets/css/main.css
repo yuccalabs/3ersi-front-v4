@@ -74,12 +74,6 @@ html {
     font-size: 9px;
   }
 }
-@media (max-width: 853px) {
-  html {
-    font-size: 9px;
-  }
-}
-
 body {
   color: var(--secondaly-color);
   background-color: var(--background-color);
@@ -2948,6 +2942,10 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   color: #1a1a1a;
   margin-bottom: 2rem;
 }
+body.arabic .about-us-section .about-text-container p {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
 .about-us-section .about-text-container p span {
   font-size: 2rem;
   color: var(--primary-color);
@@ -2973,10 +2971,16 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   font-weight: 400;
   margin-block: 2rem;
 }
+body.arabic .about-sub-section .text-content p {
+  font-size: 1.8rem;
+}
 .about-sub-section .text-content p span {
   font-size: 1.6rem;
   color: var(--primary-color);
   font-weight: 500;
+}
+body.arabic .about-sub-section .text-content p span {
+  font-size: 2rem;
 }
 .our-goal-section .img-container {
   flex: 1 1 40%;
@@ -3049,11 +3053,14 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   transition: var(--hover-transition);
 }
 .faq-container .faq-content ul .faq-question:hover {
-  background-color: rgba(236, 97, 92, 0.1);
+  background-color: rgba(236, 97, 92, 0.05);
 }
 .faq-container .faq-content .faq-question h4 {
   font-size: 1.4rem;
   font-weight: 300;
+}
+body.arabic .faq-container .faq-content .faq-question h4 {
+  font-size: 1.6rem;
 }
 .faq-container .faq-content .faq-question img {
   transition: var(--hover-transition);
@@ -3063,7 +3070,7 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
 .faq-container .faq-content .faq-answer {
   max-height: 0;
   overflow: hidden;
-  background-color: rgba(236, 97, 92, 0.1);
+  background-color: rgba(236, 97, 92, 0.05);
   font-size: 1.3rem;
   font-weight: 300;
   line-height: 2;
@@ -3072,6 +3079,9 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   margin-bottom: 2rem;
   transition: max-height 0.3s ease-out, padding 0.3s ease-out,
     border 0.3s ease-out;
+}
+body.arabic .faq-container .faq-content .faq-answer {
+  font-size: 1.5rem;
 }
 .faq-container .faq-content .faq-answer ul {
   list-style-type: disc;
@@ -3095,6 +3105,9 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 2rem;
+}
+body.arabic .faq-container .faq-content .contact-us h6 {
+  font-size: 1.6rem;
 }
 .faq-container .faq-content .contact-us button {
   background-color: var(--primary-color);
@@ -3155,6 +3168,9 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   font-size: 1.8rem;
   font-weight: 400;
 }
+body.arabic .contact-section .get-in-touch h4 {
+  font-size: 2.2rem;
+}
 .contact-section .get-in-touch ul {
   padding-left: 2rem;
   margin-top: 2rem;
@@ -3184,9 +3200,15 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   font-weight: 400;
   margin-bottom: 0.7rem;
 }
+body.arabic .contact-section .get-in-touch ul li .item-info h5 {
+  font-size: 1.8rem;
+}
 .contact-section .get-in-touch ul li .item-info span {
   font-size: 1.2rem;
   color: var(--primary-color);
+}
+body.arabic .contact-section .get-in-touch ul li .item-info span {
+  font-size: 1.6rem;
 }
 .contact-section .send-message {
   flex: 1 1 60%;
@@ -3195,6 +3217,9 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
 .contact-section .send-message h4 {
   font-size: 1.8rem;
   font-weight: 400;
+}
+body.arabic .contact-section .send-message h4 {
+  font-size: 2.2rem;
 }
 .contact-section .send-message form {
   padding-left: 2rem;
@@ -3215,16 +3240,22 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   font-weight: 400;
   cursor: pointer;
 }
+body.arabic .contact-section .send-message form label {
+  font-size: 1.8rem;
+}
 .contact-section .send-message form input {
   width: 100%;
   height: 42px;
-  padding-left: 1rem;
+  padding-inline: 1rem;
   border: 1px solid #4b4b4b;
   border-radius: 0.5rem;
   outline: none;
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: 300;
+}
+body.arabic .contact-section .send-message form input {
+  font-size: 1.4rem;
 }
 .contact-section .send-message form input:focus {
   border-color: var(--primary-color);
@@ -3241,6 +3272,9 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   font-weight: 300;
   border-radius: 0.5rem;
   border: 1px solid #4b4b4b;
+}
+body.arabic .contact-section .send-message form textarea {
+  font-size: 1.4rem;
 }
 .contact-section .send-message form textarea:focus {
   outline: none;
@@ -3263,6 +3297,7 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   border-color: var(--primary-color);
   box-shadow: 0 0 5px rgba(236, 97, 92, 0.5);
 }
+
 .contact-section .send-message form .ready-prompt.show {
   display: block;
 }
@@ -3279,6 +3314,9 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   font-weight: 400;
   margin-bottom: 0.8rem;
 }
+body.arabic .contact-section .send-message form .ready-prompt li h6 {
+  font-size: 1.8rem;
+}
 .contact-section .send-message form .ready-prompt li p {
   font-size: 1.2rem;
   font-weight: 200;
@@ -3291,6 +3329,9 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
+}
+body.arabic .contact-section .send-message form .ready-prompt li p {
+  font-size: 1.4rem;
 }
 .contact-section .send-message form button {
   display: flex;
@@ -3305,6 +3346,9 @@ body.arabic .sugg-section .sugg-container .box .vendor-info p {
   font-size: 1.4rem;
   font-weight: 300;
   transition: var(--hover-transition);
+}
+body.arabic .contact-section .send-message form button {
+  font-size: 1.6rem;
 }
 .contact-section .send-message form button img {
   filter: brightness(0) saturate(100%) invert(100%);
