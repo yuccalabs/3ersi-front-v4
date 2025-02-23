@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: Askan, "Open Sans", sans-serif;
+  --default-font: Askan, 'Open Sans', sans-serif;
 }
 :root {
   --primary-color: #ec615c;
@@ -13,10 +13,8 @@
   --shadow-box: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
   --hover-transition: 0.2s;
   --width-section: 92%;
-  --stroke-color: invert(46%) sepia(75%) saturate(2500%) hue-rotate(330deg)
-    brightness(90%) contrast(90%);
-  --storke-secondary-color: brightness(0) saturate(100%) invert(55%) sepia(5%)
-    saturate(10%) hue-rotate(0deg) brightness(90%) contrast(85%);
+  --stroke-color: invert(46%) sepia(75%) saturate(2500%) hue-rotate(330deg) brightness(90%) contrast(90%);
+  --storke-secondary-color: brightness(0) saturate(100%) invert(55%) sepia(5%) saturate(10%) hue-rotate(0deg) brightness(90%) contrast(85%);
   --stroke-transition: filter 0.2s ease-in-out;
 }
 /* Smooth scroll */
@@ -58,7 +56,7 @@ button {
 --------------------------------------------------------------*/
 @font-face {
   font-family: Askan;
-  src: url("assets/fonts/Hoftype Askan Black.otf") format("opentype");
+  src: url('assets/fonts/Hoftype Askan Black.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
@@ -81,7 +79,7 @@ body {
   font-weight: 400;
 }
 body.arabic {
-  font-family: "Cairo", serif; /* or any Arabic font you prefer */
+  font-family: 'Cairo', serif; /* or any Arabic font you prefer */
   text-align: right;
   direction: rtl;
 }
@@ -140,7 +138,7 @@ i {
 }
 .pesoudo::after,
 .pesoudo::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 15px;
   height: 100%;
@@ -150,25 +148,13 @@ i {
 }
 .pesoudo::before {
   left: -1px;
-  background: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(transparent),
-    to(#fff)
-  );
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(#fff));
   background: -o-linear-gradient(right, transparent, #fff);
   background: linear-gradient(to left, transparent, #fff);
 }
 .pesoudo::after {
   right: -1px;
-  background: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(#fff),
-    to(transparent)
-  );
+  background: -webkit-gradient(linear, right top, left top, from(#fff), to(transparent));
   background: -o-linear-gradient(right, #fff, transparent);
   background: linear-gradient(to left, #fff, transparent);
 }
@@ -262,7 +248,7 @@ i {
   transform: translateY(50px);
   transition: opacity 0.3s ease-in-out, transform 0.6s ease-in-out;
 }
-#aos[data-visible="true"] {
+#aos[data-visible='true'] {
   opacity: 1;
   transform: translateY(0);
 }
@@ -508,7 +494,7 @@ body.arabic .header .vendors-gate h3 a {
   color: var(--secondaly-color);
   cursor: pointer;
   width: 65px;
-  background-image: url("/assets/images/icons/chevron-down.svg"); /* Your icon */
+  background-image: url('/assets/images/icons/chevron-down.svg'); /* Your icon */
   background-repeat: no-repeat;
   background-position: right 12px center;
 }
@@ -723,13 +709,7 @@ body.arabic .header .header-container .navmenu ul li .dropdown li {
   outline: none;
 }
 /* Style the dropdown arrow*/
-.header
-  .header-container
-  .aside-content
-  ul
-  li
-  .subscirbe-mob
-  select::-ms-expand {
+.header .header-container .aside-content ul li .subscirbe-mob select::-ms-expand {
   display: none; /* Hide default arrow in IE */
 }
 
@@ -771,7 +751,7 @@ main {
   top: 0;
   left: 0;
   z-index: -1;
-  background: url("/assets/images/herosection.webp") left / cover no-repeat;
+  background: url('/assets/images/herosection.webp') left / cover no-repeat;
 }
 .hero .img-container img {
   width: 100%;
@@ -811,7 +791,7 @@ body.arabic .hero .container .hero-content {
 }
 
 .hero .container .hero-content .hero-main-text::after {
-  content: "";
+  content: '';
   display: none;
   width: 200%;
   height: 100%;
@@ -1235,7 +1215,7 @@ body.arabic .discount .discount-container .box .price .new-price {
   position: relative;
 }
 .discount .discount-container .box .price .old-price::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 0;
@@ -1322,7 +1302,7 @@ body.arabic .discount .discount-container .box .price .new-price {
   object-position: center;
 }
 .wedding-planner .container .img-container::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -1.6rem;
   right: -1.6rem;
@@ -1447,7 +1427,7 @@ body.arabic .articles .headline-container .more-articles img {
   height: 100%;
   -webkit-box-shadow: var(--shadow-box);
   box-shadow: var(--shadow-box);
-  background: url("/assets/images/category.jpg") center / cover no-repeat;
+  background: url('/assets/images/category.jpg') center / cover no-repeat;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1465,7 +1445,7 @@ body.arabic .articles .headline-container .more-articles img {
   transition: 0.5s;
 }
 .articles .category-container .category::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   width: 100%;
@@ -1978,11 +1958,7 @@ footer .copy-right {
   border-radius: 7px;
   cursor: pointer;
 }
-.listing-section
-  .vendors-list
-  .vendor-card
-  .vendor-services-provided
-  button:hover {
+.listing-section .vendors-list .vendor-card .vendor-services-provided button:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
@@ -2007,24 +1983,14 @@ footer .copy-right {
   gap: 1.5rem;
   font-size: 1.4rem;
 }
-.listing-section
-  .vendors-list-container
-  .vendors-list-pagination
-  .page-num
-  span
-  a {
+.listing-section .vendors-list-container .vendors-list-pagination .page-num span a {
   background-color: var(--background-color);
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 0.4rem 0.8rem;
   color: var(--primary-color);
 }
-.listing-section
-  .vendors-list-container
-  .vendors-list-pagination
-  .page-num
-  span.curr-page
-  a {
+.listing-section .vendors-list-container .vendors-list-pagination .page-num span.curr-page a {
   background-color: var(--primary-color);
   color: var(--third-color);
 }
@@ -2177,11 +2143,7 @@ body.arabic .listing-section .filter-content .filter-category div img {
 .listing-section .filter-section .filter-content .filter-category.show ul {
   height: auto;
 }
-.listing-section
-  .filter-section
-  .filter-content
-  .filter-category.show
-  ul.services {
+.listing-section .filter-section .filter-content .filter-category.show ul.services {
   height: 200px;
   overflow-y: auto;
 }
@@ -2203,7 +2165,7 @@ body.arabic .listing-section .filter-content .filter-category div img {
   padding-left: 2rem;
 }
 /* Style the range input */
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
@@ -2214,11 +2176,11 @@ input[type="range"] {
   opacity: 0.85;
   transition: opacity 0.2s;
 }
-body.arabic input[type="range"] {
+body.arabic input[type='range'] {
   direction: ltr;
   transform: scaleX(-1);
 }
-input[type="range"]::-webkit-slider-runnable-track {
+input[type='range']::-webkit-slider-runnable-track {
   width: 100%;
   height: 8px;
   cursor: pointer;
@@ -2226,7 +2188,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   border-radius: 5px;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
@@ -2236,28 +2198,24 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
   margin-top: -6px;
 }
-input[type="range"]::-moz-range-track {
+input[type='range']::-moz-range-track {
   width: 100%;
   height: 8px;
   cursor: pointer;
   background: transparent;
   border-radius: 5px;
 }
-input[type="range"]::-moz-range-thumb {
+input[type='range']::-moz-range-thumb {
   width: 20px;
   height: 20px;
   background: var(--primary-color);
   border-radius: 50%;
   cursor: pointer;
 }
-input[type="range"]:hover {
+input[type='range']:hover {
   opacity: 1;
 }
-.listing-section
-  .filter-section
-  .filter-category
-  .filter-item
-  [type="checkbox"] {
+.listing-section .filter-section .filter-category .filter-item [type='checkbox'] {
   width: 16px;
   height: 16px;
   border: 2px solid #ccc;
@@ -2269,20 +2227,12 @@ input[type="range"]:hover {
   cursor: pointer;
   position: relative;
 }
-.listing-section
-  .filter-section
-  .filter-category
-  .filter-item
-  [type="checkbox"]:checked {
+.listing-section .filter-section .filter-category .filter-item [type='checkbox']:checked {
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
 }
-.listing-section
-  .filter-section
-  .filter-category
-  .filter-item
-  [type="checkbox"]:checked::after {
-  content: "";
+.listing-section .filter-section .filter-category .filter-item [type='checkbox']:checked::after {
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2343,27 +2293,14 @@ input[type="range"]:hover {
     font-size: 2.2rem;
     font-weight: 400;
   }
-  .listing-section
-    .filter-section
-    .filter-header
-    .listing-section
-    .filter-section
-    .filter-content {
+  .listing-section .filter-section .filter-header .listing-section .filter-section .filter-content {
     box-shadow: none;
     font-size: 2.4rem;
   }
-  .listing-section
-    .filter-section
-    .filter-content
-    .filter-category.show
-    ul.services {
+  .listing-section .filter-section .filter-content .filter-category.show ul.services {
     height: 320px;
   }
-  .listing-section
-    .filter-section
-    .filter-content
-    .filter-category.show
-    ul::-webkit-scrollbar {
+  .listing-section .filter-section .filter-content .filter-category.show ul::-webkit-scrollbar {
     display: none;
   }
   .listing-section .filter-section .filter-category .filter-item label {
@@ -2594,22 +2531,11 @@ body.arabic .vendor-details .img-container .like-btn {
   width: 2rem;
   height: 2rem;
   background: gold;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   position: relative;
 }
 .vendor-details .vendor-info-card .rate-container .stars::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -5px;
   left: -5px;
@@ -2617,18 +2543,7 @@ body.arabic .vendor-details .img-container .like-btn {
   height: calc(100% + 20px);
   background: black;
   border: 5px solid black;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   box-sizing: border-box;
 }
 .vendor-details .vendor-info-card .rate-container p {
@@ -3077,8 +2992,7 @@ body.arabic .faq-container .faq-content .faq-question h4 {
   border: none;
   border-radius: 0.7rem;
   margin-bottom: 2rem;
-  transition: max-height 0.3s ease-out, padding 0.3s ease-out,
-    border 0.3s ease-out;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out, border 0.3s ease-out;
 }
 body.arabic .faq-container .faq-content .faq-answer {
   font-size: 1.5rem;
@@ -3409,8 +3323,7 @@ body.arabic .contact-section .send-message form button {
   border-radius: 50%;
 }
 .hero-planner .img-container > div.img-one {
-  background: url("/assets/images/wedding-planner-1.jpg") center / cover
-    no-repeat;
+  background: url('/assets/images/wedding-planner-1.jpg') center / cover no-repeat;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -3425,8 +3338,7 @@ body.arabic .contact-section .send-message form button {
   width: 70px;
 }
 .hero-planner .img-container > div.img-two {
-  background: url("/assets/images/wedding-planner-2.jpg") center / cover
-    no-repeat;
+  background: url('/assets/images/wedding-planner-2.jpg') center / cover no-repeat;
   bottom: 0;
   left: 85px;
 }
@@ -3437,8 +3349,7 @@ body.arabic .contact-section .send-message form button {
   rotate: 174deg;
 }
 .hero-planner .img-container > div.img-three {
-  background: url("/assets/images/wedding-planner-3.jpg") center / cover
-    no-repeat;
+  background: url('/assets/images/wedding-planner-3.jpg') center / cover no-repeat;
   bottom: 0;
   right: 85px;
 }
@@ -3588,7 +3499,7 @@ body.arabic .contact-section .send-message form button {
 .wedd-org-section .form-section form input {
   width: 100%;
   height: 42px;
-  padding-left: 1rem;
+  padding-inline: 1rem;
   border: 1px solid #4b4b4b;
   border-radius: 0.5rem;
   outline: none;
@@ -3596,7 +3507,8 @@ body.arabic .contact-section .send-message form button {
   font-size: 1.2rem;
   font-weight: 300;
 }
-.wedd-org-section .form-section form .input-container input[type="date"] {
+
+.wedd-org-section .form-section form .input-container input[type='date'] {
   width: 100%;
   height: 42px;
   border: 1px solid #4b4b4b;
@@ -3607,11 +3519,7 @@ body.arabic .contact-section .send-message form button {
   padding: 1rem;
   font-size: 1.4rem;
 }
-.wedd-org-section
-  .form-section
-  form
-  .input-container
-  input[type="date"]::-webkit-calendar-picker-indicator {
+.wedd-org-section .form-section form .input-container input[type='date']::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 .wedd-org-section .form-section form .input-container > div {
@@ -3623,6 +3531,10 @@ body.arabic .contact-section .send-message form button {
   top: 50%;
   width: 1.6rem;
   height: 1.6rem;
+}
+body.arabic .wedd-org-section .form-section form .input-container > div img {
+  right: auto;
+  left: 2%;
 }
 .wedd-org-section .form-section form .input-container > div:hover img {
   filter: var(--stroke-color);
@@ -3636,6 +3548,10 @@ body.arabic .contact-section .send-message form button {
   display: flex;
   margin-left: auto;
 }
+body.arabic .wedd-org-section .form-section form button {
+  margin-left: 0;
+  margin-right: auto;
+}
 .wedd-org-section .form-section form a {
   display: flex;
   align-items: center;
@@ -3644,7 +3560,6 @@ body.arabic .contact-section .send-message form button {
   color: var(--third-color);
   padding: 0.4rem 1rem;
   background-color: var(--primary-color);
-
   border-radius: 0.7rem;
   margin-top: 2rem;
   font-size: 1.4rem;
@@ -3663,6 +3578,9 @@ body.arabic .contact-section .send-message form button {
   width: 2rem;
   height: 2rem;
 }
+body.arabic .wedd-org-section .form-section form button img {
+  transform: rotate(180deg);
+}
 .wedd-org-section .form-section form button:hover img {
   filter: var(--stroke-color);
 }
@@ -3674,7 +3592,7 @@ body.arabic .contact-section .send-message form button {
   align-items: center;
   gap: 1rem;
 }
-.wedd-org-section .form-section form [type="checkbox"] {
+.wedd-org-section .form-section form [type='checkbox'] {
   width: 24px;
   height: 24px;
   border: 2px solid #ccc;
@@ -3686,12 +3604,12 @@ body.arabic .contact-section .send-message form button {
   cursor: pointer;
   position: relative;
 }
-.wedd-org-section .form-section form [type="checkbox"]:checked {
+.wedd-org-section .form-section form [type='checkbox']:checked {
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
 }
-.wedd-org-section .form-section form [type="checkbox"]:checked::after {
-  content: "";
+.wedd-org-section .form-section form [type='checkbox']:checked::after {
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3711,7 +3629,7 @@ body.arabic .contact-section .send-message form button {
   align-items: center;
   gap: 1rem;
 }
-.wedd-org-section .form-section form [type="radio"] {
+.wedd-org-section .form-section form [type='radio'] {
   width: 24px;
   height: 24px;
   border: 2px solid #ccc;
@@ -3723,8 +3641,8 @@ body.arabic .contact-section .send-message form button {
   cursor: pointer;
   position: relative;
 }
-.wedd-org-section .form-section form [type="radio"]:checked::after {
-  content: "";
+.wedd-org-section .form-section form [type='radio']:checked::after {
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3969,7 +3887,7 @@ body.arabic .popup-auth .popup-content form > div img {
   font-size: 1.4rem;
   font-weight: 300;
 }
-.popup-auth .popup-content form [type="radio"] {
+.popup-auth .popup-content form [type='radio'] {
   width: 24px;
   height: 24px;
   border: 2px solid #ccc;
@@ -3983,11 +3901,11 @@ body.arabic .popup-auth .popup-content form > div img {
   padding: 0;
   margin-bottom: 0;
 }
-body.arabic .popup-auth .popup-content form [type="radio"] {
+body.arabic .popup-auth .popup-content form [type='radio'] {
   padding: 0;
 }
-.popup-auth .popup-content form [type="radio"]:checked::after {
-  content: "";
+.popup-auth .popup-content form [type='radio']:checked::after {
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
