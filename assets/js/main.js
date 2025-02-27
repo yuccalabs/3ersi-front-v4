@@ -10,9 +10,7 @@ function hideElement(ele) {
 }
 
 function toggleActiveState(elements, targetElement) {
-  elements.forEach(
-    (item) => item !== targetElement && item.classList.remove("active")
-  );
+  elements.forEach((item) => item !== targetElement && item.classList.remove("active"));
   targetElement.classList.toggle("active");
 }
 
@@ -54,14 +52,10 @@ function toggleSidebar(show) {
 
 // Hamburger Toggle
 hamburger.addEventListener("click", () => toggleSidebar(true));
-[removeAside, asideOverlay].forEach((el) =>
-  el.addEventListener("click", () => toggleSidebar(false))
-);
+[removeAside, asideOverlay].forEach((el) => el.addEventListener("click", () => toggleSidebar(false)));
 
 asideNavItems.forEach((aNavItem) => {
-  aNavItem.addEventListener("click", () =>
-    toggleActiveState(asideNavItems, aNavItem)
-  );
+  aNavItem.addEventListener("click", () => toggleActiveState(asideNavItems, aNavItem));
 });
 
 // Close nav items on outside click
@@ -167,18 +161,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Mobile lists
   const serviceListMobUl = document.querySelector(".type-service-list-mob-v");
-  const serviceListMobUlTow = document.querySelector(
-    ".location-service-list-mob-v"
-  );
+  const serviceListMobUlTow = document.querySelector(".location-service-list-mob-v");
 
   // Mobile container and overlay
   const serviceListMobContainer = document.querySelector(".list-appear");
-  const serviceListMobOverlay = document.querySelector(
-    ".list-appear .list-overlay"
-  );
-  const removeServiceList = document.querySelector(
-    ".list-appear .title-service img"
-  );
+  const serviceListMobOverlay = document.querySelector(".list-appear .list-overlay");
+  const removeServiceList = document.querySelector(".list-appear .title-service img");
   const titleService = document.querySelector(".list-appear .title-service h4");
   const inputService = document.querySelector(".list-appear input");
 
@@ -234,25 +222,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Show type service list
   inputTypeService.addEventListener("focus", (e) => {
     handleInputFocus(e);
-    showList(
-      typeServiceList,
-      serviceListMobUl,
-      "Que Chercher Vous ?",
-      "Chercher un service",
-      listItems
-    );
+    showList(typeServiceList, serviceListMobUl, "Que Chercher Vous ?", "Chercher un service", listItems);
   });
 
   // Show location service list
   inputLocationService.addEventListener("focus", (e) => {
     handleInputFocus(e);
-    showList(
-      locationServiceList,
-      serviceListMobUlTow,
-      "Ou ?",
-      "Chercher une ville",
-      listItemsTwo
-    );
+    showList(locationServiceList, serviceListMobUlTow, "Ou ?", "Chercher une ville", listItemsTwo);
   });
 
   // Hide lists on overlay or remove button click
@@ -271,10 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ul.innerHTML = items
         .map((item, index) => ({ item, index }))
         .filter(({ item }) => item.toLowerCase().includes(inputValue))
-        .map(
-          ({ item, index }) =>
-            `<li><img src="${iconsList[index]}" alt="" /> ${item}</li>`
-        )
+        .map(({ item, index }) => `<li><img src="${iconsList[index]}" alt="" /> ${item}</li>`)
         .join("");
       // Fill the input with the Item Text
       ul.querySelectorAll("li").forEach((item) =>
@@ -283,12 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
       );
     });
-    ul.innerHTML = items
-      .map(
-        (item, index) =>
-          `<li><img src="${iconsList[index]}" alt="service-${item}" /> ${item}</li>`
-      )
-      .join(""); // Initial render
+    ul.innerHTML = items.map((item, index) => `<li><img src="${iconsList[index]}" alt="service-${item}" /> ${item}</li>`).join(""); // Initial render
 
     // Fill the input with the Item Text
     ul.querySelectorAll("li").forEach((item) =>
@@ -301,6 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Render lists for desktop and mobile
   renderList(inputTypeService, typeServiceList, listItems);
   renderList(inputLocationService, locationServiceList, listItemsTwo);
+
   renderList(inputService, serviceListMobUl, listItems);
   renderList(inputService, serviceListMobUlTow, listItemsTwo);
 
@@ -322,12 +291,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollAmount = 600;
 
     if (container && leftArrow && rightArrow) {
-      leftArrow.addEventListener("click", () =>
-        container.scrollBy({ left: -scrollAmount, behavior: "smooth" })
-      );
-      rightArrow.addEventListener("click", () =>
-        container.scrollBy({ left: scrollAmount, behavior: "smooth" })
-      );
+      leftArrow.addEventListener("click", () => container.scrollBy({ left: -scrollAmount, behavior: "smooth" }));
+      rightArrow.addEventListener("click", () => container.scrollBy({ left: scrollAmount, behavior: "smooth" }));
     }
   }
 
@@ -343,9 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterSection = document.querySelector(".filter-section");
   const filterIcon = document.querySelector(".filter-icon");
   const closeFilterIcon = document.querySelector(".close-filter");
-  const filterCategoriesItem = document.querySelectorAll(
-    ".filter-category div"
-  );
+  const filterCategoriesItem = document.querySelectorAll(".filter-category div");
   const filterOverlay = document.querySelector(".filter-overlay");
   const rangeLabels = document.querySelectorAll(".filter-item label span");
   const rangeInputs = document.querySelectorAll('input[type="range"]');
@@ -401,9 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const answer = title.nextElementSibling;
       const chevronIcon = title.querySelector("img");
       answer.classList.toggle("show");
-      chevronIcon.style.rotate = answer.classList.contains("show")
-        ? "180deg"
-        : "0deg";
+      chevronIcon.style.rotate = answer.classList.contains("show") ? "180deg" : "0deg";
     });
   });
 });
@@ -411,26 +372,18 @@ document.addEventListener("DOMContentLoaded", () => {
 // Contact Form Ready Prompt
 document.addEventListener("DOMContentLoaded", () => {
   const textareaInput = document.querySelector(".contact-section textarea");
-  const readyPromptList = document.querySelector(
-    ".textarea-container .ready-prompt"
-  );
+  const readyPromptList = document.querySelector(".textarea-container .ready-prompt");
 
   textareaInput.addEventListener("focus", () => showElement(readyPromptList));
   textareaInput.addEventListener("input", () => hideElement(readyPromptList));
 
   window.addEventListener("click", (e) => {
-    if (![readyPromptList, textareaInput].includes(e.target))
-      hideElement(readyPromptList);
+    if (![readyPromptList, textareaInput].includes(e.target)) hideElement(readyPromptList);
   });
 
-  document
-    .querySelectorAll(".textarea-container .ready-prompt li")
-    .forEach((item) => {
-      item.addEventListener(
-        "click",
-        () => (textareaInput.value = item.querySelector("p").innerText)
-      );
-    });
+  document.querySelectorAll(".textarea-container .ready-prompt li").forEach((item) => {
+    item.addEventListener("click", () => (textareaInput.value = item.querySelector("p").innerText));
+  });
 });
 
 // Control the Auth Popup
@@ -440,12 +393,8 @@ const popupSection = document.querySelector(".popup-auth");
 const loginPopup = document.querySelector(".popup-auth .popup-login");
 const signupPopup = document.querySelector(".popup-auth .popup-signup");
 const hidePopup = document.querySelectorAll(".popup-auth .close-btn img");
-const switchLogin = document.querySelector(
-  ".popup-auth .popup-signup .switch-popup"
-);
-const switchSignup = document.querySelector(
-  ".popup-auth .popup-login .switch-popup"
-);
+const switchLogin = document.querySelector(".popup-auth .popup-signup .switch-popup");
+const switchSignup = document.querySelector(".popup-auth .popup-login .switch-popup");
 
 // Display Login popup
 function showLoginPopup() {

@@ -310,104 +310,79 @@
     </header>
     <!-- End Header Section -->
     <main id="main" class="main">
-      <!-- Start Contact Headline Section-->
-      <section class="section contact headline">
-        <span>
-          <img src="/assets/images/icons/contact.svg" alt="" />
-        </span>
-        <h2>Contactez Nous</h2>
-        <h3>Nous sommes là pour vous aider à rendre votre jour spécial parfait. Contactez nos experts en mariage.</h3>
-      </section>
-      <!-- End Contact Headline Section-->
-      <!-- Start Contact Us Section-->
-      <section class="section contact-section">
-        <section class="get-in-touch">
-          <h4>Prenez contact</h4>
-          <ul>
-            <li>
-              <div class="icon-container">
-                <img src="/assets/images/icons/phone-outline.svg" alt="" />
-              </div>
-              <div class="item-info">
-                <h5>Telephone</h5>
-                <span>0671000294 / 0560847743</span>
-              </div>
-            </li>
-            <li>
-              <div class="icon-container">
-                <img src="/assets/images/icons/email.svg" alt="" />
-              </div>
-              <div class="item-info">
-                <h5>E-mail</h5>
-                <span>contact@yuccalabs.com</span>
-              </div>
-            </li>
-            <li>
-              <div class="icon-container">
-                <img src="/assets/images/icons/mdi--location.svg" alt="" />
-              </div>
-              <div class="item-info">
-                <h5>Bereau</h5>
-                <span>01 Av. de l'Indépendance, Sidi M'Hamed 16000</span>
-              </div>
-            </li>
-            <li>
-              <div class="icon-container">
-                <img src="/assets/images/icons/clock.svg" alt="" />
-              </div>
-              <div class="item-info">
-                <h5>Horaires De Travail</h5>
-                <span>dimanche - jeudi - 8h00-17h00</span>
-              </div>
-            </li>
-          </ul>
+      <!-- Start wedding planner Hero Section -->
+      <section class="section hero-planner">
+        <div class="headline mob-v">
+          <img src="/assets/images/icons/heart.svg" alt="" />
+          <h2>Wedding Planner</h2>
+        </div>
+        <section class="img-container">
+          <div class="img-one">
+            <span><img src="/assets/images/icons/branch.svg" alt="" /></span>
+          </div>
+          <div class="img-two">
+            <span><img src="/assets/images/icons/branch.svg" alt="" /></span>
+          </div>
+          <div class="img-three">
+            <span><img src="/assets/images/icons/branch.svg" alt="" /></span>
+          </div>
         </section>
-
-        <!-- Start Contact Form Section-->
-        <section class="send-message">
-          <h4>Envoyer un message</h4>
-          <form>
-            <div class="input-container">
-              <div class="">
+        <section class="text-container">
+          <div class="headline">
+            <img src="/assets/images/icons/heart.svg" alt="" />
+            <h2>Wedding Planner</h2>
+          </div>
+          <p>
+            Découvrez le service Wedding Planner de 3ersi.com Gagnez du temps, bénéficiez de notre expertise et profitez des meilleures offres disponibles sur le marché en faisant appel à notre
+            expertise pour organiser le plus beau jour de votre vie
+          </p>
+          <a href="#wedd-org-section">
+            <button>Organiser votre mariage !</button>
+          </a>
+        </section>
+      </section>
+      <!-- End wedding planner Hero Section -->
+      <section class="section wedd-org-section" id="wedd-org-section">
+        <div class="headline">
+          <h2>Organisez Votre Marriage</h2>
+        </div>
+        <section class="process-step">
+          <div class="step-number">
+            <div>1</div>
+            <span></span>
+          </div>
+          <h6>entrez vos informations personnelles</h6>
+        </section>
+        <section class="section form-section">
+          <form class="personall-info">
+            <div class="input-container personall-info">
+              <div>
                 <label for="fullname">Nom et Prenom</label>
                 <input type="text" id="fullname" placeholder="entrez votre nom complet..." required />
               </div>
               <div>
                 <label for="phone">Téléphone</label>
-                <input type="text" id="phone" placeholder="entrez votre numéro de téléphone..." maxlength="13" minlength="13" required />
+                <input type="text" id="phone" placeholder="entrez votre numéro de téléphone..." maxlength="13" minlength="10" required />
+              </div>
+              <div>
+                <label for="date">Date de mariage</label>
+                <input type="date" id="date" placeholder="entrez la date de mariage..." required />
+              </div>
+              <div>
+                <label for="location">Lieu de mariage</label>
+                <input type="text" id="location" placeholder="entrez  le lieu de mariage..." required />
+                <img src="/assets/images/icons/location-outline.svg" alt="" />
               </div>
             </div>
-            <div>
-              <label for="email">E-mail</label>
-              <input type="email" id="email" placeholder="entrez votre email..." required />
-            </div>
-            <div class="textarea-container">
-              <label for="message">Votre message</label>
-              <textarea id="message" placeholder="parlez-nous de votre journée spéciale..." required></textarea>
-              <ul class="ready-prompt">
-                <li class="prompt-1">
-                  <h6>Demande de devis</h6>
-                  <p>Bonjour, je suis intéressé par un devis pour vos services. Pourriez-vous me fournir des informations détaillées sur les tarifs pour [service spécifique] ? Merci !</p>
-                </li>
-                <li class="prompt-2">
-                  <h6>Informations sur le service</h6>
-                  <p>Bonjour, J’aimerais en savoir plus sur votre service [nom du service]. Pourriez-vous me donner plus de détails sur ce qu’il inclut et son fonctionnement ? Merci</p>
-                </li>
-                <li class="prompt-3">
-                  <h6>Réserver un service</h6>
-                  <p>Bonjour, J’aimerais réserver vos services pour le [date/heure]. Ce créneau est-il disponible ? Quelles sont les prochaines étapes pour confirmer la réservation ? Merci !</p>
-                </li>
-              </ul>
-            </div>
             <button>
-              <img src="/assets/images/icons/send.svg" alt="" />
-              Envoyer un message
+              <a href="/fr/wedd-plan/service-included/wedd-plan-reception-room.html#wedd-org-section">
+                <img src="/assets/images/icons/arrow-right.svg" alt="" />
+                Suivant
+              </a>
             </button>
           </form>
         </section>
-        <!-- End Contact Form Section-->
       </section>
-      <!-- End Contact Us Section-->
     </main>
     <!-- Start Footer Section -->
     <footer>
@@ -499,37 +474,37 @@
       <div class="popup-signup">
         <div class="popup-header">
           <span class="close-btn" id="close-popup"><img src="/assets/images/icons/xMark.svg" alt="" /></span>
-          <h5>Create Account</h5>
-          <p>Join us to start planning your wedding</p>
+          <h5>Créer un compte</h5>
+          <p>Créez un compte pour profiter de nos services</p>
         </div>
         <div class="popup-content">
           <form>
             <div class="input-container">
               <div>
-                <input type="text" placeholder="Your ID" name="username" required />
-                <img src="/assets/images/icons/person.svg" alt="" />
+                <input type="text" placeholder="Votre ID" name="username" required />
+                <img src="/assets/images/icons/id.svg" alt="" />
               </div>
               <div>
-                <input type="text" id="fullname" placeholder="Entrez le nom complet" name="fullname" required />
+                <input type="text" id="fullname" placeholder="Nom complet" name="fullname" required />
                 <img src="/assets/images/icons/person.svg" alt="" />
               </div>
             </div>
             <div class="input-container">
               <div>
-                <input type="text" id="phone-number" placeholder="Entrez le numéro de telephone" name="phone-number" required />
-                <img src="/assets/images/icons/person.svg" alt="" />
+                <input type="text" id="phone-number" placeholder="Numéro de téléphone" name="phone-number" required />
+                <img src="/assets/images/icons/phone.svg" alt="" />
               </div>
               <div>
-                <input type="email" id="email" placeholder="Entrez le email" name="email" required />
-                <img src="/assets/images/icons/person.svg" alt="" />
+                <input type="email" id="email" placeholder="Adresse e-mail" name="email" required />
+                <img src="/assets/images/icons/email.svg" alt="" />
               </div>
             </div>
             <div class="input-container">
-              <input type="password" placeholder="entre mot de passe" name="password" required />
+              <input type="password" placeholder="Entrez un mot de passe" name="password" required />
               <img src="/assets/images/icons/lock.svg" alt="" />
             </div>
             <div class="input-container">
-              <input type="password" placeholder="confirme le mot de passe" name="password" required />
+              <input type="password" placeholder="Confirmez le mot de passe" name="password" required />
               <img src="/assets/images/icons/lock.svg" alt="" />
             </div>
             <div class="radio-btn">
@@ -542,30 +517,30 @@
                 <label for="radio2" class="custom-radio">Je suis prestataire</label>
               </div>
             </div>
-            <button type="submit">Se connecter</button>
+            <button type="submit">S'inscrire</button>
           </form>
         </div>
         <div class="popup-footer">
           <p>
-            Already have an account?
-            <span class="switch-popup">Log in</span>
+            Vous avez déjà un compte ?
+            <span class="switch-popup">Connectez-vous</span>
           </p>
         </div>
       </div>
       <div class="popup-login">
         <div class="popup-header">
           <span class="close-btn" id="close-popup"><img src="/assets/images/icons/xMark.svg" alt="" /></span>
-          <h5>Welcome Back!</h5>
-          <p>Sign in to access your account</p>
+          <h5>Bienvenue de retour !</h5>
+          <p>Connectez-vous pour accéder à votre compte</p>
         </div>
         <div class="popup-content">
           <form>
             <div class="input-container">
-              <input type="text" placeholder="id, email ou numéro de telephone" name="username" required />
-              <img src="/assets/images/icons/person.svg" alt="" />
+              <input type="text" placeholder="ID, e-mail ou numéro de téléphone" name="username" required />
+              <img src="/assets/images/icons/id.svg" alt="" />
             </div>
             <div class="input-container">
-              <input type="password" placeholder="mot de passe" name="password" required />
+              <input type="password" placeholder="Mot de passe" name="password" required />
               <img src="/assets/images/icons/lock.svg" alt="" />
             </div>
             <button type="submit">Se connecter</button>
@@ -573,12 +548,12 @@
         </div>
         <div class="popup-footer">
           <p>
-            Don't have an account?
-            <span class="switch-popup">sign up</span>
+            Vous n'avez pas de compte ?
+            <span class="switch-popup">Inscrivez-vous</span>
           </p>
           <button>
             <img src="/assets/images/icons/facebook.svg" alt="" />
-            Access via Facebook
+            Accéder via Facebook
           </button>
         </div>
       </div>
