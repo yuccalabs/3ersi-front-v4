@@ -1857,7 +1857,7 @@ footer .copy-right {
   gap: 1rem;
   padding: 1rem;
 }
-.embla__dot {
+.listing-section .embla__dot {
   background-color: transparent;
   display: inline-flex;
   cursor: pointer;
@@ -1869,7 +1869,7 @@ footer .copy-right {
   border-radius: 50%;
   border: 1px solid var(--third-color);
 }
-.embla__dot.is-selected {
+.listing-section .embla__dot.is-selected {
   background-color: var(--third-color);
 }
 .listing-section .vendors-list .vendor-card .vendor-info {
@@ -4751,11 +4751,11 @@ body.arabic .error-section .error-container .search-space .input-container > div
   margin: 0 0 0 5rem;
   display: flex;
   align-items: center;
-  gap: 2rem;
-  height: 80vh;
+  gap: 10rem;
+  height: 83vh;
 }
 .intro-section > div {
-  flex: 1 1 50%;
+  flex: 1 1 40%;
 }
 .intro-section .img-container {
   background: url("/assets/images/3ersi-pro/gateau5.jpg") right / cover no-repeat;
@@ -4768,23 +4768,26 @@ body.arabic .error-section .error-container .search-space .input-container > div
   line-height: 1.2;
 }
 .intro-section .intro-text p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.8;
   color: #333;
   font-weight: 300;
 }
+.intro-section .intro-text a,
 .intro-section .intro-text button {
+  display: inline-block;
   background-color: var(--primary-color);
   color: var(--third-color);
   padding: 1rem 2rem;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 500;
   margin-block: 2rem;
   border-radius: 0.7rem;
   border: 1px solid var(--primary-color);
   transition: var(--hover-transition);
 }
+.intro-section .intro-text a:hover,
 .intro-section .intro-text button:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
@@ -4792,7 +4795,12 @@ body.arabic .error-section .error-container .search-space .input-container > div
 @media (max-width: 768px) {
   .intro-section {
     flex-direction: column-reverse;
+    gap: 0;
     margin: 0;
+    height: 78vh;
+  }
+  .intro-section .intro-text h1 {
+    font-size: 2.6rem;
   }
   .intro-section .img-container {
     width: 100%;
@@ -4809,10 +4817,12 @@ body.arabic .error-section .error-container .search-space .input-container > div
 /* Start Popular Sweet section */
 .popular-sweet-section .sweet-container {
   display: grid;
-  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, minmax(150px, 250px));
   gap: 5rem;
   width: 100%;
+  justify-content: center;
   margin: 3rem auto;
+  min-height: 35rem;
 }
 .popular-sweet-section .sweet-container .sweet-img {
   height: 30rem;
@@ -4821,11 +4831,11 @@ body.arabic .error-section .error-container .search-space .input-container > div
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 200px 0 0 0;
-  padding-top: 2rem;
+  border-radius: 0 0 200px 0;
 }
 .popular-sweet-section .sweet-container .sweet-img.opposite img {
   border-radius: 0 200px 0 0;
+  margin-top: 5rem;
 }
 @media (max-width: 768px) {
   .popular-sweet-section .sweet-container {
@@ -4837,6 +4847,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   }
   .popular-sweet-section .sweet-container .sweet-img.opposite img {
     border-radius: 200px 0 0 0;
+    margin-top: 0;
   }
 }
 /* End Popular Sweet section */
@@ -4954,7 +4965,6 @@ body.arabic .error-section .error-container .search-space .input-container > div
 .sweet-form-section {
   width: 50%;
 }
-
 .sweet-form-section .form-container {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -5051,7 +5061,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   border-radius: 0.7rem;
   padding: 0.8rem 1rem;
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 500;
   transition: var(--hover-transition);
 }
 .sweet-form-section .form-container form button img {
@@ -5086,6 +5096,423 @@ body.arabic .error-section .error-container .search-space .input-container > div
 /* End Sweet Form Section */
 /*--------------------------------------------------------------
 # End Cake Traditional page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Start Cake patisserie page
+--------------------------------------------------------------*/
+.intro-section.cake-patisserie-page .img-container {
+  background: url("/assets/images/3ersi-pro/patisserie2.jpg") center / cover no-repeat;
+  height: 100%;
+  border-radius: 400px 0 0 0;
+}
+.patisserie-occasion-section {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  gap: 2rem;
+  height: 60vh;
+}
+.patisserie-occasion-section .occasion-text {
+  flex: 0 0 50%;
+}
+.patisserie-occasion-section .occasion-text p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #333;
+  margin-block: 2rem 2.8rem;
+}
+.patisserie-occasion-section .occasion-text a,
+.patisserie-occasion-section .btn-mob-v {
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-block: 2rem;
+  border-radius: 0.7rem;
+  border: 1px solid var(--primary-color);
+  transition: var(--hover-transition);
+}
+.patisserie-occasion-section .btn-mob-v {
+  display: none;
+  font-weight: 500;
+  padding: 1.2rem 1rem;
+}
+.patisserie-occasion-section .occasion-text a:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+.patisserie-occasion-section .occasion-img-container {
+  flex: 0 0 30%;
+  border-radius: 400px 400px 0 0;
+  width: 30%;
+}
+
+.patisserie-occasion-section .occasion-img-container .embla {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  --slide-height: 60vh;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+  position: relative;
+}
+
+.patisserie-occasion-section .occasion-img-container .embla__viewport {
+  overflow: hidden;
+}
+.patisserie-occasion-section .occasion-img-container .embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.patisserie-occasion-section .occasion-img-container .embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  height: var(--slide-height);
+}
+.patisserie-occasion-section .occasion-img-container .embla__slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 250px 250px 0 0;
+}
+.patisserie-occasion-section .occasion-img-container .embla__controls {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.patisserie-occasion-section .occasion-img-container .embla__buttons {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: 100%;
+  height: 65%;
+}
+.patisserie-occasion-section .occasion-img-container .embla__button {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  width: 3rem;
+  height: 3rem;
+  z-index: 1;
+  border-radius: 50%;
+  color: var(--third-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.patisserie-occasion-section .occasion-img-container .embla__button img {
+  filter: var(--stroke-color);
+  width: 4rem;
+  height: 4rem;
+}
+.patisserie-occasion-section .embla__dots {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+}
+.patisserie-occasion-section .embla__dot {
+  background-color: transparent;
+  display: inline-flex;
+  cursor: pointer;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+}
+.patisserie-occasion-section .embla__dot.is-selected {
+  background-color: var(--primary-color);
+}
+@media (max-width: 992px) {
+  .patisserie-occasion-section .occasion-img-container {
+    flex-basis: 40%;
+  }
+  .patisserie-occasion-section .occasion-img-container .embla {
+    --slide-height: 50vh;
+  }
+}
+@media (max-width: 768px) {
+  .patisserie-occasion-section {
+    flex-direction: column;
+    height: auto;
+  }
+  .patisserie-occasion-section.engage {
+    flex-direction: column-reverse;
+  }
+  .patisserie-occasion-section .occasion-img-container {
+    width: 100%;
+  }
+  .patisserie-occasion-section .occasion-img-container .embla {
+    --slide-height: 45vh;
+  }
+  .patisserie-occasion-section .occasion-text {
+    text-align: center;
+  }
+  .patisserie-occasion-section .occasion-img-container .embla__controls {
+    height: 20%;
+    top: auto;
+    bottom: 0;
+  }
+  .patisserie-occasion-section .occasion-img-container .embla__buttons,
+  .patisserie-occasion-section .occasion-text a {
+    display: none;
+  }
+  .patisserie-occasion-section .btn-mob-v {
+    display: block;
+  }
+}
+/* Start Catalog popup */
+.popup-catalog {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.popup-catalog.show {
+  display: flex;
+}
+.popup-catalog .catalog-container {
+  width: 60%;
+  background-color: var(--background-color);
+  border-radius: 15px;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.popup-catalog .catalog-container::-webkit-scrollbar {
+  display: none;
+}
+.popup-catalog .catalog-container .catalog-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.popup-catalog .catalog-container .catalog-cards .card {
+  flex: 0 0 30%;
+  text-align: center;
+  cursor: pointer;
+}
+.popup-catalog .catalog-container .catalog-cards .card .img-container {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+.popup-catalog .catalog-container .catalog-cards .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 120px 120px 0 0;
+}
+.popup-catalog .catalog-container .catalog-cards .card .img-container > span {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+  border-radius: 120px 120px 0 0;
+  z-index: 1;
+  transition: top 0.5s;
+}
+.popup-catalog .catalog-container .catalog-cards .card .img-container > span button {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  background-color: var(--background-color);
+  color: var(--secondaly-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 0.7rem;
+  position: relative;
+  top: 75%;
+}
+.popup-catalog .catalog-container .catalog-cards .card .img-container:hover > span {
+  top: 0;
+}
+.popup-catalog .catalog-container .catalog-cards .card h5 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #333;
+  margin-block: 1rem;
+}
+@media (max-width: 768px) {
+  .popup-catalog .catalog-container {
+    width: 80%;
+    height: 70vh;
+  }
+  .popup-catalog .catalog-container .catalog-cards .card {
+    flex-basis: 80%;
+  }
+}
+/* End Catalog popup */
+/* Start Delivery Section */
+.delivery-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  position: relative;
+}
+.delivery-section .img-container {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.delivery-section .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.delivery-section .img-container:hover img {
+  transform: scale(1.05);
+}
+
+.delivery-section .img-container .image-badge {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(to right, #ec615c, #b0302a);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+  animation: pulse 2s infinite;
+}
+.delivery-section .img-container .image-badge img {
+  width: 2rem;
+  height: 2rem;
+  filter: var(--filter-white);
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.delivery-section .delivery-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.delivery-section .delivery-content p {
+  font-size: 1.6rem;
+  margin: 0 0 30px;
+  color: #4a5568;
+  line-height: 1.8;
+  text-align: center;
+}
+.delivery-section .delivery-content .delivery-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+.delivery-section .delivery-content .delivery-features .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 10px;
+  background-color: rgba(236, 97, 92, 0.15);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.delivery-section .delivery-content .delivery-features .feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+.delivery-section .delivery-content .delivery-features .feature img {
+  width: 4rem;
+  height: 4rem;
+  filter: var(--stroke-color);
+  margin-bottom: 1rem;
+}
+.delivery-section .delivery-content .delivery-features .feature span {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.delivery-section .delivery-content a {
+  background: linear-gradient(to right, #ec615c, #b0302a);
+  color: white;
+  border: none;
+  padding: 16px 30px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0 10px 20px rgba(37, 117, 252, 0.2);
+  align-self: center;
+}
+.delivery-section .delivery-content a img {
+  filter: var(--filter-white);
+}
+@media (max-width: 768px) {
+  .delivery-section {
+    grid-template-columns: 1fr;
+  }
+  .delivery-section .img-container {
+    height: 400px;
+    order: 2;
+  }
+  .delivery-section .delivery-content {
+    order: 1;
+  }
+  .delivery-section .delivery-content .delivery-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* End Delivery Section */
+
+/*--------------------------------------------------------------
+# End Cake patisserie page
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # End 3ersi Pro pages
