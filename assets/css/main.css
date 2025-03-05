@@ -4866,7 +4866,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
 .sweet-services .container > div {
   height: 90vh;
 }
-.sweet-services.delivery-section .container > div {
+.sweet-services.sweet-delivery .container > div {
   height: 70vh;
 }
 .sweet-services .img-container {
@@ -4943,6 +4943,8 @@ body.arabic .error-section .error-container .search-space .input-container > div
   }
   .sweet-services.occasions-section .headline {
     display: none;
+  }
+  .sweet-services .headline {
     text-align: center;
   }
   .sweet-services .headline.mob-v {
