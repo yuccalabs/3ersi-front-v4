@@ -4752,10 +4752,10 @@ body.arabic .error-section .error-container .search-space .input-container > div
   display: flex;
   align-items: center;
   gap: 10rem;
-  height: 83vh;
+  height: 81vh;
 }
 .intro-section > div {
-  flex: 1 1 40%;
+  flex: 1 1 50%;
 }
 .intro-section .img-container {
   background: url("/assets/images/3ersi-pro/gateau5.jpg") right / cover no-repeat;
@@ -4765,12 +4765,12 @@ body.arabic .error-section .error-container .search-space .input-container > div
 .intro-section .intro-text h1 {
   font-size: 3rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 .intro-section .intro-text p {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
-  line-height: 1.8;
+  line-height: 1.5;
   color: #333;
   font-weight: 300;
 }
@@ -4799,9 +4799,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
     margin: 0;
     height: 78vh;
   }
-  .intro-section .intro-text h1 {
-    font-size: 2.6rem;
-  }
+
   .intro-section .img-container {
     width: 100%;
     flex-basis: 100%;
@@ -4811,6 +4809,13 @@ body.arabic .error-section .error-container .search-space .input-container > div
     margin-inline: auto;
     text-align: center;
     flex-basis: 100%;
+  }
+  .intro-section .intro-text h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .intro-section .intro-text p {
+    font-weight: 400;
   }
 }
 /* End intro section */
@@ -4993,6 +4998,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   font-weight: 200;
   display: block;
   margin-bottom: 0.6rem;
+  cursor: pointer;
 }
 .sweet-form-section .form-container form input,
 .sweet-form-section .form-container form textarea,
@@ -5076,6 +5082,36 @@ body.arabic .error-section .error-container .search-space .input-container > div
 .sweet-form-section .form-container form button:hover img {
   filter: var(--stroke-color);
 }
+.sweet-form-section .form-container form .radio-input {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.sweet-form-section .form-container form [type="radio"] {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0;
+}
+.sweet-form-section .form-container form [type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transform: translate(-50%, -50%);
+}
+
 @media (max-width: 992px) {
   .sweet-form-section {
     width: 75%;
@@ -5150,7 +5186,6 @@ body.arabic .error-section .error-container .search-space .input-container > div
   border-radius: 400px 400px 0 0;
   width: 30%;
 }
-
 .patisserie-occasion-section .occasion-img-container .embla {
   width: 100%;
   height: 100%;
@@ -5160,7 +5195,6 @@ body.arabic .error-section .error-container .search-space .input-container > div
   --slide-size: 100%;
   position: relative;
 }
-
 .patisserie-occasion-section .occasion-img-container .embla__viewport {
   overflow: hidden;
 }
@@ -5399,7 +5433,6 @@ body.arabic .error-section .error-container .search-space .input-container > div
 .delivery-section .img-container:hover img {
   transform: scale(1.05);
 }
-
 .delivery-section .img-container .image-badge {
   position: absolute;
   bottom: 30px;
@@ -5510,12 +5543,332 @@ body.arabic .error-section .error-container .search-space .input-container > div
     grid-template-columns: 1fr;
   }
 }
-
 /* End Delivery Section */
-
 /*--------------------------------------------------------------
 # End Cake patisserie page
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Start  page
+--------------------------------------------------------------*/
+.intro-section.caterer-page .img-container {
+  background: url("/assets/images/3ersi-pro/caterer.jpg") center / cover no-repeat;
+  height: 100%;
+  border-radius: 400px 0 0 0;
+}
+.intro-section.caterer-page .intro-text h1 {
+  font-size: 4rem;
+}
+.intro-section.caterer-page .intro-text h4 {
+  font-size: 3.4rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.intro-section.caterer-page .intro-text h4 span {
+  color: var(--primary-color);
+  font-weight: 400;
+}
+.intro-section.caterer-page .intro-text a {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.intro-section.caterer-page .intro-text a img {
+  filter: var(--filter-white);
+  width: 2rem;
+  height: 2rem;
+  transition: var(--stroke-transition);
+}
+.intro-section.caterer-page .intro-text a:hover img {
+  filter: var(--stroke-color);
+}
+/* Start Caterer Services Section */
+.caterer-services .caterer-headline {
+  max-width: 78%;
+  text-align: center;
+  margin-inline: auto;
+}
+.caterer-services .caterer-headline h3 {
+  margin-top: 1rem;
+  line-height: 1.8;
+}
+.caterer-services .cards-container {
+  width: 80%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem;
+  margin-block: 3rem;
+}
+
+.caterer-services .cards-container .service-card {
+  border: 1px solid #ddd;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.caterer-services .cards-container .service-card .text-container {
+  padding: 1.8rem 1.8rem 1rem;
+}
+.caterer-services .cards-container .service-card .text-container h5 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.caterer-services .cards-container .service-card .text-container p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-block: 1.2rem;
+}
+.caterer-services .cards-container .service-card .caterer-img-container {
+  height: 28rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+}
+.caterer-services .cards-container .service-card .caterer-img-container .embla {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  --slide-height: 28rem;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+  position: relative;
+}
+
+.caterer-services .cards-container .service-card .caterer-img-container .embla__viewport {
+  overflow: hidden;
+}
+.caterer-services .cards-container .service-card .caterer-img-container .embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.caterer-services .cards-container .service-card .caterer-img-container .embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  height: var(--slide-height);
+  border-radius: 1.5rem;
+}
+.caterer-services .cards-container .service-card .caterer-img-container .embla__slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.caterer-services .cards-container .service-card .caterer-img-container:hover img {
+  transform: scale(1.05);
+}
+.caterer-services .cards-container .service-card .caterer-img-container .embla__controls {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.caterer-services .cards-container .service-card .caterer-img-container .embla__buttons {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+}
+.caterer-services .cards-container .service-card .caterer-img-container .embla__button {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  width: 3rem;
+  height: 3rem;
+  z-index: 1;
+  border-radius: 50%;
+  color: var(--third-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.caterer-services .cards-container .service-card .caterer-img-container .embla__button img {
+  filter: var(--filter-white);
+  width: 4rem;
+  height: 4rem;
+}
+.caterer-services .cards-container .service-card .caterer-img-container .embla__dots {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 0.6rem;
+}
+.caterer-services .cards-container .service-card .caterer-img-container .embla__dot {
+  background-color: transparent;
+  display: inline-flex;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--third-color);
+}
+.caterer-services .cards-container .service-card .caterer-img-container .embla__dot.is-selected {
+  background-color: var(--third-color);
+}
+.caterer-services > span.caterer-note {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  margin: 4rem auto;
+  color: var(--primary-color);
+  background-color: rgba(236, 97, 92, 0.2);
+  border-radius: 0.7rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.caterer-services > span.caterer-note img {
+  filter: var(--stroke-color);
+}
+@media (max-width: 768px) {
+  .intro-section.caterer-page .intro-text {
+    text-align: center;
+  }
+  .intro-section.caterer-page .intro-text h1 {
+    margin-block: 1rem;
+  }
+  .intro-section.caterer-page .intro-text h4 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  .intro-section.caterer-page .intro-text a {
+    margin: 3rem auto;
+  }
+  .caterer-services .caterer-headline {
+    max-width: 100%;
+    text-align: center;
+  }
+  .caterer-services .cards-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .caterer-services .cards-container .service-card .caterer-img-container .embla__controls {
+    height: 20%;
+    top: auto;
+    bottom: 0;
+  }
+  .caterer-services .cards-container .service-card .caterer-img-container .embla__buttons {
+    display: none;
+  }
+  .caterer-services .cards-container .service-card .text-container {
+    text-align: center;
+  }
+  .caterer-services .cards-container .service-card .text-container h5 {
+    font-weight: 600;
+  }
+  .caterer-services .cards-container .service-card .text-container p {
+    font-weight: 400;
+  }
+  .caterer-services > span.caterer-note {
+    width: 100%;
+  }
+}
+/*  */
+/* Start Caterer Delivery Section */
+.caterer-delivery .delivery-container {
+  background: url("/assets/images/3ersi-pro/caterer-delivery.jpg") center / cover no-repeat;
+  width: 80%;
+  height: 30rem;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  border-radius: 2rem;
+}
+.caterer-delivery .delivery-container .delivery-cards {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 2rem;
+}
+.caterer-delivery .delivery-container .delivery-cards .delivery-card {
+  flex: 1 1 30%;
+  background-color: var(--background-color);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  transition: transform 0.5s ease;
+}
+.caterer-delivery .delivery-container .delivery-cards .delivery-card:hover {
+  transform: translateY(10px);
+}
+.caterer-delivery .delivery-container .delivery-cards .delivery-card h5 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.caterer-delivery .delivery-container .delivery-cards .delivery-card h5 img {
+  width: 2.5rem;
+  height: 2.5rem;
+  filter: var(--stroke-color);
+}
+.caterer-delivery .delivery-container .delivery-cards .delivery-card p {
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 1.8;
+}
+.caterer-delivery .delivery-container a {
+  background: linear-gradient(to right, #ec615c, #b0302a);
+  color: white;
+  border: none;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0 10px 20px rgba(236, 97, 92, 0.2);
+  align-self: center;
+  animation: pulse 2s infinite;
+}
+.caterer-delivery .delivery-container a img {
+  filter: var(--filter-white);
+}
+
+@media (max-width: 768px) {
+  .caterer-delivery .delivery-container {
+    width: 100%;
+    height: auto;
+  }
+  .caterer-delivery .delivery-container .delivery-cards {
+    width: 92%;
+  }
+}
+/* End Caterer Delivery Section */
 /*--------------------------------------------------------------
 # End 3ersi Pro pages
 --------------------------------------------------------------*/
