@@ -22,201 +22,86 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// carousel for vendors-list section
 document.addEventListener("DOMContentLoaded", () => {
-  const OPTIONSVlIST = { loop: true };
+  function carousel(sectionSelector) {
+    if (!sectionSelector.length) {
+      console.error("Embla node not found");
+      return;
+    }
 
-  const emblaVList = document.querySelectorAll(".vendor-card .embla");
+    const OPTIONSVlIST = { loop: true };
 
-  if (emblaVList.length) {
-    emblaVList.forEach((card) => {
-      const viewportNode = card.querySelector(".embla__viewport");
-      const prevBtnNode = card.querySelector(".embla__button--prev");
-      const nextBtnNode = card.querySelector(".embla__button--next");
-      const dotsNode = card.querySelector(".embla__dots");
-      if (viewportNode) {
-        const emblaApi = EmblaCarousel(viewportNode, OPTIONSVlIST);
-
-        const addPrevNextBtnsClickHandlers = (emblaApi, prevBtnNode, nextBtnNode) => {
-          const scrollPrev = () => emblaApi.scrollPrev();
-          const scrollNext = () => emblaApi.scrollNext();
-
-          prevBtnNode.addEventListener("click", scrollPrev, false);
-          nextBtnNode.addEventListener("click", scrollNext, false);
-
-          return () => {
-            prevBtnNode.removeEventListener("click", scrollPrev, false);
-            nextBtnNode.removeEventListener("click", scrollNext, false);
-          };
-        };
-
-        const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
-          const slideLength = emblaApi.slideNodes().length;
-          const dots = Array.from({ length: slideLength }, (_, index) => {
-            const dot = document.createElement("button");
-            dot.classList.add("embla__dot");
-            dot.addEventListener("click", () => emblaApi.scrollTo(index), false);
-            dotsNode.appendChild(dot);
-            return dot;
-          });
-
-          const selectDot = () => {
-            const previous = emblaApi.previousScrollSnap();
-            const selected = emblaApi.selectedScrollSnap();
-            dots[previous].classList.remove("is-selected");
-            dots[selected].classList.add("is-selected");
-          };
-
-          emblaApi.on("select", selectDot);
-          emblaApi.on("init", selectDot);
-
-          return () => {
-            dots.forEach((dot) => dot.removeEventListener("click", () => emblaApi.scrollTo(index), false));
-          };
-        };
-
-        const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(emblaApi, prevBtnNode, nextBtnNode);
-        const removeDotBtnsClickHandlers = addDotBtnsAndClickHandlers(emblaApi, dotsNode);
-        emblaApi.on("destroy", removePrevNextBtnsClickHandlers);
-        emblaApi.on("destroy", removeDotBtnsClickHandlers);
-      } else {
-        console.error("Viewport node not found");
-      }
-    });
-  } else {
-    console.error("Embla node not found");
-  }
-});
-
-// carousel for vendors-list section
-document.addEventListener("DOMContentLoaded", () => {
-  const OPTIONSVlIST = { loop: true };
-
-  const emblaVList = document.querySelectorAll(".vendor-details .embla");
-
-  if (emblaVList.length) {
-    emblaVList.forEach((card) => {
+    sectionSelector.forEach((card) => {
       const viewportNode = card.querySelector(".embla__viewport");
       const prevBtnNode = card.querySelector(".embla__button--prev");
       const nextBtnNode = card.querySelector(".embla__button--next");
       const dotsNode = card.querySelector(".embla__dots");
 
-      if (viewportNode) {
-        const emblaApi = EmblaCarousel(viewportNode, OPTIONSVlIST);
-
-        const addPrevNextBtnsClickHandlers = (emblaApi, prevBtnNode, nextBtnNode) => {
-          const scrollPrev = () => emblaApi.scrollPrev();
-          const scrollNext = () => emblaApi.scrollNext();
-
-          prevBtnNode.addEventListener("click", scrollPrev, false);
-          nextBtnNode.addEventListener("click", scrollNext, false);
-
-          return () => {
-            prevBtnNode.removeEventListener("click", scrollPrev, false);
-            nextBtnNode.removeEventListener("click", scrollNext, false);
-          };
-        };
-        const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
-          const slideLength = emblaApi.slideNodes().length;
-          const dots = Array.from({ length: slideLength }, (_, index) => {
-            const dot = document.createElement("button");
-            dot.classList.add("embla__dot");
-            dot.addEventListener("click", () => emblaApi.scrollTo(index), false);
-            dotsNode.appendChild(dot);
-            return dot;
-          });
-
-          const selectDot = () => {
-            const previous = emblaApi.previousScrollSnap();
-            const selected = emblaApi.selectedScrollSnap();
-            dots[previous].classList.remove("is-selected");
-            dots[selected].classList.add("is-selected");
-          };
-
-          emblaApi.on("select", selectDot);
-          emblaApi.on("init", selectDot);
-
-          return () => {
-            dots.forEach((dot) => dot.removeEventListener("click", () => emblaApi.scrollTo(index), false));
-          };
-        };
-
-        const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(emblaApi, prevBtnNode, nextBtnNode);
-        const removeDotBtnsClickHandlers = addDotBtnsAndClickHandlers(emblaApi, dotsNode);
-
-        emblaApi.on("destroy", removePrevNextBtnsClickHandlers);
-        emblaApi.on("destroy", removeDotBtnsClickHandlers);
-      } else {
+      if (!viewportNode) {
         console.error("Viewport node not found");
+        return;
       }
-    });
-  } else {
-    console.error("Embla node not found");
-  }
-});
-// carousel for 3ersi-pro section
-document.addEventListener("DOMContentLoaded", () => {
-  const OPTIONSVlIST = { loop: true };
 
-  const emblaVList = document.querySelectorAll(".patisserie-occasion-section .embla");
+      const emblaApi = EmblaCarousel(viewportNode, OPTIONSVlIST);
 
-  if (emblaVList.length) {
-    emblaVList.forEach((card) => {
-      const viewportNode = card.querySelector(".embla__viewport");
-      const prevBtnNode = card.querySelector(".embla__button--prev");
-      const nextBtnNode = card.querySelector(".embla__button--next");
-      const dotsNode = card.querySelector(".embla__dots");
+      const scrollPrev = () => emblaApi.scrollPrev();
+      const scrollNext = () => emblaApi.scrollNext();
 
-      if (viewportNode) {
-        const emblaApi = EmblaCarousel(viewportNode, OPTIONSVlIST);
-
-        const addPrevNextBtnsClickHandlers = (emblaApi, prevBtnNode, nextBtnNode) => {
-          const scrollPrev = () => emblaApi.scrollPrev();
-          const scrollNext = () => emblaApi.scrollNext();
-
-          prevBtnNode.addEventListener("click", scrollPrev, false);
-          nextBtnNode.addEventListener("click", scrollNext, false);
+      const addPrevNextBtnsClickHandlers = () => {
+        if (prevBtnNode && nextBtnNode) {
+          prevBtnNode.addEventListener("click", scrollPrev);
+          nextBtnNode.addEventListener("click", scrollNext);
 
           return () => {
-            prevBtnNode.removeEventListener("click", scrollPrev, false);
-            nextBtnNode.removeEventListener("click", scrollNext, false);
+            prevBtnNode.removeEventListener("click", scrollPrev);
+            nextBtnNode.removeEventListener("click", scrollNext);
           };
-        };
-        const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
-          const slideLength = emblaApi.slideNodes().length;
-          const dots = Array.from({ length: slideLength }, (_, index) => {
-            const dot = document.createElement("button");
-            dot.classList.add("embla__dot");
-            dot.addEventListener("click", () => emblaApi.scrollTo(index), false);
-            dotsNode.appendChild(dot);
-            return dot;
-          });
+        }
+        return () => {};
+      };
 
-          const selectDot = () => {
-            const previous = emblaApi.previousScrollSnap();
-            const selected = emblaApi.selectedScrollSnap();
-            dots[previous].classList.remove("is-selected");
-            dots[selected].classList.add("is-selected");
-          };
+      const addDotBtnsAndClickHandlers = () => {
+        if (!dotsNode) return () => {};
 
-          emblaApi.on("select", selectDot);
-          emblaApi.on("init", selectDot);
+        const slideLength = emblaApi.slideNodes().length;
+        const dots = Array.from({ length: slideLength }, (_, index) => {
+          const dot = document.createElement("button");
+          dot.classList.add("embla__dot");
+          dot.addEventListener("click", () => emblaApi.scrollTo(index));
+          dotsNode.appendChild(dot);
+          return dot;
+        });
 
-          return () => {
-            dots.forEach((dot) => dot.removeEventListener("click", () => emblaApi.scrollTo(index), false));
-          };
+        const selectDot = () => {
+          const previous = emblaApi.previousScrollSnap();
+          const selected = emblaApi.selectedScrollSnap();
+          if (dots[previous]) dots[previous].classList.remove("is-selected");
+          if (dots[selected]) dots[selected].classList.add("is-selected");
         };
 
-        const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(emblaApi, prevBtnNode, nextBtnNode);
-        const removeDotBtnsClickHandlers = addDotBtnsAndClickHandlers(emblaApi, dotsNode);
+        emblaApi.on("select", selectDot);
+        emblaApi.on("init", selectDot);
 
-        emblaApi.on("destroy", removePrevNextBtnsClickHandlers);
-        emblaApi.on("destroy", removeDotBtnsClickHandlers);
-      } else {
-        console.error("Viewport node not found");
-      }
+        return () => {
+          dots.forEach((dot, index) => dot.removeEventListener("click", () => emblaApi.scrollTo(index)));
+        };
+      };
+
+      const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers();
+      const removeDotBtnsClickHandlers = addDotBtnsAndClickHandlers();
+
+      emblaApi.on("destroy", removePrevNextBtnsClickHandlers);
+      emblaApi.on("destroy", removeDotBtnsClickHandlers);
     });
-  } else {
-    console.error("Embla node not found");
   }
+
+  const vendorListCarousel = document.querySelectorAll(".vendor-card .embla");
+  const vendorDetailsCarousel = document.querySelectorAll(".vendor-details .embla");
+  const patisserieCarousel = document.querySelectorAll(".patisserie-occasion-section .embla");
+  const catererCarousel = document.querySelectorAll(".caterer-services .cards-container .embla");
+
+  carousel(vendorListCarousel);
+  carousel(vendorDetailsCarousel);
+  carousel(patisserieCarousel);
+  carousel(catererCarousel);
 });
