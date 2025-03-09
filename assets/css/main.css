@@ -5548,7 +5548,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
 # End Cake patisserie page
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Start  page
+# Start Caterer page
 --------------------------------------------------------------*/
 .intro-section.caterer-page .img-container {
   background: url("/assets/images/3ersi-pro/caterer.jpg") center / cover no-repeat;
@@ -5786,7 +5786,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
     width: 100%;
   }
 }
-/*  */
+/* End Caterer Services Section */
 /* Start Caterer Delivery Section */
 .caterer-delivery .delivery-container {
   background: url("/assets/images/3ersi-pro/caterer-delivery.jpg") center / cover no-repeat;
@@ -5799,6 +5799,20 @@ body.arabic .error-section .error-container .search-space .input-container > div
   justify-content: center;
   gap: 3rem;
   border-radius: 2rem;
+  position: relative;
+}
+.caterer-delivery .delivery-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 2rem;
+}
+.caterer-delivery.flower-page .delivery-container {
+  background: url("/assets/images/3ersi-pro/flower-del.jpg") center / cover no-repeat;
 }
 .caterer-delivery .delivery-container .delivery-cards {
   width: 90%;
@@ -5807,6 +5821,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   flex-wrap: wrap;
   gap: 3rem;
   padding: 2rem;
+  z-index: 2;
 }
 .caterer-delivery .delivery-container .delivery-cards .delivery-card {
   flex: 1 1 30%;
@@ -5869,6 +5884,222 @@ body.arabic .error-section .error-container .search-space .input-container > div
   }
 }
 /* End Caterer Delivery Section */
+/*--------------------------------------------------------------
+# Start Caterer page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Start Flowers page
+--------------------------------------------------------------*/
+.intro-section.flower-page .img-container {
+  background: url("/assets/images/3ersi-pro/flower.jpg") right / cover no-repeat;
+}
+.intro-section.flower-page .intro-text a {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.intro-section.flower-page .intro-text a img {
+  filter: var(--filter-white);
+  width: 2rem;
+  height: 2rem;
+  transition: var(--stroke-transition);
+}
+.intro-section.flower-page .intro-text a:hover img {
+  filter: var(--stroke-color);
+}
+/* Start Our Flower Bouquets Section  */
+.our-bouquets-section .headline.flower {
+  max-width: 78%;
+  text-align: left;
+}
+.our-bouquets-section .headline.flower h3 {
+  margin-top: 1rem;
+  line-height: 1.8;
+}
+.our-bouquets-section .type-bouquets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  margin-block: 5rem;
+}
+.our-bouquets-section .type-bouquets .bouquet-card {
+  position: relative;
+  box-shadow: var(--shadow-box);
+  height: 24rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+.our-bouquets-section .type-bouquets .bouquet-card .img-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  z-index: -1;
+}
+.our-bouquets-section .type-bouquets .bouquet-card .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  transition: transform 0.5s ease;
+}
+.our-bouquets-section .type-bouquets .bouquet-card:hover {
+  transform: translateY(-10px);
+}
+.our-bouquets-section .type-bouquets .bouquet-card:hover .img-container img {
+  transform: scale(1.05);
+}
+.our-bouquets-section .type-bouquets .bouquet-card .text-content {
+  width: 70%;
+  height: 100%;
+  background-color: var(--background-color);
+  border-radius: 0 20rem 20rem 0;
+  padding: 3rem 1rem;
+}
+.our-bouquets-section .type-bouquets .bouquet-card .text-content h4 {
+  font-size: 1.8rem;
+  color: #333;
+}
+.our-bouquets-section .type-bouquets .bouquet-card .text-content p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #383838;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .our-bouquets-section .headline.flower {
+    max-width: 100%;
+    text-align: center;
+  }
+  .our-bouquets-section .type-bouquets {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .our-bouquets-section .type-bouquets .bouquet-card .img-container {
+    width: 70%;
+  }
+  .our-bouquets-section .type-bouquets .bouquet-card .text-content {
+    width: 70%;
+  }
+  .our-bouquets-section .type-bouquets .bouquet-card .text-content h4 {
+    font-size: 1.6rem;
+  }
+  .our-bouquets-section .type-bouquets .bouquet-card .text-content p {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+/* End Our Flower Bouquets Section  */
+/* Start Flower Gift Section */
+.flower-gift-section {
+  position: relative;
+  overflow: hidden;
+}
+.flower-gift-section .container {
+  width: var(--width-section);
+  margin: 5rem auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  gap: 4rem;
+  max-height: 50rem;
+}
+.flower-gift-section .flower-gift-background {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 16rem;
+  transform: rotate(-35deg);
+  z-index: -1;
+}
+.flower-gift-section .headline.mob-v {
+  display: none;
+}
+.flower-gift-section .img-container {
+  flex: 0 0 40%;
+  overflow: hidden;
+  border-radius: 3rem;
+  margin-right: auto;
+}
+.flower-gift-section .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.flower-gift-section .img-container:hover img {
+  transform: scale(1.05);
+}
+.flower-gift-section .flower-gift-content {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flower-gift-section .flower-gift-content p {
+  font-size: 1.6rem;
+  margin: 0 0 30px;
+  color: #4a5568;
+  line-height: 1.8;
+  text-align: center;
+}
+.flower-gift-section .flower-gift-content a {
+  background: linear-gradient(to right, #ec615c, #b0302a);
+  color: var(--third-color);
+  border: none;
+  padding: 16px 30px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--hover-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0 10px 20px rgba(37, 117, 252, 0.2);
+  align-self: center;
+  border: 1px solid var(--primary-color);
+}
+.flower-gift-section .flower-gift-content a img {
+  filter: var(--filter-white);
+}
+.flower-gift-section .flower-gift-content a:hover {
+  background: var(--background-color);
+  color: var(--primary-color);
+}
+.flower-gift-section .flower-gift-content a:hover img {
+  filter: var(--stroke-color);
+}
+@media (max-width: 768px) {
+  .flower-gift-section .container {
+    flex-direction: column;
+    max-height: none;
+    gap: 2rem;
+  }
+  .flower-gift-section .headline {
+    display: none;
+  }
+  .flower-gift-section .headline.mob-v {
+    display: block;
+  }
+  .flower-gift-section .flower-gift-background {
+    top: 70%;
+  }
+}
+/* End Flower Gift Section */
+/* Start Flower Delivery Section */
+.caterer-delivery.flower-page .headline h3 {
+  line-height: 2;
+}
+/* End Flower Delivery  Section */
+/*--------------------------------------------------------------
+# End Flowers page
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # End 3ersi Pro pages
 --------------------------------------------------------------*/
