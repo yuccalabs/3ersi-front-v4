@@ -70,16 +70,16 @@ window.addEventListener("click", (e) => {
 // Render dynamic lists
 document.addEventListener("DOMContentLoaded", () => {
   const iconsList = [
-    "/assets/images/navmenu-icons/salle-des-fetes-48x48.svg",
-    "/assets/images/navmenu-icons/multimédia-48x48.svg",
-    "/assets/images/navmenu-icons/traiteur-48x48.svg",
-    "/assets/images/navmenu-icons/music-48x48.svg",
-    "/assets/images/navmenu-icons/décoration-48x48.svg",
-    "/assets/images/navmenu-icons/gateaux-48x48.svg",
-    "/assets/images/navmenu-icons/invite-svgrepo-com.svg",
-    "/assets/images/navmenu-icons/machta-48x48.svg",
-    "/assets/images/navmenu-icons/beauté&soins-48x48.svg",
-    "/assets/images/navmenu-icons/bijoux-48x48.svg",
+    "/assets/images/navmenu-icons/reception-room.svg",
+    "/assets/images/navmenu-icons/multimedia-service.svg",
+    "/assets/images/navmenu-icons/caterer.svg",
+    "/assets/images/navmenu-icons/music-service.svg",
+    "/assets/images/navmenu-icons/decorator.svg",
+    "/assets/images/navmenu-icons/cake-maker.svg",
+    "/assets/images/navmenu-icons/wedding-invitation-service.svg",
+    "/assets/images/navmenu-icons/machta.svg",
+    "/assets/images/navmenu-icons/beauty.svg",
+    "/assets/images/navmenu-icons/jewllery.svg",
   ];
 
   const listItems = [
