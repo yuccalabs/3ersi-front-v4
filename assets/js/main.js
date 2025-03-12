@@ -70,16 +70,16 @@ window.addEventListener("click", (e) => {
 // Render dynamic lists
 document.addEventListener("DOMContentLoaded", () => {
   const iconsList = [
-    "/assets/images/navmenu-icons/reception-room.svg",
-    "/assets/images/navmenu-icons/multimedia-service.svg",
-    "/assets/images/navmenu-icons/caterer.svg",
-    "/assets/images/navmenu-icons/music-service.svg",
-    "/assets/images/navmenu-icons/decorator.svg",
-    "/assets/images/navmenu-icons/cake-maker.svg",
+    "/assets/images/navmenu-icons/services/reception-room.svg",
+    "/assets/images/navmenu-icons/services/multimedia-service.svg",
+    "/assets/images/navmenu-icons/services/caterer.svg",
+    "/assets/images/navmenu-icons/services/music-serivce.svg",
+    "/assets/images/navmenu-icons/services/decorator.svg",
+    "/assets/images/navmenu-icons/services/cake-maker.svg",
     "/assets/images/navmenu-icons/wedding-invitation-service.svg",
-    "/assets/images/navmenu-icons/machta.svg",
-    "/assets/images/navmenu-icons/beauty.svg",
-    "/assets/images/navmenu-icons/jewllery.svg",
+    "/assets/images/navmenu-icons/services/machta.svg",
+    "/assets/images/navmenu-icons/services/beauty-service.svg",
+    "/assets/images/navmenu-icons/services/jewllery.svg",
   ];
 
   const listItems = [
