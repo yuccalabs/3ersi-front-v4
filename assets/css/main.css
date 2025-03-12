@@ -551,7 +551,7 @@ body.arabic .header .vendors-gate h3 a {
   -webkit-box-shadow: var(--shadow-box);
   box-shadow: var(--shadow-box);
   border-radius: 4px;
-  z-index: 2;
+  z-index: 999;
 }
 body.arabic .header .header-container .navmenu ul li .dropdown {
   left: auto;
@@ -4038,7 +4038,7 @@ body.arabic .popup-auth .popup-content form [type="radio"] {
 # Start Error Page
 --------------------------------------------------------------*/
 .error-section {
-  background: url("/assets/images/herosection.webp") center / cover no-repeat;
+  background: url("/assets/images/herosection.jpg") center / cover no-repeat;
   height: 81vh;
   position: relative;
 }
@@ -6407,6 +6407,8 @@ body.arabic .error-section .error-container .search-space .input-container > div
   }
 }
 /* End Event Services Section */
+/* Start Event Organization Steps Section */
+/* End Event Organization Steps Section */
 /*--------------------------------------------------------------
 # End 3ersi Event page
 --------------------------------------------------------------*/
