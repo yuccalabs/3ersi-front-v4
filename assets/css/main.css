@@ -19,7 +19,7 @@
   --secondaly-color: #222;
   --third-color: #fff;
   --background-color: #fff;
-  --shadow-box: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+  --shadow-box: 0 2px 7px rgba(0, 0, 0, 0.3);
   --hover-transition: 0.2s;
   --width-section: 92%;
   --stroke-color: invert(46%) sepia(75%) saturate(2500%) hue-rotate(330deg) brightness(90%) contrast(90%);
@@ -5138,6 +5138,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
   display: flex;
   align-items: center;
   gap: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.6rem;
+  padding: 1rem;
 }
 .sweet-form-section .form-container form [type="checkbox"] {
   width: 12px;
@@ -6330,6 +6333,21 @@ body.arabic .error-section .error-container .search-space .input-container > div
   font-weight: 200;
   color: #383838;
 }
+.event-choose-us-section > a {
+  display: block;
+  width: 34%;
+  margin-inline: auto;
+  background: linear-gradient(to right, #ec615c, #b0302a);
+  color: var(--third-color);
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(37, 117, 252, 0.2);
+  border: 1px solid var(--primary-color);
+}
 @media (max-width: 992px) {
   .event-choose-us-section .choose-us-container {
     grid-template-columns: repeat(2, 1fr);
@@ -6338,6 +6356,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
 @media (max-width: 768px) {
   .event-choose-us-section .choose-us-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .event-choose-us-section > a {
+    width: 90%;
   }
 }
 /* End Event Choose Us Section */
@@ -6351,6 +6372,21 @@ body.arabic .error-section .error-container .search-space .input-container > div
 .event-services-section .event-services-container .service-card {
   border-radius: 2rem;
   position: relative;
+  box-shadow: var(--shadow-box);
+  transition: transform 0.5s ease;
+}
+.event-services-section .event-services-container .service-card:hover {
+  transform: scale(1.05);
+}
+.event-services-section .event-services-container .service-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  z-index: 1;
 }
 .event-services-section .event-services-container .service-card:first-child {
   background: url("/assets/images/3ersi-pro/event-serv-1.jpg") center / cover no-repeat;
@@ -6370,16 +6406,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   border-radius: 2rem;
   padding: 2rem 1.5rem;
 }
-.event-services-section .event-services-container .service-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 2rem;
-  z-index: 1;
-}
+
 .event-services-section .event-services-container .service-card img {
   filter: var(--filter-white);
   width: 5rem;
@@ -6408,7 +6435,192 @@ body.arabic .error-section .error-container .search-space .input-container > div
 }
 /* End Event Services Section */
 /* Start Event Organization Steps Section */
+.event-organization .event-organization-steps {
+  position: relative;
+  margin: auto;
+}
+.event-organization .event-organization-steps::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #ccc;
+  top: 10%;
+  bottom: 10%;
+  left: 50%;
+  margin-left: -2px;
+  z-index: -1;
+}
+.event-organization .event-organization-steps .circle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.event-organization .event-organization-steps .circle.one {
+  top: 10%;
+}
+.event-organization .event-organization-steps .circle.two {
+  top: 45%;
+}
+.event-organization .event-organization-steps .circle.three {
+  top: 80%;
+}
+.event-organization .event-organization-steps .step-card {
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow-box);
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  width: 38%;
+  text-align: center;
+  position: relative;
+  background-color: var(--background-color);
+}
+
+.event-organization .event-organization-steps .step-card.right {
+  left: 55%;
+}
+.event-organization .event-organization-steps .step-card.left {
+  left: 5%;
+}
+.event-organization .event-organization-steps .step-card img {
+  filter: var(--stroke-color);
+  width: 4rem;
+  height: 4rem;
+}
+.event-organization .event-organization-steps .step-card h6 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-block: 2rem 1.5rem;
+}
+.event-organization .event-organization-steps .step-card p {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  .event-organization .event-organization-steps .step-card {
+    width: 100%;
+  }
+  .event-organization .event-organization-steps .step-card.right,
+  .event-organization .event-organization-steps .step-card.left {
+    left: 0;
+  }
+  .event-organization .event-organization-steps .circle {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  .event-organization .event-organization-steps::after {
+    top: 0%;
+  }
+}
 /* End Event Organization Steps Section */
+/* Start Event Testimonial Section */
+.event-testimonial-section .testimonial-container {
+  height: 240px;
+  width: 800px;
+  direction: ltr;
+  margin: auto;
+}
+.event-testimonial-section .testimonial-container .embla {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  --slide-height: 200px;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+  position: relative;
+}
+.event-testimonial-section .testimonial-container .embla__viewport {
+  padding: 0.7rem;
+  overflow: hidden;
+}
+.event-testimonial-section .testimonial-container .embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.event-testimonial-section .testimonial-container .embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  height: var(--slide-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.event-testimonial-section .testimonial-container .embla__slide .testimonial-card {
+  flex: 1;
+  height: 70%;
+  border-radius: 1rem;
+  background-color: var(--background-color);
+  box-shadow: var(--shadow-box);
+  padding: 2rem;
+}
+.event-testimonial-section .testimonial-container .embla__slide .testimonial-card img {
+  filter: var(--storke-secondary-color);
+  width: 3rem;
+  height: 3rem;
+}
+.event-testimonial-section .testimonial-container .embla__slide .testimonial-card p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+.event-testimonial-section .testimonial-container .embla__controls {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 90%;
+}
+.event-testimonial-section .testimonial-container .embla__dots {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+}
+.event-testimonial-section .testimonial-container .embla__dot {
+  background-color: transparent;
+  display: inline-flex;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+}
+.event-testimonial-section .testimonial-container .embla__dot.is-selected {
+  background-color: var(--primary-color);
+}
+@media (max-width: 768px) {
+  .event-testimonial-section .testimonial-container {
+    max-width: 100%;
+    height: 400px;
+  }
+  .event-testimonial-section .testimonial-container .embla {
+    --slide-height: 300px;
+  }
+  .event-testimonial-section .testimonial-container .embla__slide {
+    flex-direction: column;
+  }
+}
+/* End Event Testimonial Section */
 /*--------------------------------------------------------------
 # End 3ersi Event page
 --------------------------------------------------------------*/
