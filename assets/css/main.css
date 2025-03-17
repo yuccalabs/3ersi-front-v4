@@ -301,9 +301,9 @@ body .list-appear .list-content .input-container {
   position: relative;
   margin: 2rem 0 3rem;
 }
-body .list-appear .list-content .input-container img {
+body .list-appear .list-content .input-container > img {
   position: absolute;
-  top: 50%;
+  top: 5%;
   left: 10px;
   transform: translateY(-50%);
   color: var(--primary-color);
@@ -332,11 +332,17 @@ body .list-appear .input-container input:focus {
 body .list-appear .input-container input::placeholder {
   font-size: 1.2rem;
 }
-body .list-appear .list-content .type-service-list-mob-v,
-body .list-appear .list-content .location-service-list-mob-v {
+body .list-appear .list-content .input-container.service-type,
+body .list-appear .list-content .input-container.service-location {
   display: none;
+  height: 75%;
+}
+body .list-appear ul {
+  -ms-overflow-style: none; /* For Internet Explorer */
+  scrollbar-width: none; /* For Firefox */
+  height: 100%;
   overflow-y: auto;
-  height: 70%;
+  padding-left: 2.5rem;
 }
 body .list-appear ul::-webkit-scrollbar {
   display: none;
@@ -356,20 +362,16 @@ body .list-appear .list-content ul li img {
   width: 3rem;
   height: 3rem;
 }
-body .list-appear .list-content .location-service-list-mob-v li img {
+body .list-appear .list-content .input-container.service-location li img {
   display: none;
 }
 
-body .list-appear ul {
-  -ms-overflow-style: none; /* For Internet Explorer */
-  scrollbar-width: none; /* For Firefox */
-}
 @media (max-width: 768px) {
   body .list-appear.show {
     display: block;
   }
-  body .list-appear .list-content .type-service-list-mob-v.show,
-  body .list-appear .list-content .location-service-list-mob-v.show {
+  body .list-appear .list-content .input-container.service-type.show,
+  body .list-appear .list-content .input-container.service-location.show {
     display: block;
   }
 }
@@ -490,6 +492,58 @@ body.arabic .header .vendors-gate h3 a {
   -ms-flex-align: center;
   align-items: center;
   gap: 8px;
+}
+.header .header-container .subscirbe .logout-gate {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--third-color);
+  font-size: 1.4rem;
+  font-weight: 200;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.header .header-container .subscirbe .logout-gate ul {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 130px;
+  background-color: #eee;
+  border-radius: 1rem;
+}
+.header .header-container .subscirbe .logout-gate.active ul {
+  display: block;
+}
+.header .header-container .subscirbe .logout-gate ul li {
+  padding: 1rem 0.5rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.5rem;
+}
+.header .header-container .subscirbe .logout-gate ul li:last-child {
+  border-bottom: none;
+}
+.header .header-container .subscirbe .logout-gate ul li:hover {
+  background-color: #f9f9f9;
+}
+.header .header-container .subscirbe .logout-gate ul li img {
+  filter: var(--stroke-color);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.header .header-container .subscirbe .logout-gate img {
+  filter: var(--filter-white);
+  width: 2rem;
+  height: 2rem;
 }
 .header .header-container .subscirbe select {
   appearance: none;
@@ -1679,17 +1733,17 @@ footer .copy-right {
 /*--------------------------------------------------------------
 # Listing Page
 --------------------------------------------------------------*/
-.hero .container.listing {
-  height: 40vh;
+.hero.listing .container {
+  height: 35vh;
 }
-.hero .container.listing .img-container {
+.hero.listing .container .img-container {
   background: none;
 }
 .hero .embla {
   width: 100%;
   height: 100%;
   margin: auto;
-  --slide-height: 40vh;
+  --slide-height: 35vh;
   --slide-spacing: 1rem;
   --slide-size: 100%;
 }
@@ -1711,12 +1765,16 @@ footer .copy-right {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.hero .container.listing .hero-main-text h1 {
-  font-size: 2rem;
+.hero.listing .container .hero-main-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
 }
 @media (max-width: 768px) {
-  .hero .container.listing {
-    height: 75vh;
+  .hero.listing {
+    height: 50vh;
+  }
+  .hero.listing .container {
+    height: 100%;
   }
 }
 /* Start Vendors List Section */
@@ -2099,6 +2157,66 @@ footer .copy-right {
   flex-direction: column;
   justify-content: space-between;
 }
+.listing-section .filter-section .filter-content .search-space label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.listing-section .filter-section .filter-content .search-space input {
+  width: 100%;
+  height: 36px;
+  padding-inline: 1rem;
+  border: 1px solid #4b4b4b;
+  border-radius: 0.9rem;
+  outline: none;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.listing-section .filter-section .filter-content .search-space .input-container {
+  position: relative;
+}
+.listing-section .filter-section .filter-content .search-space ul.suggestions-services,
+.listing-section .filter-section .filter-content .search-space ul.suggestions-locations {
+  display: none;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  max-height: 135px;
+  overflow-y: auto;
+  background: #f9f9f9;
+  -webkit-box-shadow: var(--shadow-box);
+  box-shadow: var(--shadow-box);
+  z-index: 99;
+  cursor: pointer;
+  border-radius: 0 0 1rem 1rem;
+}
+.listing-section .filter-section .filter-content .search-space ul.suggestions-services.show,
+.listing-section .filter-section .filter-content .search-space ul.suggestions-locations.show {
+  display: block;
+}
+.listing-section .filter-section .filter-content .search-space ul.suggestions-services li,
+.listing-section .filter-section .filter-content .search-space ul.suggestions-locations li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-bottom: 1px solid #eee;
+}
+.listing-section .filter-section .filter-content .search-space ul.suggestions-services li img,
+.listing-section .filter-section .filter-content .search-space ul.suggestions-locations li img {
+  width: 2rem;
+  height: 2rem;
+  display: none;
+}
+.listing-section .filter-section .filter-content .search-space ul.suggestions-services li:hover,
+.listing-section .filter-section .filter-content .search-space ul.suggestions-locations li:hover {
+  color: var(--primary-color);
+}
+
 .listing-section .filter-section .filter-content li {
   padding: 1.5rem 0;
   position: relative;
@@ -4869,7 +4987,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   flex: 1 1 50%;
 }
 .intro-section .img-container {
-  background: url("/assets/images/3ersi-pro/gateau5.jpg") right / cover no-repeat;
+  background: url("/assets/images/3ersi-pro/cake-traditional/main-image.jpg") right / cover no-repeat;
   height: 100%;
   border-radius: 400px 0 0 0;
 }
@@ -5253,13 +5371,13 @@ body.arabic .error-section .error-container .search-space .input-container > div
 # Start Cake patisserie page
 --------------------------------------------------------------*/
 .intro-section.cake-patisserie-page .img-container {
-  background: url("/assets/images/3ersi-pro/patisserie2.jpg") center / cover no-repeat;
+  background: url("/assets/images/3ersi-pro/cake-patisserie/main-image.jpg") center / cover no-repeat;
   height: 100%;
   border-radius: 400px 0 0 0;
 }
 .patisserie-occasion-section {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: stretch;
   gap: 2rem;
   height: 60vh;
@@ -5665,7 +5783,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
 # Start Caterer page
 --------------------------------------------------------------*/
 .intro-section.caterer-page .img-container {
-  background: url("/assets/images/3ersi-pro/caterer.jpg") center / cover no-repeat;
+  background: url("/assets/images/3ersi-pro/caterer/main-image.jpg") center / cover no-repeat;
   height: 100%;
   border-radius: 400px 0 0 0;
 }
@@ -5903,7 +6021,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
 /* End Caterer Services Section */
 /* Start Caterer Delivery Section */
 .caterer-delivery .delivery-container {
-  background: url("/assets/images/3ersi-pro/caterer-delivery.jpg") center / cover no-repeat;
+  background: url("/assets/images/3ersi-pro/caterer/caterer-delivery.jpg") center / cover no-repeat;
   width: 80%;
   height: 30rem;
   margin: 3rem auto;
@@ -5926,7 +6044,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   border-radius: 2rem;
 }
 .caterer-delivery.flower-page .delivery-container {
-  background: url("/assets/images/3ersi-pro/flower-del.jpg") center / cover no-repeat;
+  background: url("/assets/images/3ersi-pro/flowers/flower-delivery.jpg") center / cover no-repeat;
 }
 .caterer-delivery .delivery-container .delivery-cards {
   width: 90%;
@@ -6005,7 +6123,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
 # Start Flowers page
 --------------------------------------------------------------*/
 .intro-section.flower-page .img-container {
-  background: url("/assets/images/3ersi-pro/flower.jpg") right / cover no-repeat;
+  background: url("/assets/images/3ersi-pro/flowers/main-image.jpg") right / cover no-repeat;
 }
 .intro-section.flower-page .intro-text a {
   width: fit-content;
@@ -6219,7 +6337,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
 --------------------------------------------------------------*/
 /* Start Event Intro Section */
 .event-intro-section {
-  background: url("/assets/images/3ersi-pro/event-background.jpg") center / cover no-repeat;
+  background: url("/assets/images/3ersi-pro/pro-event/event-background.jpg") center / cover no-repeat;
   position: relative;
   height: 83vh;
 }
@@ -6389,16 +6507,16 @@ body.arabic .error-section .error-container .search-space .input-container > div
   z-index: 1;
 }
 .event-services-section .event-services-container .service-card:first-child {
-  background: url("/assets/images/3ersi-pro/event-serv-1.jpg") center / cover no-repeat;
+  background: url("/assets/images/3ersi-pro/pro-event/event-services-1.jpg") center / cover no-repeat;
 }
 .event-services-section .event-services-container .service-card:nth-child(2) {
-  background: url("/assets/images/3ersi-pro/event-serv-2.jpg") center / cover no-repeat;
+  background: url("/assets/images/3ersi-pro/pro-event/event-services-1.jpg") center / cover no-repeat;
 }
 .event-services-section .event-services-container .service-card:nth-child(3) {
-  background: url("/assets/images/3ersi-pro/event-serv-3.jpg") center / cover no-repeat;
+  background: url("/assets/images/3ersi-pro/pro-event/event-services-3.jpg") center / cover no-repeat;
 }
 .event-services-section .event-services-container .service-card:nth-child(4) {
-  background: url("/assets/images/3ersi-pro/event-serv-4.jpg") center / cover no-repeat;
+  background: url("/assets/images/3ersi-pro/pro-event/event-services-4.jpg") center / cover no-repeat;
 }
 .event-services-section .event-services-container .service-card > div {
   position: relative;
