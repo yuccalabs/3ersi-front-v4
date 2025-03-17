@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  function carousel(sectionSelector) {
+  function carousel(sectionSelector, isAutoScrolled) {
     if (!sectionSelector.length) {
       console.error("Embla node not found");
       return;
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const emblaApi = EmblaCarousel(viewportNode, OPTIONSVlIST);
+      const emblaApi = EmblaCarousel(viewportNode, OPTIONSVlIST, isAutoScrolled && [EmblaCarouselAutoplay({ playOnInit: true, delay: 6000 })]);
 
       const scrollPrev = () => emblaApi.scrollPrev();
       const scrollNext = () => emblaApi.scrollNext();
@@ -99,9 +99,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const vendorDetailsCarousel = document.querySelectorAll(".vendor-details .embla");
   const patisserieCarousel = document.querySelectorAll(".patisserie-occasion-section .embla");
   const catererCarousel = document.querySelectorAll(".caterer-services .cards-container .embla");
+  const eventTestiomonialCarousel = document.querySelectorAll(".event-testimonial-section .testimonial-container .embla");
 
-  carousel(vendorListCarousel);
-  carousel(vendorDetailsCarousel);
-  carousel(patisserieCarousel);
-  carousel(catererCarousel);
+  carousel(vendorListCarousel, false);
+  carousel(vendorDetailsCarousel, false);
+  carousel(patisserieCarousel, false);
+  carousel(catererCarousel, false);
+  carousel(eventTestiomonialCarousel, true);
 });

@@ -44,6 +44,15 @@ const aside = document.querySelector("aside");
 const asideOverlay = document.querySelector("aside .aside-overlay");
 const removeAside = document.querySelector("aside .remove-aside");
 const asideNavItems = document.querySelectorAll("#asideList li");
+const logoutGate = document.querySelector(".subscirbe .logout-gate");
+const logoutList = document.querySelector(".subscirbe .logout-gate ul");
+
+// Controll the Logout Gate
+if (logoutGate) {
+  logoutGate.addEventListener("click", () => {
+    logoutGate.classList.toggle("active");
+  });
+}
 
 function toggleSidebar(show) {
   show ? showElement(aside) : hideElement(aside);
@@ -65,6 +74,9 @@ window.addEventListener("click", (e) => {
       item.classList.remove("active");
     }
   });
+  if (!e.target.closest(".logout-gate")) {
+    logoutGate.classList.remove("active");
+  }
 });
 
 // Render dynamic lists
@@ -151,24 +163,34 @@ document.addEventListener("DOMContentLoaded", () => {
     "El Meniaa",
   ];
 
-  // Input fields
-  const inputTypeService = document.querySelector(".type-service");
-  const inputLocationService = document.querySelector(".location-service");
+  const inputFields = {
+    typeService: document.querySelector(".type-service"),
+    locationService: document.querySelector(".location-service"),
+    typeServiceFilter: document.querySelector(".service-type-filter"),
+    locationServiceFilter: document.querySelector(".service-location-filter"),
+    typeServiceMobile: document.querySelector("input.type-service-input-mobile"),
+    locationServiceMobile: document.querySelector("input.location-service-input-mobile"),
+  };
 
-  // Desktop lists
-  const typeServiceList = document.querySelector(".type-service-list");
-  const locationServiceList = document.querySelector(".location-service-list");
+  const lists = {
+    typeServiceList: document.querySelector(".type-service-list"),
+    locationServiceList: document.querySelector(".location-service-list"),
+    typeServiceFilterList: document.querySelector(".search-space .suggestions-services"),
+    locationServiceFilterList: document.querySelector(".search-space .suggestions-locations"),
+    serviceListMobContainer: document.querySelector(".list-appear"),
+    serviceListMobUlContainer: document.querySelector(".input-container.service-type"),
+    serviceListMobUlTwoContainer: document.querySelector(".input-container.service-location"),
+    serviceListMobUl: document.querySelector(".type-service-list-mob-v"),
+    serviceListMobUlTwo: document.querySelector(".location-service-list-mob-v"),
+  };
 
-  // Mobile lists
-  const serviceListMobUl = document.querySelector(".type-service-list-mob-v");
-  const serviceListMobUlTow = document.querySelector(".location-service-list-mob-v");
-
-  // Mobile container and overlay
-  const serviceListMobContainer = document.querySelector(".list-appear");
   const serviceListMobOverlay = document.querySelector(".list-appear .list-overlay");
   const removeServiceList = document.querySelector(".list-appear .title-service img");
-  const titleService = document.querySelector(".list-appear .title-service h4");
-  const inputService = document.querySelector(".list-appear input");
+
+  const hideAllLists = () => {
+    Object.values(lists).forEach((list) => list && hideElement(list));
+    document.body.classList.remove("no-scroll");
+  };
 
   // Prevent keyboard on mobile devices
   const handleInputFocus = (e) => {
@@ -180,66 +202,25 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add readonly attribute based on screen size
   const addReadonlyAttribute = () => {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
-    inputTypeService.readOnly = isMobile;
-    inputLocationService.readOnly = isMobile;
+    inputFields.typeService.readOnly = isMobile;
+    inputFields.locationService.readOnly = isMobile;
   };
 
   addReadonlyAttribute();
   window.addEventListener("resize", addReadonlyAttribute);
 
-  // Function to hide all lists
-  const hideAllLists = () => {
-    hideElement(typeServiceList);
-    hideElement(locationServiceList);
-    hideElement(serviceListMobUl);
-    hideElement(serviceListMobUlTow);
-    hideElement(serviceListMobContainer);
-  };
-
   // Function to show a specific list
-  const showList = (list, mobileList, title, placeholder, items) => {
-    hideAllLists(); // Hide all lists before showing the current one
+  const showList = (list, mobileListContainer, listItems, mobileInput, ul) => {
+    hideAllLists();
     if (window.matchMedia("(max-width: 768px)").matches) {
-      // Mobile view
-      showElement(mobileList);
-      showElement(serviceListMobContainer);
-      titleService.textContent = title;
-      inputService.placeholder = placeholder;
-      inputService.value = "";
-      renderList(inputService, mobileList, items);
-      scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-      // Disable the scroll
+      showElement(lists.serviceListMobContainer);
+      showElement(mobileListContainer);
+      renderList(mobileInput, ul, listItems);
       document.body.classList.add("no-scroll");
     } else {
-      // Desktop view
       showElement(list);
     }
   };
-
-  // Show type service list
-  inputTypeService.addEventListener("focus", (e) => {
-    handleInputFocus(e);
-    showList(typeServiceList, serviceListMobUl, "Que Chercher Vous ?", "Chercher un service", listItems);
-  });
-
-  // Show location service list
-  inputLocationService.addEventListener("focus", (e) => {
-    handleInputFocus(e);
-    showList(locationServiceList, serviceListMobUlTow, "Ou ?", "Chercher une ville", listItemsTwo);
-  });
-
-  // Hide lists on overlay or remove button click
-  [serviceListMobOverlay, removeServiceList].forEach((ele) => {
-    ele.addEventListener("click", () => {
-      hideAllLists();
-      // Enable the scroll
-      document.body.classList.remove("no-scroll");
-    });
-  });
-
   // Render filtered list
   const renderList = (input, ul, items) => {
     input.addEventListener("input", () => {
@@ -266,18 +247,62 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   };
 
+  if (inputFields.typeService) {
+    inputFields.typeService.addEventListener("focus", (e) => {
+      // handleInputFocus(e);
+      console.log(lists);
+      showList(lists.typeServiceList, lists.serviceListMobUlContainer, listItems, inputFields.typeServiceMobile, lists.serviceListMobUl);
+    });
+  }
+
+  if (inputFields.locationService) {
+    inputFields.locationService.addEventListener("focus", (e) => {
+      // handleInputFocus(e);
+      showList(lists.locationServiceList, lists.serviceListMobUlTwoContainer, listItemsTwo, inputFields.locationServiceMobile, lists.serviceListMobUlTwo);
+    });
+  }
+  // if (inputTypeServiceFilter && inputLocationServiceFilter) {
+  //   inputTypeServiceFilter.addEventListener("focus", () => {
+  //     showList(typeServiceFilterList, serviceListMobUlContainer, listItems);
+  //   });
+  //   inputLocationServiceFilter.addEventListener("focus", () => {
+  //     showList(locationServiceFilterList, serviceListMobUlTwoContainer, listItemsTwo);
+  //   });
+  // }
+
   // Render lists for desktop and mobile
-  renderList(inputTypeService, typeServiceList, listItems);
-  renderList(inputLocationService, locationServiceList, listItemsTwo);
+  if (inputFields.typeService && inputFields.locationService) {
+    renderList(inputFields.typeService, lists.typeServiceList, listItems);
+    renderList(inputFields.locationService, lists.locationServiceList, listItemsTwo);
+  }
+  // if (inputTypeServiceFilter && inputLocationServiceFilter) {
+  //   renderList(inputTypeServiceFilter, typeServiceFilterList, listItems);
+  //   renderList(inputLocationServiceFilter, locationServiceFilterList, listItemsTwo);
+  // }
+  // Hide lists on overlay or remove button click
+  // [lists.serviceListMobOverlay, lists.removeServiceList].forEach((ele) => {
+  //   ele.addEventListener("click", () => {
+  //     hideAllLists();
+  //     // Enable the scroll
+  //     document.body.classList.remove("no-scroll");
+  //   });
+  // });
 
-  renderList(inputService, serviceListMobUl, listItems);
-  renderList(inputService, serviceListMobUlTow, listItemsTwo);
+  if (serviceListMobOverlay) {
+    serviceListMobOverlay.addEventListener("click", hideAllLists);
+  } else {
+    console.warn("serviceListMobOverlay not found in DOM");
+  }
 
+  if (removeServiceList) {
+    removeServiceList.addEventListener("click", hideAllLists);
+  } else {
+    console.warn("removeServiceList not found in DOM");
+  }
   // Close lists when clicking outside
   window.addEventListener("click", (e) => {
     if (!e.target.closest(".type-service, .location-service, .list-appear")) {
-      hideElement(typeServiceList);
-      hideElement(locationServiceList);
+      hideAllLists();
     }
   });
 });

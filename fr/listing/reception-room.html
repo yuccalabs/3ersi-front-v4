@@ -191,7 +191,7 @@
                   Salles Et Réception
                   <img src="/assets/images/icons/chevron-right.svg" alt="arrow-icon" />
                 </div>
-                <ul class="dropdown" id="dropdown-salles">
+                <ul class="dropdown" id="dropdown-reception-room">
                   <li>
                     <a href="/fr/listing/reception-room.html">
                       <img src="/assets/images/navmenu-icons/services/reception-room.svg" alt="reception-room-icon" />
@@ -324,8 +324,8 @@
     <!-- End Header Section -->
     <main id="main" class="main">
       <!-- Start Hero Section -->
-      <section class="hero">
-        <div class="container listing">
+      <section class="hero listing">
+        <div class="container">
           <div class="img-container">
             <section class="embla">
               <div class="embla__viewport">
@@ -342,25 +342,6 @@
             <div class="hero-main-text">
               <div>
                 <h1>Explorez toute les salle des fetes dans la algerie</h1>
-                <div class="search-space">
-                  <form>
-                    <div class="input-container">
-                      <div>
-                        <img src="/assets/images/icons/search.svg" alt="" />
-                        <input type="text" value="salle des fetes" placeholder="Que charchez-vous ?" class="type-service" />
-                        <ul class="type-service-list"></ul>
-                      </div>
-                      <div>
-                        <div>
-                          <img src="/assets/images/icons/mdi--location.svg" alt="" />
-                          <input type="text" placeholder="Ou ?" class="location-service" />
-                        </div>
-                        <ul class="location-service-list"></ul>
-                      </div>
-                    </div>
-                    <button type="submit" class="search-btn">Recharche</button>
-                  </form>
-                </div>
               </div>
             </div>
           </div>
@@ -379,6 +360,20 @@
             </div>
             <div class="filter-content">
               <ul>
+                <!-- Start filters inputs -->
+                <div class="search-space">
+                  <div class="input-container">
+                    <label for="service-type">Rechercher ici</label>
+                    <input name="service-type" class="service-type-filter" type="text" placeholder="Rechercher ici" />
+                    <ul class="suggestions-services"></ul>
+                  </div>
+                  <div class="input-container">
+                    <label for="location-service">Commune</label>
+                    <input name="location-service" class="service-location-filter" type="text" placeholder="Commune" />
+                    <ul class="suggestions-locations"></ul>
+                  </div>
+                </div>
+                <!-- End filters inputs -->
                 <li class="filter-category">
                   <div>
                     <img src="/assets/images/icons/small-chevron.svg" alt="" />
