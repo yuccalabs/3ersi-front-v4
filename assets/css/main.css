@@ -1776,6 +1776,14 @@ footer .copy-right {
   .hero.listing .container {
     height: 100%;
   }
+  .hero.listing .container .img-container {
+    height: 60%;
+  }
+  .hero.listing .container .hero-content .hero-main-text {
+    text-align: center;
+    padding-top: 0;
+    line-height: 1.8;
+  }
 }
 /* Start Vendors List Section */
 .listing-section {
@@ -2196,8 +2204,17 @@ footer .copy-right {
 .listing-section .filter-section .filter-content .search-space ul.suggestions-locations.show {
   display: block;
 }
+.listing-section .filter-section .filter-content .search-space .hidden {
+  display: none;
+}
 .listing-section .filter-section .filter-content .search-space ul.suggestions-services li,
-.listing-section .filter-section .filter-content .search-space ul.suggestions-locations li {
+.listing-section .filter-section .filter-content .search-space .hidden li {
+  padding: 0;
+}
+
+.listing-section .filter-section .filter-content .search-space ul.suggestions-services li a,
+.listing-section .filter-section .filter-content .search-space ul.suggestions-locations li a,
+.listing-section .filter-section .filter-content .search-space .hidden li a {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -2206,11 +2223,9 @@ footer .copy-right {
   font-weight: 300;
   border-bottom: 1px solid #eee;
 }
-.listing-section .filter-section .filter-content .search-space ul.suggestions-services li img,
-.listing-section .filter-section .filter-content .search-space ul.suggestions-locations li img {
-  width: 2rem;
-  height: 2rem;
-  display: none;
+.listing-section .filter-section .filter-content .search-space ul.suggestions-services li img {
+  width: 3rem;
+  height: 3rem;
 }
 .listing-section .filter-section .filter-content .search-space ul.suggestions-services li:hover,
 .listing-section .filter-section .filter-content .search-space ul.suggestions-locations li:hover {
