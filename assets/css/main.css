@@ -4998,6 +4998,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
   gap: 10rem;
   height: 81vh;
 }
+body.arabic .intro-section {
+  direction: ltr;
+}
 .intro-section > div {
   flex: 1 1 50%;
 }
@@ -5012,7 +5015,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   line-height: 1.5;
 }
 .intro-section .intro-text p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.5;
   color: #333;
@@ -5108,6 +5111,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
 }
 .sweet-services .headline {
   text-align: left;
+}
+body.arabic .sweet-services .headline {
+  text-align: right;
 }
 .sweet-services .headline.mob-v {
   display: none;
@@ -5392,9 +5398,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
 }
 .patisserie-occasion-section {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: stretch;
-  gap: 2rem;
+  gap: 10rem;
   height: 60vh;
 }
 .patisserie-occasion-section .occasion-text {
@@ -5405,7 +5411,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   font-weight: 300;
   line-height: 1.7;
   color: #333;
-  margin-block: 2rem 2.8rem;
+  margin-block: 2rem 4rem;
 }
 .patisserie-occasion-section .occasion-text a,
 .patisserie-occasion-section .btn-mob-v {
@@ -5432,6 +5438,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   flex: 0 0 30%;
   border-radius: 400px 400px 0 0;
   width: 30%;
+  direction: ltr;
 }
 .patisserie-occasion-section .occasion-img-container .embla {
   width: 100%;
@@ -5540,6 +5547,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   .patisserie-occasion-section {
     flex-direction: column;
     height: auto;
+    gap: 2rem;
   }
   .patisserie-occasion-section.engage {
     flex-direction: column-reverse;
@@ -5701,6 +5709,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
   height: 2rem;
   filter: var(--filter-white);
 }
+body.arabic .delivery-section .img-container .image-badge img {
+  transform: scaleX(-1);
+}
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -5775,6 +5786,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
 .delivery-section .delivery-content a img {
   filter: var(--filter-white);
 }
+body.arabic .delivery-section .delivery-content a img {
+  transform: scaleX(-1);
+}
 @media (max-width: 768px) {
   .delivery-section {
     grid-template-columns: 1fr;
@@ -5804,6 +5818,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
 }
 .intro-section.caterer-page .intro-text h1 {
   font-size: 4rem;
+  margin-bottom: 1.3rem;
 }
 .intro-section.caterer-page .intro-text h4 {
   font-size: 3.4rem;
@@ -5819,6 +5834,10 @@ body.arabic .error-section .error-container .search-space .input-container > div
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  margin-top: 3.2rem;
+}
+body.arabic .intro-section.caterer-page .intro-text a {
+  justify-self: flex-end;
 }
 .intro-section.caterer-page .intro-text a img {
   filter: var(--filter-white);
@@ -5878,6 +5897,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
   --slide-spacing: 1rem;
   --slide-size: 100%;
   position: relative;
+}
+body.arabic .caterer-services .cards-container .service-card .caterer-img-container .embla {
+  direction: ltr;
 }
 
 .caterer-services .cards-container .service-card .caterer-img-container .embla__viewport {
@@ -6160,6 +6182,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
   max-width: 78%;
   text-align: left;
 }
+body.arabic .our-bouquets-section .headline.flower {
+  text-align: right;
+}
 .our-bouquets-section .headline.flower h3 {
   margin-top: 1rem;
   line-height: 1.8;
@@ -6178,6 +6203,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   overflow: hidden;
   transition: transform 0.5s ease;
 }
+
 .our-bouquets-section .type-bouquets .bouquet-card .img-container {
   position: absolute;
   top: 0;
@@ -6245,6 +6271,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
 .flower-gift-section {
   position: relative;
   overflow: hidden;
+}
+body.arabic .flower-gift-section {
+  direction: ltr;
 }
 .flower-gift-section .container {
   width: var(--width-section);
@@ -6525,7 +6554,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   background: url("/assets/images/3ersi-pro/pro-event/event-services-1.jpg") center / cover no-repeat;
 }
 .event-services-section .event-services-container .service-card:nth-child(2) {
-  background: url("/assets/images/3ersi-pro/pro-event/event-services-1.jpg") center / cover no-repeat;
+  background: url("/assets/images/3ersi-pro/pro-event/event-services-2.jpg") center / cover no-repeat;
 }
 .event-services-section .event-services-container .service-card:nth-child(3) {
   background: url("/assets/images/3ersi-pro/pro-event/event-services-3.jpg") center / cover no-repeat;
@@ -6571,6 +6600,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
 .event-organization .event-organization-steps {
   position: relative;
   margin: auto;
+}
+body.arabic .event-organization .event-organization-steps {
+  direction: ltr;
 }
 .event-organization .event-organization-steps::after {
   content: "";
@@ -6691,6 +6723,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
   justify-content: center;
   gap: 4rem;
 }
+body.arabic .event-testimonial-section .testimonial-container .embla__slide {
+  direction: rtl;
+}
 .event-testimonial-section .testimonial-container .embla__slide .testimonial-card {
   flex: 1;
   height: 70%;
@@ -6703,6 +6738,9 @@ body.arabic .error-section .error-container .search-space .input-container > div
   filter: var(--storke-secondary-color);
   width: 3rem;
   height: 3rem;
+}
+body.arabic .event-testimonial-section .testimonial-container .embla__slide .testimonial-card img {
+  transform: scaleX(-1);
 }
 .event-testimonial-section .testimonial-container .embla__slide .testimonial-card p {
   font-size: 1.6rem;
@@ -6760,3 +6798,22 @@ body.arabic .error-section .error-container .search-space .input-container > div
 /*--------------------------------------------------------------
 # End 3ersi Pro pages
 --------------------------------------------------------------*/
+/* Start Youtube Video Section */
+.youtube-video-container {
+  position: relative;
+  max-width: 800px;
+  min-height: 400px;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.youtube-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/* End Youtube Video Section */

@@ -79,7 +79,7 @@ window.addEventListener("click", (e) => {
     }
   });
   if (!e.target.closest(".logout-gate")) {
-    // logoutGate.classList.remove("active");
+    logoutGate.classList.remove("active");
   }
 });
 
@@ -168,19 +168,25 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const inputFields = {
+    // desktop inputs
     typeService: document.querySelector(".type-service"),
     locationService: document.querySelector(".location-service"),
+    // filter inputs (listing pages)
     typeServiceFilter: document.querySelector(".search-space .service-type-filter"),
     locationServiceFilter: document.querySelector(".search-space .service-location-filter"),
+    // mobile inputs
     typeServiceMobile: document.querySelector("input.type-service-input-mobile"),
     locationServiceMobile: document.querySelector("input.location-service-input-mobile"),
   };
 
   const lists = {
+    // desktop list
     typeServiceList: document.querySelector(".type-service-list"),
     locationServiceList: document.querySelector(".location-service-list"),
+    // filter lists
     typeServiceFilterList: document.querySelector(".search-space .suggestions-services"),
     locationServiceFilterList: document.querySelector(".search-space .suggestions-locations"),
+    // mobile lists and its containers
     serviceListMobContainer: document.querySelector("#list-appear"),
     serviceListMobUlContainer: document.querySelector(".input-container.service-type"),
     serviceListMobUlTwoContainer: document.querySelector(".input-container.service-location"),
@@ -191,6 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const serviceListMobOverlay = document.querySelector(".list-appear .list-overlay");
   const removeServiceList = document.querySelector(".list-appear .title-service img");
 
+  // hide all the lists
   const hideAllLists = () => {
     Object.values(lists).forEach((list) => list && hideElement(list));
     document.body.classList.remove("no-scroll");
@@ -250,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     );
   };
-
+  // Check if the input existe
   if (inputFields.typeService) {
     inputFields.typeService.addEventListener("focus", (e) => {
       handleInputFocus(e);
@@ -258,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showList(lists.typeServiceList, lists.serviceListMobUlContainer, listItems, inputFields.typeServiceMobile, lists.serviceListMobUl);
     });
   }
-
+  // Check if the input existe
   if (inputFields.locationService) {
     inputFields.locationService.addEventListener("focus", (e) => {
       handleInputFocus(e);
@@ -266,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  //
+  // Check if the input existe
   if (inputFields.typeServiceFilter && inputFields.locationServiceFilter) {
     inputFields.typeServiceFilter.addEventListener("focus", () => {
       showList(lists.typeServiceFilterList, undefined, listItems, inputFields.typeServiceFilter, undefined);
@@ -276,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Render lists for desktop and mobile
+  // Render lists for desktop
   if (inputFields.typeService && inputFields.locationService) {
     renderList(inputFields.typeService, lists.typeServiceList, listItems);
     renderList(inputFields.locationService, lists.locationServiceList, listItemsTwo);
@@ -286,17 +293,18 @@ document.addEventListener("DOMContentLoaded", () => {
     renderList(inputFields.locationServiceFilter, lists.typeServiceFilterList, listItemsTwo);
   }
 
+  // remove the mobile list on overlay or icone click
   if (serviceListMobOverlay) {
     serviceListMobOverlay.addEventListener("click", hideAllLists);
   } else {
     console.warn("serviceListMobOverlay not found in DOM");
   }
-
   if (removeServiceList) {
     removeServiceList.addEventListener("click", hideAllLists);
   } else {
     console.warn("removeServiceList not found in DOM");
   }
+
   // Close lists when clicking outside
   window.addEventListener("click", (e) => {
     if (e.target !== inputFields.typeService && e.target !== inputFields.locationService) {

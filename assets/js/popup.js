@@ -1,13 +1,17 @@
 "use strict";
 
 // Utility Functions
-function showElement(ele) {
-  ele.classList.add("show");
-}
+// function showElement(ele) {
+//   if (ele) {
+//     ele.classList.add("show");
+//   }
+// }
 
-function hideElement(ele) {
-  ele.classList.remove("show");
-}
+// function hideElement(ele) {
+//   if (ele) {
+//     ele.classList.remove("show");
+//   }
+// }
 // Controll the popup (edite, discount)
 document.addEventListener("DOMContentLoaded", () => {
   const servicePopupSection = document.querySelectorAll(".popup-service");
@@ -78,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const catalogPopupSection = document.querySelector("#popup-catalog");
   const openCatalogBtn = document.querySelector("#open_catalog");
+  console.log(catalogPopupSection, openCatalogBtn);
 
   // Display Catalog popup
   function showCatalogPopup() {
