@@ -4639,7 +4639,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   border-radius: 0.5rem;
   font-weight: 300;
 }
-.vendor-service-details.services-page .grid .row-item button.edite {
+.vendor-service-details.services-page .grid .row-item button.edit {
   background-color: #4caf50;
 }
 .vendor-service-details.services-page .grid .row-item button.discount {
@@ -4819,7 +4819,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.popup-service.edite.show,
+.popup-service.edit.show,
 .popup-service.discount.show {
   display: flex;
 }

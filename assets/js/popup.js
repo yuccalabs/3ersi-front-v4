@@ -8,73 +8,54 @@ function showElement(ele) {
 function hideElement(ele) {
   ele.classList.remove("show");
 }
-// Controll the popup (edite, discount)
+
+// Control the popup (edit, discount)
 document.addEventListener("DOMContentLoaded", () => {
   const servicePopupSection = document.querySelectorAll(".popup-service");
-  const editeBtn = document.querySelectorAll(".services-page .edite");
+
+  const editBtn = document.querySelectorAll(".services-page .edit");
   const discountBtn = document.querySelectorAll(".services-page .discount img");
-  const edtiePopup = document.querySelector("#popup-service-edite");
-  const discountPopup = document.querySelector("#popup-service-discount");
   const closeBtn = document.querySelectorAll(".popup-service .close-btn");
 
-  // Display Service popup
-  function showEditeServicePopup() {
-    showElement(edtiePopup);
-    hideElement(discountPopup);
-  }
-  function showDiscountServicePopup() {
-    showElement(discountPopup);
-    hideElement(edtiePopup);
+  function getPopup(element) {
+    const popupID = element.id
+        .split('-')
+        .filter((_, index, arr) => index !== arr.length - 1)
+        .join('-');
+    return document.getElementById(popupID);
   }
 
-  // Hide all popups
-  function closeServicePopup() {
-    hideElement(edtiePopup);
-    hideElement(discountPopup);
+  function openPopup(event, index) {
+      let popup = getPopup(event.target);
+      showElement(popup);
+      document.body.classList.add("no-scroll");
   }
 
-  // Switch Between edite and discount Popups
-  function switchPopup(event, ind) {
-    if (event.target === editeBtn[ind]) {
-      showEditeServicePopup();
-      document.body.classList.add("no-scroll");
-    } else if (event.target === discountBtn[ind]) {
-      showDiscountServicePopup();
-      document.body.classList.add("no-scroll");
-    }
-  }
   // open popup
-  editeBtn.forEach((btn, ind) => btn.addEventListener("click", (eve) => switchPopup(eve, ind)));
-  discountBtn.forEach((btn, ind) => btn.addEventListener("click", (eve) => switchPopup(eve, ind)));
+  editBtn.forEach((btn, index) => btn.addEventListener("click", (event) => openPopup(event, index)));
+  discountBtn.forEach((btn, index) => btn.addEventListener("click", (event) => openPopup(event, index)));
 
   // Hide all popups when close buttons are clicked
   closeBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
-      closeServicePopup();
+      let popupToClose = getPopup(btn);
+      hideElement(popupToClose);
       document.body.classList.remove("no-scroll");
     });
   });
 
-  // Close popup when clicking outside the container
-  servicePopupSection.forEach((popup, ind) =>
-    popup.addEventListener("click", (event) => {
-      console.log(event.target);
-      if (event.target === servicePopupSection[ind]) {
-        closeServicePopup();
-        document.body.classList.remove("no-scroll");
-      }
-    })
-  );
-
   // Close popup on pressing the Escape key
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      closeServicePopup();
+      servicePopupSection.forEach((popup) => {
+          hideElement(popup)
+      });
       document.body.classList.remove("no-scroll");
     }
   });
 });
-// Controll the Catalog popup
+
+// Control the Catalog popup
 document.addEventListener("DOMContentLoaded", () => {
   const catalogPopupSection = document.querySelector("#popup-catalog");
   const openCatalogBtn = document.querySelector("#open_catalog");

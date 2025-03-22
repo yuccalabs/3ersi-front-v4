@@ -390,7 +390,7 @@
             <div class="grid gird-row">
               <div class="row-item name">Dîner et demi soirée (17h-minuit) pour les 2 salles</div>
               <div class="row-item">400000</div>
-              <div class="row-item"><button class="edite">Modifier</button></div>
+              <div class="row-item"><button class="edit" id="popup-service-edit-1-openBtn">Modifier</button></div>
               <div class="row-item">
                 <button class="discount">
                   <img src="/assets/images/icons/discount.svg" alt="" />
@@ -404,7 +404,7 @@
             <div class="grid gird-row">
               <div class="row-item name">Dîner et demi soirée (17h-minuit) pour les 2 salles</div>
               <div class="row-item">400000</div>
-              <div class="row-item"><button class="edite">Modifier</button></div>
+              <div class="row-item"><button class="edit" id="popup-service-edit-2-openBtn">Modifier</button></div>
               <div class="row-item">
                 <button class="discount">
                   <img src="/assets/images/icons/discount.svg" alt="" />
@@ -418,7 +418,7 @@
             <div class="grid gird-row">
               <div class="row-item name">Dîner et demi soirée (17h-minuit) pour les 2 salles</div>
               <div class="row-item">400000</div>
-              <div class="row-item"><button class="edite">Modifier</button></div>
+              <div class="row-item"><button class="edit" id="popup-service-edit-3-openBtn">Modifier</button></div>
               <div class="row-item">
                 <button class="discount">
                   <img src="/assets/images/icons/discount.svg" alt="" />
@@ -523,7 +523,7 @@
     <div class="popup-auth" id="popup-auth">
       <div class="popup-signup">
         <div class="popup-header">
-          <span class="close-btn" id="close-popup"><img src="/assets/images/icons/xMark.svg" alt="" /></span>
+          <span class="close-btn" ><img src="/assets/images/icons/xMark.svg" alt="" /></span>
           <h5>Créer un compte</h5>
           <p>Créez un compte pour profiter de nos services</p>
         </div>
@@ -579,7 +579,7 @@
       </div>
       <div class="popup-login">
         <div class="popup-header">
-          <span class="close-btn" id="close-popup"><img src="/assets/images/icons/xMark.svg" alt="" /></span>
+          <span class="close-btn" ><img src="/assets/images/icons/xMark.svg" alt="" /></span>
           <h5>Bienvenue de retour !</h5>
           <p>Connectez-vous pour accéder à votre compte</p>
         </div>
@@ -610,11 +610,57 @@
     </div>
     <!-- End Popup Authentication -->
     <!-- Start Popup Edite -->
-    <div class="popup-service edite" id="popup-service-edite">
+    <div class="popup-service edit" id="popup-service-edit-1">
       <div class="popup-content">
         <div class="popup-header">
-          <span class="close-btn" id="close-popup"><img src="/assets/images/icons/xMark.svg" alt="" /></span>
-          <h5>Modifier votre service</h5>
+          <span class="close-btn" id="popup-service-edit-1-closeBtn"><img src="/assets/images/icons/xMark.svg" alt="" /></span>
+          <h5>Modifier votre service 1</h5>
+        </div>
+        <form>
+          <div class="input-container">
+            <label for="description">Description</label>
+            <textarea name="service-description" id="description" placeholder="Entrez votre details" required></textarea>
+          </div>
+          <div class="input-container">
+            <label for="price">Prix</label>
+            <input type="text" id="price" placeholder="price" name="service-price" required />
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="checkboxo-1" name="checkboxo-1" />
+            <label for="checkboxo-1">Ce service est-il le service principal ?</label>
+          </div>
+          <button type="submit">Enregistrer</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup-service edit" id="popup-service-edit-2">
+      <div class="popup-content">
+        <div class="popup-header">
+          <span class="close-btn" ><img src="/assets/images/icons/xMark.svg" alt="" /></span>
+          <h5>Modifier votre service 2</h5>
+        </div>
+        <form>
+          <div class="input-container">
+            <label for="description">Description</label>
+            <textarea name="service-description" id="description" placeholder="Entrez votre details" required></textarea>
+          </div>
+          <div class="input-container">
+            <label for="price">Prix</label>
+            <input type="text" id="price" placeholder="price" name="service-price" required />
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="checkboxo-1" name="checkboxo-1" />
+            <label for="checkboxo-1">Ce service est-il le service principal ?</label>
+          </div>
+          <button type="submit">Enregistrer</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup-service edit" id="popup-service-edit-3">
+      <div class="popup-content">
+        <div class="popup-header">
+          <span class="close-btn" ><img src="/assets/images/icons/xMark.svg" alt="" /></span>
+          <h5>Modifier votre service 3</h5>
         </div>
         <form>
           <div class="input-container">
@@ -638,7 +684,7 @@
     <div class="popup-service discount" id="popup-service-discount">
       <div class="popup-content">
         <div class="popup-header">
-          <span class="close-btn" id="close-popup"><img src="/assets/images/icons/xMark.svg" alt="" /></span>
+          <span class="close-btn" ><img src="/assets/images/icons/xMark.svg" alt="" /></span>
           <h5>Ajouter une promotion</h5>
         </div>
         <form>
