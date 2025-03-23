@@ -65,20 +65,20 @@ function toggleSidebar(show) {
 
 // Hamburger Toggle
 hamburger.addEventListener("click", () => toggleSidebar(true));
-[removeAside, asideOverlay].forEach((el) => el.addEventListener("click", () => toggleSidebar(false)));
+[removeAside, asideOverlay].forEach((element) => element.addEventListener("click", () => toggleSidebar(false)));
 
 asideNavItems.forEach((aNavItem) => {
   aNavItem.addEventListener("click", () => toggleActiveState(asideNavItems, aNavItem));
 });
 
 // Close nav items on outside click
-window.addEventListener("click", (e) => {
+window.addEventListener("click", (event) => {
   navItems.forEach((item) => {
-    if (e.target !== item && e.target !== item.children[0]) {
+    if (event.target !== item && event.target !== item.children[0]) {
       item.classList.remove("active");
     }
   });
-  if (!e.target.closest(".logout-gate")) {
+  if (!event.target.closest(".logout-gate")) {
     logoutGate.classList.remove("active");
   }
 });
@@ -204,9 +204,9 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Prevent keyboard on mobile devices
-  const handleInputFocus = (e) => {
+  const handleInputFocus = (event) => {
     if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      e.preventDefault();
+      event.preventDefault();
     }
   };
 
@@ -243,8 +243,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .join("");
       // Fill the input with the Item Text
       ul.querySelectorAll("li").forEach((item) =>
-        item.addEventListener("click", (e) => {
-          input.value = e.target.innerText;
+        item.addEventListener("click", (event) => {
+          input.value = event.target.innerText;
         })
       );
     });
@@ -252,23 +252,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fill the input with the Item Text
     ul.querySelectorAll("li").forEach((item) =>
-      item.addEventListener("click", (e) => {
-        input.value = e.target.innerText;
+      item.addEventListener("click", (event) => {
+        input.value = event.target.innerText;
       })
     );
   };
   // Check if the input existe
   if (inputFields.typeService) {
-    inputFields.typeService.addEventListener("focus", (e) => {
-      handleInputFocus(e);
+    inputFields.typeService.addEventListener("focus", (event) => {
+      handleInputFocus(event);
       console.log(lists);
       showList(lists.typeServiceList, lists.serviceListMobUlContainer, listItems, inputFields.typeServiceMobile, lists.serviceListMobUl);
     });
   }
   // Check if the input existe
   if (inputFields.locationService) {
-    inputFields.locationService.addEventListener("focus", (e) => {
-      handleInputFocus(e);
+    inputFields.locationService.addEventListener("focus", (event) => {
+      handleInputFocus(event);
       showList(lists.locationServiceList, lists.serviceListMobUlTwoContainer, listItemsTwo, inputFields.locationServiceMobile, lists.serviceListMobUlTwo);
     });
   }
@@ -306,8 +306,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Close lists when clicking outside
-  window.addEventListener("click", (e) => {
-    if (e.target !== inputFields.typeService && e.target !== inputFields.locationService) {
+  window.addEventListener("click", (event) => {
+    if (event.target !== inputFields.typeService && event.target !== inputFields.locationService) {
       hideElement(lists.typeServiceList);
       hideElement(lists.locationServiceList);
     }
@@ -360,8 +360,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("no-scroll");
   });
 
-  [closeFilterIcon, filterOverlay].forEach((el) =>
-    el.addEventListener("click", () => {
+  [closeFilterIcon, filterOverlay].forEach((element) =>
+    element.addEventListener("click", () => {
       hideElement(filterSection);
       document.body.classList.remove("no-scroll");
     })
@@ -409,8 +409,8 @@ document.addEventListener("DOMContentLoaded", () => {
   textareaInput.addEventListener("focus", () => showElement(readyPromptList));
   textareaInput.addEventListener("input", () => hideElement(readyPromptList));
 
-  window.addEventListener("click", (e) => {
-    if (![readyPromptList, textareaInput].includes(e.target)) hideElement(readyPromptList);
+  window.addEventListener("click", (event) => {
+    if (![readyPromptList, textareaInput].includes(event.target)) hideElement(readyPromptList);
   });
 
   document.querySelectorAll(".textarea-container .ready-prompt li").forEach((item) => {

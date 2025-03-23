@@ -892,7 +892,7 @@ body.arabic .hero .container .hero-content .search-space {
   align-items: center;
 }
 .hero .container .hero-content form > div {
-  width: 78%;
+  /* width: 78%; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -943,7 +943,6 @@ body.arabic .hero .container .hero-content input.type-service {
   border-left: none;
   border-right: none;
 }
-
 .hero .container .hero-content .search-btn {
   width: 22%;
   padding: 0 1rem;
@@ -1101,10 +1100,110 @@ body.arabic .hero .container .hero-content .search-btn {
   .hero .container .hero-content .search-space {
     width: 100%;
   }
-  .hero .container .hero-content form > div div:first-child {
+  /* .hero .container .hero-content form > div div:first-child {
     margin-bottom: 2rem;
+  } */
+}
+
+/* Start new CSS */
+.hero .container .hero-content label {
+  display: none;
+}
+.hero .container .hero-content .search-input-container {
+  position: relative;
+}
+.hero .container .hero-content .search-input-container > img {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  font-size: 2rem;
+  width: 2rem;
+  filter: var(--stroke-color);
+  z-index: 2;
+}
+.hero .container .hero-content input#wilaya-search-field {
+  border-left: none;
+  border-right: none;
+}
+.hero .container .hero-content input#service-search-field {
+  border-radius: 1.4rem 0 0 1.4rem;
+}
+.hero .container .hero-content .float-container {
+  position: relative;
+}
+.hero .container .hero-content ul.suggestions-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 145px;
+  overflow-y: auto;
+  background: #fff;
+  -webkit-box-shadow: var(--shadow-box);
+  box-shadow: var(--shadow-box);
+  z-index: 9999;
+  cursor: pointer;
+  border-radius: 0 0 0.7rem 0.7rem;
+}
+.hero .container .hero-content ul.suggestions-container.show {
+  display: block;
+}
+
+.hero .container .hero-content ul.suggestions-container li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-bottom: 1px solid #eee;
+}
+.hero .container .hero-content ul.suggestions-container li img {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (max-width: 992px) {
+  .hero .container .hero-content form > div {
+    flex-wrap: wrap;
+  }
+  .hero .container .hero-content .search-input-container {
+    width: 48%;
+  }
+  .hero .container .hero-content input#wilaya-search-field,
+  .hero .container .hero-content input#service-search-field {
+    border: 1px solid #6c6c6c;
+    border-radius: 1.4rem;
   }
 }
+@media (max-width: 768px) {
+  .hero .container .hero-content form > div {
+    flex-wrap: wrap;
+  }
+  .hero .container .hero-content .search-input-container {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .hero .container .hero-content ul.suggestions-container {
+    top: auto;
+    bottom: 100%;
+    max-height: 220px;
+    border-radius: 1.4rem;
+  }
+  .hero .container .hero-content ul.suggestions-container li a {
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .hero .container .hero-content ul.suggestions-container li img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+/* end new CSS */
 /*--------------------------------------------------------------
 # End Hero Section
 --------------------------------------------------------------*/
@@ -4654,7 +4753,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   border-radius: 0.5rem;
   font-weight: 300;
 }
-.vendor-service-details.services-page .grid .row-item button.edite {
+.vendor-service-details.services-page .grid .row-item button.edit {
   background-color: #4caf50;
 }
 .vendor-service-details.services-page .grid .row-item button.discount {
@@ -4834,7 +4933,7 @@ body.arabic .error-section .error-container .search-space .input-container > div
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.popup-service.edite.show,
+.popup-service.edit.show,
 .popup-service.discount.show {
   display: flex;
 }
@@ -5389,32 +5488,32 @@ body.arabic .sweet-services .headline {
 # End Cake Traditional page
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Start Cake patisserie page
+# Start Cake Pastry page
 --------------------------------------------------------------*/
-.intro-section.cake-patisserie-page .img-container {
-  background: url("/assets/images/3ersi-pro/cake-patisserie/main-image.jpg") center / cover no-repeat;
+.intro-section.cake-pastry-page .img-container {
+  background: url("/assets/images/3ersi-pro/cake-pastry/main-image.jpg") center / cover no-repeat;
   height: 100%;
   border-radius: 400px 0 0 0;
 }
-.patisserie-occasion-section {
+.pastry-occasion-section {
   display: flex;
   align-items: center;
   justify-content: stretch;
   gap: 10rem;
   height: 60vh;
 }
-.patisserie-occasion-section .occasion-text {
+.pastry-occasion-section .occasion-text {
   flex: 0 0 50%;
 }
-.patisserie-occasion-section .occasion-text p {
+.pastry-occasion-section .occasion-text p {
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.7;
   color: #333;
   margin-block: 2rem 4rem;
 }
-.patisserie-occasion-section .occasion-text a,
-.patisserie-occasion-section .btn-mob-v {
+.pastry-occasion-section .occasion-text a,
+.pastry-occasion-section .btn-mob-v {
   background-color: var(--primary-color);
   color: var(--third-color);
   padding: 1rem 2rem;
@@ -5425,22 +5524,22 @@ body.arabic .sweet-services .headline {
   border: 1px solid var(--primary-color);
   transition: var(--hover-transition);
 }
-.patisserie-occasion-section .btn-mob-v {
+.pastry-occasion-section .btn-mob-v {
   display: none;
   font-weight: 500;
   padding: 1.2rem 1rem;
 }
-.patisserie-occasion-section .occasion-text a:hover {
+.pastry-occasion-section .occasion-text a:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
-.patisserie-occasion-section .occasion-img-container {
+.pastry-occasion-section .occasion-img-container {
   flex: 0 0 30%;
   border-radius: 400px 400px 0 0;
   width: 30%;
   direction: ltr;
 }
-.patisserie-occasion-section .occasion-img-container .embla {
+.pastry-occasion-section .occasion-img-container .embla {
   width: 100%;
   height: 100%;
   margin: auto;
@@ -5449,41 +5548,41 @@ body.arabic .sweet-services .headline {
   --slide-size: 100%;
   position: relative;
 }
-.patisserie-occasion-section .occasion-img-container .embla__viewport {
+.pastry-occasion-section .occasion-img-container .embla__viewport {
   overflow: hidden;
 }
-.patisserie-occasion-section .occasion-img-container .embla__container {
+.pastry-occasion-section .occasion-img-container .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
 }
-.patisserie-occasion-section .occasion-img-container .embla__slide {
+.pastry-occasion-section .occasion-img-container .embla__slide {
   transform: translate3d(0, 0, 0);
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
   height: var(--slide-height);
 }
-.patisserie-occasion-section .occasion-img-container .embla__slide img {
+.pastry-occasion-section .occasion-img-container .embla__slide img {
   width: 100%;
   height: 100%;
   border-radius: 250px 250px 0 0;
 }
-.patisserie-occasion-section .occasion-img-container .embla__controls {
+.pastry-occasion-section .occasion-img-container .embla__controls {
   position: absolute;
   top: 0;
   z-index: 1;
   width: 100%;
   height: 100%;
 }
-.patisserie-occasion-section .occasion-img-container .embla__buttons {
+.pastry-occasion-section .occasion-img-container .embla__buttons {
   display: flex;
   align-items: end;
   justify-content: space-between;
   width: 100%;
   height: 65%;
 }
-.patisserie-occasion-section .occasion-img-container .embla__button {
+.pastry-occasion-section .occasion-img-container .embla__button {
   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
   -webkit-appearance: none;
   appearance: none;
@@ -5505,12 +5604,12 @@ body.arabic .sweet-services .headline {
   align-items: center;
   justify-content: center;
 }
-.patisserie-occasion-section .occasion-img-container .embla__button img {
+.pastry-occasion-section .occasion-img-container .embla__button img {
   filter: var(--stroke-color);
   width: 4rem;
   height: 4rem;
 }
-.patisserie-occasion-section .embla__dots {
+.pastry-occasion-section .embla__dots {
   position: absolute;
   bottom: 0;
   display: flex;
@@ -5520,7 +5619,7 @@ body.arabic .sweet-services .headline {
   gap: 1rem;
   padding: 1rem;
 }
-.patisserie-occasion-section .embla__dot {
+.pastry-occasion-section .embla__dot {
   background-color: transparent;
   display: inline-flex;
   cursor: pointer;
@@ -5532,45 +5631,45 @@ body.arabic .sweet-services .headline {
   border-radius: 50%;
   border: 2px solid var(--primary-color);
 }
-.patisserie-occasion-section .embla__dot.is-selected {
+.pastry-occasion-section .embla__dot.is-selected {
   background-color: var(--primary-color);
 }
 @media (max-width: 992px) {
-  .patisserie-occasion-section .occasion-img-container {
+  .pastry-occasion-section .occasion-img-container {
     flex-basis: 40%;
   }
-  .patisserie-occasion-section .occasion-img-container .embla {
+  .pastry-occasion-section .occasion-img-container .embla {
     --slide-height: 50vh;
   }
 }
 @media (max-width: 768px) {
-  .patisserie-occasion-section {
+  .pastry-occasion-section {
     flex-direction: column;
     height: auto;
     gap: 2rem;
   }
-  .patisserie-occasion-section.engage {
+  .pastry-occasion-section.engage {
     flex-direction: column-reverse;
   }
-  .patisserie-occasion-section .occasion-img-container {
+  .pastry-occasion-section .occasion-img-container {
     width: 100%;
   }
-  .patisserie-occasion-section .occasion-img-container .embla {
+  .pastry-occasion-section .occasion-img-container .embla {
     --slide-height: 45vh;
   }
-  .patisserie-occasion-section .occasion-text {
+  .pastry-occasion-section .occasion-text {
     text-align: center;
   }
-  .patisserie-occasion-section .occasion-img-container .embla__controls {
+  .pastry-occasion-section .occasion-img-container .embla__controls {
     height: 20%;
     top: auto;
     bottom: 0;
   }
-  .patisserie-occasion-section .occasion-img-container .embla__buttons,
-  .patisserie-occasion-section .occasion-text a {
+  .pastry-occasion-section .occasion-img-container .embla__buttons,
+  .pastry-occasion-section .occasion-text a {
     display: none;
   }
-  .patisserie-occasion-section .btn-mob-v {
+  .pastry-occasion-section .btn-mob-v {
     display: block;
   }
 }
@@ -5806,7 +5905,7 @@ body.arabic .delivery-section .delivery-content a img {
 }
 /* End Delivery Section */
 /*--------------------------------------------------------------
-# End Cake patisserie page
+# End Cake pastry page
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Start Caterer page
@@ -6142,7 +6241,9 @@ body.arabic .caterer-services .cards-container .service-card .caterer-img-contai
 .caterer-delivery .delivery-container a img {
   filter: var(--filter-white);
 }
-
+body.arabic .caterer-delivery .delivery-container a img {
+  transform: scaleX(-1);
+}
 @media (max-width: 768px) {
   .caterer-delivery .delivery-container {
     width: 100%;
@@ -6167,6 +6268,9 @@ body.arabic .caterer-services .cards-container .service-card .caterer-img-contai
   display: flex;
   align-items: center;
   gap: 0.8rem;
+}
+body.arabic .intro-section.flower-page .intro-text a {
+  justify-content: flex-end;
 }
 .intro-section.flower-page .intro-text a img {
   filter: var(--filter-white);
@@ -6212,6 +6316,10 @@ body.arabic .our-bouquets-section .headline.flower {
   height: 100%;
   z-index: -1;
 }
+body.arabic .our-bouquets-section .type-bouquets .bouquet-card .img-container {
+  right: auto;
+  left: 0;
+}
 .our-bouquets-section .type-bouquets .bouquet-card .img-container img {
   width: 100%;
   height: 100%;
@@ -6231,6 +6339,9 @@ body.arabic .our-bouquets-section .headline.flower {
   background-color: var(--background-color);
   border-radius: 0 20rem 20rem 0;
   padding: 3rem 1rem;
+}
+body.arabic .our-bouquets-section .type-bouquets .bouquet-card .text-content {
+  border-radius: 20rem 0 0 20rem;
 }
 .our-bouquets-section .type-bouquets .bouquet-card .text-content h4 {
   font-size: 1.8rem;
@@ -6362,6 +6473,9 @@ body.arabic .flower-gift-section {
   }
   .flower-gift-section .headline.mob-v {
     display: block;
+    width: var(--width-section);
+    text-align: center;
+    margin-inline: auto;
   }
   .flower-gift-section .flower-gift-background {
     top: 70%;
@@ -6817,3 +6931,230 @@ body.arabic .event-testimonial-section .testimonial-container .embla__slide .tes
   border: none;
 }
 /* End Youtube Video Section */
+/*--------------------------------------------------------------
+# Start JOin Us Page
+--------------------------------------------------------------*/
+/* Start Intro Section */
+.join-us-intro-section {
+  background: url("/assets/images/join-us-background.jpg") center / cover no-repeat;
+  height: 81vh;
+  position: relative;
+}
+.join-us-intro-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.join-us-intro-section .intro-container {
+  width: var(--width-section);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+  padding-block: 5rem;
+}
+.join-us-intro-section .intro-container .text-content {
+  flex: 1 1 60%;
+}
+.join-us-intro-section .intro-container .statistics-content {
+  flex: 1 1 40%;
+}
+.join-us-intro-section .intro-container .text-content h1 {
+  font-size: 3.2rem;
+  line-height: 1.5;
+  color: var(--third-color);
+}
+.join-us-intro-section .intro-container .text-content .intro-list {
+  margin-block: 2rem;
+}
+.join-us-intro-section .intro-container .text-content .intro-list li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--third-color);
+  margin-bottom: 2rem;
+}
+.join-us-intro-section .intro-container .text-content .intro-list li > span {
+  min-width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.join-us-intro-section .intro-container .text-content .intro-list li > span img {
+  width: 2rem;
+  height: 2rem;
+  filter: var(--filter-white);
+}
+.join-us-intro-section .intro-container .text-content .intro-list li p {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.join-us-intro-section .intro-container .statistics-content .statistics-card {
+  width: 45%;
+  margin-inline: auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-box);
+  text-align: center;
+  color: var(--third-color);
+  margin-bottom: 2rem;
+}
+.join-us-intro-section .intro-container .statistics-content .statistics-card span {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1.4rem;
+}
+.join-us-intro-section .intro-container .statistics-content .statistics-card h4 {
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+.join-us-intro-section .intro-container .statistics-content a {
+  width: 45%;
+  margin-inline: auto;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  padding: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-box);
+}
+.join-us-intro-section .intro-container .statistics-content a img {
+  filter: var(--filter-white);
+  width: 2rem;
+  height: 2rem;
+}
+@media (max-width: 768px) {
+  .join-us-intro-section .intro-container {
+    flex-direction: column;
+  }
+  .join-us-intro-section .intro-container .text-content h1 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .join-us-intro-section .intro-container .statistics-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .join-us-intro-section .intro-container .statistics-content a {
+    width: 60%;
+  }
+}
+/* End Intro Section */
+/* Start Join Us Services Section */
+.join-us-services-section .services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-block: 5rem;
+}
+.join-us-services-section .services-container .service-card {
+  padding: 2rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.join-us-services-section .services-container .service-card img {
+  filter: var(--stroke-color);
+  width: 5rem;
+  height: 5rem;
+}
+.join-us-services-section .services-container .service-card h5 {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+@media (max-width: 992px) {
+  .join-us-services-section .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .join-us-services-section .services-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* End Join Us Services Section */
+/* Start Why Join Us Section */
+.why-join-us-section .why-join-us-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-block: 5rem;
+}
+.why-join-us-section .why-join-us-container .img-container {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.why-join-us-section .why-join-us-container .img-container img {
+  width: 100%;
+  height: 100%;
+}
+.why-join-us-section .why-join-us-container .join-us-benfit-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.why-join-us-section .why-join-us-container .join-us-benfit-list li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-box);
+  height: 20%;
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+.why-join-us-section .why-join-us-container .join-us-benfit-list li span {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: rgba(236, 97, 92, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.why-join-us-section .why-join-us-container .join-us-benfit-list li span img {
+  /* filter: var(--filter-white); */
+  filter: invert(45%) sepia(88%) saturate(393%) hue-rotate(96deg);
+
+  width: 2rem;
+  height: 2rem;
+}
+.why-join-us-section .why-join-us-container .join-us-benfit-list li > div {
+  flex: 1;
+}
+.why-join-us-section .why-join-us-container .join-us-benfit-list li > div h6 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.why-join-us-section .why-join-us-container .join-us-benfit-list li > div p {
+  font-size: 1.2rem;
+  color: #6c6c66;
+  font-weight: 300;
+}
+/* End Why Join Us Section */
+/*--------------------------------------------------------------
+# End JOin Us Page
+--------------------------------------------------------------*/
