@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.remove("no-scroll");
     });
   });
+  
   // Close popup when clicking outside the container
   window.addEventListener("click", (event) => {
     if (event.target.classList.contains("popup-service")) {
