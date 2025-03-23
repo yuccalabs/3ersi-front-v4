@@ -20,23 +20,6 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
-    <!-- Start Mob-search-list -->
-    <div class="list-appear">
-      <div class="list-overlay"></div>
-      <div class="list-content">
-        <div class="title-service">
-          <h4></h4>
-          <img src="/assets/images/icons/xMark.svg" alt="remove-icon" />
-        </div>
-        <div class="input-container">
-          <img src="/assets/images/icons/search.svg" alt="search-icon" />
-          <input type="text" class="type-service-list-mob" placeholder="categorie de la prestataires" />
-        </div>
-        <ul class="type-service-list-mob-v"></ul>
-        <ul class="location-service-list-mob-v"></ul>
-      </div>
-    </div>
-    <!-- End Mob-search-list -->
     <!-- Start Header Section -->
     <header class="header">
       <div class="vendors-gate">
@@ -342,25 +325,6 @@
             <div class="hero-main-text">
               <div>
                 <h1>Explorez toute les Musiciens, DJ, chanteurs et Zerna dans la algerie</h1>
-                <div class="search-space">
-                  <form>
-                    <div class="input-container">
-                      <div>
-                        <img src="/assets/images/icons/search.svg" alt="" />
-                        <input type="text" value="Musique" placeholder="Que charchez-vous ?" class="type-service" />
-                        <ul class="type-service-list"></ul>
-                      </div>
-                      <div>
-                        <div>
-                          <img src="/assets/images/icons/mdi--location.svg" alt="" />
-                          <input type="text" placeholder="Ou ?" class="location-service" />
-                        </div>
-                        <ul class="location-service-list"></ul>
-                      </div>
-                    </div>
-                    <button type="submit" class="search-btn">Recharche</button>
-                  </form>
-                </div>
               </div>
             </div>
           </div>
@@ -379,6 +343,34 @@
             </div>
             <div class="filter-content">
               <ul>
+                <!-- Start filters inputs -->
+                <div class="search-space">
+                  <!-- <div class="suggestions-overlay hidden fixed inset-0 -z-10" style="background-color: transparent"></div> -->
+                  <div class="input-container service-type">
+                    <label for="name">Rechercher ici</label>
+                    <input name="name" type="text" class="service-type-filter" />
+                    <div class="hidden">
+                      <li class="default-suggestion">
+                        <a id="RECEPTION_ROOM">
+                          <img class="autocomplete-icon" src="/assets/images/navmenu-icons/services/music-serivce.svg" />
+                        </a>
+                      </li>
+                    </div>
+                    <ul class="suggestions-services">
+                      <li>
+                        <a href="">
+                          <img class="autocomplete-icon" src="/assets/images/navmenu-icons/services/music-serivce.svg" />
+                          salle des fetes
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="input-container">
+                    <label for="wilaya">Commune</label>
+                    {{ form_widget(form.commune) }}
+                  </div>
+                </div>
+                <!-- End filters inputs -->
                 <li class="filter-category">
                   <div>
                     <img src="/assets/images/icons/small-chevron.svg" alt="" />

@@ -1,14 +1,5 @@
 "use strict";
 
-// Utility Functions
-function showElement(ele) {
-  ele.classList.add("show");
-}
-
-function hideElement(ele) {
-  ele.classList.remove("show");
-}
-
 // Control the popup (edit, discount)
 document.addEventListener("DOMContentLoaded", () => {
   const servicePopupSection = document.querySelectorAll(".popup-service");
@@ -17,18 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const discountBtn = document.querySelectorAll(".services-page .discount img");
   const closeBtn = document.querySelectorAll(".popup-service .close-btn");
 
+  // console.log(closeBtn);
+
   function getPopup(element) {
     const popupID = element.id
-        .split('-')
-        .filter((_, index, arr) => index !== arr.length - 1)
-        .join('-');
+      .split("-")
+      .filter((_, index, arr) => index !== arr.length - 1)
+      .join("-");
     return document.getElementById(popupID);
   }
 
-  function openPopup(event, index) {
-      let popup = getPopup(event.target);
-      showElement(popup);
-      document.body.classList.add("no-scroll");
+  function openPopup(event) {
+    let popup = getPopup(event.target);
+    showElement(popup);
+    document.body.classList.add("no-scroll");
   }
 
   // open popup
@@ -43,13 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.remove("no-scroll");
     });
   });
-
-  // Close popup on pressing the Escape key
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      servicePopupSection.forEach((popup) => {
-          hideElement(popup)
-      });
+  
+  // Close popup when clicking outside the container
+  window.addEventListener("click", (event) => {
+    if (event.target.classList.contains("popup-service")) {
+      hideElement(event.target);
       document.body.classList.remove("no-scroll");
     }
   });

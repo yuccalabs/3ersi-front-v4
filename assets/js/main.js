@@ -1,13 +1,17 @@
 "use strict";
 
 // Utility Functions
-function showElement(ele) {
-  ele.classList.add("show");
-}
+const showElement = (element) => {
+  if (element) {
+    element.classList.add("show");
+  }
+};
 
-function hideElement(ele) {
-  ele.classList.remove("show");
-}
+const hideElement = (element) => {
+  if (element) {
+    element.classList.remove("show");
+  }
+};
 
 function toggleActiveState(elements, targetElement) {
   elements.forEach((item) => item !== targetElement && item.classList.remove("active"));
@@ -61,20 +65,20 @@ function toggleSidebar(show) {
 
 // Hamburger Toggle
 hamburger.addEventListener("click", () => toggleSidebar(true));
-[removeAside, asideOverlay].forEach((el) => el.addEventListener("click", () => toggleSidebar(false)));
+[removeAside, asideOverlay].forEach((element) => element.addEventListener("click", () => toggleSidebar(false)));
 
 asideNavItems.forEach((aNavItem) => {
   aNavItem.addEventListener("click", () => toggleActiveState(asideNavItems, aNavItem));
 });
 
 // Close nav items on outside click
-window.addEventListener("click", (e) => {
+window.addEventListener("click", (event) => {
   navItems.forEach((item) => {
-    if (e.target !== item && e.target !== item.children[0]) {
+    if (event.target !== item && event.target !== item.children[0]) {
       item.classList.remove("active");
     }
   });
-  if (!e.target.closest(".logout-gate")) {
+  if (!event.target.closest(".logout-gate")) {
     logoutGate.classList.remove("active");
   }
 });
@@ -164,20 +168,26 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const inputFields = {
+    // desktop inputs
     typeService: document.querySelector(".type-service"),
     locationService: document.querySelector(".location-service"),
-    typeServiceFilter: document.querySelector(".service-type-filter"),
-    locationServiceFilter: document.querySelector(".service-location-filter"),
+    // filter inputs (listing pages)
+    typeServiceFilter: document.querySelector(".search-space .service-type-filter"),
+    locationServiceFilter: document.querySelector(".search-space .service-location-filter"),
+    // mobile inputs
     typeServiceMobile: document.querySelector("input.type-service-input-mobile"),
     locationServiceMobile: document.querySelector("input.location-service-input-mobile"),
   };
 
   const lists = {
+    // desktop list
     typeServiceList: document.querySelector(".type-service-list"),
     locationServiceList: document.querySelector(".location-service-list"),
+    // filter lists
     typeServiceFilterList: document.querySelector(".search-space .suggestions-services"),
     locationServiceFilterList: document.querySelector(".search-space .suggestions-locations"),
-    serviceListMobContainer: document.querySelector(".list-appear"),
+    // mobile lists and its containers
+    serviceListMobContainer: document.querySelector("#list-appear"),
     serviceListMobUlContainer: document.querySelector(".input-container.service-type"),
     serviceListMobUlTwoContainer: document.querySelector(".input-container.service-location"),
     serviceListMobUl: document.querySelector(".type-service-list-mob-v"),
@@ -187,23 +197,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const serviceListMobOverlay = document.querySelector(".list-appear .list-overlay");
   const removeServiceList = document.querySelector(".list-appear .title-service img");
 
+  // hide all the lists
   const hideAllLists = () => {
     Object.values(lists).forEach((list) => list && hideElement(list));
     document.body.classList.remove("no-scroll");
   };
 
   // Prevent keyboard on mobile devices
-  const handleInputFocus = (e) => {
+  const handleInputFocus = (event) => {
     if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      e.preventDefault();
+      event.preventDefault();
     }
   };
 
   // Add readonly attribute based on screen size
   const addReadonlyAttribute = () => {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
-    inputFields.typeService.readOnly = isMobile;
-    inputFields.locationService.readOnly = isMobile;
+    if (inputFields.typeService) inputFields.typeService.readOnly = isMobile;
+    if (inputFields.locationService) inputFields.locationService.readOnly = isMobile;
   };
 
   addReadonlyAttribute();
@@ -212,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to show a specific list
   const showList = (list, mobileListContainer, listItems, mobileInput, ul) => {
     hideAllLists();
-    if (window.matchMedia("(max-width: 768px)").matches) {
+    if (window.matchMedia("(max-width: 768px)").matches && mobileListContainer && ul) {
       showElement(lists.serviceListMobContainer);
       showElement(mobileListContainer);
       renderList(mobileInput, ul, listItems);
@@ -232,8 +243,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .join("");
       // Fill the input with the Item Text
       ul.querySelectorAll("li").forEach((item) =>
-        item.addEventListener("click", (e) => {
-          input.value = e.target.innerText;
+        item.addEventListener("click", (event) => {
+          input.value = event.target.innerText;
         })
       );
     });
@@ -241,68 +252,64 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fill the input with the Item Text
     ul.querySelectorAll("li").forEach((item) =>
-      item.addEventListener("click", (e) => {
-        input.value = e.target.innerText;
+      item.addEventListener("click", (event) => {
+        input.value = event.target.innerText;
       })
     );
   };
-
+  // Check if the input existe
   if (inputFields.typeService) {
-    inputFields.typeService.addEventListener("focus", (e) => {
-      // handleInputFocus(e);
+    inputFields.typeService.addEventListener("focus", (event) => {
+      handleInputFocus(event);
       console.log(lists);
       showList(lists.typeServiceList, lists.serviceListMobUlContainer, listItems, inputFields.typeServiceMobile, lists.serviceListMobUl);
     });
   }
-
+  // Check if the input existe
   if (inputFields.locationService) {
-    inputFields.locationService.addEventListener("focus", (e) => {
-      // handleInputFocus(e);
+    inputFields.locationService.addEventListener("focus", (event) => {
+      handleInputFocus(event);
       showList(lists.locationServiceList, lists.serviceListMobUlTwoContainer, listItemsTwo, inputFields.locationServiceMobile, lists.serviceListMobUlTwo);
     });
   }
-  // if (inputTypeServiceFilter && inputLocationServiceFilter) {
-  //   inputTypeServiceFilter.addEventListener("focus", () => {
-  //     showList(typeServiceFilterList, serviceListMobUlContainer, listItems);
-  //   });
-  //   inputLocationServiceFilter.addEventListener("focus", () => {
-  //     showList(locationServiceFilterList, serviceListMobUlTwoContainer, listItemsTwo);
-  //   });
-  // }
 
-  // Render lists for desktop and mobile
+  // Check if the input existe
+  if (inputFields.typeServiceFilter && inputFields.locationServiceFilter) {
+    inputFields.typeServiceFilter.addEventListener("focus", () => {
+      showList(lists.typeServiceFilterList, undefined, listItems, inputFields.typeServiceFilter, undefined);
+    });
+    inputFields.locationServiceFilter.addEventListener("focus", () => {
+      showList(lists.locationServiceFilterList, lists.serviceListMobUlTwoContainer, listItemsTwo, inputFields.locationServiceMobile, lists.serviceListMobUlTwo);
+    });
+  }
+
+  // Render lists for desktop
   if (inputFields.typeService && inputFields.locationService) {
     renderList(inputFields.typeService, lists.typeServiceList, listItems);
     renderList(inputFields.locationService, lists.locationServiceList, listItemsTwo);
   }
-  // if (inputTypeServiceFilter && inputLocationServiceFilter) {
-  //   renderList(inputTypeServiceFilter, typeServiceFilterList, listItems);
-  //   renderList(inputLocationServiceFilter, locationServiceFilterList, listItemsTwo);
-  // }
-  // Hide lists on overlay or remove button click
-  // [lists.serviceListMobOverlay, lists.removeServiceList].forEach((ele) => {
-  //   ele.addEventListener("click", () => {
-  //     hideAllLists();
-  //     // Enable the scroll
-  //     document.body.classList.remove("no-scroll");
-  //   });
-  // });
+  if (inputFields.typeServiceFilter && inputFields.locationServiceFilter) {
+    renderList(inputFields.typeServiceFilter, lists.typeServiceFilterList, listItems);
+    renderList(inputFields.locationServiceFilter, lists.typeServiceFilterList, listItemsTwo);
+  }
 
+  // remove the mobile list on overlay or icone click
   if (serviceListMobOverlay) {
     serviceListMobOverlay.addEventListener("click", hideAllLists);
   } else {
     console.warn("serviceListMobOverlay not found in DOM");
   }
-
   if (removeServiceList) {
     removeServiceList.addEventListener("click", hideAllLists);
   } else {
     console.warn("removeServiceList not found in DOM");
   }
+
   // Close lists when clicking outside
-  window.addEventListener("click", (e) => {
-    if (!e.target.closest(".type-service, .location-service, .list-appear")) {
-      hideAllLists();
+  window.addEventListener("click", (event) => {
+    if (event.target !== inputFields.typeService && event.target !== inputFields.locationService) {
+      hideElement(lists.typeServiceList);
+      hideElement(lists.locationServiceList);
     }
   });
 });
@@ -353,8 +360,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("no-scroll");
   });
 
-  [closeFilterIcon, filterOverlay].forEach((el) =>
-    el.addEventListener("click", () => {
+  [closeFilterIcon, filterOverlay].forEach((element) =>
+    element.addEventListener("click", () => {
       hideElement(filterSection);
       document.body.classList.remove("no-scroll");
     })
@@ -402,8 +409,8 @@ document.addEventListener("DOMContentLoaded", () => {
   textareaInput.addEventListener("focus", () => showElement(readyPromptList));
   textareaInput.addEventListener("input", () => hideElement(readyPromptList));
 
-  window.addEventListener("click", (e) => {
-    if (![readyPromptList, textareaInput].includes(e.target)) hideElement(readyPromptList);
+  window.addEventListener("click", (event) => {
+    if (![readyPromptList, textareaInput].includes(event.target)) hideElement(readyPromptList);
   });
 
   document.querySelectorAll(".textarea-container .ready-prompt li").forEach((item) => {

@@ -20,6 +20,27 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
+    <!-- Start Mob-search-list -->
+    <div class="list-appear" id="list-appear">
+      <div class="list-overlay"></div>
+      <div class="list-content">
+        <div class="title-service">
+          <h4>Recherche ici</h4>
+          <img src="/assets/images/icons/xMark.svg" alt="remove-icon" />
+        </div>
+        <div class="input-container service-type">
+          <img src="/assets/images/icons/search.svg" alt="search-icon" />
+          <input type="text" class="type-service-input-mobile" placeholder="categorie de la prestataires" />
+          <ul class="type-service-list-mob-v"></ul>
+        </div>
+        <div class="input-container service-location">
+          <img src="/assets/images/icons/search.svg" alt="search-icon" />
+          <input type="text" class="location-service-input-mobile" placeholder="categorie de la prestataires" />
+          <ul class="location-service-list-mob-v"></ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Mob-search-list -->
     <!-- Start Header Section -->
     <header class="header">
       <div class="vendors-gate">
@@ -306,254 +327,113 @@
     </header>
     <!-- End Header Section -->
     <main id="main" class="main">
-      <!-- Start Intro Section -->
-      <section class="intro-section cake-patisserie-page">
-        <div class="intro-text">
-          <h1>🎂 Envie d'une pièce montée pour un événement spécial ? ✨</h1>
-          <p>Anniversaire, fiançailles ou mariage, nous réalisons des pièces montées élégantes et gourmandes en Algérie, adaptées à vos envies. Contactez-nous pour un devis personnalisé ! 🍰💍</p>
-          <button id="open_catalog">ouvrir le catalogue</button>
-        </div>
-        <div class="img-container"></div>
-      </section>
-      <!-- End Intro Section -->
-      <!-- Start Marriage Occasion Section  -->
-      <section class="section marriage patisserie-occasion-section">
-        <div class="occasion-text">
-          <h2>🎂 Commander votre pièce montée de mariage</h2>
-          <p>Célébrez votre grand jour avec une pièce montée mariage sur mesure, conçue par nos pâtissiers experts. Un gâteau aussi raffiné que délicieux pour un mariage inoubliable ! ✨💍</p>
-          <a href="#form-section">Obtenez votre pièce montée sur mesure !</a>
-        </div>
-        <div class="occasion-img-container">
-          <section class="embla">
-            <div class="embla__viewport">
-              <div class="embla__container">
-                <div class="embla__slide">
-                  <img src="/assets/images/3ersi-pro/cake-patisserie/example-image-1.jpg" alt="" />
-                </div>
-                <div class="embla__slide">
-                  <img src="/assets/images/3ersi-pro/cake-patisserie/example-image-1.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-
-            <div class="embla__controls">
-              <div class="embla__buttons">
-                <button class="embla__button embla__button--prev" type="button">
-                  <img src="/assets/images/icons/chevron-left.svg" alt="" />
-                </button>
-
-                <button class="embla__button embla__button--next" type="button">
-                  <img src="/assets/images/icons/chevron-right.svg" alt="" />
-                </button>
-              </div>
-              <div class="embla__dots"></div>
-            </div>
-          </section>
-        </div>
-        <a href="#form-section" class="btn-mob-v">Obtenez votre pièce montée sur mesure !</a>
-      </section>
-      <!-- End Marriage Occasion Section  -->
-      <!-- Start engage Occasion Section  -->
-      <section class="section patisserie-occasion-section engage">
-        <a href="#form-section" class="btn-mob-v">Obtenez votre pièce montée personnalisée !</a>
-        <div class="occasion-img-container">
-          <section class="embla">
-            <div class="embla__viewport">
-              <div class="embla__container">
-                <div class="embla__slide">
-                  <img src="/assets/images/3ersi-pro/cake-patisserie/example-image-2.jpg" alt="" />
-                </div>
-                <div class="embla__slide">
-                  <img src="/assets/images/3ersi-pro/cake-patisserie/example-image-2.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="embla__controls">
-              <div class="embla__buttons">
-                <button class="embla__button embla__button--prev" type="button">
-                  <img src="/assets/images/icons/chevron-left.svg" alt="" />
-                </button>
-
-                <button class="embla__button embla__button--next" type="button">
-                  <img src="/assets/images/icons/chevron-right.svg" alt="" />
-                </button>
-              </div>
-              <div class="embla__dots"></div>
-            </div>
-          </section>
-        </div>
-        <div class="occasion-text">
-          <h2>🎂 Commander votre pièce montée de fiançailles</h2>
-          <p>
-            Rendez votre fête de fiançailles encore plus spéciale avec une pièce montée unique et personnalisée. Que vous souhaitiez un design classique ou original, nous créons des gâteaux
-            d’exception qui émerveilleront vos invités. ✨💍
-          </p>
-          <a href="#form-section">Obtenez votre pièce montée personnalisée !</a>
-        </div>
-      </section>
-      <!-- End engage Occasion Section  -->
-      <!-- Start birthday Occasion Section  -->
-      <section class="section birthday patisserie-occasion-section">
-        <div class="occasion-text">
-          <h2>🎂 Commander votre pièce montée d'anniversaire</h2>
-          <p>
-            Un anniversaire sans gâteau, ce n’est pas un vrai anniversaire ! 🎉 Optez pour une pièce montée personnalisée, aussi gourmande qu’originale, pour une célébration inoubliable. Choisissez
-            votre design et laissez-nous créer votre gâteau sur mesure ! 🎂✨
-          </p>
-          <a href="#form-section">Créez votre pièce montée d’anniversaire sur mesure !</a>
-        </div>
-        <div class="occasion-img-container">
-          <section class="embla">
-            <div class="embla__viewport">
-              <div class="embla__container">
-                <div class="embla__slide">
-                  <img src="/assets/images/3ersi-pro/cake-patisserie/example-image-3.jpg" alt="" />
-                </div>
-                <div class="embla__slide">
-                  <img src="/assets/images/3ersi-pro/cake-patisserie/example-image-3.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-
-            <div class="embla__controls">
-              <div class="embla__buttons">
-                <button class="embla__button embla__button--prev" type="button">
-                  <img src="/assets/images/icons/chevron-left.svg" alt="" />
-                </button>
-
-                <button class="embla__button embla__button--next" type="button">
-                  <img src="/assets/images/icons/chevron-right.svg" alt="" />
-                </button>
-              </div>
-              <div class="embla__dots"></div>
-            </div>
-          </section>
-        </div>
-        <a href="#form-section" class="btn-mob-v">Créez votre pièce montée d’anniversaire sur mesure !</a>
-      </section>
-      <!-- End birthday Occasion Section  -->
-      <!-- Start Delivery Section -->
-      <section class="section delivery-section">
-        <div class="img-container">
-          <img src="/assets/images/3ersi-pro/cake-patisserie/delivery-patisserie.jpg" alt="Livraison de gâteaux" />
-          <div class="image-badge">
-            <img src="/assets/images/icons/delivery.svg" alt="" />
-            <span>Livraison Rapide</span>
+      <!-- Start Join Us Intro Section -->
+      <section class="join-us-intro-section">
+        <section class="intro-container">
+          <div class="text-content">
+            <h1>Vous êtes un prestataire de mariage ? Salles des fêtes, traiteurs, photographes… Rejoignez 3ersi.com !</h1>
+            <ul class="intro-list">
+              <li>
+                <span>
+                  <img src="/assets/images/icons/shop.svg" alt="" />
+                </span>
+                <p>Faites connaître vos services aux futurs mariés en Algérie</p>
+              </li>
+              <li>
+                <span>
+                  <img src="/assets/images/icons/people.svg" alt="" />
+                </span>
+                <p>Créez une page professionnelle et recevez des demandes qualifiées</p>
+              </li>
+              <li>
+                <span>
+                  <img src="/assets/images/icons/statistics.svg" alt="" />
+                </span>
+                <p>Boostez votre présence en ligne sur la plateforme n°1 du mariage</p>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="delivery-content">
-          <div class="headline">
-            <h2>📦 Commandez et faites-vous livrer en toute simplicité !</h2>
+          <div class="statistics-content">
+            <div class="statistics-card">
+              <span>10.000 +</span>
+              <h4>prestataire</h4>
+            </div>
+            <div class="statistics-card">
+              <span>10.000 +</span>
+              <h4>prestataire</h4>
+            </div>
+            <a href="#join-us-form" class="join-us-btn">
+              <img src="/assets/images/icons/briefcase.svg" alt="briefcase-icon" />
+              Rejoignez-nous
+            </a>
           </div>
-          <p>
-            Contactez-nous pour découvrir notre sélection de pièces montées et gâteaux sur mesure. Choisissez votre design, précisez votre quantité et laissez-nous assurer une préparation soignée et
-            une livraison rapide partout en Algérie.
-          </p>
-          <div class="delivery-features">
-            <div class="feature">
-              <img src="/assets/images/icons/cake.svg" alt="" />
-              <span>Gâteaux personnalisés</span>
-            </div>
-            <div class="feature">
-              <img src="/assets/images/icons/location.svg" alt="" />
-              <span>Partout en Algérie</span>
-            </div>
-            <div class="feature">
-              <img src="/assets/images/icons/clock.svg" alt="" />
-              <span>Livraison rapide</span>
-            </div>
-          </div>
-          <a href="#form-section">
-            Découvrez nos créations et planifiez votre livraison !
-            <img src="/assets/images/icons/arrow-right.svg" alt="" />
-          </a>
-        </div>
+        </section>
       </section>
-      <!-- End Delivery Section -->
-      <!-- Start Form Section -->
-      <section class="section sweet-form-section" id="form-section">
+      <!-- End Join Us Intro Section -->
+      <!-- Start Join Us Services Section -->
+      <section class="section join-us-services-section">
         <div class="headline">
-          <h2>Remplissez vos détails et recevez votre devis !</h2>
+          <h2>Nos services pour les prestataires</h2>
+          <h3>TexteQuels avantages pour vous ?</h3>
         </div>
-        <div class="form-container">
-          <form>
-            <h5>📋 1. Informations personnelles</h5>
-            <div class="input-container">
-              <div>
-                <label for="fullname">Nom et Prenom</label>
-                <input type="text" id="fullname" placeholder="entrez votre nom complet" name="fullname" required />
-              </div>
-              <div>
-                <label for="phone_number">Téléphone</label>
-                <input type="text" id="phone_number" placeholder="entrez votre numéro de téléphone" name="phone_number" required />
-              </div>
-            </div>
-            <h5>🛍️ 2. Type de produit</h5>
-            <div class="checkbox-container">
-              <div class="checkbox">
-                <input type="checkbox" id="checkbox_1" />
-                <label for="checkbox_1">🍪 Gâteaux traditionnels / Prestiges / Secs</label>
-              </div>
-              <div class="checkbox">
-                <input type="checkbox" id="checkbox_2" />
-                <label for="checkbox_2">🎂 Pièce montée / Cake design</label>
-              </div>
-              <div class="checkbox">
-                <input type="checkbox" id="checkbox_3" />
-                <label for="checkbox_3">🥟 Amuse-bouches & mini-salés</label>
-              </div>
-              <div class="checkbox">
-                <input type="checkbox" id="checkbox_4" />
-                <label for="checkbox_4">🧁 Pâtisseries modernes</label>
-              </div>
-              <div class="checkbox">
-                <input type="checkbox" id="checkbox_5" />
-                <label for="checkbox_5">🌴 Dattes fourrées</label>
-              </div>
-              <div class="checkbox">
-                <input type="checkbox" id="checkbox_6" />
-                <label for="checkbox_6">❓ Autre (à préciser)</label>
-              </div>
-            </div>
-            <h5>🎉 3. Occasion</h5>
-            <div class="input-container">
-              <div>
-                <select name="occasion" id="occasion">
-                  <option value="occasion-1">💒 Mariage</option>
-                  <option value="occasion-2">💍 Fiançailles / Khotba</option>
-                  <option value="occasion-3">🎂 Anniversaire</option>
-                  <option value="occasion-4">👶 Naissance / Baptême</option>
-                  <option value="occasion-5">☕ Pour le plaisir à la maison</option>
-                  <option value="occasion-6">🏢 Entreprise / Événement</option>
-                  <option value="occasion-7">❓ Autre (à préciser)</option>
-                </select>
-              </div>
-            </div>
-            <h5>🚚 4. Livraison</h5>
-            <div class="input-container">
-              <div>
-                <label for="delivery_location">📌 Adresse de livraison</label>
-                <input type="text" id="delivery_location" placeholder="entrez votre  adresse" name="delivery_location" required />
-              </div>
-              <div>
-                <label for="delivery_time">⏲️ Date et heure souhaitées</label>
-                <input type="datetime-local" id="delivery_time" name="delivery_time" required />
-              </div>
-            </div>
-            <h5>📝 5. Autres précisions (optionnel)</h5>
-            <div class="input-container">
-              <div>
-                <textarea name="message" id="message" placeholder="Allergies, demandes spéciales, préférences de goût, personnalisation..."></textarea>
-              </div>
-            </div>
-            <button type="submit">
-              <img src="/assets/images/icons/send.svg" alt="" />
-              Envoyez votre commande
-            </button>
-          </form>
+        <div class="services-container">
+          <div class="service-card">
+            <img src="/assets/images/icons/screen.svg" alt="screen-icon" />
+            <h5>Une page personnalisée avec vos offres, photos et contacts</h5>
+          </div>
+          <div class="service-card">
+            <img src="/assets/images/icons/statistics.svg" alt="statistics-icon" />
+            <h5>Une mise en avant auprès de milliers de couples intéressés découvriront vos services</h5>
+          </div>
+          <div class="service-card">
+            <img src="/assets/images/icons/support.svg" alt="support-icon" />
+            <h5>Un accompagnement dédié pour maximiser vos réservations</h5>
+          </div>
         </div>
       </section>
-      <!-- End Form Section -->
+      <!-- End Join Us Services Section -->
+      <!-- Start Why Join us Section -->
+      <section class="section why-join-us-section">
+        <div class="headline">
+          <h2>Pourquoi un abonnement sur 3ersi.com ?</h2>
+          <h3>Découvrez les avantages de notre plateforme</h3>
+        </div>
+        <div class="why-join-us-container">
+          <ul class="join-us-benfit-list">
+            <li>
+              <span>
+                <img src="/assets/images/icons/check-mark.svg" alt="" />
+              </span>
+              <div>
+                <h6>Visibilité garantie</h6>
+                <p>Sur une plateforme spécialisée dans le mariage, votre entreprise sera mise en avant auprès de votre clientèle cible.</p>
+              </div>
+            </li>
+            <li>
+              <span>
+                <img src="/assets/images/icons/check-mark.svg" alt="" />
+              </span>
+              <div>
+                <h6>Accès direct aux clients</h6>
+                <p>Connectez-vous directement avec des clients potentiels prêts à réserver vos services.</p>
+              </div>
+            </li>
+            <li>
+              <span>
+                <img src="/assets/images/icons/check-mark.svg" alt="" />
+              </span>
+              <div>
+                <h6>Gestion simplifiée</h6>
+                <p>Gérez facilement vos demandes et contacts depuis votre espace personnel.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="img-container">
+            <img src="/assets/images/why-joining-us.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- End Why Join us Section -->
     </main>
     <!-- Start Footer Section -->
     <footer>
@@ -607,7 +487,7 @@
               <img src="/assets/images/app-store.jpg" alt="Download the app on the Apple Store" />
             </a>
             <a href="">
-              <img src="/assets/images/play-store.jpg" alt="Download the app on the Apple Store" />
+              <img src="/assets/images/play-store.jpg" alt="Download the app on the play Store" />
             </a>
           </div>
         </div>
@@ -730,68 +610,7 @@
       </div>
     </div>
     <!-- End Popup Authentication -->
-    <!-- Start Popup Catalog -->
-    <div class="popup-catalog" id="popup-catalog">
-      <div class="catalog-container">
-        <div class="headline">
-          <h2>Choisissez votre catégorie de sucree</h2>
-        </div>
-        <div class="catalog-cards">
-          <div class="card">
-            <div class="img-container">
-              <img src="/assets/images/3ersi-pro/cake-patisserie/catalog-1.jpg" alt="wedding-cake" />
-              <span>
-                <button>Commonder</button>
-              </span>
-            </div>
-            <h5>🍪 Gâteaux traditionnels / Prestiges / Secs</h5>
-          </div>
-          <div class="card">
-            <div class="img-container">
-              <img src="/assets/images/3ersi-pro/cake-patisserie/example-image-3.jpg" alt="wedding-cake" />
-              <span>
-                <button>Commonder</button>
-              </span>
-            </div>
-            <h5>🎂 Pièce montée / Cake design</h5>
-          </div>
-          <div class="card">
-            <div class="img-container">
-              <img src="/assets/images/3ersi-pro/cake-patisserie/catalog-3.jpg" alt="wedding-cake" />
-              <span>
-                <button>Commonder</button>
-              </span>
-            </div>
-            <h5>🥟 Amuse-bouches & mini-salés</h5>
-          </div>
-          <div class="card">
-            <div class="img-container">
-              <img src="/assets/images/3ersi-pro/cake-patisserie/catalog-4.jpg" alt="wedding-cake" />
-              <span>
-                <button>Commonder</button>
-              </span>
-            </div>
-            <h5>🧁 Pâtisseries modernes</h5>
-          </div>
-          <div class="card">
-            <div class="img-container">
-              <img src="/assets/images/3ersi-pro/cake-patisserie/catalog-5.jpg" alt="wedding-cake" />
-              <span>
-                <button>Commonder</button>
-              </span>
-            </div>
-            <h5>🌴 Dattes fourrées</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Popup Catalog -->
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
-    <script src="/assets/js/popup.js" defer></script>
-    <!-- external packages -->
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
-    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
-    <script src="/assets/vendors/carousel.js"></script>
   </body>
 </html>
