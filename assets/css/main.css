@@ -1105,7 +1105,7 @@ body.arabic .hero .container .hero-content .search-btn {
   } */
 }
 
-/* Start new CSS */
+/* Start new CSS for the hero section */
 .hero .container .hero-content label {
   display: none;
 }
@@ -1203,7 +1203,7 @@ body.arabic .hero .container .hero-content .search-btn {
     height: 3.5rem;
   }
 }
-/* end new CSS */
+/* End new CSS for the hero section */
 /*--------------------------------------------------------------
 # End Hero Section
 --------------------------------------------------------------*/
@@ -4301,6 +4301,88 @@ body.arabic .popup-auth .popup-content form [type="radio"] {
   border-radius: 1rem;
 }
 
+/* Start new CSS for the error section */
+.error-section .error-container .search-space label {
+  display: none;
+}
+.error-section .error-container .search-space .search-input-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.error-section .error-container .search-space .search-input-container > img {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  font-size: 2rem;
+  width: 2rem;
+  filter: var(--stroke-color);
+  z-index: 2;
+}
+
+.error-section .error-container .search-space .float-container {
+  position: relative;
+}
+.error-section .error-container .search-space ul.suggestions-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 180px;
+  overflow-y: auto;
+  background: #fff;
+  -webkit-box-shadow: var(--shadow-box);
+  box-shadow: var(--shadow-box);
+  z-index: 9999;
+  cursor: pointer;
+  border-radius: 0 0 0.7rem 0.7rem;
+}
+.error-section .error-container .search-space ul.suggestions-container.show {
+  display: block;
+}
+
+.error-section .error-container .search-space ul.suggestions-container li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-bottom: 1px solid #eee;
+}
+.error-section .error-container .search-space ul.suggestions-container li img {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (max-width: 992px) {
+  .error-section .error-container {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .error-section .error-container {
+    width: 85%;
+  }
+  .error-section .error-container .search-space ul.suggestions-container {
+    top: auto;
+    bottom: 100%;
+    max-height: 220px;
+    border-radius: 1.4rem;
+  }
+  .error-section .error-container .search-space ul.suggestions-container li a {
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .error-section .error-container .search-space ul.suggestions-container li img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+/* End new CSS for the error section */
 .error-section .error-container .search-space input:focus {
   outline: none;
 }
@@ -4378,11 +4460,6 @@ body.arabic .error-section .error-container .search-space .input-container > div
   }
 }
 
-@media (max-width: 768px) {
-  .error-section .error-container {
-    width: 80%;
-  }
-}
 /*--------------------------------------------------------------
 # End Error Page
 --------------------------------------------------------------*/
@@ -5318,29 +5395,29 @@ body.arabic .sweet-services .headline {
 }
 /* End Order Occasions Section */
 /* Start Sweet Form Section */
-.sweet-form-section {
+.reusable-form-section {
   width: 50%;
 }
-.sweet-form-section .form-container {
+.reusable-form-section .form-container {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 1rem;
   padding: 1.5rem;
 }
-.sweet-form-section .form-container h5 {
+.reusable-form-section .form-container h5 {
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
-.sweet-form-section .form-container .input-container {
+.reusable-form-section .form-container .input-container {
   display: flex;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
-.sweet-form-section .form-container .input-container > div {
+.reusable-form-section .form-container .input-container > div {
   flex: 1;
 }
-.sweet-form-section .form-container form label {
+.reusable-form-section .form-container form label {
   font-size: 1.4rem;
   line-height: 1.8;
   color: #333;
@@ -5349,9 +5426,9 @@ body.arabic .sweet-services .headline {
   margin-bottom: 0.6rem;
   cursor: pointer;
 }
-.sweet-form-section .form-container form input,
-.sweet-form-section .form-container form textarea,
-.sweet-form-section .form-container form select {
+.reusable-form-section .form-container form input,
+.reusable-form-section .form-container form textarea,
+.reusable-form-section .form-container form select {
   width: 100%;
   height: 42px;
   padding: 1rem;
@@ -5362,17 +5439,17 @@ body.arabic .sweet-services .headline {
   font-size: 1.2rem;
   font-weight: 300;
 }
-.sweet-form-section .form-container form textarea {
+.reusable-form-section .form-container form textarea {
   resize: none;
   height: 70px;
 }
-.sweet-form-section .form-container .checkbox-container {
+.reusable-form-section .form-container .checkbox-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
-.sweet-form-section .form-container .checkbox {
+.reusable-form-section .form-container .checkbox {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -5380,7 +5457,7 @@ body.arabic .sweet-services .headline {
   border-radius: 0.6rem;
   padding: 1rem;
 }
-.sweet-form-section .form-container form [type="checkbox"] {
+.reusable-form-section .form-container form [type="checkbox"] {
   width: 12px;
   height: 12px;
   border: 2px solid #ccc;
@@ -5393,11 +5470,11 @@ body.arabic .sweet-services .headline {
   position: relative;
   padding: 0.6rem;
 }
-.sweet-form-section .form-container form [type="checkbox"]:checked {
+.reusable-form-section .form-container form [type="checkbox"]:checked {
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
 }
-.sweet-form-section .form-container form [type="checkbox"]:checked::after {
+.reusable-form-section .form-container form [type="checkbox"]:checked::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -5408,7 +5485,7 @@ body.arabic .sweet-services .headline {
   transform: translate(-50%, -50%);
   border-radius: 2px;
 }
-.sweet-form-section .form-container form button {
+.reusable-form-section .form-container form button {
   width: 40%;
   margin: 2rem auto;
   display: flex;
@@ -5424,22 +5501,22 @@ body.arabic .sweet-services .headline {
   font-weight: 500;
   transition: var(--hover-transition);
 }
-.sweet-form-section .form-container form button img {
+.reusable-form-section .form-container form button img {
   filter: var(--filter-white);
 }
-.sweet-form-section .form-container form button:hover {
+.reusable-form-section .form-container form button:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
-.sweet-form-section .form-container form button:hover img {
+.reusable-form-section .form-container form button:hover img {
   filter: var(--stroke-color);
 }
-.sweet-form-section .form-container form .radio-input {
+.reusable-form-section .form-container form .radio-input {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.sweet-form-section .form-container form [type="radio"] {
+.reusable-form-section .form-container form [type="radio"] {
   width: 24px;
   height: 24px;
   border: 2px solid #ccc;
@@ -5452,7 +5529,7 @@ body.arabic .sweet-services .headline {
   position: relative;
   margin-bottom: 0;
 }
-.sweet-form-section .form-container form [type="radio"]:checked::after {
+.reusable-form-section .form-container form [type="radio"]:checked::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -5465,21 +5542,21 @@ body.arabic .sweet-services .headline {
 }
 
 @media (max-width: 992px) {
-  .sweet-form-section {
+  .reusable-form-section {
     width: 75%;
   }
 }
 @media (max-width: 768px) {
-  .sweet-form-section {
+  .reusable-form-section {
     width: 92%;
   }
-  .sweet-form-section .form-container .input-container {
+  .reusable-form-section .form-container .input-container {
     flex-direction: column;
   }
-  .sweet-form-section .form-container .checkbox-container {
+  .reusable-form-section .form-container .checkbox-container {
     grid-template-columns: repeat(1, 1fr);
   }
-  .sweet-form-section .form-container form button {
+  .reusable-form-section .form-container form button {
     width: 70%;
   }
 }
@@ -6946,7 +7023,7 @@ body.arabic .event-testimonial-section .testimonial-container .embla__slide .tes
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 .join-us-intro-section .intro-container {
@@ -7000,7 +7077,7 @@ body.arabic .event-testimonial-section .testimonial-container .embla__slide .tes
 }
 
 .join-us-intro-section .intro-container .statistics-content .statistics-card {
-  width: 45%;
+  width: 60%;
   margin-inline: auto;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.2);
@@ -7012,16 +7089,17 @@ body.arabic .event-testimonial-section .testimonial-container .embla__slide .tes
   margin-bottom: 2rem;
 }
 .join-us-intro-section .intro-container .statistics-content .statistics-card span {
+  display: block;
   font-size: 2.5rem;
   font-weight: 500;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1rem;
 }
 .join-us-intro-section .intro-container .statistics-content .statistics-card h4 {
   font-size: 1.6rem;
   font-weight: 200;
 }
 .join-us-intro-section .intro-container .statistics-content a {
-  width: 45%;
+  width: 60%;
   margin-inline: auto;
   background-color: var(--primary-color);
   color: var(--third-color);
@@ -7056,6 +7134,9 @@ body.arabic .event-testimonial-section .testimonial-container .embla__slide .tes
   }
   .join-us-intro-section .intro-container .statistics-content a {
     width: 60%;
+  }
+  .join-us-intro-section .intro-container .statistics-content .statistics-card {
+    width: 45%;
   }
 }
 /* End Intro Section */
@@ -7125,20 +7206,24 @@ body.arabic .event-testimonial-section .testimonial-container .embla__slide .tes
   height: 20%;
   border-radius: 2rem;
   padding: 1.5rem;
+  transition: transform 0.5s ease;
+}
+.why-join-us-section .why-join-us-container .join-us-benfit-list li:hover {
+  transform: translateY(-10px);
+  transform: scale(1.02);
 }
 .why-join-us-section .why-join-us-container .join-us-benfit-list li span {
   width: 3.5rem;
   height: 3.5rem;
-  background-color: rgba(236, 97, 92, 0.8);
+  background-color: var(--background-color);
+  box-shadow: var(--shadow-box);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
 }
 .why-join-us-section .why-join-us-container .join-us-benfit-list li span img {
-  /* filter: var(--filter-white); */
   filter: invert(45%) sepia(88%) saturate(393%) hue-rotate(96deg);
-
   width: 2rem;
   height: 2rem;
 }
@@ -7148,13 +7233,82 @@ body.arabic .event-testimonial-section .testimonial-container .embla__slide .tes
 .why-join-us-section .why-join-us-container .join-us-benfit-list li > div h6 {
   font-size: 1.8rem;
   font-weight: 500;
+  margin-bottom: 0.8rem;
 }
 .why-join-us-section .why-join-us-container .join-us-benfit-list li > div p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  line-height: 1.3;
   color: #6c6c66;
   font-weight: 300;
 }
+.why-join-us-section .why-join-us-container .join-us-benfit-list > a {
+  width: fit-content;
+  display: block;
+  margin: 1rem auto;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 0.7rem;
+  box-shadow: 0 10px 20px rgba(236, 97, 92, 0.2);
+}
+@media (max-width: 768px) {
+  .why-join-us-section .why-join-us-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .why-join-us-section .why-join-us-container .join-us-benfit-list li {
+    height: 30%;
+  }
+  .why-join-us-section .why-join-us-container .join-us-benfit-list li > div p {
+    font-weight: 500;
+  }
+}
 /* End Why Join Us Section */
+/* Start FAQ JOin Us Section */
+.faq-join-us-section .faq-container {
+  width: 65%;
+  margin: 5rem auto;
+}
+
+.faq-join-us-section .faq-container ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+.faq-join-us-section .faq-container ol li {
+  list-style: decimal;
+  font-size: 2rem;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+.faq-join-us-section .faq-container ol li h5 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+.faq-join-us-section .faq-container ol li p {
+  font-size: 1.6rem;
+  color: #4a5568;
+  font-weight: 200;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .faq-join-us-section .faq-container {
+    width: 100%;
+    /* width: var(--width-section); */
+  }
+  .faq-join-us-section .faq-container ol li h5 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+  .faq-join-us-section .faq-container ol li p {
+    font-weight: 400;
+  }
+}
+/* End FAQ JOin Us Section */
+/*  */
 /*--------------------------------------------------------------
 # End JOin Us Page
 --------------------------------------------------------------*/

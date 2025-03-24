@@ -20,23 +20,6 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
-    <!-- Start Mob-search-list -->
-    <div class="list-appear">
-      <div class="list-overlay"></div>
-      <div class="list-content">
-        <div class="title-service">
-          <h4></h4>
-          <img src="/assets/images/icons/xMark.svg" alt="remove-icon" />
-        </div>
-        <div class="input-container">
-          <img src="/assets/images/icons/search.svg" alt="search-icon" />
-          <input type="text" class="type-service-list-mob" placeholder="categorie de la prestataires" />
-        </div>
-        <ul class="type-service-list-mob-v"></ul>
-        <ul class="location-service-list-mob-v"></ul>
-      </div>
-    </div>
-    <!-- End Mob-search-list -->
     <!-- Start Header Section -->
     <header class="header">
       <div class="vendors-gate">
@@ -330,20 +313,112 @@
             <h3>La page que vous cherchez semble introuvable.</h3>
           </div>
           <div class="search-space">
-            <form>
-              <div class="input-container">
-                <div>
-                  <img src="/assets/images/icons/search.svg" alt="recherche-icône" />
-                  <input type="text" placeholder="Que charchez-vous ?" class="type-service-error" />
-                  <ul class="type-service-list-error"></ul>
+            <form class="search-form row" method="POST" action="{{ path('app_search') }}" onsubmit="return search(this)">
+              <div class="search-section__input">
+                <div id="service-search-container" class="search-input-container">
+                  <img src="/assets/images/icons/search.svg" alt="" />
+                  <div class="suggestions-overlay hidden"></div>
+                  <div class="float-container">
+                    <label for="service-search-field" id="changingText">Que cherchez-vous ?</label>
+                    <input type="hidden" name="service-search-field" id="service-field" />
+                    <input
+                      type="text"
+                      id="service-search-field"
+                      data-placeholder="Que cherchez-vous?"
+                      placeholder="Que cherchez-vous?"
+                      oninput="searchByKeyword(this)"
+                      onfocus="showSuggestions(this)"
+                    />
+                    <ul class="suggestions-container hidden">
+                      <div class="keyword-based-suggestions"></div>
+                      <li class="default-suggestion">
+                        <a id="RECEPTION_ROOM">
+                          <img class="autocomplete-icon" src="/assets/images/navmenu-icons/services/reception-room.svg" />
+                          <!-- <img class="autocomplete-icon" src="{{ asset('build/images/reception-room-48x48.svg') }}"/> -->
+                          Salles des fêtes
+                        </a>
+                      </li>
+                      <li class="default-suggestion">
+                        <a id="MULTIMEDIA_SERVICE">
+                          <img class="autocomplete-icon" src="/assets/images/navmenu-icons/services/multimedia-service.svg" />
+                          <!-- <img class="autocomplete-icon" src="{{ asset('build/images/multimedia-service-48x48.svg') }}"/> -->
+                          Photos et vidéos
+                        </a>
+                      </li>
+                      <li class="default-suggestion">
+                        <a id="CATERER">
+                          <img class="autocomplete-icon" src="/assets/images/navmenu-icons/services/caterer.svg" />
+                          <!-- <img class="autocomplete-icon" src="{{ asset('build/images/caterer-48x48.svg') }}"/> -->
+                          Traiteurs
+                        </a>
+                      </li>
+                      <li class="default-suggestion">
+                        <a id="MUSIC_SERVICE">
+                          <img class="autocomplete-icon" src="/assets/images/navmenu-icons/services/music-serivce.svg" />
+                          <!-- <img class="autocomplete-icon" src="{{ asset('build/images/music-service-48x48.svg') }}"/> -->
+                          Musique
+                        </a>
+                      </li>
+                      <li class="default-suggestion">
+                        <a id="CAKE_MAKER">
+                          <img class="autocomplete-icon" src="/assets/images/navmenu-icons/services/cake-maker.svg" />
+                          <!-- <img class="autocomplete-icon" src="{{ asset('build/images/cake-maker-48x48.svg') }}"/> -->
+                          Gâteaux et pâtisseries
+                        </a>
+                      </li>
+                      <li class="default-suggestion">
+                        <a id="DRESS_MAKER">
+                          <img class="autocomplete-icon" src="/assets/images/navmenu-icons/services/dress-maker.svg" />
+                          <!-- <img class="autocomplete-icon" src="{{ asset('build/images/dress-maker-48x48.svg') }}"/> -->
+                          Tenues de mariage
+                        </a>
+                      </li>
+                      <li class="default-suggestion">
+                        <a id="MACHTA">
+                          <img class="autocomplete-icon" src="/assets/images/navmenu-icons/services/machta.svg" />
+                          <!-- <img class="autocomplete-icon" src="{{ asset('build/images/machta-48x48.svg') }}"/> -->
+                          Machta
+                        </a>
+                      </li>
+                      <li class="default-suggestion">
+                        <a id="BEAUTY_SERVICE">
+                          <img class="autocomplete-icon" src="/assets/images/navmenu-icons/services/beauty-service.svg" />
+                          <!-- <img class="autocomplete-icon" src="{{ asset("build/images/beauty-service-48x48.svg") }}"/> -->
+                          Coiffure &amp; Beauté
+                        </a>
+                      </li>
+                      <li class="default-suggestion">
+                        <a id="DECORATOR">
+                          <img class="autocomplete-icon" src="/assets/images/navmenu-icons/services/decorator.svg" />
+                          <!-- <img class="autocomplete-icon" src="{{ asset('build/images/decorator-48x48.svg') }}"/> -->
+                          Décoration
+                        </a>
+                      </li>
+                      <li class="default-suggestion">
+                        <a id="JEWELLER">
+                          <img class="autocomplete-icon" src="/assets/images/navmenu-icons/services/jewllery.svg" />
+                          <!-- <img class="autocomplete-icon" src="{{ asset('build/images/jeweller-48x48.svg') }}"/> -->
+                          Bijoux et accessoires
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <img src="/assets/images/icons/mdi--location.svg" alt="localisation-icone" />
-                  <input type="text" placeholder="Ou ?" class="location-service-error" />
-                  <ul class="location-service-list-error"></ul>
+                <div id="wilaya-search-container" class="search-input-container">
+                  <img src="/assets/images/icons/mdi--location.svg" alt="" />
+                  <div class="suggestions-overlay hidden"></div>
+                  <div class="float-container">
+                    <label for="wilaya-search-field">Où ?</label>
+                    <input type="hidden" name="wilaya-search-field" id="wilaya-field" />
+                    <input type="text" id="wilaya-search-field" data-placeholder="Alger, Oran..." placeholder="Où ?" onfocus="showSuggestions(this)" oninput="searchWilayas(this)" />
+                    <ul class="suggestions-container hidden"></ul>
+                  </div>
                 </div>
+                <button aria-label="search" type="submit" class="btn btn-grad-2 search-btn">
+                  <i class="fas fa-search"></i>
+                  Rechercher
+                </button>
               </div>
-              <button type="submit" class="search-btn">Recharche</button>
             </form>
           </div>
         </div>

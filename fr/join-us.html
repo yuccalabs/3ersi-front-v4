@@ -20,27 +20,6 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
-    <!-- Start Mob-search-list -->
-    <div class="list-appear" id="list-appear">
-      <div class="list-overlay"></div>
-      <div class="list-content">
-        <div class="title-service">
-          <h4>Recherche ici</h4>
-          <img src="/assets/images/icons/xMark.svg" alt="remove-icon" />
-        </div>
-        <div class="input-container service-type">
-          <img src="/assets/images/icons/search.svg" alt="search-icon" />
-          <input type="text" class="type-service-input-mobile" placeholder="categorie de la prestataires" />
-          <ul class="type-service-list-mob-v"></ul>
-        </div>
-        <div class="input-container service-location">
-          <img src="/assets/images/icons/search.svg" alt="search-icon" />
-          <input type="text" class="location-service-input-mobile" placeholder="categorie de la prestataires" />
-          <ul class="location-service-list-mob-v"></ul>
-        </div>
-      </div>
-    </div>
-    <!-- End Mob-search-list -->
     <!-- Start Header Section -->
     <header class="header">
       <div class="vendors-gate">
@@ -355,14 +334,14 @@
           </div>
           <div class="statistics-content">
             <div class="statistics-card">
-              <span>10.000 +</span>
-              <h4>prestataire</h4>
+              <span class="join-us-statistic-counter"></span>
+              <h4>Les Prestataires nous ont déjà rejoint</h4>
             </div>
             <div class="statistics-card">
-              <span>10.000 +</span>
-              <h4>prestataire</h4>
+              <span class="join-us-statistic-counter"></span>
+              <h4>D’interactions sur la plateforme par ans</h4>
             </div>
-            <a href="#join-us-form" class="join-us-btn">
+            <a href="#form-section" class="join-us-btn">
               <img src="/assets/images/icons/briefcase.svg" alt="briefcase-icon" />
               Rejoignez-nous
             </a>
@@ -392,7 +371,7 @@
         </div>
       </section>
       <!-- End Join Us Services Section -->
-      <!-- Start Why Join us Section -->
+      <!-- Start Why Join Us Section -->
       <section class="section why-join-us-section">
         <div class="headline">
           <h2>Pourquoi un abonnement sur 3ersi.com ?</h2>
@@ -427,13 +406,122 @@
                 <p>Gérez facilement vos demandes et contacts depuis votre espace personnel.</p>
               </div>
             </li>
+
+            <a href="#form-section">Devenir prestataire</a>
           </ul>
           <div class="img-container">
             <img src="/assets/images/why-joining-us.jpg" alt="" />
           </div>
         </div>
       </section>
-      <!-- End Why Join us Section -->
+      <!-- End Why Join Us Section -->
+      <!-- Start FAQ join Us Section -->
+      <section class="section faq-join-us-section">
+        <div class="headline">
+          <h2>FAQ - Prestataires sur 3ersi.com</h2>
+        </div>
+        <div class="faq-container">
+          <ol>
+            <li>
+              <h5>Quels types de prestataires peuvent s'inscrire ?</h5>
+              <p>
+                Nous acceptons tous les prestataires liés au mariage : salles des fêtes, instituts de beauté, traiteurs, photographes, décorateurs, DJ, boutiques de robes, machta et bien plus encore.
+              </p>
+            </li>
+            <li>
+              <h5>Comment mon entreprise sera-t-elle mise en avant ?</h5>
+              <p>
+                Votre profil sera visible sur notre site avec une page dédiée, optimisée pour le référencement. Nous mettons aussi en avant certains prestataires dans nos publications et
+                recommandations.
+              </p>
+            </li>
+            <li>
+              <h5>Comment fonctionne l'abonnement ?</h5>
+              <p>L'abonnement vous permet d'avoir une visibilité garantie, une page personnalisée, et d'accéder à des outils marketing pour développer votre clientèle.</p>
+            </li>
+            <li>
+              <h5>Est-ce que 3ersi.com prend une commission sur mes ventes ?</h5>
+              <p>Non, nous ne prenons aucune commission. Vous payez uniquement l'abonnement et gardez 100 % de vos revenus.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <!-- End FAQ Join Us Section -->
+      <!-- Start JOin Us Form -->
+      <section class="section reusable-form-section" id="form-section" id="aos" data-visible="false">
+        <div class="headline">
+          <h2>Voici un formulaire simple, rapide et efficace :</h2>
+        </div>
+        <div class="form-container">
+          <form>
+            <h5>📌 Informations essentielles</h5>
+            <div class="input-container">
+              <div>
+                <label for="organization_name">Nom de l’entreprise/service</label>
+                <input type="text" id="organization_name" placeholder="entrez le nom complet de votre entreprise" name="organization_name" required />
+              </div>
+              <div>
+                <label for="region">Ville / Région</label>
+                <input type="text" id="region" placeholder="entrez la ville de service" name="region" required />
+              </div>
+            </div>
+            <div class="input-container">
+              <div>
+                <label for="categories">Catégorie de services</label>
+                <select name="categories" id="categories">
+                  <option value="category-1">Salle des fêtes</option>
+                  <option value="category-2">Décoration</option>
+                  <option value="category-3">Musique</option>
+                  <option value="category-4">Photo & Vidéo</option>
+                  <option value="category-5">Gateaux et patisserie</option>
+                  <option value="category-6">Traiteur</option>
+                  <option value="category-7">Tesdira et robes</option>
+                  <option value="category-7">Machta</option>
+                  <option value="category-7">Bijoux</option>
+                  <option value="category-7">Coiffure homme</option>
+                  <option value="category-7">Location de voiture</option>
+                  <option value="category-7">Voyage de noces</option>
+                  <option value="category-7">Faire-part mariage</option>
+                  <option value="category-7">Boites de gateaux</option>
+                  <option value="category-7">Animation</option>
+                  <option value="category-7">Animation</option>
+                  <option value="category-7">Emballages et sacs</option>
+                  <option value="category-7">Fleurs</option>
+                  <option value="category-7">Autre (à Préciser)</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-container">
+              <div>
+                <label for="message">Autres précisions</label>
+                <textarea name="message" id="message" placeholder="si vous n'avez pas trouvé votre catégorie de service, écrivez-le ici"></textarea>
+              </div>
+            </div>
+            <h5>📞 Contact</h5>
+            <div class="input-container">
+              <div>
+                <label for="fullname">Nom et Prenom</label>
+                <input type="text" id="fullname" placeholder="entrez votre nom complet" name="fullname" required />
+              </div>
+              <div>
+                <label for="phone_number">Téléphone</label>
+                <input type="text" id="phone_number" placeholder="entrez votre numéro de téléphone" name="phone_number" required />
+              </div>
+            </div>
+            <div class="input-container">
+              <div>
+                <label for="email">Adresse e-mail</label>
+                <input type="email" id="email" placeholder="entrez votre adresse e-mail" name="email" required />
+              </div>
+            </div>
+            <button type="submit">
+              <img src="/assets/images/icons/send.svg" alt="" />
+              Envoyer ma demande
+            </button>
+          </form>
+        </div>
+      </section>
+      <!-- End JOin Us Form -->
     </main>
     <!-- Start Footer Section -->
     <footer>

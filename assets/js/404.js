@@ -1,14 +1,5 @@
 "use strict";
 
-// Utility Functions
-function showElement(ele) {
-  ele.classList.add("show");
-}
-
-function hideElement(ele) {
-  ele.classList.remove("show");
-}
-
 // Render dynamic lists
 document.addEventListener("DOMContentLoaded", () => {
   const iconsList = [
@@ -162,20 +153,20 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Show type service list
-  inputTypeServiceError.addEventListener("focus", (e) => {
-    handleInputFocus(e);
+  inputTypeServiceError.addEventListener("focus", (event) => {
+    handleInputFocus(event);
     showList(typeServiceListError, serviceListMobUl, "Que Chercher Vous ?", "Chercher un service", listItems);
   });
 
   // Show location service list
-  inputLocationServiceError.addEventListener("focus", (e) => {
-    handleInputFocus(e);
+  inputLocationServiceError.addEventListener("focus", (event) => {
+    handleInputFocus(event);
     showList(locationServiceListError, serviceListMobUlTow, "Ou ?", "Chercher une ville", listItemsTwo);
   });
 
   // Hide lists on overlay or remove button click
-  [serviceListMobOverlay, removeServiceList].forEach((ele) => {
-    ele.addEventListener("click", () => {
+  [serviceListMobOverlay, removeServiceList].forEach((element) => {
+    element.addEventListener("click", () => {
       hideAllLists();
       // Enable the scroll
       document.body.classList.remove("no-scroll");
@@ -193,8 +184,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .join("");
       // Fill the input with the Item Text
       ul.querySelectorAll("li").forEach((item) =>
-        item.addEventListener("click", (e) => {
-          input.value = e.target.innerText;
+        item.addEventListener("click", (event) => {
+          input.value = event.target.innerText;
         })
       );
     });
@@ -202,8 +193,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fill the input with the Item Text
     ul.querySelectorAll("li").forEach((item) =>
-      item.addEventListener("click", (e) => {
-        input.value = e.target.innerText;
+      item.addEventListener("click", (event) => {
+        input.value = event.target.innerText;
       })
     );
   };
@@ -216,8 +207,8 @@ document.addEventListener("DOMContentLoaded", () => {
   renderList(inputService, serviceListMobUlTow, listItemsTwo);
 
   // Close lists when clicking outside
-  window.addEventListener("click", (e) => {
-    if (!e.target.closest(".type-service-error, .location-service-error, .list-appear")) {
+  window.addEventListener("click", (event) => {
+    if (!event.target.closest(".type-service-error, .location-service-error, .list-appear")) {
       hideElement(typeServiceListError);
       hideElement(locationServiceListError);
     }
