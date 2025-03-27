@@ -164,10 +164,29 @@
         </nav>
         <div class="subscirbe">
           <button class="sign-up-btn" id="Connexion">Connexion</button>
-          <select id="lang-switcher">
+          <!-- <select id="lang-switcher">
             <option value="fr">FR</option>
             <option value="ar">AR</option>
-          </select>
+          </select> -->
+          <ul class="navbar-nav nav-right">
+            <li class="nav-item avt-wrapper">
+                <div class="avt dropdown">
+                    <img src='/assets/images/icons/language-switcher.svg' alt='' id="dropdown-toggler" class="dropdown-toggle" data-toggle="user-menu-tr"/>
+                    <ul id="user-menu-tr" class="dropdown-menu">
+                            <li class="dropdown-menu-item language">
+                                <a href="{{ path('change_locale', {'locale': 'fr_FR'}) }}" class="dropdown-menu-link">
+                                    <span id="lang"> Français </span>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-item language">
+                                <a href="{{ path('change_locale', {'locale': 'en_US'}) }}" class="dropdown-menu-link">
+                                    <span id="lang"> English </span>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
         </div>
         <aside>
           <div class="aside-content">
@@ -300,10 +319,29 @@
               <li>
                 <div class="subscirbe-mob">
                   <button class="sign-up-btn" id="Connexion">Connexion</button>
-                  <select id="lang-switcher">
+                  <!-- <select id="lang-switcher">
                     <option value="fr">FR</option>
                     <option value="ar">AR</option>
-                  </select>
+                  </select> -->
+                  <ul class="navbar-nav nav-right">
+                    <li class="nav-item avt-wrapper">
+                        <div class="avt dropdown">
+                            <img src='/assets/images/icons/language-switcher.svg' alt='' id="dropdown-toggler" class="dropdown-toggle" data-toggle="user-menu-tr"/>
+                            <ul id="user-menu-tr" class="dropdown-menu">
+                                    <li class="dropdown-menu-item language">
+                                        <a href="{{ path('change_locale', {'locale': 'fr_FR'}) }}" class="dropdown-menu-link">
+                                            <span id="lang"> Français </span>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu-item language">
+                                        <a href="{{ path('change_locale', {'locale': 'en_US'}) }}" class="dropdown-menu-link">
+                                            <span id="lang"> English </span>
+                                        </a>
+                                    </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
                 </div>
               </li>
             </ul>

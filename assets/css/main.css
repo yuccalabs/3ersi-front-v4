@@ -559,6 +559,50 @@ body.arabic .header .vendors-gate h3 a {
   background-repeat: no-repeat;
   background-position: right 12px center;
 }
+
+/* New CSS */
+.header .header-container .subscirbe .avt.dropdown {
+  position: relative;
+}
+.header .header-container .subscirbe .avt.dropdown img {
+  width: 2.5rem;
+  height: 2.5rem;
+  filter: var(--stroke-color);
+  cursor: pointer;
+}
+.header .header-container .subscirbe .avt.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  left: -100%;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  z-index: 999;
+}
+.header .header-container .subscirbe .avt.dropdown .dropdown-menu.show {
+  display: block;
+}
+.header .header-container .subscirbe .avt.dropdown .dropdown-menu li {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  font-size: 1.5rem;
+  transition: var(--hover-transition);
+}
+.header .header-container .subscirbe .avt.dropdown .dropdown-menu li a {
+  color: var(--third-color);
+  transition: var(--hover-transition);
+}
+.header .header-container .subscirbe .avt.dropdown .dropdown-menu li:hover a {
+  color: var(--primary-color);
+}
+.header .header-container .subscirbe .avt.dropdown .dropdown-menu li:hover {
+  background-color: var(--background-color);
+}
+.header .header-container .subscirbe .avt.dropdown .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+/* End New CSS */
 /* Style the dropdown arrow (for modern browsers) */
 .header .header-container .subscirbe select::-ms-expand {
   display: none; /* Hide default arrow in IE */
@@ -766,6 +810,36 @@ body.arabic .header .header-container .navmenu ul li .dropdown li {
   font-size: 1.6rem;
   color: var(--secondaly-color);
 }
+/* New Lnaguage Swithcher CSS */
+.header .header-container .aside-content ul li .subscirbe-mob .avt.dropdown {
+  position: relative;
+  overflow: visible;
+}
+.header .header-container .aside-content ul li .subscirbe-mob .avt.dropdown img {
+  width: 2.5rem;
+  height: 2.5rem;
+  filter: var(--stroke-color);
+}
+.header .header-container .aside-content ul li .subscirbe-mob .avt.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 15px;
+  z-index: 999;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+}
+.header .header-container .aside-content ul li .subscirbe-mob .avt.dropdown .dropdown-menu.show {
+  display: block;
+}
+.header .header-container .aside-content ul li .subscirbe-mob .avt.dropdown .dropdown-menu li {
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+.header .header-container .aside-content ul li .subscirbe-mob .avt.dropdown .dropdown-menu li a {
+  color: var(--third-color);
+}
+/* End New Lnaguage Swithcher CSS */
 .header .header-container .aside-content ul li .subscirbe-mob select:focus {
   outline: none;
 }
@@ -777,7 +851,7 @@ body.arabic .header .header-container .navmenu ul li .dropdown li {
 @media (max-width: 992px) {
   .header .header-container .navmenu,
   .header .header-container .subscirbe .sign-up-btn,
-  .header .header-container .subscirbe select {
+  .header .header-container .subscirbe .navbar-nav.nav-right {
     display: none;
   }
   .header .header-container {
