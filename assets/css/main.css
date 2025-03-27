@@ -484,7 +484,7 @@ body.arabic .header .vendors-gate h3 a {
 .header .header-container .navmenu ul li:hover img {
   filter: var(--stroke-color);
 }
-.header .header-container .subscirbe {
+.header .header-container .subscribe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -493,7 +493,7 @@ body.arabic .header .vendors-gate h3 a {
   align-items: center;
   gap: 8px;
 }
-.header .header-container .subscirbe .logout-gate {
+.header .header-container .subscribe .logout-gate {
   position: relative;
   display: flex;
   align-items: center;
@@ -507,7 +507,7 @@ body.arabic .header .vendors-gate h3 a {
   border-radius: 7px;
   cursor: pointer;
 }
-.header .header-container .subscirbe .logout-gate ul {
+.header .header-container .subscribe .logout-gate ul {
   display: none;
   position: absolute;
   top: 120%;
@@ -516,10 +516,10 @@ body.arabic .header .vendors-gate h3 a {
   background-color: #eee;
   border-radius: 1rem;
 }
-.header .header-container .subscirbe .logout-gate.active ul {
+.header .header-container .subscribe .logout-gate.active ul {
   display: block;
 }
-.header .header-container .subscirbe .logout-gate ul li {
+.header .header-container .subscribe .logout-gate ul li {
   padding: 1rem 0.5rem;
   color: var(--primary-color);
   display: flex;
@@ -529,23 +529,23 @@ body.arabic .header .vendors-gate h3 a {
   border-bottom: 1px solid #ddd;
   font-size: 1.5rem;
 }
-.header .header-container .subscirbe .logout-gate ul li:last-child {
+.header .header-container .subscribe .logout-gate ul li:last-child {
   border-bottom: none;
 }
-.header .header-container .subscirbe .logout-gate ul li:hover {
+.header .header-container .subscribe .logout-gate ul li:hover {
   background-color: #f9f9f9;
 }
-.header .header-container .subscirbe .logout-gate ul li img {
+.header .header-container .subscribe .logout-gate ul li img {
   filter: var(--stroke-color);
   width: 1.5rem;
   height: 1.5rem;
 }
-.header .header-container .subscirbe .logout-gate img {
+.header .header-container .subscribe .logout-gate img {
   filter: var(--filter-white);
   width: 2rem;
   height: 2rem;
 }
-.header .header-container .subscirbe select {
+.header .header-container .subscribe select {
   appearance: none;
   background-color: var(--background-color);
   border: none;
@@ -561,16 +561,16 @@ body.arabic .header .vendors-gate h3 a {
 }
 
 /* New CSS */
-.header .header-container .subscirbe .avt.dropdown {
+.header .header-container .subscribe .avt.dropdown {
   position: relative;
 }
-.header .header-container .subscirbe .avt.dropdown img {
+.header .header-container .subscribe .avt.dropdown img {
   width: 2.5rem;
   height: 2.5rem;
   filter: var(--stroke-color);
   cursor: pointer;
 }
-.header .header-container .subscirbe .avt.dropdown .dropdown-menu {
+.header .header-container .subscribe .avt.dropdown .dropdown-menu {
   display: none;
   position: absolute;
   top: 4rem;
@@ -579,38 +579,38 @@ body.arabic .header .vendors-gate h3 a {
   border-radius: 1rem;
   z-index: 999;
 }
-.header .header-container .subscirbe .avt.dropdown .dropdown-menu.show {
+.header .header-container .subscribe .avt.dropdown .dropdown-menu.show {
   display: block;
 }
-.header .header-container .subscirbe .avt.dropdown .dropdown-menu li {
+.header .header-container .subscribe .avt.dropdown .dropdown-menu li {
   padding: 1rem;
   border-bottom: 1px solid #eee;
   font-size: 1.5rem;
   transition: var(--hover-transition);
 }
-.header .header-container .subscirbe .avt.dropdown .dropdown-menu li a {
+.header .header-container .subscribe .avt.dropdown .dropdown-menu li a {
   color: var(--third-color);
   transition: var(--hover-transition);
 }
-.header .header-container .subscirbe .avt.dropdown .dropdown-menu li:hover a {
+.header .header-container .subscribe .avt.dropdown .dropdown-menu li:hover a {
   color: var(--primary-color);
 }
-.header .header-container .subscirbe .avt.dropdown .dropdown-menu li:hover {
+.header .header-container .subscribe .avt.dropdown .dropdown-menu li:hover {
   background-color: var(--background-color);
 }
-.header .header-container .subscirbe .avt.dropdown .dropdown-menu li:last-child {
+.header .header-container .subscribe .avt.dropdown .dropdown-menu li:last-child {
   border-bottom: none;
 }
 
 /* End New CSS */
 /* Style the dropdown arrow (for modern browsers) */
-.header .header-container .subscirbe select::-ms-expand {
+.header .header-container .subscribe select::-ms-expand {
   display: none; /* Hide default arrow in IE */
 }
-.header .header-container .subscirbe select:focus {
+.header .header-container .subscribe select:focus {
   outline: none;
 }
-.header .header-container .subscirbe select option {
+.header .header-container .subscribe select option {
   background: var(--background-color);
   color: var(--secondaly-color);
   padding: 8px;
@@ -801,7 +801,7 @@ body.arabic .header .header-container .navmenu ul li .dropdown li {
 .header .header-container .aside-content ul li .dropdown li:last-child {
   border: none;
 }
-.header .header-container .aside-content ul li .subscirbe-mob select {
+.header .header-container .aside-content ul li .subscribe-mob select {
   appearance: none;
   background-color: var(--background-color);
   border: none;
@@ -811,16 +811,16 @@ body.arabic .header .header-container .navmenu ul li .dropdown li {
   color: var(--secondaly-color);
 }
 /* New Lnaguage Swithcher CSS */
-.header .header-container .aside-content ul li .subscirbe-mob .avt.dropdown {
+.header .header-container .aside-content ul li .subscribe-mob .avt.dropdown {
   position: relative;
   overflow: visible;
 }
-.header .header-container .aside-content ul li .subscirbe-mob .avt.dropdown img {
+.header .header-container .aside-content ul li .subscribe-mob .avt.dropdown img {
   width: 2.5rem;
   height: 2.5rem;
   filter: var(--stroke-color);
 }
-.header .header-container .aside-content ul li .subscirbe-mob .avt.dropdown .dropdown-menu {
+.header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
@@ -829,29 +829,29 @@ body.arabic .header .header-container .navmenu ul li .dropdown li {
   background-color: var(--primary-color);
   border-radius: 1rem;
 }
-.header .header-container .aside-content ul li .subscirbe-mob .avt.dropdown .dropdown-menu.show {
+.header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu.show {
   display: block;
 }
-.header .header-container .aside-content ul li .subscirbe-mob .avt.dropdown .dropdown-menu li {
+.header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu li {
   font-size: 1.6rem;
   padding: 1rem;
 }
-.header .header-container .aside-content ul li .subscirbe-mob .avt.dropdown .dropdown-menu li a {
+.header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu li a {
   color: var(--third-color);
 }
 /* End New Lnaguage Swithcher CSS */
-.header .header-container .aside-content ul li .subscirbe-mob select:focus {
+.header .header-container .aside-content ul li .subscribe-mob select:focus {
   outline: none;
 }
 /* Style the dropdown arrow*/
-.header .header-container .aside-content ul li .subscirbe-mob select::-ms-expand {
+.header .header-container .aside-content ul li .subscribe-mob select::-ms-expand {
   display: none; /* Hide default arrow in IE */
 }
 
 @media (max-width: 992px) {
   .header .header-container .navmenu,
-  .header .header-container .subscirbe .sign-up-btn,
-  .header .header-container .subscirbe .navbar-nav.nav-right {
+  .header .header-container .subscribe .sign-up-btn,
+  .header .header-container .subscribe .navbar-nav.nav-right {
     display: none;
   }
   .header .header-container {
