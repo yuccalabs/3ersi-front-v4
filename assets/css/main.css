@@ -2850,36 +2850,31 @@ body.arabic .vendor-details .img-container .like-btn {
 .vendor-details .vendor-info-card .call-vendor:hover img {
   filter: var(--stroke-color);
 }
-.vendor-details .vendor-info-card .rate-container {
+/* Start Raring Section */
+.vendor-details .vendor-info-card .rating-comment {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
 }
-.vendor-details .vendor-info-card .rate-container .stars {
-  width: 2rem;
-  height: 2rem;
-  background: gold;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  position: relative;
+.vendor-details .vendor-info-card .rating-comment span:first-child {
+  width: 10rem;
 }
-.vendor-details .vendor-info-card .rate-container .stars::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
-  background: black;
-  border: 5px solid black;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  box-sizing: border-box;
-}
-.vendor-details .vendor-info-card .rate-container p {
-  font-size: 1.2rem;
-  font-weight: 300;
+.vendor-details .vendor-info-card .rating-comment span:last-child {
   text-decoration: underline;
+  cursor: pointer;
 }
+.vendor-details .vendor-info-card .rating-comment span.rating {
+  margin-inline: 1rem 2rem;
+}
+.vendor-details .vendor-info-card .rating-comment span svg .rating__background {
+  fill: #e0e0e0;
+}
+.vendor-details .vendor-info-card .rating-comment .rating__value {
+  fill: #ffc107;
+  height: 100%;
+}
+/* End Rating Section */
 .vendor-intro {
   width: 65%;
   margin-block: 5rem;
@@ -3127,6 +3122,72 @@ body.arabic .services-section .services-price ul li > span {
   }
 }
 /* End Our Packs Section */
+/* Start Comments Section */
+.comments-section .ratings-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.comments-section .ratings-container .ratings-card {
+  flex: 0 0 30%;
+  padding: 2rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 1.5rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+.comments-section .ratings-container .ratings-card .rating-card-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.comments-section .ratings-container .ratings-card .profile-preview p {
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: #333;
+}
+.comments-section .ratings-container .ratings-card .profile-preview span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+.comments-section .ratings-container .ratings-card #comment-review-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.comments-section .ratings-container .ratings-card #comment-review-stars svg {
+  width: 10rem;
+}
+.comments-section .ratings-container .ratings-card #comment-review-stars svg .rating__background {
+  fill: #e0e0e0;
+}
+.comments-section .ratings-container .ratings-card #comment-review-stars svg .rating__value {
+  fill: #ffc107;
+  height: 100%;
+}
+.comments-section .ratings-container .ratings-card #comment-review-stars .rating {
+  font-size: 1.8rem;
+}
+.comments-section .ratings-container .ratings-card .rating-card-body p {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: #222;
+  font-weight: 400;
+  line-height: 1.4;
+}
+@media (max-width: 992px) {
+  .comments-section .ratings-container .ratings-card {
+    flex: 1 1 40%;
+  }
+}
+@media (max-width: 768px) {
+  .comments-section .ratings-container .ratings-card {
+  }
+}
+/* End Comments Section */
 /* Start Caterer Menu Section */
 .caterer-menu-section .menu-conatiner {
   display: grid;
