@@ -171,16 +171,20 @@
           <ul class="navbar-nav nav-right">
             <li class="nav-item avt-wrapper">
                 <div class="avt dropdown">
-                    <img src='/assets/images/icons/language-switcher.svg' alt='' id="dropdown-toggler" class="dropdown-toggle" data-toggle="user-menu-tr"/>
+                    <!-- <img src='/assets/images/icons/language-switcher.svg' alt='' id="dropdown-toggler" class="dropdown-toggle" data-toggle="user-menu-tr"/> -->
+                    <div id="dropdown-toggler" class="dropdown-toggle" data-toggle="user-menu-tr">
+                      <span>langue</span>
+                      <img src="/assets/images/icons/chevron-down.svg" alt="">
+                    </div>
                     <ul id="user-menu-tr" class="dropdown-menu">
                             <li class="dropdown-menu-item language">
                                 <a href="{{ path('change_locale', {'locale': 'fr_FR'}) }}" class="dropdown-menu-link">
-                                    <span id="lang"> Français </span>
+                                    <span id="lang"> FR </span>
                                 </a>
                             </li>
                             <li class="dropdown-menu-item language">
                                 <a href="{{ path('change_locale', {'locale': 'en_US'}) }}" class="dropdown-menu-link">
-                                    <span id="lang"> English </span>
+                                    <span id="lang"> EN </span>
                                 </a>
                             </li>
                     </ul>
@@ -326,7 +330,11 @@
                   <ul class="navbar-nav nav-right">
                     <li class="nav-item avt-wrapper">
                         <div class="avt dropdown">
-                            <img src='/assets/images/icons/language-switcher.svg' alt='' id="dropdown-toggler" class="dropdown-toggle" data-toggle="user-menu-tr"/>
+                            <!-- <img src='/assets/images/icons/language-switcher.svg' alt='' id="dropdown-toggler" class="dropdown-toggle" data-toggle="user-menu-tr"/> -->
+                            <div id="dropdown-toggler" class="dropdown-toggle" data-toggle="user-menu-tr">
+                              <span>langue</span>
+                              <img src="/assets/images/icons/chevron-down.svg" alt="">
+                            </div>
                             <ul id="user-menu-tr" class="dropdown-menu">
                                     <li class="dropdown-menu-item language">
                                         <a href="{{ path('change_locale', {'locale': 'fr_FR'}) }}" class="dropdown-menu-link">

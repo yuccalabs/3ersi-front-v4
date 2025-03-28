@@ -560,49 +560,56 @@ body.arabic .header .vendors-gate h3 a {
   background-position: right 12px center;
 }
 
-/* New CSS */
+/* New language Switcher CSS */
 .header .header-container .subscribe .avt.dropdown {
   position: relative;
 }
+.header .header-container .subscribe .avt.dropdown .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-left: 1rem;
+  border-left: 1px solid #333;
+}
 .header .header-container .subscribe .avt.dropdown img {
-  width: 2.5rem;
-  height: 2.5rem;
-  filter: var(--stroke-color);
-  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .header .header-container .subscribe .avt.dropdown .dropdown-menu {
-  display: none;
+  display: block;
   position: absolute;
-  top: 4rem;
-  left: -100%;
-  background-color: var(--primary-color);
+  top: 2.5rem;
+  left: 1rem;
+  background-color: var(--background-color);
   border-radius: 1rem;
   z-index: 999;
+  text-align: center;
 }
 .header .header-container .subscribe .avt.dropdown .dropdown-menu.show {
   display: block;
 }
 .header .header-container .subscribe .avt.dropdown .dropdown-menu li {
-  padding: 1rem;
-  border-bottom: 1px solid #eee;
-  font-size: 1.5rem;
+  padding: 0.8rem 2rem;
+  border: 1px solid #333;
+  font-size: 1.2rem;
   transition: var(--hover-transition);
 }
 .header .header-container .subscribe .avt.dropdown .dropdown-menu li a {
-  color: var(--third-color);
+  color: var(--secondaly-color);
   transition: var(--hover-transition);
 }
 .header .header-container .subscribe .avt.dropdown .dropdown-menu li:hover a {
-  color: var(--primary-color);
+  color: var(--third-color);
 }
 .header .header-container .subscribe .avt.dropdown .dropdown-menu li:hover {
-  background-color: var(--background-color);
+  background-color: #4a90e2;
 }
 .header .header-container .subscribe .avt.dropdown .dropdown-menu li:last-child {
-  border-bottom: none;
+  border-top: none;
 }
-
-/* End New CSS */
+/* End New language Switcher CSS */
 /* Style the dropdown arrow (for modern browsers) */
 .header .header-container .subscribe select::-ms-expand {
   display: none; /* Hide default arrow in IE */
@@ -781,7 +788,7 @@ body.arabic .header .header-container .navmenu ul li .dropdown li {
   width: 2rem;
   height: 2rem;
 }
-.header .header-container .aside-content ul li.active > div img {
+.header .header-container .aside-content ul li.active > div > img {
   -webkit-transition: var(--hover-transition);
   -o-transition: var(--hover-transition);
   transition: var(--hover-transition) ease-in-out;
@@ -814,30 +821,54 @@ body.arabic .header .header-container .navmenu ul li .dropdown li {
 .header .header-container .aside-content ul li .subscribe-mob .avt.dropdown {
   position: relative;
   overflow: visible;
+  border: none;
+}
+.header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  border-left: 1px solid #333;
+  padding: 0;
+  padding-left: 1rem;
 }
 .header .header-container .aside-content ul li .subscribe-mob .avt.dropdown img {
-  width: 2.5rem;
-  height: 2.5rem;
-  filter: var(--stroke-color);
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu {
-  display: none;
+  display: block;
   position: absolute;
-  top: 100%;
-  right: 15px;
-  z-index: 999;
-  background-color: var(--primary-color);
+  top: 6rem;
+  left: 2rem;
+  background-color: var(--background-color);
   border-radius: 1rem;
+  z-index: 999;
+  text-align: center;
 }
 .header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu.show {
   display: block;
 }
 .header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu li {
-  font-size: 1.6rem;
-  padding: 1rem;
+  padding: 1rem 1.3rem;
+  border: 1px solid #333;
+  font-size: 1.4rem;
+  transition: var(--hover-transition);
 }
 .header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu li a {
+  color: var(--secondaly-color);
+  transition: var(--hover-transition);
+}
+.header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu li:hover a {
   color: var(--third-color);
+}
+.header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu li:hover {
+  background-color: #4a90e2;
+}
+.header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu li:last-child {
+  border-top: none;
 }
 /* End New Lnaguage Swithcher CSS */
 .header .header-container .aside-content ul li .subscribe-mob select:focus {
@@ -7385,4 +7416,220 @@ body.arabic .event-testimonial-section .testimonial-container .embla__slide .tes
 /*  */
 /*--------------------------------------------------------------
 # End JOin Us Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Start Listing Of Exhibitions Page
+--------------------------------------------------------------*/
+/* Start Exhibition Intro Section */
+.exhibition-intro-section {
+  background: url("/assets/images/herosection.jpg") center / cover no-repeat;
+  position: relative;
+  width: 100%;
+  height: 83vh;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.exhibition-intro-section > div {
+  max-width: 88%;
+}
+.exhibition-intro-section h1 {
+  font-size: 4rem;
+  line-height: 1.3;
+  margin-bottom: 1.3rem;
+  color: var(--third-color);
+}
+.exhibition-intro-section p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #f9f9f9;
+  line-height: 1.8;
+}
+/* End Exhibition Intro Section */
+/* Start Call Section */
+.call-section article address .call-now-button {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-box);
+}
+.call-section article address .call-now-button a {
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  padding: 1rem 2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1.2rem;
+  transition: var(--hover-transition);
+}
+.call-section article address .call-now-button a:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+@media (max-width: 992px) {
+  .call-section article address .call-now-button {
+    width: 50%;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .call-section article address .call-now-button {
+    width: 65%;
+  }
+  .exhibition-intro-section p {
+    font-weight: 400;
+  }
+}
+/* End Call Section */
+/* Start Interviews Section */
+.interviews-section .interviews-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-block: 5rem;
+}
+.interviews-section .interviews-container .interview-card {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-box);
+  z-index: 10;
+}
+.interviews-section .interviews-container .interview-card .image-container {
+  height: 20rem;
+}
+.interviews-section .interviews-container .interview-card .image-container iframe {
+  width: 100%;
+  height: 100%;
+}
+.interviews-section .interviews-container .interview-card .text-container {
+  padding: 2rem 1rem;
+}
+.interviews-section .interviews-container .interview-card .text-container h4 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.interviews-section .interviews-container .interview-card .text-container p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #4a5568;
+  margin-top: 1rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+@media (max-width: 992px) {
+  .interviews-section .interviews-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .interviews-section .interviews-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .interviews-section .interviews-container .interview-card .text-container h4 {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  .interviews-section .interviews-container .interview-card .text-container p {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+/* End Interviews Section */
+/*--------------------------------------------------------------
+# End Listing Of Exhibitions Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Start Details Of Exhibitions Page
+--------------------------------------------------------------*/
+.exhibition-details-section .section-header h1 {
+  color: var(--primary-color);
+  font-size: 3.4rem;
+  text-align: center;
+}
+.exhibition-details-section section#videos {
+  width: 75%;
+  height: 32rem;
+  margin-inline: auto;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-box);
+}
+.exhibition-details-section section#videos iframe {
+  width: 100%;
+  height: 100%;
+}
+.exhibition-details-section .provider-details {
+  width: 75%;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.exhibition-details-section .provider-details .provider-detail-section input[type="checkbox"] {
+  display: none;
+}
+.exhibition-details-section .provider-details article {
+  flex: 1 1 30%;
+}
+.exhibition-details-section .provider-details article .call-now-button {
+  text-align: center;
+}
+.exhibition-details-section .provider-details article .call-now-button a {
+  display: block;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  padding: 1rem 2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1.2rem;
+  font-size: 1.8rem;
+  transition: var(--hover-transition);
+}
+.exhibition-details-section .provider-details article .call-now-button a:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+.exhibition-details-section .provider-details > div {
+  flex: 1 1 65%;
+}
+.exhibition-details-section .provider-details .read-more-wrap p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #333;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .exhibition-details-section section#videos {
+    width: 100%;
+  }
+  .exhibition-details-section .provider-details {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    width: 100%;
+  }
+  .exhibition-details-section .provider-details .read-more-wrap p {
+    text-align: center;
+  }
+}
+/*--------------------------------------------------------------
+# End Details Of Exhibitions Page
 --------------------------------------------------------------*/
