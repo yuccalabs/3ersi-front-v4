@@ -7694,3 +7694,201 @@ body.arabic .event-testimonial-section .testimonial-container .embla__slide .tes
 /*--------------------------------------------------------------
 # End Details Of Exhibitions Page
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Start Token Page
+--------------------------------------------------------------*/
+.token-section {
+  background: url("../../assets/images/herosection.jpg") center / cover no-repeat;
+  height: 81vh;
+  position: relative;
+}
+.token-section .token-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  background-color: var(--background-color);
+  text-align: center;
+  width: 35%;
+  border-radius: 2rem;
+  padding: 2rem 1rem;
+}
+
+.token-section .token-container .search-space {
+  width: 90%;
+  margin: 2rem auto;
+}
+.token-section .token-container .search-space input {
+  width: 100%;
+  padding: 6px 35px 6px 35px;
+  border: 1px solid #6c6c6c;
+  color: var(--secondaly-color);
+  height: 4rem;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+}
+
+/* Start new CSS for the error section */
+.token-section .token-container .search-space label {
+  display: none;
+}
+.token-section .token-container .search-space .search-input-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.token-section .token-container .search-space .search-input-container > img {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  font-size: 2rem;
+  width: 2rem;
+  filter: var(--stroke-color);
+  z-index: 2;
+}
+
+.token-section .token-container .search-space .float-container {
+  position: relative;
+}
+.token-section .token-container .search-space ul.suggestions-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 180px;
+  overflow-y: auto;
+  background: #fff;
+  -webkit-box-shadow: var(--shadow-box);
+  box-shadow: var(--shadow-box);
+  z-index: 9999;
+  cursor: pointer;
+  border-radius: 0 0 0.7rem 0.7rem;
+}
+.token-section .token-container .search-space ul.suggestions-container.show {
+  display: block;
+}
+
+.token-section .token-container .search-space ul.suggestions-container li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-bottom: 1px solid #eee;
+}
+.token-section .token-container .search-space ul.suggestions-container li img {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (max-width: 992px) {
+  .token-section .token-container {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .token-section .token-container {
+    width: 85%;
+  }
+  .token-section .token-container .search-space ul.suggestions-container {
+    top: auto;
+    bottom: 100%;
+    max-height: 220px;
+    border-radius: 1.4rem;
+  }
+  .token-section .token-container .search-space ul.suggestions-container li a {
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .token-section .token-container .search-space ul.suggestions-container li img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+/* End new CSS for the error section */
+.token-section .token-container .search-space input:focus {
+  outline: none;
+}
+.token-section .token-container .search-space .input-container > div {
+  position: relative;
+  margin-block: 2rem;
+}
+.token-section .token-container .search-space .input-container > div > img {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  font-size: 2rem;
+  width: 2rem;
+  filter: var(--stroke-color);
+}
+body.arabic .token-section .token-container .search-space .input-container > div > img {
+  left: auto;
+  right: 10px;
+}
+.token-section .token-container .search-space button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  border-radius: 7px;
+  margin-bottom: 1rem;
+  transition: var(--hover-transition);
+  border: 1px solid var(--primary-color);
+}
+.token-section .token-container .search-space button:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+.token-section .token-container .search-space .input-container .type-service-list-error,
+.token-section .token-container .search-space .input-container .location-service-list-error {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 180px;
+  overflow-y: auto;
+  background: #fff;
+  -webkit-box-shadow: var(--shadow-box);
+  box-shadow: var(--shadow-box);
+  z-index: 99;
+  cursor: pointer;
+  border-radius: 0.5rem 0.5rem 1rem 1rem;
+}
+.token-section .token-container .search-space .input-container .type-service-list-error li,
+.token-section .token-container .search-space .input-container .location-service-list-error li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-bottom: 1px solid #eee;
+}
+.token-section .token-container .search-space .input-container .type-service-list-error li img {
+  width: 2rem;
+  height: 2rem;
+}
+.token-section .token-container .search-space .input-container .location-service-list-error li img {
+  display: none;
+}
+@media (min-width: 767px) {
+  .token-section .token-container .search-space .input-container .type-service-list-error.show,
+  .token-section .token-container .search-space .input-container .location-service-list-error.show {
+    display: block;
+  }
+}
+
+/*--------------------------------------------------------------
+# End Token Page
+--------------------------------------------------------------*/
