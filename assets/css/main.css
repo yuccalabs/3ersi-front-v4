@@ -499,29 +499,33 @@ body.arabic .header .vendors-gate h3 a {
   align-items: center;
   justify-content: center;
   padding: 6px 12px;
-  background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  color: var(--third-color);
+  background-color: #eee;
+  border: 1px solid #ddd;
   font-size: 1.4rem;
   font-weight: 200;
   border-radius: 7px;
   cursor: pointer;
 }
+.header .header-container .subscribe .logout-gate img {
+  width: 2rem;
+  height: 2rem;
+}
 .header .header-container .subscribe .logout-gate ul {
   display: none;
   position: absolute;
   top: 120%;
-  right: 0;
+  left: -80%;
   width: 130px;
-  background-color: #eee;
+  background-color: var(--background-color);
   border-radius: 1rem;
+  border: 1px solid #ddd;
 }
 .header .header-container .subscribe .logout-gate.active ul {
   display: block;
 }
 .header .header-container .subscribe .logout-gate ul li {
   padding: 1rem 0.5rem;
-  color: var(--primary-color);
+  color: var(--secondaly-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -533,18 +537,14 @@ body.arabic .header .vendors-gate h3 a {
   border-bottom: none;
 }
 .header .header-container .subscribe .logout-gate ul li:hover {
-  background-color: #f9f9f9;
+  background-color: #f6f6f6;
 }
 .header .header-container .subscribe .logout-gate ul li img {
   filter: var(--stroke-color);
   width: 1.5rem;
   height: 1.5rem;
 }
-.header .header-container .subscribe .logout-gate img {
-  filter: var(--filter-white);
-  width: 2rem;
-  height: 2rem;
-}
+
 .header .header-container .subscribe select {
   appearance: none;
   background-color: var(--background-color);
@@ -572,13 +572,14 @@ body.arabic .header .vendors-gate h3 a {
   font-weight: 300;
   padding-left: 1rem;
   border-left: 1px solid #333;
+  cursor: pointer;
 }
 .header .header-container .subscribe .avt.dropdown img {
   width: 1.5rem;
   height: 1.5rem;
 }
 .header .header-container .subscribe .avt.dropdown .dropdown-menu {
-  display: block;
+  display: none;
   position: absolute;
   top: 2.5rem;
   left: 1rem;
@@ -587,7 +588,7 @@ body.arabic .header .vendors-gate h3 a {
   z-index: 999;
   text-align: center;
 }
-.header .header-container .subscribe .avt.dropdown .dropdown-menu.show {
+.header .header-container .subscribe .avt.dropdown .dropdown-menu.active {
   display: block;
 }
 .header .header-container .subscribe .avt.dropdown .dropdown-menu li {
@@ -839,7 +840,7 @@ body.arabic .header .header-container .navmenu ul li .dropdown li {
   height: 1.5rem;
 }
 .header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu {
-  display: block;
+  display: none;
   position: absolute;
   top: 6rem;
   left: 2rem;
@@ -848,7 +849,7 @@ body.arabic .header .header-container .navmenu ul li .dropdown li {
   z-index: 999;
   text-align: center;
 }
-.header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu.show {
+.header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu.active {
   display: block;
 }
 .header .header-container .aside-content ul li .subscribe-mob .avt.dropdown .dropdown-menu li {
@@ -3183,10 +3184,7 @@ body.arabic .services-section .services-price ul li > span {
     flex: 1 1 40%;
   }
 }
-@media (max-width: 768px) {
-  .comments-section .ratings-container .ratings-card {
-  }
-}
+
 /* End Comments Section */
 /* Start Caterer Menu Section */
 .caterer-menu-section .menu-conatiner {
@@ -4210,6 +4208,223 @@ body.arabic .wedd-org-section .form-section form button img {
   }
 }
 /* End Wedding Organaistaion Section */
+/* Start Wedding planer Payment Pages */
+/* Start Packages Section */
+.wedding-planner-packages-section .packages-container {
+  width: 80%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.wedding-planner-packages-section .packages-container .package-card {
+  padding: 2rem 3.5rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-box);
+}
+.wedding-planner-packages-section .packages-container .package-card h4 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.wedding-planner-packages-section .packages-container .package-card h4 img {
+  width: 4rem;
+  height: 4rem;
+  filter: var(--stroke-color);
+}
+.wedding-planner-packages-section .packages-container .package-card ul {
+  margin-block: 2rem;
+}
+.wedding-planner-packages-section .packages-container .package-card ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #333;
+}
+.wedding-planner-packages-section .packages-container .package-card ul li span {
+  position: relative;
+}
+.wedding-planner-packages-section .packages-container .package-card ul li.not-available {
+  color: #ccc;
+}
+.wedding-planner-packages-section .packages-container .package-card ul li.not-available > span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ddd;
+  z-index: 2;
+}
+.wedding-planner-packages-section .packages-container .package-card ul li img {
+  width: 2rem;
+  height: 2rem;
+}
+.wedding-planner-packages-section .packages-container .package-card > a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1.5rem;
+  transition: var(--hover-transition);
+}
+.wedding-planner-packages-section .packages-container .package-card > button:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+@media (max-width: 768px) {
+  .wedding-planner-packages-section .packages-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .wedding-planner-packages-section .packages-container .package-card {
+    padding-inline: 1.5rem;
+  }
+  .wedding-planner-packages-section .packages-container .package-card ul li {
+    font-weight: 400;
+    line-height: 1.3;
+  }
+}
+/* End Packages Section */
+/* Start Package Price Section */
+.package-price-section .package-price-container > div {
+  width: 40%;
+  margin-inline: auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-box);
+}
+.package-price-section .package-price-container > div h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.package-price-section .package-price-container > div h4 img {
+  width: 4rem;
+  height: 4rem;
+  filter: var(--stroke-color);
+}
+.package-price-section .package-price-container > div h5 {
+  font-size: 2.4rem;
+  margin-block: 2rem;
+}
+.package-price-section .package-price-container > div a {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+  transition: var(--hover-transition);
+}
+.package-price-section .package-price-container > div a:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+@media (max-width: 768px) {
+  .package-price-section .package-price-container > div {
+    width: 100%;
+  }
+}
+/* End Package Price Section */
+/* Start Payment Methods */
+.payment-method-section .payment-methods-container {
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-box);
+}
+.payment-method-section .payment-methods-container .card {
+  flex: 1 1 30%;
+  text-align: center;
+}
+.payment-method-section .payment-methods-container .card label {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1.4rem;
+  cursor: pointer;
+}
+.payment-method-section .payment-methods-container .card .img-method {
+  min-height: 14rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  position: relative;
+}
+.payment-method-section .payment-methods-container .card .img-method.stripe {
+  background: url("/assets/images/payment-methods/stripe.jpg") center / cover no-repeat;
+}
+.payment-method-section .payment-methods-container .card .img-method.ccp {
+  background: url("/assets/images/payment-methods/ccp.jpg") center / cover no-repeat;
+}
+.payment-method-section .payment-methods-container .card .img-method.baridi-mob {
+  background: url("/assets/images/payment-methods/baridi-mob.jpg") center / cover no-repeat;
+}
+.payment-method-section .payment-methods-container .card .img-method input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  cursor: pointer;
+}
+.payment-method-section .payment-methods-container .card .img-method:has(input[type="radio"]:checked) {
+  border: 4px solid var(--primary-color);
+}
+.payment-method-section .payment-methods-container > a {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+  transition: var(--hover-transition);
+}
+.payment-method-section .payment-methods-container > a:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+@media (max-width: 768px) {
+  .payment-method-section .payment-methods-container .card {
+    flex-basis: 100%;
+  }
+}
+/* End Payment Methods */
+/* End Wedding planner Payment Pages */
 /*--------------------------------------------------------------
 # End Wedding Planner Page
 --------------------------------------------------------------*/

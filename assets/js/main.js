@@ -38,8 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Navbar Control
 const navItems = document.querySelectorAll("#navmenu ul li");
+const languageSwitchers = document.querySelectorAll("#language-dropdown-toggle");
+const languageDropDownMenus = document.querySelectorAll("#language-dropdown-menu");
+
 navItems.forEach((navItem) => {
   navItem.addEventListener("click", () => toggleActiveState(navItems, navItem));
+});
+languageSwitchers.forEach((languageSwitcher, index) => {
+  languageSwitcher.addEventListener("click", () => toggleActiveState(languageSwitchers, languageDropDownMenus[index]));
 });
 
 // Sidebar Control
@@ -48,8 +54,8 @@ const aside = document.querySelector("aside");
 const asideOverlay = document.querySelector("aside .aside-overlay");
 const removeAside = document.querySelector("aside .remove-aside");
 const asideNavItems = document.querySelectorAll("#asideList li");
-const logoutGate = document.querySelector(".subscirbe .logout-gate");
-const logoutList = document.querySelector(".subscirbe .logout-gate ul");
+const logoutGate = document.querySelector(".subscribe .logout-gate");
+const logoutList = document.querySelector(".subscribe .logout-gate ul");
 
 // Controll the Logout Gate
 if (logoutGate) {
