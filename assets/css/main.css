@@ -4281,7 +4281,7 @@ body.arabic .wedd-org-section .form-section form button img {
   border-radius: 1.5rem;
   transition: var(--hover-transition);
 }
-.wedding-planner-packages-section .packages-container .package-card > button:hover {
+.wedding-planner-packages-section .packages-container .package-card > a:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
@@ -5921,7 +5921,22 @@ body.arabic .sweet-services .headline {
   background-color: var(--primary-color);
   transform: translate(-50%, -50%);
 }
-
+.reusable-form-section p.error-message {
+  display: none;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+.reusable-form-section p#form-validation {
+  text-align: center;
+}
+.reusable-form-section p.error-message.valid {
+  color: #15803d;
+}
+.reusable-form-section p.error-message.show {
+  display: block;
+}
 @media (max-width: 992px) {
   .reusable-form-section {
     width: 75%;
@@ -6617,7 +6632,7 @@ body.arabic .caterer-services .cards-container .service-card .caterer-img-contai
 .caterer-delivery .delivery-container {
   background: url("/assets/images/3ersi-pro/caterer/caterer-delivery.jpg") center / cover no-repeat;
   width: 80%;
-  height: 30rem;
+  min-height: 30rem;
   margin: 3rem auto;
   display: flex;
   flex-direction: column;
