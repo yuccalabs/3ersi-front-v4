@@ -91,231 +91,24 @@ window.addEventListener("click", (event) => {
 
 // Render dynamic lists
 document.addEventListener("DOMContentLoaded", () => {
-  const iconsList = [
-    "/assets/images/navmenu-icons/services/reception-room.svg",
-    "/assets/images/navmenu-icons/services/multimedia-service.svg",
-    "/assets/images/navmenu-icons/services/caterer.svg",
-    "/assets/images/navmenu-icons/services/music-serivce.svg",
-    "/assets/images/navmenu-icons/services/decorator.svg",
-    "/assets/images/navmenu-icons/services/cake-maker.svg",
-    "/assets/images/navmenu-icons/wedding-invitation-service.svg",
-    "/assets/images/navmenu-icons/services/machta.svg",
-    "/assets/images/navmenu-icons/services/beauty-service.svg",
-    "/assets/images/navmenu-icons/services/jewllery.svg",
-  ];
+  const serviceList = document.querySelectorAll("ul.suggestions-container");
+  const typeServiceInput = document.querySelector("input#service-search-field");
+  const locationServiceInput = document.querySelector("input#wilaya-search-field");
 
-  const listItems = [
-    "Salles des fêtes",
-    "Photos et vidéos",
-    "Traiteurs",
-    "Musique",
-    "Décoration",
-    "Gâteaux et pâtisseries",
-    "Tenues de mariage",
-    "Machta",
-    "Coiffure & Beauté",
-    "Bijoux et accessoires",
-  ];
+  typeServiceInput.addEventListener("focus", () => {
+    hideElement(serviceList[1]);
+    showElement(serviceList[0]);
+  });
 
-  const listItemsTwo = [
-    "Alger",
-    "Oran",
-    "Blida",
-    "Tipaza",
-    "Tizi Ouzou",
-    "Boumerdes",
-    "Adrar",
-    "Chlef",
-    "Laghouat",
-    "Oum El Bouaghi",
-    "Batna",
-    "Bejaia",
-    "Biskra",
-    "Bechar",
-    "Djelfa",
-    "Setif",
-    "Saida",
-    "Skikda",
-    "Sidi Bel Abbes",
-    "Annaba",
-    "Guelma",
-    "Constantine",
-    "Medea",
-    "Mostaganem",
-    "M'Sila",
-    "Mascara",
-    "Ouargla",
-    "El Bayadh",
-    "Illizi",
-    "Bordj Bou Arreridj",
-    "Tamanrasset",
-    "Tebessa",
-    "Tlemcen",
-    "Tiaret",
-    "Tindouf",
-    "Khenchela",
-    "Souk Ahras",
-    "Mila",
-    "Ain Defla",
-    "Naama",
-    "Ain Temouchent",
-    "Ghardaia",
-    "Relizane",
-    "Timimoun",
-    "Bordj Badji Mokhtar",
-    "Ouled Djellal",
-    "Beni Abbes",
-    "In Salah",
-    "In Guezzam",
-    "Touggourt",
-    "Djanet",
-    "El M'Ghair",
-    "El Meniaa",
-  ];
-
-  const inputFields = {
-    // desktop inputs
-    typeService: document.querySelector(".type-service"),
-    locationService: document.querySelector(".location-service"),
-    // filter inputs (listing pages)
-    typeServiceFilter: document.querySelector(".search-space .service-type-filter"),
-    locationServiceFilter: document.querySelector(".search-space .service-location-filter"),
-    // mobile inputs
-    typeServiceMobile: document.querySelector("input.type-service-input-mobile"),
-    locationServiceMobile: document.querySelector("input.location-service-input-mobile"),
-  };
-
-  const lists = {
-    // desktop list
-    typeServiceList: document.querySelector(".type-service-list"),
-    locationServiceList: document.querySelector(".location-service-list"),
-    // filter lists
-    typeServiceFilterList: document.querySelector(".search-space .suggestions-services"),
-    locationServiceFilterList: document.querySelector(".search-space .suggestions-locations"),
-    // mobile lists and its containers
-    serviceListMobContainer: document.querySelector("#list-appear"),
-    serviceListMobUlContainer: document.querySelector(".input-container.service-type"),
-    serviceListMobUlTwoContainer: document.querySelector(".input-container.service-location"),
-    serviceListMobUl: document.querySelector(".type-service-list-mob-v"),
-    serviceListMobUlTwo: document.querySelector(".location-service-list-mob-v"),
-  };
-
-  const serviceListMobOverlay = document.querySelector(".list-appear .list-overlay");
-  const removeServiceList = document.querySelector(".list-appear .title-service img");
-
-  // hide all the lists
-  const hideAllLists = () => {
-    Object.values(lists).forEach((list) => list && hideElement(list));
-    document.body.classList.remove("no-scroll");
-  };
-
-  // Prevent keyboard on mobile devices
-  const handleInputFocus = (event) => {
-    if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      event.preventDefault();
-    }
-  };
-
-  // Add readonly attribute based on screen size
-  const addReadonlyAttribute = () => {
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-    if (inputFields.typeService) inputFields.typeService.readOnly = isMobile;
-    if (inputFields.locationService) inputFields.locationService.readOnly = isMobile;
-  };
-
-  addReadonlyAttribute();
-  window.addEventListener("resize", addReadonlyAttribute);
-
-  // Function to show a specific list
-  const showList = (list, mobileListContainer, listItems, mobileInput, ul) => {
-    hideAllLists();
-    if (window.matchMedia("(max-width: 768px)").matches && mobileListContainer && ul) {
-      showElement(lists.serviceListMobContainer);
-      showElement(mobileListContainer);
-      renderList(mobileInput, ul, listItems);
-      document.body.classList.add("no-scroll");
-    } else {
-      showElement(list);
-    }
-  };
-  // Render filtered list
-  const renderList = (input, ul, items) => {
-    input.addEventListener("input", () => {
-      const inputValue = input.value.toLowerCase();
-      ul.innerHTML = items
-        .map((item, index) => ({ item, index }))
-        .filter(({ item }) => item.toLowerCase().includes(inputValue))
-        .map(({ item, index }) => `<li><img src="${iconsList[index]}" alt="" /> ${item}</li>`)
-        .join("");
-      // Fill the input with the Item Text
-      ul.querySelectorAll("li").forEach((item) =>
-        item.addEventListener("click", (event) => {
-          input.value = event.target.innerText;
-        })
-      );
-    });
-    ul.innerHTML = items.map((item, index) => `<li><img src="${iconsList[index]}" alt="service-${item}" /> ${item}</li>`).join(""); // Initial render
-
-    // Fill the input with the Item Text
-    ul.querySelectorAll("li").forEach((item) =>
-      item.addEventListener("click", (event) => {
-        input.value = event.target.innerText;
-      })
-    );
-  };
-  // Check if the input existe
-  if (inputFields.typeService) {
-    inputFields.typeService.addEventListener("focus", (event) => {
-      handleInputFocus(event);
-      console.log(lists);
-      showList(lists.typeServiceList, lists.serviceListMobUlContainer, listItems, inputFields.typeServiceMobile, lists.serviceListMobUl);
-    });
-  }
-  // Check if the input existe
-  if (inputFields.locationService) {
-    inputFields.locationService.addEventListener("focus", (event) => {
-      handleInputFocus(event);
-      showList(lists.locationServiceList, lists.serviceListMobUlTwoContainer, listItemsTwo, inputFields.locationServiceMobile, lists.serviceListMobUlTwo);
-    });
-  }
-
-  // Check if the input existe
-  if (inputFields.typeServiceFilter && inputFields.locationServiceFilter) {
-    inputFields.typeServiceFilter.addEventListener("focus", () => {
-      showList(lists.typeServiceFilterList, undefined, listItems, inputFields.typeServiceFilter, undefined);
-    });
-    inputFields.locationServiceFilter.addEventListener("focus", () => {
-      showList(lists.locationServiceFilterList, lists.serviceListMobUlTwoContainer, listItemsTwo, inputFields.locationServiceMobile, lists.serviceListMobUlTwo);
-    });
-  }
-
-  // Render lists for desktop
-  if (inputFields.typeService && inputFields.locationService) {
-    renderList(inputFields.typeService, lists.typeServiceList, listItems);
-    renderList(inputFields.locationService, lists.locationServiceList, listItemsTwo);
-  }
-  if (inputFields.typeServiceFilter && inputFields.locationServiceFilter) {
-    renderList(inputFields.typeServiceFilter, lists.typeServiceFilterList, listItems);
-    renderList(inputFields.locationServiceFilter, lists.typeServiceFilterList, listItemsTwo);
-  }
-
-  // remove the mobile list on overlay or icone click
-  if (serviceListMobOverlay) {
-    serviceListMobOverlay.addEventListener("click", hideAllLists);
-  } else {
-    console.warn("serviceListMobOverlay not found in DOM");
-  }
-  if (removeServiceList) {
-    removeServiceList.addEventListener("click", hideAllLists);
-  } else {
-    console.warn("removeServiceList not found in DOM");
-  }
+  locationServiceInput.addEventListener("focus", () => {
+    hideElement(serviceList[0]);
+    showElement(serviceList[1]);
+  });
 
   // Close lists when clicking outside
   window.addEventListener("click", (event) => {
-    if (event.target !== inputFields.typeService && event.target !== inputFields.locationService) {
-      hideElement(lists.typeServiceList);
-      hideElement(lists.locationServiceList);
+    if (!event.target.classList.contains("suggestions-container") && event.target !== typeServiceInput && event.target !== locationServiceInput) {
+      serviceList.forEach((list) => hideElement(list));
     }
   });
 });

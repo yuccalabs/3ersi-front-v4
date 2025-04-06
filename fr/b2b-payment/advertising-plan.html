@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
-
   <body>
     <!-- Start Header Section -->
     <header class="header">
@@ -307,59 +306,103 @@
     </header>
     <!-- End Header Section -->
     <main id="main" class="main">
-      <!-- Start wedding planner Hero Section -->
-      <section class="section hero-planner">
-        <div class="headline mob-v">
-          <img src="/assets/images/icons/heart.svg" alt="" />
-          <h2>Wedding Planner</h2>
-        </div>
-        <section class="img-container">
-          <div class="img-one">
-            <span><img src="/assets/images/icons/branch.svg" alt="" /></span>
+      <!-- Start Join Us Intro Section -->
+      <section class="join-us-intro-section">
+        <section class="intro-container">
+          <div class="text-content">
+            <h1>Vous êtes un prestataire de mariage ? Salles des fêtes, traiteurs, photographes… Rejoignez 3ersi.com !</h1>
+            <ul class="intro-list">
+              <li>
+                <span>
+                  <img src="/assets/images/icons/shop.svg" alt="" />
+                </span>
+                <p>Faites connaître vos services aux futurs mariés en Algérie</p>
+              </li>
+              <li>
+                <span>
+                  <img src="/assets/images/icons/people.svg" alt="" />
+                </span>
+                <p>Créez une page professionnelle et recevez des demandes qualifiées</p>
+              </li>
+              <li>
+                <span>
+                  <img src="/assets/images/icons/statistics.svg" alt="" />
+                </span>
+                <p>Boostez votre présence en ligne sur la plateforme n°1 du mariage</p>
+              </li>
+            </ul>
           </div>
-          <div class="img-two">
-            <span><img src="/assets/images/icons/branch.svg" alt="" /></span>
+          <div class="statistics-content">
+            <div class="statistics-card">
+              <span class="join-us-statistic-counter"></span>
+              <h4>Les Prestataires nous ont déjà rejoint</h4>
+            </div>
+            <div class="statistics-card">
+              <span class="join-us-statistic-counter"></span>
+              <h4>D’interactions sur la plateforme par ans</h4>
+            </div>
+            <a href="#form-section" class="join-us-btn">
+              <img src="/assets/images/icons/briefcase.svg" alt="briefcase-icon" />
+              Rejoignez-nous
+            </a>
           </div>
-          <div class="img-three">
-            <span><img src="/assets/images/icons/branch.svg" alt="" /></span>
-          </div>
-        </section>
-        <section class="text-container">
-          <div class="headline">
-            <img src="/assets/images/icons/heart.svg" alt="" />
-            <h2>Wedding Planner</h2>
-          </div>
-          <p>
-            Découvrez le service Wedding Planner de 3ersi.com Gagnez du temps, bénéficiez de notre expertise et profitez des meilleures offres disponibles sur le marché en faisant appel à notre
-            expertise pour organiser le plus beau jour de votre vie
-          </p>
-          <a href="#wedd-org-section">
-            <button>Organiser votre mariage !</button>
-          </a>
         </section>
       </section>
-      <!-- End wedding planner Hero Section -->
-      <!-- Start Package Price Section -->
-      <section class="section package-price-section" id="package-price">
+      <!-- End Join Us Intro Section -->
+      <!-- Start Join Us Plans -->
+      <section class="section join-us-plans-section advertising-plan" id="advertising-plan-section">
         <div class="headline">
-          <h2>Choisissez votre Pack Mariage</h2>
+          <h2>Rejoignez 3ersi en tant que prestatai</h2>
           <h3>Sélectionnez le pack qui correspond le mieux à vos besoins pour un mariage sans stress.</h3>
         </div>
-        <div class="package-price-container">
-          <div>
+        <div class="plans-container">
+          <div class="plan-card">
             <h4>
-              <img src="/assets/images/icons/package.svg" alt="" />
-              <span class="package-title">Mariage Premium</span>
+              <img src="/assets/images/icons/announcement.svg" alt="" />
+              Plan Publicitaire
             </h4>
-            <h5>
-              <span class="price">225.000</span>
-              <span class="currency">DA</span>
-            </h5>
-            <a href="/fr/wedding-planner/payment/payment-method.html#payment-methods">Continuer vers le paiement</a>
+            <ul>
+              <li>
+                <img src="/assets/images/icons/check.svg" alt="" />
+                <span>Planification complète de votre mariage</span>
+              </li>
+              <li>
+                <img src="/assets/images/icons/check.svg" alt="" />
+                <span>Gestion de la logistique</span>
+              </li>
+              <li>
+                <img src="/assets/images/icons/check.svg" alt="" />
+                <span>Coordination le jour J</span>
+              </li>
+              <li class="not-available">
+                <img src="/assets/images/icons/xMark-2.svg" alt="" />
+                <span>Coordination le jour J</span>
+              </li>
+              <li>
+                <img src="/assets/images/icons/check.svg" alt="" />
+                Coordination le jour J
+              </li>
+              <li>
+                <img src="/assets/images/icons/check.svg" alt="" />
+                <span>Coordination le jour J</span>
+              </li>
+              <li class="not-available">
+                <img src="/assets/images/icons/xMark-2.svg" alt="" />
+                <span>Coordination le jour J</span>
+              </li>
+              <li>
+                <img src="/assets/images/icons/check.svg" alt="" />
+                <span>Coordination le jour J</span>
+              </li>
+            </ul>
+            <div class="links-container">
+              <a href="/fr/b2b-payment/plan-price.html?advertise-plan=not-included" class="skip">sauter le pack</a>
+              <a href="/fr/b2b-payment/plan-price.html?advertise-plan=included">Sélectionnez le pack</a>
+            </div>
           </div>
         </div>
       </section>
-      <!-- End Package Price Section -->
+      <!-- End Join Us Plans -->
     </main>
     <!-- Start Footer Section -->
     <footer>
@@ -393,10 +436,10 @@
             <li><a href="/fr/about-us.html">Qui Sommes-Nous?</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="/fr/contact.html">Contactez-Nous</a></li>
-            <li><a href="">Rejoignez-Nous</a></li>
+            <li><a href="/fr/join-us.html">Rejoignez-Nous</a></li>
             <li><a href="/fr/faq.html">FAQ</a></li>
             <li>
-              <img src="/assets/images/icons/briefcase.svg" alt="mallette" />
+              <img src="/assets/images/icons/briefcase.svg" alt="briefcase-icon" />
               <a href="">Organisation événementielle pour les entreprises</a>
             </li>
           </ul>
@@ -413,7 +456,7 @@
               <img src="/assets/images/app-store.jpg" alt="Download the app on the Apple Store" />
             </a>
             <a href="">
-              <img src="/assets/images/play-store.jpg" alt="Download the app on the Apple Store" />
+              <img src="/assets/images/play-store.jpg" alt="Download the app on the play Store" />
             </a>
           </div>
         </div>
@@ -539,36 +582,26 @@
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
     <script>
-      // change the price and the title  based on the selected package
-      const urlParams = new URLSearchParams(window.location.search);
-      const plan = urlParams.get("plan");
+      // animates the counters for statistics in join us page
+      const counters = document.querySelectorAll(".join-us-statistic-counter");
+      const targetValues = [1000, 25000];
+      let countOne = 0;
+      let countTwo = 0;
 
-      if (plan === "gold") {
-        updatePricing("gold");
-      } else if (plan === "premium") {
-        updatePricing("premium");
-      }
+      // counter one
+      const intervalOne = setInterval(() => {
+        countOne += 10;
 
-      function updatePricing(plan) {
-        const packagePrice = document.querySelector(".package-price-container h5 span.price");
-        const packageTitle = document.querySelector(".package-price-container h4 .package-title");
-        if (plan === "gold") {
-          packagePrice.innerHTML = "400";
-          packageTitle.innerHTML = "Mariage Gold";
-        } else if (plan === "premium") {
-          packagePrice.innerHTML = "200";
-          packageTitle.innerHTML = "Mariage Premium";
-        }
-      }
+        counters[0].textContent = countOne + " +";
+        if (countOne >= targetValues[0]) clearInterval(intervalOne);
+      }, 10);
 
-      // Change the currency based on the user location
-      const packagePriceCurrency = document.querySelector(".package-price-container h5 span.currency");
-      const userLocation = window.localStorage.getItem("user-location");
-      if (userLocation === "algeria") {
-        packagePriceCurrency.innerHTML = "DA";
-      } else if (userLocation === "global") {
-        packagePriceCurrency.innerHTML = "€";
-      }
+      // counter two
+      const intervalTwo = setInterval(() => {
+        countTwo += 100;
+        counters[1].textContent = countTwo + " +";
+        if (countTwo >= targetValues[1]) clearInterval(intervalTwo);
+      }, 10);
     </script>
   </body>
 </html>
