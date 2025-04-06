@@ -2,7 +2,7 @@
 
 // Form validation and submission in 3ersi pro pages
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("form");
+  const form = document.querySelector("form#3ersi-pro-form");
   if (!form) return;
 
   // Error messages
