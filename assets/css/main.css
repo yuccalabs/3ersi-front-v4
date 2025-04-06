@@ -3928,22 +3928,22 @@ body.arabic .contact-section .send-message form button {
   }
 }
 /* Start Wedding Organaistaion Section */
-.wedd-org-section {
+.wedding-organize-section {
   padding-block: 3rem;
 }
-.wedd-org-section .headline h2 {
+.wedding-organize-section .headline h2 {
   color: var(--secondaly-color);
 }
-.wedd-org-section .process-step {
+.wedding-organize-section .process-step {
   text-align: center;
 }
-.wedd-org-section .process-step .step-number {
+.wedding-organize-section .process-step .step-number {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
-.wedd-org-section .process-step .step-number div {
+.wedding-organize-section .process-step .step-number div {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -3955,47 +3955,47 @@ body.arabic .contact-section .send-message form button {
   font-weight: 600;
   color: var(--third-color);
 }
-.wedd-org-section .process-step .step-number span {
+.wedding-organize-section .process-step .step-number span {
   width: 8rem;
   height: 2px;
   background-color: var(--secondaly-color);
 }
-.wedd-org-section .process-step h6 {
+.wedding-organize-section .process-step h6 {
   font-size: 1.4rem;
   font-weight: 200;
   margin-block: 1rem;
 }
-.wedd-org-section .form-section h5 {
+.wedding-organize-section .form-section h5 {
   font-size: 1.8rem;
   font-weight: 400;
   color: var(--secondaly-color);
   text-align: center;
   margin-bottom: 2rem;
 }
-.wedd-org-section .form-section form {
+.wedding-organize-section .form-section form {
   width: 40%;
   margin: auto;
 }
-.wedd-org-section .form-section form.personall-info {
+.wedding-organize-section .form-section form.personall-info {
   width: 60%;
 }
-.wedd-org-section .form-section form .input-container {
+.wedding-organize-section .form-section form .input-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
 }
-.wedd-org-section .form-section form.personall-info .input-container {
+.wedding-organize-section .form-section form.personall-info .input-container {
   grid-template-columns: 1fr 1fr;
 }
 
-.wedd-org-section .form-section form label {
+.wedding-organize-section .form-section form label {
   display: block;
   margin-bottom: 0.8rem;
   font-size: 1.4rem;
   font-weight: 400;
   cursor: pointer;
 }
-.wedd-org-section .form-section form input {
+.wedding-organize-section .form-section form input {
   width: 100%;
   height: 42px;
   padding-inline: 1rem;
@@ -4006,8 +4006,24 @@ body.arabic .contact-section .send-message form button {
   font-size: 1.2rem;
   font-weight: 300;
 }
+.wedding-organize-section .form-section form .select-container {
+  margin-block: 2rem;
+}
+.wedding-organize-section .form-section form select {
+  width: 100%;
+  height: 42px;
+  padding: 1rem 1.5rem;
+  border: 1px solid #4b4b4b;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1.2rem;
 
-.wedd-org-section .form-section form .input-container input[type="date"] {
+}
+.wedding-organize-section .form-section form select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(236, 97, 92, 0.5);
+}
+.wedding-organize-section .form-section form .input-container input[type="date"] {
   width: 100%;
   height: 42px;
   border: 1px solid #4b4b4b;
@@ -4018,40 +4034,40 @@ body.arabic .contact-section .send-message form button {
   padding: 1rem;
   font-size: 1.4rem;
 }
-.wedd-org-section .form-section form .input-container input[type="date"]::-webkit-calendar-picker-indicator {
+.wedding-organize-section .form-section form .input-container input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
-.wedd-org-section .form-section form .input-container > div {
+.wedding-organize-section .form-section form .input-container > div {
   position: relative;
 }
-.wedd-org-section .form-section form .input-container > div img {
+.wedding-organize-section .form-section form .input-container > div img {
   position: absolute;
   right: 2%;
   top: 50%;
   width: 1.6rem;
   height: 1.6rem;
 }
-body.arabic .wedd-org-section .form-section form .input-container > div img {
+body.arabic .wedding-organize-section .form-section form .input-container > div img {
   right: auto;
   left: 2%;
 }
-.wedd-org-section .form-section form .input-container > div:hover img {
+.wedding-organize-section .form-section form .input-container > div:hover img {
   filter: var(--stroke-color);
 }
-.wedd-org-section .form-section form input:focus {
+.wedding-organize-section .form-section form input:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 5px rgba(236, 97, 92, 0.5);
 }
 
-.wedd-org-section .form-section form button {
+.wedding-organize-section .form-section form button {
   display: flex;
   margin-left: auto;
 }
-body.arabic .wedd-org-section .form-section form button {
+body.arabic .wedding-organize-section .form-section form button {
   margin-left: 0;
   margin-right: auto;
 }
-.wedd-org-section .form-section form a {
+.wedding-organize-section .form-section form button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4067,31 +4083,31 @@ body.arabic .wedd-org-section .form-section form button {
   transition: var(--hover-transition);
 }
 
-.wedd-org-section .form-section form button:hover a {
+.wedding-organize-section .form-section form button:hover {
   border-color: var(--primary-color);
   background-color: var(--background-color);
   color: var(--primary-color);
 }
-.wedd-org-section .form-section form button img {
+.wedding-organize-section .form-section form button img {
   filter: var(--filter-white);
   width: 2rem;
   height: 2rem;
 }
-body.arabic .wedd-org-section .form-section form button img {
+body.arabic .wedding-organize-section .form-section form button img {
   transform: rotate(180deg);
 }
-.wedd-org-section .form-section form button:hover img {
+.wedding-organize-section .form-section form button:hover img {
   filter: var(--stroke-color);
 }
-.wedd-org-section .form-section form button:hover a {
+.wedding-organize-section .form-section form button:hover {
   color: var(--primary-color);
 }
-.wedd-org-section .form-section form .input-container .checkbox {
+.wedding-organize-section .form-section form .input-container .checkbox {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.wedd-org-section .form-section form [type="checkbox"] {
+.wedding-organize-section .form-section form [type="checkbox"] {
   width: 24px;
   height: 24px;
   border: 2px solid #ccc;
@@ -4103,11 +4119,11 @@ body.arabic .wedd-org-section .form-section form button img {
   cursor: pointer;
   position: relative;
 }
-.wedd-org-section .form-section form [type="checkbox"]:checked {
+.wedding-organize-section .form-section form [type="checkbox"]:checked {
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
 }
-.wedd-org-section .form-section form [type="checkbox"]:checked::after {
+.wedding-organize-section .form-section form [type="checkbox"]:checked::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -4118,17 +4134,17 @@ body.arabic .wedd-org-section .form-section form button img {
   transform: translate(-50%, -50%);
   border-radius: 2px;
 }
-.wedd-org-section .form-section form .input-container .radio-btn h6 {
+.wedding-organize-section .form-section form .input-container .radio-btn h6 {
   font-size: 1.4rem;
   font-weight: 400;
   margin-bottom: 1rem;
 }
-.wedd-org-section .form-section form .input-container .radio-btn > div {
+.wedding-organize-section .form-section form .input-container .radio-btn > div {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.wedd-org-section .form-section form [type="radio"] {
+.wedding-organize-section .form-section form [type="radio"] {
   width: 24px;
   height: 24px;
   border: 2px solid #ccc;
@@ -4140,7 +4156,7 @@ body.arabic .wedd-org-section .form-section form button img {
   cursor: pointer;
   position: relative;
 }
-.wedd-org-section .form-section form [type="radio"]:checked::after {
+.wedding-organize-section .form-section form [type="radio"]:checked::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -4152,13 +4168,13 @@ body.arabic .wedd-org-section .form-section form button img {
   transform: translate(-50%, -50%);
 }
 
-.wedd-org-section .form-section .booking-choice {
+.wedding-organize-section .form-section .booking-choice {
   display: flex;
   align-items: center;
   gap: 3rem;
   justify-content: center;
 }
-.wedd-org-section .form-section .booking-choice button.no {
+.wedding-organize-section .form-section .booking-choice button.no {
   width: 80px;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
@@ -4168,7 +4184,7 @@ body.arabic .wedd-org-section .form-section form button img {
   border-radius: 0.7rem;
 }
 
-.wedd-org-section .form-section .booking-choice button.yes {
+.wedding-organize-section .form-section .booking-choice button.yes {
   width: 100px;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
@@ -4180,30 +4196,30 @@ body.arabic .wedd-org-section .form-section form button img {
   border-radius: 0.7rem;
   transition: var(--hover-transition);
 }
-.wedd-org-section .form-section .booking-choice button.yes:hover {
+.wedding-organize-section .form-section .booking-choice button.yes:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
-.wedd-org-section .form-section .congrat-text {
+.wedding-organize-section .form-section .congrat-text {
   text-align: center;
 }
-.wedd-org-section .form-section .congrat-text p {
+.wedding-organize-section .form-section .congrat-text p {
   font-size: 2.5rem;
   font-weight: 400;
   color: var(--secondaly-color);
   margin-block: 2rem 4rem;
 }
-.wedd-org-section .form-section .congrat-text p:last-child {
+.wedding-organize-section .form-section .congrat-text p:last-child {
   font-size: 1.8rem;
   font-weight: 300;
   color: var(--secondaly-color);
 }
 @media (max-width: 768px) {
-  .wedd-org-section .form-section form.personall-info,
-  .wedd-org-section .form-section form {
+  .wedding-organize-section .form-section form.personall-info,
+  .wedding-organize-section .form-section form {
     width: 100%;
   }
-  .wedd-org-section .form-section form.personall-info .input-container {
+  .wedding-organize-section .form-section form.personall-info .input-container {
     grid-template-columns: 1fr;
   }
 }
@@ -4281,7 +4297,7 @@ body.arabic .wedd-org-section .form-section form button img {
   border-radius: 1.5rem;
   transition: var(--hover-transition);
 }
-.wedding-planner-packages-section .packages-container .package-card > button:hover {
+.wedding-planner-packages-section .packages-container .package-card > a:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
@@ -4315,8 +4331,9 @@ body.arabic .wedd-org-section .form-section form button img {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  font-size: 1.8rem;
-  font-weight: 400;
+}
+.package-price-section .package-price-container > div h4 .package-title {
+  font-size: 2rem;
 }
 .package-price-section .package-price-container > div h4 img {
   width: 4rem;
@@ -4351,7 +4368,7 @@ body.arabic .wedd-org-section .form-section form button img {
 }
 /* End Package Price Section */
 /* Start Payment Methods */
-.payment-method-section .payment-methods-container {
+.payment-methods-section .payment-methods-container {
   width: 80%;
   margin-inline: auto;
   display: flex;
@@ -4364,33 +4381,33 @@ body.arabic .wedd-org-section .form-section form button img {
   border-radius: 2rem;
   box-shadow: var(--shadow-box);
 }
-.payment-method-section .payment-methods-container .card {
+.payment-methods-section .payment-methods-container .card {
   flex: 1 1 30%;
   text-align: center;
 }
-.payment-method-section .payment-methods-container .card label {
+.payment-methods-section .payment-methods-container .card label {
   display: block;
   font-size: 1.8rem;
   font-weight: 400;
   margin-bottom: 1.4rem;
   cursor: pointer;
 }
-.payment-method-section .payment-methods-container .card .img-method {
+.payment-methods-section .payment-methods-container .card .img-method {
   min-height: 14rem;
   border: 1px solid #ddd;
   border-radius: 1rem;
   position: relative;
 }
-.payment-method-section .payment-methods-container .card .img-method.stripe {
+.payment-methods-section .payment-methods-container .card .img-method.stripe {
   background: url("/assets/images/payment-methods/stripe.jpg") center / cover no-repeat;
 }
-.payment-method-section .payment-methods-container .card .img-method.ccp {
+.payment-methods-section .payment-methods-container .card .img-method.ccp {
   background: url("/assets/images/payment-methods/ccp.jpg") center / cover no-repeat;
 }
-.payment-method-section .payment-methods-container .card .img-method.baridi-mob {
+.payment-methods-section .payment-methods-container .card .img-method.baridi-mob {
   background: url("/assets/images/payment-methods/baridi-mob.jpg") center / cover no-repeat;
 }
-.payment-method-section .payment-methods-container .card .img-method input[type="radio"] {
+.payment-methods-section .payment-methods-container .card .img-method input[type="radio"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -4400,10 +4417,10 @@ body.arabic .wedd-org-section .form-section form button img {
   opacity: 0;
   cursor: pointer;
 }
-.payment-method-section .payment-methods-container .card .img-method:has(input[type="radio"]:checked) {
+.payment-methods-section .payment-methods-container .card .img-method:has(input[type="radio"]:checked) {
   border: 4px solid var(--primary-color);
 }
-.payment-method-section .payment-methods-container > a {
+.payment-methods-section .payment-methods-container > a {
   display: inline-block;
   background-color: var(--primary-color);
   color: var(--third-color);
@@ -4414,12 +4431,12 @@ body.arabic .wedd-org-section .form-section form button img {
   border-radius: 1rem;
   transition: var(--hover-transition);
 }
-.payment-method-section .payment-methods-container > a:hover {
+.payment-methods-section .payment-methods-container > a:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
 @media (max-width: 768px) {
-  .payment-method-section .payment-methods-container .card {
+  .payment-methods-section .payment-methods-container .card {
     flex-basis: 100%;
   }
 }
@@ -5921,7 +5938,22 @@ body.arabic .sweet-services .headline {
   background-color: var(--primary-color);
   transform: translate(-50%, -50%);
 }
-
+.reusable-form-section p.error-message {
+  display: none;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+.reusable-form-section p#form-validation {
+  text-align: center;
+}
+.reusable-form-section p.error-message.valid {
+  color: #15803d;
+}
+.reusable-form-section p.error-message.show {
+  display: block;
+}
 @media (max-width: 992px) {
   .reusable-form-section {
     width: 75%;
@@ -6617,7 +6649,7 @@ body.arabic .caterer-services .cards-container .service-card .caterer-img-contai
 .caterer-delivery .delivery-container {
   background: url("/assets/images/3ersi-pro/caterer/caterer-delivery.jpg") center / cover no-repeat;
   width: 80%;
-  height: 30rem;
+  min-height: 30rem;
   margin: 3rem auto;
   display: flex;
   flex-direction: column;

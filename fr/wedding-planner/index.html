@@ -116,7 +116,7 @@
               </ul>
             </li>
             <li>
-              <a href="/wedd-plan/wedding-planner.html">Wedding Planner</a>
+              <a href="/fr/wedding-planner/index.html">Wedding Planner</a>
             </li>
             <li><a href="">Blog</a></li>
             <li role="button" tabindex="0" aria-expanded="false" aria-controls="dropdown-other-services">
@@ -246,7 +246,7 @@
               </li>
               <li role="menuitem">
                 <div>
-                  <a href="/wedd-plan/wedding-planner.html">Wedding Planner</a>
+                  <a href="/fr/wedding-planner/index.html">Wedding Planner</a>
                 </div>
               </li>
               <li role="menuitem">
@@ -333,13 +333,13 @@
             Découvrez le service Wedding Planner de 3ersi.com Gagnez du temps, bénéficiez de notre expertise et profitez des meilleures offres disponibles sur le marché en faisant appel à notre
             expertise pour organiser le plus beau jour de votre vie
           </p>
-          <a href="#wedd-org-section">
+          <a href="#wedding-organize-section">
             <button>Organiser votre mariage !</button>
           </a>
         </section>
       </section>
       <!-- End wedding planner Hero Section -->
-      <section class="section wedd-org-section" id="wedd-org-section">
+      <section class="section wedding-organize-section" id="wedding-organize-section">
         <div class="headline">
           <h2>Organisez Votre Marriage</h2>
         </div>
@@ -351,8 +351,8 @@
           <h6>entrez vos informations personnelles</h6>
         </section>
         <section class="section form-section">
-          <form class="personall-info">
-            <div class="input-container personall-info">
+          <form action="/fr/wedding-planner/service-included/wedding-planner-reception-room.html#wedding-organize-section" class="personall-info">
+            <div class="input-container">
               <div>
                 <label for="fullname">Nom et Prenom</label>
                 <input type="text" id="fullname" placeholder="entrez votre nom complet..." required />
@@ -366,16 +366,22 @@
                 <input type="date" id="date" placeholder="entrez la date de mariage..." required />
               </div>
               <div>
-                <label for="location">Lieu de mariage</label>
-                <input type="text" id="location" placeholder="entrez  le lieu de mariage..." required />
+                <label for="location_of_wedding">Lieu de mariage</label>
+                <input type="text" id="location_of_wedding" placeholder="entrez  le lieu de mariage..." required />
                 <img src="/assets/images/icons/location-outline.svg" alt="" />
               </div>
             </div>
+            <div class="select-container">
+              <label for="location">Sélectionnez votre pays :</label>
+              <select id="location">
+                <option value="" selected disabled>-- Sélectionner un pays --</option>
+                <option value="algeria">Algérie</option>
+                <option value="global">Monde entier</option>
+              </select>
+            </div>
             <button>
-              <a href="/fr/wedd-plan/service-included/wedd-plan-reception-room.html#wedd-org-section">
-                <img src="/assets/images/icons/arrow-right.svg" alt="" />
-                Suivant
-              </a>
+              <img src="/assets/images/icons/arrow-right.svg" alt="" />
+              Suivant
             </button>
           </form>
         </section>
@@ -558,5 +564,16 @@
     <!-- End Popup Authentication -->
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
+    <script>
+      const selectedValue = document.querySelector("select#location");
+      selectedValue.addEventListener("change", function () {
+        const selected = this.value;
+        if (selected === "algeria") {
+          window.localStorage.setItem("user-location", "agleria");
+        } else if (selected === "global") {
+          window.localStorage.setItem("user-location", "global");
+        }
+      });
+    </script>
   </body>
 </html>

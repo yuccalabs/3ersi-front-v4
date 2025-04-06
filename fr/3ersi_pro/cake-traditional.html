@@ -531,64 +531,73 @@
           <h2>Remplissez vos détails et recevez votre devis !</h2>
         </div>
         <div class="form-container">
-          <form>
+          <form id="3ersi-pro-form">
             <h5>📋 1. Informations personnelles</h5>
             <div class="input-container">
               <div>
                 <label for="fullname">Nom et Prenom</label>
                 <input type="text" id="fullname" placeholder="entrez votre nom complet" name="fullname" required />
+                <!-- Error message for FullName -->
+                <p class="error-message" id="fullName-error">le nom doit comporter au moins 4 caractères.</p>
               </div>
               <div>
                 <label for="phone_number">Téléphone</label>
                 <input type="text" id="phone_number" placeholder="entrez votre numéro de téléphone" name="phone_number" required />
+                <!-- Error message for PhoneNumber -->
+                <p class="error-message" id="phoneNumber-error">le numéro de téléphone doit être composé d'au moins 10 chiffres.</p>
               </div>
             </div>
             <h5>🛍️ 2. Type de produit</h5>
             <div class="checkbox-container">
               <div class="checkbox">
-                <input type="checkbox" id="checkbox_1" />
+                <input type="checkbox" id="checkbox_1" value="traditional_prestige_dry_cakes" />
                 <label for="checkbox_1">🍪 Gâteaux traditionnels / Prestiges / Secs</label>
               </div>
               <div class="checkbox">
-                <input type="checkbox" id="checkbox_2" />
+                <input type="checkbox" id="checkbox_2" value="wedding_cake_cake_design" />
                 <label for="checkbox_2">🎂 Pièce montée / Cake design</label>
               </div>
               <div class="checkbox">
-                <input type="checkbox" id="checkbox_3" />
+                <input type="checkbox" id="checkbox_3" value="savory_snacks_mini_appetizers" />
                 <label for="checkbox_3">🥟 Amuse-bouches & mini-salés</label>
               </div>
               <div class="checkbox">
-                <input type="checkbox" id="checkbox_4" />
+                <input type="checkbox" id="checkbox_4" value="modern_pastries" />
                 <label for="checkbox_4">🧁 Pâtisseries modernes</label>
               </div>
               <div class="checkbox">
-                <input type="checkbox" id="checkbox_5" />
+                <input type="checkbox" id="checkbox_5" value="stuffed_dates" />
                 <label for="checkbox_5">🌴 Dattes fourrées</label>
               </div>
               <div class="checkbox">
-                <input type="checkbox" id="checkbox_6" />
+                <input type="checkbox" id="checkbox_6" value="other_specify" />
                 <label for="checkbox_6">❓ Autre (à préciser)</label>
               </div>
             </div>
+            <!-- Error message for checkboxes -->
+            <p class="error-message" id="checkbox-error">Veuillez sélectionner au moins un type de produit.</p>
             <h5>🎉 3. Occasion</h5>
             <div class="input-container">
               <div>
                 <select name="occasion" id="occasion">
-                  <option value="occasion-1">💒 Mariage</option>
-                  <option value="occasion-2">💍 Fiançailles / Khotba</option>
-                  <option value="occasion-3">🎂 Anniversaire</option>
-                  <option value="occasion-4">👶 Naissance / Baptême</option>
-                  <option value="occasion-5">☕ Pour le plaisir à la maison</option>
-                  <option value="occasion-6">🏢 Entreprise / Événement</option>
-                  <option value="occasion-7">❓ Autre (à préciser)</option>
+                  <option value="" disabled selected>Choisissez une occasion</option>
+                  <option value="Wedding">💒 Mariage</option>
+                  <option value="engagement_proposal">💍 Fiançailles / Khotba</option>
+                  <option value="birthday">🎂 Anniversaire</option>
+                  <option value="birth_baptism">👶 Naissance / Baptême</option>
+                  <option value="home_pleasure">☕ Pour le plaisir à la maison</option>
+                  <option value="business_event">🏢 Entreprise / Événement</option>
+                  <option value="other_specify">❓ Autre (à préciser)</option>
                 </select>
+                <!-- Error message for select options -->
+                <p class="error-message" id="occasion-error">Veuillez sélectionner une occasion.</p>
               </div>
             </div>
             <h5>🚚 4. Livraison</h5>
             <div class="input-container">
               <div>
                 <label for="delivery_location">📌 Adresse de livraison</label>
-                <input type="text" id="delivery_location" placeholder="entrez votre  adresse" name="delivery_location" required />
+                <input type="text" id="delivery_location" placeholder="entrez votre adresse" name="delivery_location" required />
               </div>
               <div>
                 <label for="delivery_time">⏲️ Date et heure souhaitées</label>
@@ -605,6 +614,8 @@
               <img src="/assets/images/icons/send.svg" alt="" />
               Envoyez votre commande
             </button>
+            <!-- Error message for Fom Validation -->
+            <p class="error-message" id="form-validation"></p>
           </form>
         </div>
       </section>
@@ -787,5 +798,6 @@
     <!-- End Popup Authentication -->
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/form-handler.js" defer></script>
   </body>
 </html>

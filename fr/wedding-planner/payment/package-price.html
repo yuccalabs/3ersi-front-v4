@@ -340,7 +340,7 @@
       </section>
       <!-- End wedding planner Hero Section -->
       <!-- Start Package Price Section -->
-      <section class="section package-price-section">
+      <section class="section package-price-section" id="package_price">
         <div class="headline">
           <h2>Choisissez votre Pack Mariage</h2>
           <h3>Sélectionnez le pack qui correspond le mieux à vos besoins pour un mariage sans stress.</h3>
@@ -349,13 +349,13 @@
           <div>
             <h4>
               <img src="/assets/images/icons/package.svg" alt="" />
-              Mariage Premium
+              <span class="package-title">Mariage Premium</span>
             </h4>
             <h5>
-              225.000
-              <span>DA</span>
+              <span class="price">225.000</span>
+              <span class="currency">DA</span>
             </h5>
-            <a href="/fr/wedding-planner/payment/payment-method.html">Continuer vers le paiement</a>
+            <a href="/fr/wedding-planner/payment/payment-method.html#payment-methods">Continuer vers le paiement</a>
           </div>
         </div>
       </section>
@@ -538,5 +538,37 @@
     <!-- End Popup Authentication -->
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
+    <script>
+      // change the price and the title  based on the selected package
+      const urlParams = new URLSearchParams(window.location.search);
+      const plan = urlParams.get("plan");
+
+      if (plan === "gold") {
+        updatePricing("gold");
+      } else if (plan === "premium") {
+        updatePricing("premium");
+      }
+
+      function updatePricing(plan) {
+        const packagePrice = document.querySelector(".package-price-container h5 span.price");
+        const packageTitle = document.querySelector(".package-price-container h4 .package-title");
+        if (plan === "gold") {
+          packagePrice.innerHTML = "400";
+          packageTitle.innerHTML = "Mariage Gold";
+        } else if (plan === "premium") {
+          packagePrice.innerHTML = "200";
+          packageTitle.innerHTML = "Mariage Premium";
+        }
+      }
+
+      // Change the currency based on the user location
+      const packagePriceCurrency = document.querySelector(".package-price-container h5 span.currency");
+      const userLocation = window.localStorage.getItem("user-location");
+      if (userLocation === "algeria") {
+        packagePriceCurrency.innerHTML = "DA";
+      } else if (userLocation === "global") {
+        packagePriceCurrency.innerHTML = "€";
+      }
+    </script>
   </body>
 </html>
