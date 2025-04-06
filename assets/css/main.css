@@ -8139,3 +8139,7 @@ body.arabic .token-section .token-container .search-space .input-container > div
 /*--------------------------------------------------------------
 # End Token Page
 --------------------------------------------------------------*/
+
+img.footer-icon {
+  width: 1em;
+}
