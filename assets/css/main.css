@@ -4017,7 +4017,6 @@ body.arabic .contact-section .send-message form button {
   border-radius: 0.5rem;
   outline: none;
   font-size: 1.2rem;
-
 }
 .wedding-organize-section .form-section form select:focus {
   border-color: var(--primary-color);
@@ -8139,7 +8138,332 @@ body.arabic .token-section .token-container .search-space .input-container > div
 /*--------------------------------------------------------------
 # End Token Page
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Start B2B Payments Pages
+--------------------------------------------------------------*/
+/* Start Plans Section */
+.join-us-plans-section .plans-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.join-us-plans-section .plans-container .plan-card {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-box);
+}
+
+.join-us-plans-section .plans-container .plan-card h4 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.join-us-plans-section .plans-container .plan-card h4 img {
+  width: 3rem;
+  height: 3rem;
+  filter: var(--stroke-color);
+}
+.join-us-plans-section .plans-container .plan-card ul {
+  margin-block: 2rem;
+}
+.join-us-plans-section .plans-container .plan-card ul li {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  padding-block: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #333;
+}
+.join-us-plans-section .plans-container .plan-card ul li span {
+  position: relative;
+}
+.join-us-plans-section .plans-container .plan-card ul li.not-available {
+  color: #ccc;
+}
+.join-us-plans-section .plans-container .plan-card ul li.not-available > span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ddd;
+  z-index: 2;
+}
+.join-us-plans-section .plans-container .plan-card ul li img {
+  width: 2rem;
+  height: 2rem;
+}
+.join-us-plans-section .plans-container .plan-card > a {
+  display: block;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1.5rem;
+  transition: var(--hover-transition);
+}
+.join-us-plans-section .plans-container .plan-card > a:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+@media (max-width: 992px) {
+  .join-us-plans-section .plans-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .join-us-plans-section .plans-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .join-us-plans-section .plans-container .plan-card {
+    padding-inline: 1.5rem;
+  }
+  .join-us-plans-section .plans-container .plan-card ul li {
+    font-weight: 400;
+    line-height: 1.3;
+  }
+}
+/* End Plans Section */
+/* Start Advertising Plan Section */
+.join-us-plans-section.advertising-plan .plans-container {
+  display: block;
+  width: 35%;
+  margin-inline: auto;
+}
+.join-us-plans-section.advertising-plan .plans-container .plan-card {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-box);
+}
+
+.join-us-plans-section.advertising-plan .plans-container .plan-card h4 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.join-us-plans-section.advertising-plan .plans-container .plan-card h4 img {
+  width: 3rem;
+  height: 3rem;
+  filter: var(--stroke-color);
+}
+.join-us-plans-section.advertising-plan .plans-container .plan-card ul {
+  margin-block: 2rem;
+}
+.join-us-plans-section.advertising-plan .plans-container .plan-card ul li {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  padding-block: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #333;
+}
+.join-us-plans-section.advertising-plan .plans-container .plan-card ul li span {
+  position: relative;
+}
+.join-us-plans-section.advertising-plan .plans-container .plan-card ul li.not-available {
+  color: #ccc;
+}
+.join-us-plans-section.advertising-plan .plans-container .plan-card ul li.not-available > span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ddd;
+  z-index: 2;
+}
+.join-us-plans-section.advertising-plan .plans-container .plan-card ul li img {
+  width: 2rem;
+  height: 2rem;
+}
+.join-us-plans-section.advertising-plan .plans-container .plan-card .links-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.join-us-plans-section.advertising-plan .plans-container .plan-card .links-container a {
+  display: block;
+  width: 60%;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1.5rem;
+  transition: var(--hover-transition);
+}
+.join-us-plans-section.advertising-plan .plans-container .plan-card .links-container a:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+.join-us-plans-section.advertising-plan .plans-container .plan-card .links-container a.skip {
+  width: 30%;
+  background-color: #ddd;
+  color: var(--secondaly-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-color: var(--secondaly-color);
+}
+
+@media (max-width: 992px) {
+  .join-us-plans-section.advertising-plan .plans-container {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .join-us-plans-section.advertising-plan .plans-container {
+    width: 100%;
+  }
+  .join-us-plans-section.advertising-plan .plans-container .plan-card {
+    padding-inline: 1.5rem;
+  }
+  .join-us-plans-section.advertising-plan .plans-container .plan-card ul li {
+    font-weight: 400;
+    line-height: 1.3;
+  }
+}
+/* End Advertising Plan Section */
+/*--------------------------------------------------------------
+# Start Plan Price Page
+--------------------------------------------------------------*/
+/* Start Reminder Plans Section */
+.join-us-plans-section.reminder-plans .plans-container {
+  width: 70%;
+  margin-inline: auto;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 768px) {
+  .join-us-plans-section.reminder-plans .plans-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+/* End Reminder Plans Section */
+/* Start Plans Price Section */
+.join-us-plans-price-section .container {
+  width: 70%;
+  margin-inline: auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+}
+
+.join-us-plans-price-section .container h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.join-us-plans-price-section .container h4 img {
+  width: 3rem;
+  height: 3rem;
+  filter: var(--stroke-color);
+}
+.join-us-plans-price-section .container .plans-price-container {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.join-us-plans-price-section .container .plans-price-container .plan-price-card {
+  position: relative;
+  flex: 1 1 50%;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  text-align: center;
+  transition: var(--hover-transition);
+}
+.join-us-plans-price-section .container .plans-price-container .plan-price-card input[type="radio"] {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.join-us-plans-price-section .container .plans-price-container .plan-price-card:has(input:checked) {
+  border: 2px solid #4a90e2;
+}
+
+.join-us-plans-price-section .container .plans-price-container .plan-price-card label {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1.3rem;
+  cursor: pointer;
+}
+.join-us-plans-price-section .container .plans-price-container .plan-price-card span.price {
+  display: none;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  margin-bottom: 1.3rem;
+}
+.join-us-plans-price-section .container .plans-price-container .plan-price-card:has(input:checked) span.price {
+  display: block;
+}
+.join-us-plans-price-section .container .plans-price-container .plan-price-card p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #2c2c2c;
+}
+.join-us-plans-price-section .container > button {
+  display: block;
+  width: 50%;
+  margin: 1.5rem auto;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  transition: var(--hover-transition);
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+}
+.join-us-plans-price-section .container > button:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+@media (max-width: 768px) {
+  .join-us-plans-price-section .container {
+    width: 100%;
+  }
+  .join-us-plans-price-section .container .plans-price-container {
+    flex-direction: column;
+  }
+}
+/* End Plans Price Section */
+/*--------------------------------------------------------------
+# End Plan Price Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# End B2B Payments Pages
+--------------------------------------------------------------*/
 
 img.footer-icon {
   width: 1em;
+  height: 1rem;
 }
+
