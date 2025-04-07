@@ -175,6 +175,7 @@ i {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  justify-content: center;
   gap: 25px;
   overflow-x: auto;
   padding: 10px;
@@ -1250,7 +1251,7 @@ body.arabic .hero .container .hero-content .search-btn {
   background: #fff;
   -webkit-box-shadow: var(--shadow-box);
   box-shadow: var(--shadow-box);
-  z-index: 9999;
+  z-index: 99;
   cursor: pointer;
   border-radius: 0 0 0.7rem 0.7rem;
 }
@@ -1852,10 +1853,8 @@ footer .footer-col ul li a:hover {
   -o-transition: var(--hover-transition);
   transition: var(--hover-transition);
 }
-footer .footer-col.second-col ul li:last-child a {
-  color: var(--secondaly-color);
-}
-footer .footer-col.second-col ul li:last-child {
+
+footer .footer-col.second-col ul li.ersi-pro {
   font-size: 1.2rem;
   width: 85%;
   display: -webkit-box;
@@ -1865,13 +1864,16 @@ footer .footer-col.second-col ul li:last-child {
   -ms-flex-align: center;
   align-items: center;
   gap: 5px;
+
   position: relative;
   left: -22px;
 }
-
-body.arabic footer .footer-col.second-col ul li:last-child {
-  right: -22px;
-  font-size: 1.4rem;
+footer .footer-col.second-col ul li.ersi-pro a {
+  color: var(--secondaly-color);
+}
+footer .footer-col.second-col ul li.ersi-pro img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 footer .footer-col .footer-logo img {
   width: 12rem;
@@ -4370,57 +4372,69 @@ body.arabic .wedding-organize-section .form-section form button img {
 .payment-methods-section .payment-methods-container {
   width: 80%;
   margin-inline: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
   padding: 2rem;
   border: 1px solid #ddd;
   border-radius: 2rem;
   box-shadow: var(--shadow-box);
 }
+.payment-methods-section .payment-methods-container > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 .payment-methods-section .payment-methods-container .card {
-  flex: 1 1 30%;
+  flex: 0 0 30%;
   text-align: center;
+  
 }
 .payment-methods-section .payment-methods-container .card label {
-  display: block;
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 1.4rem;
   cursor: pointer;
 }
+.payment-methods-section .payment-methods-container .card h5 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 1.4rem;
+}
 .payment-methods-section .payment-methods-container .card .img-method {
-  min-height: 14rem;
+  height: 14rem;
   border: 1px solid #ddd;
   border-radius: 1rem;
   position: relative;
 }
-.payment-methods-section .payment-methods-container .card .img-method.stripe {
+.payment-methods-section .payment-methods-container .card .img-method > div {
+  width: 80%;
+  height: 100%;
+  margin-left: auto;
+}
+
+.payment-methods-section .payment-methods-container .card .img-method.stripe > div  {
   background: url("/assets/images/payment-methods/stripe.jpg") center / cover no-repeat;
 }
-.payment-methods-section .payment-methods-container .card .img-method.ccp {
+.payment-methods-section .payment-methods-container .card .img-method.ccp > div {
   background: url("/assets/images/payment-methods/ccp.jpg") center / cover no-repeat;
 }
-.payment-methods-section .payment-methods-container .card .img-method.baridi-mob {
+.payment-methods-section .payment-methods-container .card .img-method.baridi-mob > div {
   background: url("/assets/images/payment-methods/baridi-mob.jpg") center / cover no-repeat;
 }
 .payment-methods-section .payment-methods-container .card .img-method input[type="radio"] {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 8%;
+  width: 22px;
+  height: 22px;
   z-index: 10;
-  opacity: 0;
+  transform: translateY(-50%);
   cursor: pointer;
 }
 .payment-methods-section .payment-methods-container .card .img-method:has(input[type="radio"]:checked) {
-  border: 4px solid var(--primary-color);
+  border: 3px solid #4a90e2;
 }
 .payment-methods-section .payment-methods-container > a {
-  display: inline-block;
+  width: fit-content;
+  display: block;
+  margin: 2rem auto;
   background-color: var(--primary-color);
   color: var(--third-color);
   padding: 1rem 2rem;
@@ -4435,8 +4449,11 @@ body.arabic .wedding-organize-section .form-section form button img {
   color: var(--primary-color);
 }
 @media (max-width: 768px) {
+  .payment-methods-section .payment-methods-container {
+    width: 100%;
+  }
   .payment-methods-section .payment-methods-container .card {
-    flex-basis: 100%;
+    flex-basis: 68%;
   }
 }
 /* End Payment Methods */
@@ -7426,7 +7443,7 @@ body.arabic .event-testimonial-section .testimonial-container .embla__slide .tes
 /* Start Intro Section */
 .join-us-intro-section {
   background: url("/assets/images/join-us-background.jpg") center / cover no-repeat;
-  height: 81vh;
+  min-height: 81vh;
   position: relative;
 }
 .join-us-intro-section::after {
@@ -8199,8 +8216,8 @@ body.arabic .token-section .token-container .search-space .input-container > div
   width: 2rem;
   height: 2rem;
 }
-.join-us-plans-section .plans-container .plan-card > a {
-  display: block;
+.join-us-plans-section .plans-container .plan-card > button {
+  width: 100%;
   text-align: center;
   background-color: var(--primary-color);
   color: var(--third-color);
@@ -8211,7 +8228,7 @@ body.arabic .token-section .token-container .search-space .input-container > div
   border-radius: 1.5rem;
   transition: var(--hover-transition);
 }
-.join-us-plans-section .plans-container .plan-card > a:hover {
+.join-us-plans-section .plans-container .plan-card > button:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
@@ -8236,19 +8253,19 @@ body.arabic .token-section .token-container .search-space .input-container > div
 }
 /* End Plans Section */
 /* Start Advertising Plan Section */
-.join-us-plans-section.advertising-plan .plans-container {
+.join-us-plans-section.advertising-plan-section .plans-container {
   display: block;
   width: 35%;
   margin-inline: auto;
 }
-.join-us-plans-section.advertising-plan .plans-container .plan-card {
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card {
   padding: 2rem;
   border: 1px solid #ddd;
   border-radius: 1rem;
   box-shadow: var(--shadow-box);
 }
 
-.join-us-plans-section.advertising-plan .plans-container .plan-card h4 {
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card h4 {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -8256,15 +8273,15 @@ body.arabic .token-section .token-container .search-space .input-container > div
   font-size: 1.8rem;
   font-weight: 400;
 }
-.join-us-plans-section.advertising-plan .plans-container .plan-card h4 img {
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card h4 img {
   width: 3rem;
   height: 3rem;
   filter: var(--stroke-color);
 }
-.join-us-plans-section.advertising-plan .plans-container .plan-card ul {
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card ul {
   margin-block: 2rem;
 }
-.join-us-plans-section.advertising-plan .plans-container .plan-card ul li {
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card ul li {
   display: flex;
   align-items: start;
   gap: 1rem;
@@ -8273,13 +8290,13 @@ body.arabic .token-section .token-container .search-space .input-container > div
   font-weight: 300;
   color: #333;
 }
-.join-us-plans-section.advertising-plan .plans-container .plan-card ul li span {
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card ul li span {
   position: relative;
 }
-.join-us-plans-section.advertising-plan .plans-container .plan-card ul li.not-available {
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card ul li.not-available {
   color: #ccc;
 }
-.join-us-plans-section.advertising-plan .plans-container .plan-card ul li.not-available > span::after {
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card ul li.not-available > span::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -8289,17 +8306,16 @@ body.arabic .token-section .token-container .search-space .input-container > div
   background-color: #ddd;
   z-index: 2;
 }
-.join-us-plans-section.advertising-plan .plans-container .plan-card ul li img {
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card ul li img {
   width: 2rem;
   height: 2rem;
 }
-.join-us-plans-section.advertising-plan .plans-container .plan-card .links-container {
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card .links-container {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
-.join-us-plans-section.advertising-plan .plans-container .plan-card .links-container a {
-  display: block;
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card .links-container button {
   width: 60%;
   text-align: center;
   background-color: var(--primary-color);
@@ -8311,32 +8327,38 @@ body.arabic .token-section .token-container .search-space .input-container > div
   border-radius: 1.5rem;
   transition: var(--hover-transition);
 }
-.join-us-plans-section.advertising-plan .plans-container .plan-card .links-container a:hover {
+
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card .links-container button:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
-.join-us-plans-section.advertising-plan .plans-container .plan-card .links-container a.skip {
+.join-us-plans-section.advertising-plan-section .plans-container .plan-card .links-container a.skip {
+  display: block;
   width: 30%;
+  text-align: center;
   background-color: #ddd;
   color: var(--secondaly-color);
   font-size: 1.2rem;
   font-weight: 400;
-  border-color: var(--secondaly-color);
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--secondaly-color);
+  border-radius: 1.5rem;
+  transition: var(--hover-transition);
 }
 
 @media (max-width: 992px) {
-  .join-us-plans-section.advertising-plan .plans-container {
+  .join-us-plans-section.advertising-plan-section .plans-container {
     width: 50%;
   }
 }
 @media (max-width: 768px) {
-  .join-us-plans-section.advertising-plan .plans-container {
+  .join-us-plans-section.advertising-plan-section .plans-container {
     width: 100%;
   }
-  .join-us-plans-section.advertising-plan .plans-container .plan-card {
+  .join-us-plans-section.advertising-plan-section .plans-container .plan-card {
     padding-inline: 1.5rem;
   }
-  .join-us-plans-section.advertising-plan .plans-container .plan-card ul li {
+  .join-us-plans-section.advertising-plan-section .plans-container .plan-card ul li {
     font-weight: 400;
     line-height: 1.3;
   }
@@ -8346,15 +8368,21 @@ body.arabic .token-section .token-container .search-space .input-container > div
 # Start Plan Price Page
 --------------------------------------------------------------*/
 /* Start Reminder Plans Section */
-.join-us-plans-section.reminder-plans .plans-container {
+.join-us-plans-section.reminder-plans-section .plans-container {
   width: 70%;
   margin-inline: auto;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2rem;
+}
+.join-us-plans-section.reminder-plans-section .plans-container .plan-card {
+  flex: 0 0 50%;
 }
 @media (max-width: 768px) {
-  .join-us-plans-section.reminder-plans .plans-container {
+  .join-us-plans-section.reminder-plans-section .plans-container {
     width: 100%;
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 }
 /* End Reminder Plans Section */
@@ -8406,8 +8434,13 @@ body.arabic .token-section .token-container .search-space .input-container > div
 .join-us-plans-price-section .container .plans-price-container .plan-price-card:has(input:checked) {
   border: 2px solid #4a90e2;
 }
-
 .join-us-plans-price-section .container .plans-price-container .plan-price-card label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.join-us-plans-price-section .container .plans-price-container .plan-price-card label  h5{
   display: block;
   font-size: 1.8rem;
   font-weight: 400;
@@ -8417,7 +8450,7 @@ body.arabic .token-section .token-container .search-space .input-container > div
 .join-us-plans-price-section .container .plans-price-container .plan-price-card span.price {
   display: none;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--primary-color);
   margin-bottom: 1.3rem;
 }
@@ -8429,9 +8462,10 @@ body.arabic .token-section .token-container .search-space .input-container > div
   font-weight: 300;
   color: #2c2c2c;
 }
-.join-us-plans-price-section .container > button {
+.join-us-plans-price-section .container > a {
   display: block;
-  width: 50%;
+  width: fit-content;
+  text-align: center;
   margin: 1.5rem auto;
   padding: 1rem 2rem;
   font-size: 1.4rem;
@@ -8442,7 +8476,7 @@ body.arabic .token-section .token-container .search-space .input-container > div
   border: 1px solid var(--primary-color);
   border-radius: 1rem;
 }
-.join-us-plans-price-section .container > button:hover {
+.join-us-plans-price-section .container > a:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
@@ -8462,8 +8496,4 @@ body.arabic .token-section .token-container .search-space .input-container > div
 # End B2B Payments Pages
 --------------------------------------------------------------*/
 
-img.footer-icon {
-  width: 1em;
-  height: 1rem;
-}
 

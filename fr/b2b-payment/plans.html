@@ -395,7 +395,8 @@
                 <span>Coordination le jour J</span>
               </li>
             </ul>
-            <a href="/fr/b2b-payment/advertising-plan.html#advertising-plan-section">Sélectionnez le pack</a>
+            <!-- <a href="/fr/b2b-payment/advertising-plan.html?plan=premium#advertising-plan-section">Sélectionnez le pack</a> -->
+            <button onclick="selectPlan('premiumPlan')">Sélectionnez le pack</button>
           </div>
           <div class="plan-card">
             <h4>
@@ -436,7 +437,8 @@
                 <span>Coordination le jour J</span>
               </li>
             </ul>
-            <a href="/fr/b2b-payment/advertising-plan.html#advertising-plan-section">Sélectionnez le pack</a>
+            <!-- <a href="/fr/b2b-payment/advertising-plan.html?plan=gold#advertising-plan-section">Sélectionnez le pack</a> -->
+            <button onclick="selectPlan('goldPlan')">Sélectionnez le pack</button>
           </div>
           <div class="plan-card">
             <h4>
@@ -477,7 +479,8 @@
                 <span>Coordination le jour J</span>
               </li>
             </ul>
-            <a href="/fr/b2b-payment/plan-pric.html">Sélectionnez le pack</a>
+            <!-- <a href="/fr/b2b-payment/plan-price.html#join-us-plans-price">Sélectionnez le pack</a> -->
+            <button onclick="selectPlan('advertisePlan')">Sélectionnez le pack</button>
           </div>
         </div>
       </section>
@@ -659,28 +662,26 @@
     </div>
     <!-- End Popup Authentication -->
     <!-- Main JS File -->
+    <script src="/assets/js/animate-counters.js" async></script>
     <script src="/assets/js/main.js" defer></script>
     <script>
-      // animates the counters for statistics in join us page
-      const counters = document.querySelectorAll(".join-us-statistic-counter");
-      const targetValues = [1000, 25000];
-      let countOne = 0;
-      let countTwo = 0;
+      // set the user selected paln in session storage and redirect to the appropriate page
+      function selectPlan(planName) {
+        const plans = {
+          premiumPlan: false,
+          goldPlan: false,
+          advertisePlan: false,
+        };
+        plans[planName] = true;
+        // Store in sessionStorage
+        sessionStorage.setItem("planSelected", JSON.stringify(plans));
 
-      // counter one
-      const intervalOne = setInterval(() => {
-        countOne += 10;
-
-        counters[0].textContent = countOne + " +";
-        if (countOne >= targetValues[0]) clearInterval(intervalOne);
-      }, 10);
-
-      // counter two
-      const intervalTwo = setInterval(() => {
-        countTwo += 100;
-        counters[1].textContent = countTwo + " +";
-        if (countTwo >= targetValues[1]) clearInterval(intervalTwo);
-      }, 10);
+        if (planName === "advertisePlan") {
+          window.location.href = "/fr/b2b-payment/plan-price.html#join-us-plans-price";
+        } else {
+          window.location.href = "/fr/b2b-payment/advertising-plan.html#advertising-plan";
+        }
+      }
     </script>
   </body>
 </html>

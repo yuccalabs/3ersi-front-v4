@@ -350,13 +350,13 @@
       </section>
       <!-- End Join Us Intro Section -->
       <!-- Start Join Us Plans -->
-      <section class="section join-us-plans-section reminder-plans" id="advertising-plan-section">
+      <section class="section join-us-plans-section reminder-plans-section" id="reminder-plans">
         <div class="headline">
           <h2>Rejoignez 3ersi en tant que prestatai</h2>
           <h3>Sélectionnez le pack qui correspond le mieux à vos besoins pour un mariage sans stress.</h3>
         </div>
         <div class="plans-container">
-          <div class="plan-card" data-paln="premium" style="display: none">
+          <div class="plan-card" data-paln="premiumPlan" style="display: none">
             <h4>
               <img src="/assets/images/icons/rocket.svg" alt="" />
               Plan Premium
@@ -396,7 +396,7 @@
               </li>
             </ul>
           </div>
-          <div class="plan-card" data-paln="gold">
+          <div class="plan-card" data-paln="goldPlan">
             <h4>
               <img src="/assets/images/icons/diamond.svg" alt="" />
               Plan Gold
@@ -436,7 +436,7 @@
               </li>
             </ul>
           </div>
-          <div class="plan-card" data-paln="advertise">
+          <div class="plan-card" data-paln="advertisePlan">
             <h4>
               <img src="/assets/images/icons/announcement.svg" alt="" />
               Plan Publicitaire
@@ -480,7 +480,7 @@
       </section>
       <!-- End Join Us Plans -->
       <!-- Start Join Us Plan's Price -->
-      <section class="section join-us-plans-price-section">
+      <section class="section join-us-plans-price-section" id="join-us-plans-price">
         <div class="container">
           <h4>
             <img src="/assets/images/icons/clock.svg" alt="" />
@@ -490,26 +490,30 @@
           <div class="plans-price-container">
             <div class="plan-price-card">
               <input type="radio" name="duration-price" id="duration_1" checked />
-              <label for="duration_1">6 mois</label>
-              <span class="price">200 DA</span>
-              <p>
-                plan
-                <span class="plan-name">Gold</span>
-                pendant 6 mois
-              </p>
+              <label for="duration_1">
+                <h5>6 mois</h5>
+                <span class="price">200 DA</span>
+                <p>
+                  plan
+                  <span class="plan-name">Gold</span>
+                  pendant 6 mois
+                </p>
+              </label>
             </div>
             <div class="plan-price-card">
               <input type="radio" name="duration-price" id="duration_2" />
-              <label for="duration_2">12 mois</label>
-              <span class="price">200 DA</span>
-              <p>
-                plan
-                <span class="plan-name">Gold</span>
-                pendant 12 mois
-              </p>
+              <label for="duration_2">
+                <h5>12 mois</h5>
+                <span class="price">200 DA</span>
+                <p>
+                  plan
+                  <span class="plan-name">Gold</span>
+                  pendant 12 mois
+                </p>
+              </label>
             </div>
           </div>
-          <button>Continuer vers le paiement</button>
+          <a href="/fr/b2b-payment/payment-methods.html#payment-methods">Continuer vers le paiement</a>
         </div>
       </section>
       <!-- End Join  Us Plan's Price -->
@@ -691,27 +695,20 @@
     <!-- End Popup Authentication -->
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/animate-counters.js" async></script>
     <script>
-      // animates the counters for statistics in join us page
-      const counters = document.querySelectorAll(".join-us-statistic-counter");
-      const targetValues = [1000, 25000];
-      let countOne = 0;
-      let countTwo = 0;
+      // show reminder plans but only the selected one
+      const storedPlans = JSON.parse(sessionStorage.getItem("planSelected"));
+      const plans = document.querySelectorAll(".plan-card");
 
-      // counter one
-      const intervalOne = setInterval(() => {
-        countOne += 10;
-
-        counters[0].textContent = countOne + " +";
-        if (countOne >= targetValues[0]) clearInterval(intervalOne);
-      }, 10);
-
-      // counter two
-      const intervalTwo = setInterval(() => {
-        countTwo += 100;
-        counters[1].textContent = countTwo + " +";
-        if (countTwo >= targetValues[1]) clearInterval(intervalTwo);
-      }, 10);
+      plans.forEach((plan) => {
+        const planName = plan.getAttribute("data-paln");
+        if (storedPlans[planName]) {
+          plan.style.display = "block";
+        } else {
+          plan.style.display = "none";
+        }
+      });
     </script>
   </body>
 </html>

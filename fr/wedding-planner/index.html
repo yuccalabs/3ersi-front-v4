@@ -565,14 +565,18 @@
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
     <script>
+      const form = document.querySelector(".form-section form");
       const selectedValue = document.querySelector("select#location");
+
+      form.addEventListener("submit", function (e) {
+        if (!selectedValue.value) {
+          e.preventDefault();
+        }
+      });
+
       selectedValue.addEventListener("change", function () {
         const selected = this.value;
-        if (selected === "algeria") {
-          window.localStorage.setItem("user-location", "agleria");
-        } else if (selected === "global") {
-          window.localStorage.setItem("user-location", "global");
-        }
+        window.sessionStorage.setItem("user-location", selected);
       });
     </script>
   </body>
