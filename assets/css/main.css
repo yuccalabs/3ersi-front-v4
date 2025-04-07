@@ -8461,3 +8461,9 @@ body.arabic .token-section .token-container .search-space .input-container > div
 /*--------------------------------------------------------------
 # End B2B Payments Pages
 --------------------------------------------------------------*/
+
+img.footer-icon {
+  width: 1em;
+  height: 1rem;
+}
+
