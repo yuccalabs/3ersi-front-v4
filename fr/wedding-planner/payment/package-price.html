@@ -349,13 +349,13 @@
           <div>
             <h4>
               <img src="/assets/images/icons/package.svg" alt="" />
-              <span class="package-title">Mariage Premium</span>
+              <span class="package-title"></span>
             </h4>
             <h5>
-              <span class="price">225.000</span>
-              <span class="currency">DA</span>
+              <span class="price"></span>
+              <span class="currency"></span>
             </h5>
-            <a href="/fr/wedding-planner/payment/payment-method.html#payment-methods">Continuer vers le paiement</a>
+            <a href="/fr/wedding-planner/payment/payment-methods.html#payment-methods">Continuer vers le paiement</a>
           </div>
         </div>
       </section>
@@ -539,16 +539,16 @@
     <!-- Main JS File -->
     <script src="/assets/js/main.js" defer></script>
     <script>
-      // change the price and the title  based on the selected package
+      // get the url parameters to get the selected package
       const urlParams = new URLSearchParams(window.location.search);
-      const plan = urlParams.get("plan");
+      const plan = urlParams.get("package");
 
       if (plan === "gold") {
         updatePricing("gold");
       } else if (plan === "premium") {
         updatePricing("premium");
       }
-
+      // change the price and the title  based on the selected package
       function updatePricing(plan) {
         const packagePrice = document.querySelector(".package-price-container h5 span.price");
         const packageTitle = document.querySelector(".package-price-container h4 .package-title");
@@ -563,7 +563,7 @@
 
       // Change the currency based on the user location
       const packagePriceCurrency = document.querySelector(".package-price-container h5 span.currency");
-      const userLocation = window.localStorage.getItem("user-location");
+      const userLocation = window.sessionStorage.getItem("user-location");
       if (userLocation === "algeria") {
         packagePriceCurrency.innerHTML = "DA";
       } else if (userLocation === "global") {
