@@ -1,8 +1,10 @@
 "use strict";
 
 // Form validation and submission in 3ersi pro pages
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("form#3ersi-pro-form");
+function validateForm() {
+  const form = document.getElementById("3ersi-pro-form");
+
+  console.log(form);
   if (!form) return;
 
   // Error messages
@@ -121,6 +123,8 @@ document.addEventListener("DOMContentLoaded", function () {
       //   } catch (error) {
       //     console.error("Error:", error);
       //   }
+
+      form.reset(); // Reset the form after submission
     }
   });
-});
+}
