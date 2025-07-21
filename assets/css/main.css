@@ -4397,38 +4397,50 @@ body.arabic .wedding-organize-section .form-section form button img {
   margin-bottom: 1.4rem;
 }
 .payment-methods-section .payment-methods-container .card .img-method {
-  height: 14rem;
+  height: 18rem;
   border: 1px solid #ddd;
   border-radius: 1rem;
   position: relative;
 }
 .payment-methods-section .payment-methods-container .card .img-method > div {
-  width: 80%;
-  height: 100%;
-  margin-left: auto;
+  width: 22rem;
+  height: 14rem;
+  padding: 1rem;
+  margin-inline: auto;
 }
 
-.payment-methods-section .payment-methods-container .card .img-method.stripe > div  {
-  background: url("/assets/images/payment-methods/stripe.jpg") center / cover no-repeat;
-}
-.payment-methods-section .payment-methods-container .card .img-method.ccp > div {
-  background: url("/assets/images/payment-methods/ccp.jpg") center / cover no-repeat;
-}
-.payment-methods-section .payment-methods-container .card .img-method.baridi-mob > div {
-  background: url("/assets/images/payment-methods/baridi-mob.jpg") center / cover no-repeat;
+.payment-methods-section .payment-methods-container .card .img-method img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
 }
 .payment-methods-section .payment-methods-container .card .img-method input[type="radio"] {
   position: absolute;
-  top: 50%;
-  left: 8%;
+  top: 90%;
+  left: 50%;
   width: 22px;
   height: 22px;
   z-index: 10;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   cursor: pointer;
 }
 .payment-methods-section .payment-methods-container .card .img-method:has(input[type="radio"]:checked) {
   border: 3px solid #4a90e2;
+}
+
+.payment-methods-section .payment-methods-container > h6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-block: 2rem;
+}
+.payment-methods-section .payment-methods-container > h6 img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .payment-methods-section .payment-methods-container > a {
   width: fit-content;
